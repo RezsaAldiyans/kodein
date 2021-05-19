@@ -1,0 +1,32 @@
+.calender {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+
+    padding: 4%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: #113078;
+}
+
+.year, .day, .month {
+    width: 100%;
+    text-align: center;
+}
+
+table {
+    height: 80%;
+}
+
+table td {
+    text-align: center;
+}
+
+table td:hover {
+    background-color: #113078;
+    color: #fff;
+}
