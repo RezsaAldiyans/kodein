@@ -30,3 +30,14 @@ table td:hover {
     background-color: #113078;
     color: #fff;
 }
+
+/* Mobile Layouts */
+@media (max-width: 576px){
+    .image{
+        width: 200px;
+        height: 200px;
+    }
+    .history{
+        margin-top: 25px;
+    }
+}
