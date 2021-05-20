@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kodein</title>
+    <!-- Punyaku -->
+    <link rel="stylesheet" href="assets/fullcalendar-5.7.0/lib/main.css">
+    <link rel="stylesheet" href="assets/style.css">
+
+    <!-- Punya mobirise -->
+    <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+    <link rel="stylesheet" href="assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.css">
+    <link rel="stylesheet" href="assets/tether/tether.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="assets/dropdown/css/style.css">
+    <link rel="stylesheet" href="assets/animatecss/animate.css">
+    <link rel="stylesheet" href="assets/socicon/css/styles.css">
+    <link rel="stylesheet" href="assets/theme/css/style.css">
+    <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css">
+    <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+
+    <!-- JS -->
+    <script src="assets/js/dashboard-user.js" defer></script>
+    <script src="assets/fullcalendar-5.7.0/lib/main.js" defer></script>
+
+</head>
+
+<body>
+
+    <section class="menu menu3 cid-swTgLUegze" once="menu" id="menu3-0">
+
+        <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="navbar-brand">
+                    <span class="navbar-logo">
+                        <a href="https://mobiri.se">
+                            <img src="assets/images/logo-2.png" alt="Mobirise" style="height: 3rem;">
+                        </a>
+                    </span>
+
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+                        <li class="nav-item"><a class="nav-link link text-black display-4 font-weight-bold"
+                                href="https://mobiri.se">Tentang Kami</a></li>
+                        <li class="nav-item"><a class="nav-link link text-black display-4 font-weight-bold"
+                                href="https://mobiri.se">Kelas Koding</a></li>
+                        <li class="nav-item"><a class="nav-link link text-black display-4 font-weight-bold"
+                                href="https://mobiri.se">Code Challenge</a>
+                        </li>
+                    </ul>
+                    <div class="icons-menu">
+                        <a class="iconfont-wrapper" href="https://mobiri.se" target="_blank">
+                            <span class="p-2 mbr-iconfont socicon-youtube socicon"></span>
+                        </a>
+                        <a class="iconfont-wrapper" href="https://mobiri.se" target="_blank">
+                            <span class="p-2 mbr-iconfont socicon-twitter socicon"></span>
+                        </a>
+                        <a class="iconfont-wrapper" href="https://mobiri.se" target="_blank">
+                            <span class="p-2 mbr-iconfont socicon-instagram socicon"></span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <section class="profile mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="card p-4 shadow">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <img src="assets/images/cewek.jpg" class="image img-fluid mx-auto" style="border-radius: 50%;" alt="">
+                            </div>
+                            <div class="col-md-7 py-5">
+                                <p class="h3">Yogesvara</p>
+                                <p class="h3">200</p>
+                                <p class="h3">Tidak Ada Pencapaian</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="history col-md-5">
+                    <div class="calender shadow" id="calender"></div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-3 col-6">
+                    <div class="card shadow p-3">
+                        <img src="assets/images/cewek.jpg" class="img-fluid mx-auto" style="width: 100px;border-radius: 50%;" alt="">
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="card shadow p-3">
+                        <img src="assets/images/cewek.jpg" class="img-fluid mx-auto" style="width: 100px;border-radius: 50%;" alt="">
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="card shadow p-3">
+                        <img src="assets/images/cewek.jpg" class="img-fluid mx-auto" style="width: 100px;border-radius: 50%;" alt="">
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="card shadow p-3">
+                        <img src="assets/images/cewek.jpg" class="img-fluid mx-auto" style="width: 100px;border-radius: 50%;" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
