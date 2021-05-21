@@ -31,13 +31,30 @@ table td:hover {
     color: #fff;
 } */
 
-/* Mobile Layouts */
-@media (max-width: 576px){
-    .image{
-        width: 200px;
-        height: 200px;
-    }
+.footer {
+    margin-top: 60px;
+}
+.footer p{
+    color: #ACACAC;
+    font-size: 18px;
+
+}
+
+.image{
+    width: 200px;
+    height: 200px;
+}
+
+.card{
+    margin: 12px;
+}
+
+/* Desktop Layouts */
+@media (min-width: 992px){
     .history{
         margin-top: 25px;
     }
+    .card{
+        margin: 15px;
+    }    
 }
