@@ -5,8 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
         redirect: 'follow'
     };
     fetch("http://localhost:8080/ApiHistory", requestOptions)
-        .then(response => response.json())
+        .then(response =>{response.json()})
         .then(result =>{
+            if(!result){return document.getElementById('calender').innerHTML = "<h4>Aktivitas tidak ditemukan!</h4>";}
             let data = [];
             result.map(datas=>{
                 data.push({"title":datas.nama_materi,"start":datas.tgl_selesai,"end":datas.tgl_selesai})
@@ -61,5 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             calendar.render();
         })
-        .catch(error => console.log('error', error));
+        .catch(error => {
+            console.log('errors', error);
+        });
 });
