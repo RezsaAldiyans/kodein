@@ -1,0 +1,101 @@
+CRITICAL - 2021-05-20 12:42:35 --> Argument 1 passed to CodeIgniter\Model::findAll() must be of the type int, string given, called in A:\kodein\local-main\app\Models\HistoryModel.php on line 10
+#0 A:\kodein\local-main\app\Models\HistoryModel.php(10): CodeIgniter\Model->findAll('test1')
+#1 A:\kodein\local-main\app\Controllers\Home.php(14): App\Models\historyModel->getHistory('test1')
+#2 A:\kodein\local-main\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#3 A:\kodein\local-main\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 A:\kodein\local-main\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 A:\kodein\local-main\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 A:\kodein\local-main\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\local...')
+#7 {main}
+CRITICAL - 2021-05-20 12:43:00 --> Array to string conversion
+#0 A:\kodein\local-main\app\Controllers\Home.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'A:\\kodein\\local...', 16, Array)
+#1 A:\kodein\local-main\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#2 A:\kodein\local-main\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 A:\kodein\local-main\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\local-main\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\local-main\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\local...')
+#6 {main}
+CRITICAL - 2021-05-20 12:56:27 --> Array to string conversion
+#0 A:\kodein\local-main\app\Controllers\Home.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'A:\\kodein\\local...', 40, Array)
+#1 A:\kodein\local-main\system\CodeIgniter.php(918): App\Controllers\Home->ApiHistory()
+#2 A:\kodein\local-main\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 A:\kodein\local-main\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\local-main\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\local-main\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\local...')
+#6 {main}
+CRITICAL - 2021-05-20 12:58:58 --> Undefined variable: history
+#0 A:\kodein\local-main\app\Controllers\Home.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'A:\\kodein\\local...', 34, Array)
+#1 A:\kodein\local-main\system\CodeIgniter.php(918): App\Controllers\Home->ApiHistory()
+#2 A:\kodein\local-main\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 A:\kodein\local-main\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\local-main\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\local-main\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\local...')
+#6 {main}
+CRITICAL - 2021-05-20 12:59:19 --> Array to string conversion
+#0 A:\kodein\local-main\app\Controllers\Home.php(37): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'A:\\kodein\\local...', 37, Array)
+#1 A:\kodein\local-main\system\CodeIgniter.php(918): App\Controllers\Home->ApiHistory()
+#2 A:\kodein\local-main\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 A:\kodein\local-main\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\local-main\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\local-main\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\local...')
+#6 {main}
+CRITICAL - 2021-05-20 13:00:25 --> Array to string conversion
+#0 A:\kodein\local-main\app\Controllers\Home.php(37): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'A:\\kodein\\local...', 37, Array)
+#1 A:\kodein\local-main\system\CodeIgniter.php(918): App\Controllers\Home->ApiHistory()
+#2 A:\kodein\local-main\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 A:\kodein\local-main\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\local-main\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\local-main\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\local...')
+#6 {main}
+CRITICAL - 2021-05-20 13:00:33 --> Undefined index: id_akun
+#0 A:\kodein\local-main\app\Controllers\Home.php(37): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'A:\\kodein\\local...', 37, Array)
+#1 A:\kodein\local-main\system\CodeIgniter.php(918): App\Controllers\Home->ApiHistory()
+#2 A:\kodein\local-main\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 A:\kodein\local-main\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\local-main\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\local-main\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\local...')
+#6 {main}
+CRITICAL - 2021-05-20 13:00:41 --> Undefined offset: 1
+#0 A:\kodein\local-main\app\Controllers\Home.php(37): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'A:\\kodein\\local...', 37, Array)
+#1 A:\kodein\local-main\system\CodeIgniter.php(918): App\Controllers\Home->ApiHistory()
+#2 A:\kodein\local-main\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 A:\kodein\local-main\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\local-main\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\local-main\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\local...')
+#6 {main}
+CRITICAL - 2021-05-20 13:05:58 --> Call to undefined method App\Controllers\Home::getWhere()
+#0 A:\kodein\local-main\system\CodeIgniter.php(918): App\Controllers\Home->ApiHistory()
+#1 A:\kodein\local-main\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\local-main\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\local-main\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\local-main\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\local...')
+#5 {main}
+CRITICAL - 2021-05-20 13:07:38 --> Call to undefined method App\Controllers\Home::getWhere()
+#0 A:\kodein\local-main\system\CodeIgniter.php(918): App\Controllers\Home->ApiHistory()
+#1 A:\kodein\local-main\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\local-main\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\local-main\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\local-main\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\local...')
+#5 {main}
+CRITICAL - 2021-05-20 13:07:47 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::findAll()
+#0 A:\kodein\local-main\app\Controllers\Home.php(35): App\Models\historyModel->getHistory('test1')
+#1 A:\kodein\local-main\system\CodeIgniter.php(918): App\Controllers\Home->ApiHistory()
+#2 A:\kodein\local-main\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 A:\kodein\local-main\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\local-main\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\local-main\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\local...')
+#6 {main}
+CRITICAL - 2021-05-20 13:08:54 --> Call to undefined method App\Controllers\Home::respond()
+#0 A:\kodein\local-main\system\CodeIgniter.php(918): App\Controllers\Home->ApiHistory()
+#1 A:\kodein\local-main\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\local-main\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\local-main\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\local-main\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\local...')
+#5 {main}
+CRITICAL - 2021-05-20 13:13:03 --> Class 'App\Controllers\HistoryModel' not found
+#0 A:\kodein\local-main\system\CodeIgniter.php(918): App\Controllers\restfulApi->ApiHistory()
+#1 A:\kodein\local-main\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restfulApi))
+#2 A:\kodein\local-main\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\local-main\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\local-main\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\local...')
+#5 {main}
