@@ -3,10 +3,10 @@
 use CodeIgniter\Model;
 
 class LoginModel extends Model{
-    protected $table = 'akun';
+    protected $table = "akun";
     protected $allowedFields = ['id_akun','nama_lengkap','email','password','no_hp'];
     protected $primaryKey = "id_akun";
-    function __construct()
+    function _construct()
     {
         $this->db = db_connect();
     }

@@ -32,7 +32,11 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/user','Home::dashboard_user');
-$routes->post('/selesai','Home::selesai');
+$routes->get('/login','Home::viewLogin');
+$routes->post('/logins','Home::login');
+$routes->post('/register','Home::register');
+
+$routes->get('/logout','Home::logout');
 
 
 // route API untuk history

@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
         redirect: 'follow'
     };
     fetch("http://localhost:8080/ApiHistory", requestOptions)
-        .then(response =>{response.json()})
+        .then(response =>{return response.json();})
         .then(result =>{
             if(!result){return document.getElementById('calender').innerHTML = "<h4>Aktivitas tidak ditemukan!</h4>";}
             let data = [];
