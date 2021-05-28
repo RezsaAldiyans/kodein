@@ -5,111 +5,75 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Template</title>
+  <link rel="stylesheet" href="style-login.css">
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <style>
-    section {
-      margin-top: 2%;
-    }
-    .login{
-      padding-top: 25%;
-    }
-    .login-card-img {
-      border-radius: 0;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      -o-object-fit: cover;
-      object-fit: cover;
-    }
-  </style>
+  <!-- <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"> -->
+
+  <!-- FontAwsome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-  <section>
-    <div class="container">
-      <div class="card">
-        <div class="row">
-          <div class="col-md-6">
-            <img src="auth.jfif" alt="login" class="img1 login-card-img d-block">
-            <div class="card-body p-5">
-              <h4 class="text-center">Register Page</h4>
-              <form action="#">
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="text" name="email" class="form-control" id="email" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                  <label for="telp">No. Telp</label>
-                  <input type="text" name="telp" class="form-control" id="telp"
-                    placeholder="Enter No. Telp">
-                </div>
-                <div class="form-group">
-                  <label for="username">username</label>
-                  <input type="text" name="username" class="form-control" id="username"
-                    placeholder="Enter Username">
-                </div>
-                <div class="form-group">
-                  <label for="password">Password</label>
-                  <input type="password" name="password" class="form-control" id="password"
-                    placeholder="Enter Password">
-                </div>
-                <div class="mt-4">
-                  <button class="btn btn-dark btn-block waves-effect waves-light" type="submit">Log In</button>
-                </div>
-              </form>
-              <div class="mt-4 text-center">
-                <p class="mb-0"><a href="/">No have account?</a></p>
-              </div>
+  <div class="container" id="container">
+    <div class="form-container sign-up-container">
+        <form action="#">
+            <h1>Create Account</h1>
+            <div class="social-container">
+                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
             </div>
-          </div>
-
-          <div class="col-md-6">
-            <img src="auth.jfif" alt="login" class="img2 login-card-img d-none">
-            <div class="login card-body px-5">
-              <h4 class="text-center">Login Page</h4>
-              <form action="#">
-                <div class="form-group">
-                  <label for="username">Email</label>
-                  <input type="text" name="email" class="form-control" id="email" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                  <label for="userpassword">Password</label>
-                  <input type="password" name="password" class="form-control" id="userpassword"
-                    placeholder="Enter password">
-                </div>
-                <div class="mt-4">
-                  <button class="btn btn-dark btn-block waves-effect waves-light" type="submit">Log In</button>
-                </div>
-              </form>
-              <div class="mt-4 text-center">
-                <p class="mb-0"><a href="/">No have account?</a></p>
-              </div>
+            <span>or use your email for registration</span>
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <button>Sign Up</button>
+        </form>
+    </div>  
+    <div class="form-container sign-in-container">
+        <form action="#">
+            <h1>Sign in</h1>
+            <div class="social-container">
+                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
             </div>
-          </div>
-        </div>
-      </div>
+            <span>or use your account</span>
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <a href="#">Forgot your password?</a>
+            <button>Sign In</button>
+        </form>
     </div>
-  </section>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-  <script>
-    const login = document.querySelector('.img1')
-    const register = document.querySelector('.img2')
-    register.addEventListener('click', function(){
-      register.classList.remove('d-block')
-      register.classList.add('d-none')
-      login.classList.remove('d-none')
-      login.classList.add('d-block')
-    })
-    login.addEventListener('click', function(){
-      login.classList.remove('d-block')
-      login.classList.add('d-none')
-      register.classList.remove('d-none')
-      register.classList.add('d-block')
-    })
-  </script>
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1>Welcome Back!</h1>
+                <p>Ayo segera login dan mari kita belajar</p>
+                <button class="ghost" id="signIn">Sign In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1>Kodein!</h1>
+                <p>Ayo daftar, dan tingkatkan skill kamu</p>
+                <button class="ghost" id="signUp">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
+
+    signUpButton.addEventListener('click', () => {
+        container.classList.add("right-panel-active");
+    });
+
+    signInButton.addEventListener('click', () => {
+        container.classList.remove("right-panel-active");
+    });
+</script>
 </body>
 
 </html>
