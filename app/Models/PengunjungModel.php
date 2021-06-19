@@ -6,7 +6,7 @@ class PengunjungModel extends Model{
     protected $table = 'pengunjung';
     protected $allowedFields = ['id_pengunjung','tgl_pengunjung','os','device'];
     protected $primaryKey = "id_pegunjung";
-    function __construct()
+    function _construct()
     {
         $this->db = db_connect();
     }

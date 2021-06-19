@@ -44,8 +44,8 @@
             <div class="container-fluid">
                 <div class="navbar-brand">
                     <span class="navbar-logo">
-                        <a href="https://mobiri.se">
-                            <img src="assets/images/logo-2.png" alt="Mobirise" style="height: 3rem;">
+                        <a href="http://kodein.codes">
+                            <img src="assets/images/kodein-logo-k-560x560.png" class="image img-fluid mx-auto" alt="kodein">
                         </a>
                     </span>
 
@@ -94,12 +94,18 @@
                     <div class="card p-4 ">
                         <div class="row">
                             <div class="col-md-5">
-                                <img src="assets/images/i.jpg" class="image img-fluid mx-auto" style="border-radius: 50%;" alt="">
+                            <?php
+                                if($session->get('profile_user') != ''){
+                                    echo "<img src='$_SESSION[profile_user]' class='image img-fluid mx-auto' style='border-radius: 50%;' alt='profile user'>";
+                                }else {
+                                    echo '<img src="assets/images/i.jpg" class="image img-fluid mx-auto" style="border-radius: 50%;" alt="">';
+                                }
+                            ?>
                             </div>
                             <div class="col-md-7 justify-content-center py-4">
-                                <p class="h1 text-md-left text-center"><?php echo $session->get("nama_lengkap");?></p>
-                                <p class="h3 text-md-left text-center pl-1">kelas: </p>
-                                <p class="h3 text-md-left text-center">Tidak Ada Pencapaian</p>
+                                <p class="h1 text-md-left text-center"><?php echo ucfirst($session->get("nama_lengkap"));?></p>
+                                <p class="h3 text-md-left text-center">Level: <?php echo $session->get('level');?></p>
+                                <p class="h3 text-md-left text-center">Badges : <?php echo ucfirst($session->get('badges'));?></p>
                                 <div class="d-flex justify-content-center d-md-block d-none">
                                     <button type="button" class="btn btn-primary btn-sm">Follow</button>
                                 </div>
@@ -120,28 +126,28 @@
                 <div class="card border border-info mx-sm-1 p-3">
                     <div class="border border-info shadow text-info p-3 my-card"><span class="fa fa-code" aria-hidden="true"></span></div>
                     <div class="text-info text-center mt-3"><h4>Kelas Koding</h4></div>
-                    <div class="text-info text-center mt-2"><h1>234</h1></div>
+                    <div class="text-info text-center mt-2"><h1><?php echo $session->get('total_kelas');?></h1></div>
                 </div>
             </div>
             <div class="col-md-3 col-6">
                 <div class="card border border-success mx-sm-1 p-3">
                     <div class="border border-success shadow text-success p-3 my-card"><span class="fa fa-rocket" aria-hidden="true"></span></div>
                     <div class="text-success text-center mt-3"><h4>Code Challenge</h4></div>
-                    <div class="text-success text-center mt-2"><h1>9332</h1></div>
+                    <div class="text-success text-center mt-2"><h1><?php echo $session->get('total_kelas');?></h1></div>
                 </div>
             </div>
             <div class="col-md-3 col-6">
                 <div class="card border border-danger mx-sm-1 p-3">
                     <div class="border border-danger shadow text-danger p-3 my-card" ><span class="fa fa-puzzle-piece" aria-hidden="true"></span></div>
                     <div class="text-danger text-center mt-3"><h4>Events</h4></div>
-                    <div class="text-danger text-center mt-2"><h1>346</h1></div>
+                    <div class="text-danger text-center mt-2"><h1><?php echo $session->get('total_kelas');?></h1></div>
                 </div>
             </div>
             <div class="col-md-3 col-6 ">
                 <div class="card border border-warning mx-sm-1 p-3">
                     <div class="border border-warning shadow text-warning p-3 my-card" ><span class="fa fa-dollar-sign" aria-hidden="true"></span></div>
                     <div class="text-warning text-center mt-3"><h4>Jobs</h4></div>
-                    <div class="text-warning text-center mt-2"><h1>346</h1></div>
+                    <div class="text-warning text-center mt-2"><h1><?php echo $session->get('total_kelas');?></h1></div>
                 </div>
             </div>
         </div>

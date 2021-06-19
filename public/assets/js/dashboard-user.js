@@ -7,10 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch("http://localhost:8080/ApiHistory", requestOptions)
         .then(response =>{return response.json();})
         .then(result =>{
-            if(!result){return document.getElementById('calender').innerHTML = "<h4>Aktivitas tidak ditemukan!</h4>";}
             let data = [];
             result.map(datas=>{
-                data.push({"title":datas.nama_materi,"start":datas.tgl_selesai,"end":datas.tgl_selesai})
+                if(!datas){
+                    data = [];
+                }
+                data.push({"title":datas.nama_materi,"start":datas.tgl_selesai,"end":datas.tgl_selesai});
             })
             // initial date
             var today = new Date();
@@ -42,16 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 // editable: true,
                 // dayMaxEvents: true,
                 events:data //semua event calendar dari data
-                    // {
-                    //     title: 'Menyelesaikan tugas dasar',
-                    //     start: '2021-05-17T00:00:00',
-                    //     end: '2021-05-17T01:00:00'
-                    // },
-                    // {
-                    //     title: 'Menyelesaikan tugas menengah',
-                    //     start: '2021-05-18T14:00:00',
-                    //     end: '2021-05-18T01:00:00',
-                    // },
                     // {
                     //     title: 'Menyelesaikan tugas menengah',
                     //     groupId: 'testGroupId',

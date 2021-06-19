@@ -16,19 +16,15 @@
         <div class="form-container sign-up-container">
             <form action="/register" method="POST">
                 <h1>Create Account</h1>
-                <?php
-                    if(session()->getFlashData('error')){
-                        echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>".session()->getFlashData('error')."<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>";
-                    }
-                ?>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your email for registration</span>
-                <input class ="form-control" type="text" name="nama" placeholder="Nama Lengkap" />
+                <input class ="form-control" type="text" name="nama_lengkap" placeholder="Nama Lengkap" />
                 <input class ="form-control" type="email" name="email" placeholder="example@email.com" />
+                <input class ="form-control" type="number" name="no_hp" placeholder="08xxxxxxxx" />
                 <input class="form-control" type="password" name="password" placeholder="**********" />
                 <button>Sign Up</button>
             </form>
