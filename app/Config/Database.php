@@ -31,13 +31,13 @@ class Database extends \CodeIgniter\Database\Config
 	 */
 	public $default = [
 		'DSN'      => '',
-		'hostname' => 'localhost',
-		'username' => 'root',
+		'hostname' => '',
+		'username' => '',
 		'password' => '',
-		'database' => 'db_kodein',
+		'database' => '',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
-		'pConnect' => false,
+		'pConnect' => FALSE,
 		'DBDebug'  => (ENVIRONMENT !== 'production'),
 		'cacheOn'  => false,
 		'cacheDir' => '',

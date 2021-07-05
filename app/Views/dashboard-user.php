@@ -1,7 +1,5 @@
-<!doctype html>
 <html lang="en">
-<?php $session = session();
-?>
+<?php $session = session();?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -105,6 +103,7 @@
                             <div class="col-md-7 justify-content-center py-4">
                                 <p class="h1 text-md-left text-center"><?php echo ucfirst($session->get("nama_lengkap"));?></p>
                                 <p class="h3 text-md-left text-center">Level: <?php echo $session->get('level');?></p>
+                                <p class="h3 text-md-left text-center">Exp: <?php echo $session->get('exp');?></p>
                                 <p class="h3 text-md-left text-center">Badges : <?php echo ucfirst($session->get('badges'));?></p>
                                 <div class="d-flex justify-content-center d-md-block d-none">
                                     <button type="button" class="btn btn-primary btn-sm">Follow</button>

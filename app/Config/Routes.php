@@ -39,6 +39,10 @@ $routes->post('/register','Home::register');
 
 $routes->get('/logout','Home::logout');
 
+//test
+$routes->get('/test','Home::leaderboard');
+$routes->get('/coder','Home::inCoder');
+
 
 // route API untuk history
 $routes->get('/ApiHistory','restfulApi::ApiHistory');

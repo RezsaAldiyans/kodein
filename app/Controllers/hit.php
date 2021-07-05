@@ -1,6 +1,6 @@
 <?php
 use App\Models\PengunjungModel;
-
+date_default_timezone_set("Asia/Jakarta");
 class HitCounter
 {
 
@@ -17,7 +17,7 @@ class HitCounter
         $this->expire = 1 * 86400; //umur cookie 1 hari
     }
 
-    public function Hitung($os,$device) {
+    public function Hitung($os,$device,$ua) {
         if (!isset($_COOKIE['counter'])) {
             //cookie kosong dan tambahkan jumlah pengunjung
             $handle = fopen($this->file, 'r');
@@ -28,17 +28,18 @@ class HitCounter
             fwrite($handle, $nilaibaru);
             // kirim ke database pengunjung
             $id = "pengunjung-".$nilaibaru;
-            $tgl = date("Y-m-d", time());
+            $tgl = date("Ymdhis", time());
             $os = $os;
             $devices = $device;
             $datas = [
                 "id_pengunjung"=>"pengunjung-".$nilaibaru,
-                "tgl_pengunjung"=>date("Y-m-d", time()),
-                "os"=>$os,
-                "device"=>$device
+                "tgl_pengunjung"=>$tgl,
+                "name_os"=>$os,
+                "name_device"=>$device,
+                "user_agent"=> $ua
             ];
             $pengunjungModel = new PengunjungModel();
-            $pengunjungModel->query("insert into pengunjung values('$id','$tgl','$os','$devices')");
+            $pengunjungModel->query("insert into pengunjung values('$id','$tgl','$os','$devices','$ua')");
             setcookie('counter', time(), time() + $this->expire); //tambahkan cookie dengan nilai tanggal sekarang
         }
     }

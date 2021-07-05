@@ -4,6 +4,13 @@ use App\Models\HistoryModel;
 use App\Models\LoginModel;
 use App\Models\PengunjungModel;
 use App\Models\ProfileModel;
+use App\Models\LeaderboardModel;
+date_default_timezone_set("Asia/Jakarta");
+
+function levelUp($data){
+	$model = new loginModel();
+	$up = $model->levelingUp($data);
+}
 
 class Home extends BaseController
 {
@@ -30,7 +37,7 @@ class Home extends BaseController
 			'password' => 'required|min_length[8]|max_length[12]',
 		]);
 		if(!$valid){
-			session()->setFlashdata('error', $this->validator->listErrors());
+			session()->setFlashdata('errorRegister', $this->validator->listErrors());
 			return redirect()->back()->withInput();
 		}
 
@@ -40,10 +47,10 @@ class Home extends BaseController
 			'email' => $email,
 			'password' => md5($password),
 			'tgl_gabung' => $tgl_gabung,
-			'profile_user' => '',
+			'profile_user' => 'assets/images/kodein-logo-k-560x560.png',
 			'asal_kota' => '',
 			'exp' => 0,
-			'badges' => 'newbie',
+			'badges' => 'rookie',
 			'level' => 0
 		];
 		$loginModel = new LoginModel();
@@ -56,12 +63,17 @@ class Home extends BaseController
 	}
 	public function login(){
 		$session = session();
+		// pengambilan data dari post
 		$email = $this->request->getVar("email");
 		$password = md5($this->request->getVar("password"));
+		// end pengambilan data
+		// jika datanya tidak valid langsung masuk ke bagian ini
+		// bagian ini diambil dari model LoginModel untuk mengambil data dari database table akun
 		$model = new LoginModel();
-		$data = $model->where('email',$email)->first();
+		$data = $model->where('email',$email)->first(); //pencarian data dari model LoginModel menurut email yang sudah di input
 		if($data){
 			$pass = $data['password'];
+			// cek passwordnya apakah sama dengan yang ada di data
 			if($pass == $password){
 				//get data kelas_user
 				$profilModel =  new ProfileModel();
@@ -84,24 +96,49 @@ class Home extends BaseController
 					"total_kelas" => count($dataProfil),
 					'logged_in' => TRUE
 				];
+				// setting session agar session dapat dipanggil di file manapun
 				$session->set($ses_data);
 				return redirect()->to('/dashboard');
 			}
 			else{
-				$session->setFlashdata('msg', 'Email / Password Salah');
+				// jika salah email atau passwordnya
+				$session->setFlashdata('msgerr', 'Email / Password Salah');
                 return redirect()->to('/login');
 			}
 		}else{
-			$session->setFlashdata('msg', 'Akun belum terdaftar silahkan daftar terlebih dahulu!');
+			// jika akunnya tidak ada sama sekali
+			$session->setFlashdata('msgerr', 'Akun belum terdaftar silahkan daftar terlebih dahulu!');
             return redirect()->to('/login');
 		}
 	}
 	public function dashboard_user(){
+		// selalu update data ketika user mengunjungi dashboard_user
 		$session = session();
 		if(!$session->get("logged_in")){
 			return redirect()->to('/');
 		}
-		return view('dashboard-user');
+		$model = new LoginModel();
+		$data = $model->where('email',$session->get("email"))->first();
+		//get data kelas_user
+		$profilModel =  new ProfileModel();
+		$dataProfil = $profilModel->getKelasUser($data["id_akun"]);
+		$ses_data = [
+			'id_akun' => $data["id_akun"],
+			'nama_lengkap' => $data["nama_lengkap"],
+			'email' => $data["email"],
+			'tgl_gabung' => $data["tgl_gabung"],
+			'profile_user' => $data["profile_user"],
+			'asal_kota' => $data["asal_kota"],
+			'exp' => $data["exp"],
+			'badges' => $data["badges"],
+			'level' => $data["level"],
+			'kelas_user' => $dataProfil,
+			"total_kelas" => count($dataProfil),
+			'logged_in' => TRUE
+		];
+		levelUp($ses_data);
+		$session->set($ses_data);
+		// return view('dashboard-user');
 	}
 	public function selesai(){
 		return "selesai";
@@ -110,6 +147,24 @@ class Home extends BaseController
 		$session = session();
 		$session->destroy();
 		return redirect()->to('/');
+	}
+	public function testDB(){
+		return view('testDB');
+	}
+
+	// function leaderboard
+	public function leaderboard(){
+		$model = new LoginModel();
+		$leaderboardModel = new LeaderboardModel();
+		$akun = $model->getLeadAkun();
+		$data = [
+			"data"=>$akun
+		];
+		return view('testLeadBoard',$data);
+	}
+
+	public function inCoder(){
+		return view('inCoder');
 	}
 
 	//--------------------------------------------------------------------

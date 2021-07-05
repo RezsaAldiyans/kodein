@@ -5,14 +5,20 @@ document.addEventListener('DOMContentLoaded', function() {
         redirect: 'follow'
     };
     fetch("http://localhost:8080/ApiHistory", requestOptions)
-        .then(response =>{return response.json();})
+        .then(response => response.json())
         .then(result =>{
             let data = [];
+            if(!result){
+                return data = [];
+            }
             result.map(datas=>{
-                if(!datas){
-                    data = [];
-                }
-                data.push({"title":datas.nama_materi,"start":datas.tgl_selesai,"end":datas.tgl_selesai});
+                data.push(
+                    {
+                        title:datas.nama_materi,
+                        start:datas.tgl_selesai,
+                        end:datas.tgl_selesai,
+                    }
+                )
             })
             // initial date
             var today = new Date();
@@ -45,6 +51,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 // dayMaxEvents: true,
                 events:data //semua event calendar dari data
                     // {
+                    //     title: 'Menyelesaikan tugas dasar',
+                    //     start: '2021-05-17T00:00:00',
+                    //     end: '2021-05-17T01:00:00'
+                    // },
+                    // {
+                    //     title: 'Menyelesaikan tugas menengah',
+                    //     start: '2021-05-18T14:00:00',
+                    //     end: '2021-05-18T01:00:00',
+                    // },
+                    // {
                     //     title: 'Menyelesaikan tugas menengah',
                     //     groupId: 'testGroupId',
                     //     start: '2021-05-19T10:00:00',
@@ -54,7 +70,5 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             calendar.render();
         })
-        .catch(error => {
-            console.log('errors', error);
-        });
+        .catch(error => console.log('error', error));
 });
