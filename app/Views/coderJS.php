@@ -31,7 +31,6 @@
 <body>
 
 <script>
-  
     //
     // desc: demonstrates textarea line numbers using canvas paint 
     // auth: nikola bozovic <nigerija@gmail>
@@ -45,14 +44,14 @@
         var cssButton = 'width:120px; height:40px; border:1px solid #333 !important; border-bottom-color: #484!important; color:#ffe; background-color:#222;';
         var cssCanvas = 'border:0px; background-color:#1c1c20; margin-top:0px; padding-top:0px;';
         var cssTextArea = 'width:400px;'
-                        + 'height:200px;'
+                        + 'height:250px;'
                         + 'font-size:11px;'
                         + 'font-family:monospace;'
                         + 'line-height:15px;'
                         + 'font-weight:500;'
                         + 'margin: 0px 0px 0px 0px;'
                         + 'padding: 0px 0px 0px 0px;'
-                        + 'resize: both;'
+                        + 'resize: none;'
                         + 'color:#ffa;'
                         + 'border:none;outline: none;'
                         + 'background-color:#222;'
@@ -84,9 +83,10 @@
 
         // TEXTAREA
         var ta = this.evalnode = document.createElement('textarea');
-            ta.setAttribute('id','isi');
+            ta.setAttribute('id','js');
             ta.setAttribute('cols','80');
             ta.setAttribute('style', cssTextArea);
+            ta.setAttribute('placeholder',"JAVASCRIPT AREA")
             //ta.value = this.S.get('eval') || '';  // get previous executed value ;)
 
         // TEXTAREA NUMBERS (Canvas)
@@ -136,19 +136,6 @@
 
 var ta = TextAreaLineNumbersWithCanvas();
 // ta.value = TextAreaLineNumbersWithCanvas.toString();
-</script>
-<div class="preview-area">
-    <iframe id="preview-window"></iframe>
-</div>
-<input type="submit" onclick="prev()" value="Cek Code!">
-<script>
-function prev(){
-    var note = document.getElementById("isi").value;
-    var frame = document.getElementById("preview-window").contentWindow.document;
-    frame.open();
-    frame.write(note);
-    frame.close();
-}
 </script>
 </body>
 </html>
