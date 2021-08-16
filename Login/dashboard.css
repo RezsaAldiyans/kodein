@@ -17,10 +17,10 @@ html {
       object-fit: cover;
       object-position: center;
   }
-  
+
   .navbar-light .navbar-nav .nav-link{
-      color: rgba(12, 11, 11, 0.5);
-      font-weight: 400;
+      color: #125488;
+      font-weight: bold;
       font-size: 17px;
   }
   
