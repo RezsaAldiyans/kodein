@@ -1,9 +1,0 @@
-{
-    "discord.lowerDetailsIdling": "Idlings",
-    "discord.detailsEditing": "✒️ {file_name}",
-    "discord.detailsIdling": "waiting...",
-    "discord.largeImage": "Editing File",
-    "discord.largeImageIdling": "???",
-    "discord.removeRemoteRepository": true,
-    "discord.removeLowerDetails": true
-}

@@ -18,13 +18,8 @@
  */
 export function mixin (mixinParams) {
   class MixinSwal extends this {
-<<<<<<< Updated upstream
     _main (params, priorityMixinParams) {
       return super._main(params, Object.assign({}, mixinParams, priorityMixinParams))
-=======
-    _main (params) {
-      return super._main(Object.assign({}, mixinParams, params))
->>>>>>> Stashed changes
     }
   }
 

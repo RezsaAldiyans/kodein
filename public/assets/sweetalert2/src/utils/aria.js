@@ -1,8 +1,4 @@
 import { getContainer } from './dom/getters.js'
-<<<<<<< Updated upstream
-=======
-import { contains } from './dom/domUtils.js'
->>>>>>> Stashed changes
 import { toArray } from './utils.js'
 
 // From https://developer.paciellogroup.com/blog/2018/06/the-current-state-of-modal-dialog-accessibility/
@@ -13,11 +9,7 @@ import { toArray } from './utils.js'
 export const setAriaHidden = () => {
   const bodyChildren = toArray(document.body.children)
   bodyChildren.forEach(el => {
-<<<<<<< Updated upstream
     if (el === getContainer() || el.contains(getContainer())) {
-=======
-    if (el === getContainer() || contains(el, getContainer())) {
->>>>>>> Stashed changes
       return
     }
 

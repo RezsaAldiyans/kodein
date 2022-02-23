@@ -11,7 +11,6 @@ export const iOSfix = () => {
     document.body.style.top = `${offset * -1}px`
     dom.addClass(document.body, swalClasses.iosfix)
     lockBodyScroll()
-<<<<<<< Updated upstream
     addBottomPaddingForTallPopups() // #1948
   }
 }
@@ -23,8 +22,6 @@ const addBottomPaddingForTallPopups = () => {
     if (dom.getPopup().scrollHeight > window.innerHeight - bottomPanelHeight) {
       dom.getContainer().style.paddingBottom = `${bottomPanelHeight}px`
     }
-=======
->>>>>>> Stashed changes
   }
 }
 
@@ -32,16 +29,7 @@ const lockBodyScroll = () => { // #1246
   const container = dom.getContainer()
   let preventTouchMove
   container.ontouchstart = (e) => {
-<<<<<<< Updated upstream
     preventTouchMove = shouldPreventTouchMove(e)
-=======
-    preventTouchMove =
-      e.target === container ||
-      (
-        !dom.isScrollable(container) &&
-        e.target.tagName !== 'INPUT' // #1603
-      )
->>>>>>> Stashed changes
   }
   container.ontouchmove = (e) => {
     if (preventTouchMove) {
@@ -51,7 +39,6 @@ const lockBodyScroll = () => { // #1246
   }
 }
 
-<<<<<<< Updated upstream
 const shouldPreventTouchMove = (event) => {
   const target = event.target
   const container = dom.getContainer()
@@ -83,8 +70,6 @@ const isZoom = (event) => { // #1891
   return event.touches && event.touches.length > 1
 }
 
-=======
->>>>>>> Stashed changes
 export const undoIOSfix = () => {
   if (dom.hasClass(document.body, swalClasses.iosfix)) {
     const offset = parseInt(document.body.style.top, 10)

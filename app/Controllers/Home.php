@@ -11,18 +11,15 @@ function levelUp($data){
 	$model = new loginModel();
 	$up = $model->levelingUp($data);
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of 95c9dc2 (update)
 class Home extends BaseController
 {
-	public function __construct(){
-		//nothing
-	}
-	public function index(){
-		$kelasModel = new KelasModel();
-		$dataKelas = $kelasModel->getAllKelas();
-		$set_data = [
-			"kelas"=>$dataKelas
-		];
-		return view('index',$set_data);
+	public function index()
+	{
+		return view('index');
 	}
 	public function viewLogin(){
 		return view('login');
@@ -47,6 +44,7 @@ class Home extends BaseController
 			return redirect()->back()->withInput();
 		}
 
+<<<<<<< HEAD
 
 		$valid = $this->validate([
 			'nama' => 'required|min_length[1]',
@@ -74,6 +72,8 @@ class Home extends BaseController
 			return redirect()->back()->withInput();
 		}
 
+=======
+>>>>>>> parent of 95c9dc2 (update)
 		$data_insert =[
 			'id_akun' => 'pelajar-'.$tgl_gabung,
 			'nama_lengkap' => $nama_lengkap,
@@ -81,7 +81,10 @@ class Home extends BaseController
 			'password' => md5($password),
 			'tgl_gabung' => $tgl_gabung,
 			'profile_user' => 'assets/images/kodein-logo-k-560x560.png',
+<<<<<<< HEAD
 			'profile_user' => 'assets/images/default.jpg',
+=======
+>>>>>>> parent of 95c9dc2 (update)
 			'asal_kota' => '',
 			'exp' => 0,
 			'badges' => 'rookie',
@@ -100,10 +103,13 @@ class Home extends BaseController
 		// pengambilan data dari post
 		$email = $this->request->getVar("email");
 		$password = md5($this->request->getVar("password"));
+<<<<<<< HEAD
 		if($email == '' || $password == ''){
 			$session->setFlashdata('msgerr', 'Harap isi data dengan benar!');
             return redirect()->to('/login');
 		}
+=======
+>>>>>>> parent of 95c9dc2 (update)
 		// end pengambilan data
 		// jika datanya tidak valid langsung masuk ke bagian ini
 		// bagian ini diambil dari model LoginModel untuk mengambil data dari database table akun
@@ -156,6 +162,7 @@ class Home extends BaseController
 			return redirect()->to('/');
 		}
 		$model = new LoginModel();
+<<<<<<< HEAD
 		$data = $model->getAkun($session->get("id_akun"));
 		//get data kelas_user
 		$profilModel =  new ProfileModel();
@@ -181,6 +188,32 @@ class Home extends BaseController
 		];
 		levelUp($ses_data);
 		return view('dashboard-user',$ses_data);
+=======
+		$data = $model->where('email',$session->get("email"))->first();
+		//get data kelas_user
+		$profilModel =  new ProfileModel();
+		$dataProfil = $profilModel->getKelasUser($data["id_akun"]);
+		$ses_data = [
+			'id_akun' => $data["id_akun"],
+			'nama_lengkap' => $data["nama_lengkap"],
+			'email' => $data["email"],
+			'tgl_gabung' => $data["tgl_gabung"],
+			'profile_user' => $data["profile_user"],
+			'asal_kota' => $data["asal_kota"],
+			'exp' => $data["exp"],
+			'badges' => $data["badges"],
+			'level' => $data["level"],
+			'kelas_user' => $dataProfil,
+			"total_kelas" => count($dataProfil),
+			'logged_in' => TRUE
+		];
+		levelUp($ses_data);
+		$session->set($ses_data);
+		// return view('dashboard-user');
+	}
+	public function selesai(){
+		return "selesai";
+>>>>>>> parent of 95c9dc2 (update)
 	}
 	public function logout(){
 		$session = session();
@@ -190,15 +223,21 @@ class Home extends BaseController
 	public function testDB(){
 		return view('testDB');
 	}
+<<<<<<< HEAD
 	// public function testDB(){
 	// 	return view('testDB');
 	// }
+=======
+>>>>>>> parent of 95c9dc2 (update)
 
 	// function leaderboard
 	public function leaderboard(){
 		$model = new LoginModel();
 		$leaderboardModel = new LeaderboardModel();
+<<<<<<< HEAD
 		// $leaderboardModel = new LeaderboardModel();
+=======
+>>>>>>> parent of 95c9dc2 (update)
 		$akun = $model->getLeadAkun();
 		$data = [
 			"data"=>$akun
@@ -210,6 +249,7 @@ class Home extends BaseController
 		return view('inCoder');
 	}
 
+<<<<<<< HEAD
 	public function inCoders(){
 		$file = "test.txt";
 		$handle = fopen($file,'r');
@@ -276,6 +316,8 @@ class Home extends BaseController
 			return redirect()->to("/kelas/$id_kelas");
 		}
 	}
+=======
+>>>>>>> parent of 95c9dc2 (update)
 	//--------------------------------------------------------------------
 
 }

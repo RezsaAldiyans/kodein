@@ -8,9 +8,5 @@ export function getInput (instance) {
   if (!domCache) {
     return null
   }
-<<<<<<< Updated upstream
   return dom.getInput(domCache.popup, innerParams.input)
-=======
-  return dom.getInput(domCache.content, innerParams.input)
->>>>>>> Stashed changes
 }

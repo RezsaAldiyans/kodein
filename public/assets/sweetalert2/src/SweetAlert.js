@@ -1,7 +1,3 @@
-<<<<<<< Updated upstream
-=======
-import { error } from './utils/utils.js'
->>>>>>> Stashed changes
 import { DismissReason } from './utils/DismissReason.js'
 import * as staticMethods from './staticMethods.js'
 import * as instanceMethods from './instanceMethods.js'
@@ -9,7 +5,6 @@ import privateProps from './privateProps.js'
 
 let currentInstance
 
-<<<<<<< Updated upstream
 class SweetAlert {
   constructor (...args) {
     // Prevent run in Node env
@@ -44,47 +39,6 @@ class SweetAlert {
     const promise = privateProps.promise.get(this)
     return promise.finally(onFinally)
   }
-=======
-// SweetAlert constructor
-function SweetAlert (...args) {
-  // Prevent run in Node env
-  /* istanbul ignore if */
-  if (typeof window === 'undefined') {
-    return
-  }
-
-  // Check for the existence of Promise
-  /* istanbul ignore if */
-  if (typeof Promise === 'undefined') {
-    error('This package requires a Promise library, please include a shim to enable it in this browser (See: https://github.com/sweetalert2/sweetalert2/wiki/Migration-from-SweetAlert-to-SweetAlert2#1-ie-support)')
-  }
-
-  currentInstance = this
-
-  const outerParams = Object.freeze(this.constructor.argsToParams(args))
-
-  Object.defineProperties(this, {
-    params: {
-      value: outerParams,
-      writable: false,
-      enumerable: true,
-      configurable: true
-    }
-  })
-
-  const promise = this._main(this.params)
-  privateProps.promise.set(this, promise)
-}
-
-// `catch` cannot be the name of a module export, so we define our thenable methods here instead
-SweetAlert.prototype.then = function (onFulfilled) {
-  const promise = privateProps.promise.get(this)
-  return promise.then(onFulfilled)
-}
-SweetAlert.prototype.finally = function (onFinally) {
-  const promise = privateProps.promise.get(this)
-  return promise.finally(onFinally)
->>>>>>> Stashed changes
 }
 
 // Assign instance methods from src/instanceMethods/*.js to prototype
@@ -104,10 +58,6 @@ Object.keys(instanceMethods).forEach(key => {
 
 SweetAlert.DismissReason = DismissReason
 
-<<<<<<< Updated upstream
 SweetAlert.version = '11.0.16'
-=======
-SweetAlert.version = '9.7.2'
->>>>>>> Stashed changes
 
 export default SweetAlert

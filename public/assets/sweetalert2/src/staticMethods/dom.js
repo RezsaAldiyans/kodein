@@ -5,7 +5,6 @@ export {
   getContainer,
   getPopup,
   getTitle,
-<<<<<<< Updated upstream
   getHtmlContainer,
   getImage,
   getIcon,
@@ -18,19 +17,6 @@ export {
   getLoader,
   getFooter,
   getTimerProgressBar,
-=======
-  getContent,
-  getHtmlContainer,
-  getImage,
-  getIcon,
-  getIcons,
-  getCloseButton,
-  getActions,
-  getConfirmButton,
-  getCancelButton,
-  getHeader,
-  getFooter,
->>>>>>> Stashed changes
   getFocusableElements,
   getValidationMessage,
   isLoading
@@ -49,14 +35,11 @@ export const isVisible = () => {
 export const clickConfirm = () => dom.getConfirmButton() && dom.getConfirmButton().click()
 
 /*
-<<<<<<< Updated upstream
  * Global function to click 'Deny' button
  */
 export const clickDeny = () => dom.getDenyButton() && dom.getDenyButton().click()
 
 /*
-=======
->>>>>>> Stashed changes
  * Global function to click 'Cancel' button
  */
 export const clickCancel = () => dom.getCancelButton() && dom.getCancelButton().click()

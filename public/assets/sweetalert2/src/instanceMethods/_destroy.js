@@ -22,16 +22,10 @@ export function _destroy () {
     delete globalState.deferDisposalTimer
   }
 
-<<<<<<< Updated upstream
   if (typeof innerParams.didDestroy === 'function') {
     innerParams.didDestroy()
   }
 
-=======
-  if (typeof innerParams.onDestroy === 'function') {
-    innerParams.onDestroy()
-  }
->>>>>>> Stashed changes
   disposeSwal(this)
 }
 

@@ -1,19 +1,12 @@
-<<<<<<< Updated upstream
 import { getTimerProgressBar, getConfirmButton, getDenyButton, getCancelButton } from './getters.js'
 import { swalClasses, iconTypes } from '../classes.js'
 import { toArray, warn } from '../utils.js'
-=======
-import { getTimerProgressBar } from './getters.js'
-import { swalClasses, iconTypes } from '../classes.js'
-import { toArray, objectValues, warn } from '../utils.js'
->>>>>>> Stashed changes
 
 // Remember state in cases where opening and handling a modal will fiddle with it.
 export const states = {
   previousBodyPadding: null
 }
 
-<<<<<<< Updated upstream
 export const setInnerHtml = (elem, html) => { // #1926
   elem.textContent = ''
   if (html) {
@@ -28,8 +21,6 @@ export const setInnerHtml = (elem, html) => { // #1926
   }
 }
 
-=======
->>>>>>> Stashed changes
 export const hasClass = (elem, className) => {
   if (!className) {
     return false
@@ -46,15 +37,9 @@ export const hasClass = (elem, className) => {
 const removeCustomClasses = (elem, params) => {
   toArray(elem.classList).forEach(className => {
     if (
-<<<<<<< Updated upstream
       !Object.values(swalClasses).includes(className) &&
       !Object.values(iconTypes).includes(className) &&
       !Object.values(params.showClass).includes(className)
-=======
-      !objectValues(swalClasses).includes(className) &&
-      !objectValues(iconTypes).includes(className) &&
-      !objectValues(params.showClass).includes(className)
->>>>>>> Stashed changes
     ) {
       elem.classList.remove(className)
     }
@@ -73,11 +58,7 @@ export const applyCustomClass = (elem, params, className) => {
   }
 }
 
-<<<<<<< Updated upstream
 export const getInput = (popup, inputType) => {
-=======
-export function getInput (content, inputType) {
->>>>>>> Stashed changes
   if (!inputType) {
     return null
   }
@@ -85,7 +66,6 @@ export function getInput (content, inputType) {
     case 'select':
     case 'textarea':
     case 'file':
-<<<<<<< Updated upstream
       return getChildByClass(popup, swalClasses[inputType])
     case 'checkbox':
       return popup.querySelector(`.${swalClasses.checkbox} input`)
@@ -96,18 +76,6 @@ export function getInput (content, inputType) {
       return popup.querySelector(`.${swalClasses.range} input`)
     default:
       return getChildByClass(popup, swalClasses.input)
-=======
-      return getChildByClass(content, swalClasses[inputType])
-    case 'checkbox':
-      return content.querySelector(`.${swalClasses.checkbox} input`)
-    case 'radio':
-      return content.querySelector(`.${swalClasses.radio} input:checked`) ||
-        content.querySelector(`.${swalClasses.radio} input:first-child`)
-    case 'range':
-      return content.querySelector(`.${swalClasses.range} input`)
-    default:
-      return getChildByClass(content, swalClasses.input)
->>>>>>> Stashed changes
   }
 }
 
@@ -158,12 +126,9 @@ export const getChildByClass = (elem, className) => {
 }
 
 export const applyNumericalStyle = (elem, property, value) => {
-<<<<<<< Updated upstream
   if (value === `${parseInt(value)}`) {
     value = parseInt(value)
   }
-=======
->>>>>>> Stashed changes
   if (value || parseInt(value) === 0) {
     elem.style[property] = (typeof value === 'number') ? `${value}px` : value
   } else {
@@ -172,15 +137,10 @@ export const applyNumericalStyle = (elem, property, value) => {
 }
 
 export const show = (elem, display = 'flex') => {
-<<<<<<< Updated upstream
-=======
-  elem.style.opacity = ''
->>>>>>> Stashed changes
   elem.style.display = display
 }
 
 export const hide = (elem) => {
-<<<<<<< Updated upstream
   elem.style.display = 'none'
 }
 
@@ -191,12 +151,6 @@ export const setStyle = (parent, selector, property, value) => {
   }
 }
 
-=======
-  elem.style.opacity = ''
-  elem.style.display = 'none'
-}
-
->>>>>>> Stashed changes
 export const toggle = (elem, condition, display) => {
   condition ? show(elem, display) : hide(elem)
 }
@@ -204,12 +158,8 @@ export const toggle = (elem, condition, display) => {
 // borrowed from jquery $(elem).is(':visible') implementation
 export const isVisible = (elem) => !!(elem && (elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length))
 
-<<<<<<< Updated upstream
 export const allButtonsAreHidden = () => !isVisible(getConfirmButton()) && !isVisible(getDenyButton()) && !isVisible(getCancelButton())
 
-=======
-/* istanbul ignore next */
->>>>>>> Stashed changes
 export const isScrollable = (elem) => !!(elem.scrollHeight > elem.clientHeight)
 
 // borrowed from https://stackoverflow.com/a/46352119
@@ -222,15 +172,6 @@ export const hasCssAnimation = (elem) => {
   return animDuration > 0 || transDuration > 0
 }
 
-<<<<<<< Updated upstream
-=======
-export const contains = (haystack, needle) => {
-  if (typeof haystack.contains === 'function') {
-    return haystack.contains(needle)
-  }
-}
-
->>>>>>> Stashed changes
 export const animateTimerProgressBar = (timer, reset = false) => {
   const timerProgressBar = getTimerProgressBar()
   if (isVisible(timerProgressBar)) {

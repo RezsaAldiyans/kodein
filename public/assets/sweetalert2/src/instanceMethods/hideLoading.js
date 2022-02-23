@@ -3,11 +3,7 @@ import { swalClasses } from '../utils/classes.js'
 import privateProps from '../privateProps.js'
 
 /**
-<<<<<<< Updated upstream
  * Hides loader and shows back the button which was hidden by .showLoading()
-=======
- * Enables buttons and hide loader.
->>>>>>> Stashed changes
  */
 function hideLoading () {
   // do nothing if popup is closed
@@ -16,7 +12,6 @@ function hideLoading () {
     return
   }
   const domCache = privateProps.domCache.get(this)
-<<<<<<< Updated upstream
   dom.hide(domCache.loader)
   if (dom.isToast()) {
     if (innerParams.icon) {
@@ -24,19 +19,11 @@ function hideLoading () {
     }
   } else {
     showRelatedButton(domCache)
-=======
-  if (!innerParams.showConfirmButton) {
-    dom.hide(domCache.confirmButton)
-    if (!innerParams.showCancelButton) {
-      dom.hide(domCache.actions)
-    }
->>>>>>> Stashed changes
   }
   dom.removeClass([domCache.popup, domCache.actions], swalClasses.loading)
   domCache.popup.removeAttribute('aria-busy')
   domCache.popup.removeAttribute('data-loading')
   domCache.confirmButton.disabled = false
-<<<<<<< Updated upstream
   domCache.denyButton.disabled = false
   domCache.cancelButton.disabled = false
 }
@@ -50,11 +37,6 @@ const showRelatedButton = (domCache) => {
   }
 }
 
-=======
-  domCache.cancelButton.disabled = false
-}
-
->>>>>>> Stashed changes
 export {
   hideLoading,
   hideLoading as disableLoading

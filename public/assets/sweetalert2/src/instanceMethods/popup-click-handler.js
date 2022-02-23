@@ -24,15 +24,10 @@ const handleToastClick = (instance, domCache, dismissWith) => {
     const innerParams = privateProps.innerParams.get(instance)
     if (
       innerParams.showConfirmButton ||
-<<<<<<< Updated upstream
       innerParams.showDenyButton ||
       innerParams.showCancelButton ||
       innerParams.showCloseButton ||
       innerParams.timer ||
-=======
-      innerParams.showCancelButton ||
-      innerParams.showCloseButton ||
->>>>>>> Stashed changes
       innerParams.input
     ) {
       return

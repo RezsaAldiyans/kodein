@@ -1,20 +1,13 @@
-<<<<<<< Updated upstream
 @use 'sass:math';
 
 .swal2-container {
   display: grid;
-=======
-.swal2-container {
-  // centering
-  display: flex;
->>>>>>> Stashed changes
   position: fixed;
   z-index: 1060;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-<<<<<<< Updated upstream
   box-sizing: border-box;
   grid-template-areas:
     "top-start     top            top-end"
@@ -24,19 +17,12 @@
   grid-template-rows: auto auto auto $swal2-container-padding;
   height: 100%; // Safari
   padding: $swal2-container-padding $swal2-container-padding 0;
-=======
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: $swal2-container-padding;
->>>>>>> Stashed changes
   overflow-x: hidden;
   transition: $swal2-backdrop-transition;
 
   // sweetalert2/issues/905
   -webkit-overflow-scrolling: touch;
 
-<<<<<<< Updated upstream
   &::after { // #1986
     content: '';
     grid-column: 1/4;
@@ -46,9 +32,6 @@
 
   &.swal2-backdrop-show,
   &.swal2-noanimation {
-=======
-  &.swal2-backdrop-show {
->>>>>>> Stashed changes
     background: $swal2-backdrop;
   }
 
@@ -56,7 +39,6 @@
     background: transparent !important;
   }
 
-<<<<<<< Updated upstream
   &.swal2-top-start,
   &.swal2-center-start,
   &.swal2-bottom-start {
@@ -149,138 +131,6 @@
 
   &.swal2-no-transition {
     transition: none !important;
-=======
-  &.swal2-top {
-    align-items: flex-start;
-  }
-
-  &.swal2-top-start,
-  &.swal2-top-left {
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-
-  &.swal2-top-end,
-  &.swal2-top-right {
-    align-items: flex-start;
-    justify-content: flex-end;
-  }
-
-  &.swal2-center {
-    align-items: center;
-  }
-
-  &.swal2-center-start,
-  &.swal2-center-left {
-    align-items: center;
-    justify-content: flex-start;
-  }
-
-  &.swal2-center-end,
-  &.swal2-center-right {
-    align-items: center;
-    justify-content: flex-end;
-  }
-
-  &.swal2-bottom {
-    align-items: flex-end;
-  }
-
-  &.swal2-bottom-start,
-  &.swal2-bottom-left {
-    align-items: flex-end;
-    justify-content: flex-start;
-  }
-
-  &.swal2-bottom-end,
-  &.swal2-bottom-right {
-    align-items: flex-end;
-    justify-content: flex-end;
-  }
-
-  &.swal2-bottom > :first-child,
-  &.swal2-bottom-start > :first-child,
-  &.swal2-bottom-left > :first-child,
-  &.swal2-bottom-end > :first-child,
-  &.swal2-bottom-right > :first-child {
-    margin-top: auto;
-  }
-
-  &.swal2-grow-fullscreen > .swal2-modal {
-    display: flex !important;
-    flex: 1;
-    align-self: stretch;
-    justify-content: center;
-  }
-
-  &.swal2-grow-row > .swal2-modal {
-    display: flex !important;
-    flex: 1;
-    align-content: center;
-    justify-content: center;
-  }
-
-  &.swal2-grow-column {
-    flex: 1;
-    flex-direction: column;
-
-    &.swal2-top,
-    &.swal2-center,
-    &.swal2-bottom {
-      align-items: center;
-    }
-
-    &.swal2-top-start,
-    &.swal2-center-start,
-    &.swal2-bottom-start,
-    &.swal2-top-left,
-    &.swal2-center-left,
-    &.swal2-bottom-left {
-      align-items: flex-start;
-    }
-
-    &.swal2-top-end,
-    &.swal2-center-end,
-    &.swal2-bottom-end,
-    &.swal2-top-right,
-    &.swal2-center-right,
-    &.swal2-bottom-right {
-      align-items: flex-end;
-    }
-
-    & > .swal2-modal {
-      display: flex !important;
-      flex: 1;
-      align-content: center;
-      justify-content: center;
-    }
-  }
-
-  @include not('.swal2-top',
-  '.swal2-top-start',
-  '.swal2-top-end',
-  '.swal2-top-left',
-  '.swal2-top-right',
-  '.swal2-center-start',
-  '.swal2-center-end',
-  '.swal2-center-left',
-  '.swal2-center-right',
-  '.swal2-bottom',
-  '.swal2-bottom-start',
-  '.swal2-bottom-end',
-  '.swal2-bottom-left',
-  '.swal2-bottom-right',
-  '.swal2-grow-fullscreen') {
-    & > .swal2-modal {
-      margin: auto;
-    }
-  }
-
-  @include ie {
-    .swal2-modal {
-      margin: 0 !important;
-    }
->>>>>>> Stashed changes
   }
 }
 
@@ -288,11 +138,6 @@
   display: none;
   position: relative;
   box-sizing: border-box;
-<<<<<<< Updated upstream
-=======
-  flex-direction: column;
-  justify-content: center;
->>>>>>> Stashed changes
   width: $swal2-width;
   max-width: 100%;
   padding: $swal2-padding;
@@ -311,7 +156,6 @@
   }
 }
 
-<<<<<<< Updated upstream
 .swal2-title {
   position: $swal2-title-position;
   max-width: $swal2-title-max-width;
@@ -321,44 +165,20 @@
   font-size: $swal2-title-font-size;
   font-weight: $swal2-title-font-weight;
   text-align: $swal2-title-text-align;
-=======
-.swal2-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.swal2-title {
-  position: relative;
-  max-width: 100%;
-  margin: $swal2-title-margin;
-  padding: 0;
-  color: $swal2-title-color;
-  font-size: $swal2-title-font-size;
-  font-weight: 600;
-  text-align: center;
->>>>>>> Stashed changes
   text-transform: none;
   word-wrap: break-word;
 }
 
 .swal2-actions {
   display: flex;
-<<<<<<< Updated upstream
   z-index: 1; // prevent success icon from overlapping buttons
   box-sizing: border-box;
-=======
-  z-index: 1; // prevent sucess icon from overlapping buttons
->>>>>>> Stashed changes
   flex-wrap: $swal2-actions-flex-wrap;
   align-items: $swal2-actions-align-items;
   justify-content: $swal2-actions-justify-content;
   width: $swal2-actions-width;
   margin: $swal2-actions-margin;
-<<<<<<< Updated upstream
   padding: $swal2-actions-padding;
-=======
->>>>>>> Stashed changes
 
   &:not(.swal2-loading) {
     .swal2-styled {
@@ -375,7 +195,6 @@
       }
     }
   }
-<<<<<<< Updated upstream
 }
 
 .swal2-loader {
@@ -398,74 +217,19 @@
   transition: $swal2-button-transition;
   box-shadow: $swal2-button-box-shadow;
   font-weight: $swal2-button-font-weight;
-=======
-
-  &.swal2-loading {
-    .swal2-styled {
-      &.swal2-confirm {
-        box-sizing: border-box;
-        width: 2.5em;
-        height: 2.5em;
-        margin: .46875em;
-        padding: 0;
-        animation: swal2-rotate-loading 1.5s linear 0s infinite normal;
-        border: .25em solid transparent;
-        border-radius: 100%;
-        border-color: transparent;
-        background-color: transparent !important;
-        color: transparent;
-        cursor: default;
-        user-select: none;
-      }
-
-      &.swal2-cancel {
-        margin-right: 30px;
-        margin-left: 30px;
-      }
-    }
-
-    :not(.swal2-styled) {
-      &.swal2-confirm {
-        &::after {
-          content: '';
-          display: inline-block;
-          width: 15px;
-          height: 15px;
-          margin-left: 5px;
-          animation: swal2-rotate-loading 1.5s linear 0s infinite normal;
-          border: 3px solid lighten($swal2-black, 60);
-          border-radius: 50%;
-          border-right-color: transparent;
-          box-shadow: 1px 1px 1px $swal2-white;
-        }
-      }
-    }
-  }
-}
-
-.swal2-styled {
-  margin: .3125em;
-  padding: .625em 2em;
-  box-shadow: none;
-  font-weight: 500;
->>>>>>> Stashed changes
 
   &:not([disabled]) {
     cursor: pointer;
   }
 
   &.swal2-confirm {
-<<<<<<< Updated upstream
     order: $swal2-confirm-button-order;
-=======
->>>>>>> Stashed changes
     border: $swal2-confirm-button-border;
     border-radius: $swal2-confirm-button-border-radius;
     background: initial;
     background-color: $swal2-confirm-button-background-color;
     color: $swal2-confirm-button-color;
     font-size: $swal2-confirm-button-font-size;
-<<<<<<< Updated upstream
 
     &:focus {
       box-shadow: $swal2-confirm-button-focus-box-shadow;
@@ -488,18 +252,12 @@
 
   &.swal2-cancel {
     order: $swal2-cancel-button-order;
-=======
-  }
-
-  &.swal2-cancel {
->>>>>>> Stashed changes
     border: $swal2-cancel-button-border;
     border-radius: $swal2-cancel-button-border-radius;
     background: initial;
     background-color: $swal2-cancel-button-background-color;
     color: $swal2-cancel-button-color;
     font-size: $swal2-cancel-button-font-size;
-<<<<<<< Updated upstream
 
     &:focus {
       box-shadow: $swal2-cancel-button-focus-box-shadow;
@@ -510,17 +268,10 @@
     &:focus {
       box-shadow: $swal2-button-focus-box-shadow;
     }
-=======
->>>>>>> Stashed changes
   }
 
   &:focus {
     outline: $swal2-button-focus-outline;
-<<<<<<< Updated upstream
-=======
-    background-color: $swal2-button-focus-background-color;
-    box-shadow: $swal2-button-focus-box-shadow;
->>>>>>> Stashed changes
   }
 
   &::-moz-focus-inner {
@@ -537,7 +288,6 @@
   font-size: $swal2-footer-font-size;
 }
 
-<<<<<<< Updated upstream
 .swal2-timer-progress-bar-container {
   position: absolute;
   right: 0;
@@ -551,12 +301,6 @@
 }
 
 .swal2-timer-progress-bar {
-=======
-.swal2-timer-progress-bar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
->>>>>>> Stashed changes
   width: 100%;
   height: $swal2-timer-progress-bar-height;
   background: $swal2-timer-progress-bar-background;
@@ -569,7 +313,6 @@
 
 .swal2-close {
   position: $swal2-close-button-position;
-<<<<<<< Updated upstream
   z-index: 2; // sweetalert2/issues/1617
   align-items: $swal2-close-button-align-items;
   justify-content: $swal2-close-button-justify-content;
@@ -579,17 +322,6 @@
   margin-right: $swal2-close-button-gap;
   margin-bottom: -$swal2-close-button-height;
   padding: $swal2-close-button-padding;
-=======
-  z-index: 2;
-
-  /* 1617 */
-  top: $swal2-close-button-gap;
-  right: $swal2-close-button-gap;
-  justify-content: center;
-  width: $swal2-close-button-width;
-  height: $swal2-close-button-height;
-  padding: 0;
->>>>>>> Stashed changes
   overflow: hidden;
   transition: $swal2-close-button-transition;
   border: $swal2-close-button-border;
@@ -598,16 +330,10 @@
   background: $swal2-close-button-background;
   color: $swal2-close-button-color;
   font-family: $swal2-close-button-font-family;
-<<<<<<< Updated upstream
   font-family: monospace;
   font-size: $swal2-close-button-font-size;
   cursor: pointer;
   justify-self: $swal2-close-button-justify-self;
-=======
-  font-size: $swal2-close-button-font-size;
-  line-height: $swal2-close-button-line-height;
-  cursor: pointer;
->>>>>>> Stashed changes
 
   &:hover {
     transform: $swal2-close-button-hover-transform;
@@ -615,20 +341,16 @@
     color: $swal2-close-button-hover-color;
   }
 
-<<<<<<< Updated upstream
   &:focus {
     outline: $swal2-close-button-focus-outline;
     box-shadow: $swal2-close-button-focus-box-shadow;
   }
 
-=======
->>>>>>> Stashed changes
   &::-moz-focus-inner {
     border: 0;
   }
 }
 
-<<<<<<< Updated upstream
 .swal2-html-container {
   z-index: 1; // prevent sucess icon overlapping the content
   justify-content: $swal2-html-container-justify-content;
@@ -641,19 +363,6 @@
   text-align: $swal2-html-container-text-align;
   word-wrap: $swal2-html-container-word-wrap;
   word-break: $swal2-html-container-word-break;
-=======
-.swal2-content {
-  z-index: 1; // prevent sucess icon overlapping the content
-  justify-content: $swal2-content-justify-content;
-  margin: $swal2-content-margin;
-  padding: $swal2-content-pading;
-  color: $swal2-content-color;
-  font-size: $swal2-content-font-size;
-  font-weight: $swal2-content-font-weight;
-  line-height: $swal2-content-line-height;
-  text-align: $swal2-content-text-align;
-  word-wrap: $swal2-content-word-wrap;
->>>>>>> Stashed changes
 }
 
 .swal2-input,
@@ -690,11 +399,7 @@
   }
 
   &::placeholder {
-<<<<<<< Updated upstream
     color: #ccc;
-=======
-    color: lighten($swal2-black, 80);
->>>>>>> Stashed changes
   }
 }
 
@@ -732,12 +437,9 @@
 }
 
 .swal2-file {
-<<<<<<< Updated upstream
   width: 75%;
   margin-right: auto;
   margin-left: auto;
-=======
->>>>>>> Stashed changes
   background: $swal2-input-background;
   font-size: $swal2-input-font-size;
 }
@@ -769,15 +471,11 @@
   }
 
   input {
-<<<<<<< Updated upstream
     flex-shrink: 0;
-=======
->>>>>>> Stashed changes
     margin: 0 .4em;
   }
 }
 
-<<<<<<< Updated upstream
 .swal2-input-label {
   display: flex;
   justify-content: $swal2-input-label-justify-content;
@@ -788,12 +486,6 @@
   align-items: $swal2-validation-message-align-items;
   justify-content: $swal2-validation-message-justify-content;
   margin: $swal2-validation-message-margin;
-=======
-.swal2-validation-message {
-  display: none;
-  align-items: center;
-  justify-content: $swal2-validation-message-justify-content;
->>>>>>> Stashed changes
   padding: $swal2-validation-message-padding;
   overflow: hidden;
   background: $swal2-validation-message-background;
@@ -818,15 +510,12 @@
   }
 }
 
-<<<<<<< Updated upstream
 // https://stackoverflow.com/a/12335841/1331425
 @function strip-units($number) {
   @return math.div($number, ($number * 0 + 1));
 }
 $icon-zoom: math.div(strip-units($swal2-icon-size), 5);
 
-=======
->>>>>>> Stashed changes
 .swal2-icon {
   position: relative;
   box-sizing: content-box;
@@ -835,14 +524,9 @@ $icon-zoom: math.div(strip-units($swal2-icon-size), 5);
   height: $swal2-icon-size;
   margin: $swal2-icon-margin;
   zoom: $swal2-icon-zoom;
-<<<<<<< Updated upstream
   border: #{.25em * $icon-zoom} solid transparent;
   border-radius: 50%;
   border-color: $swal2-icon-border-color;
-=======
-  border: .25em solid transparent;
-  border-radius: 50%;
->>>>>>> Stashed changes
   font-family: $swal2-icon-font-family;
   line-height: $swal2-icon-size;
   cursor: default;
@@ -851,11 +535,7 @@ $icon-zoom: math.div(strip-units($swal2-icon-size), 5);
   .swal2-icon-content {
     display: flex;
     align-items: center;
-<<<<<<< Updated upstream
     font-size: $swal2-icon-font-size;
-=======
-    font-size: 3.75em;
->>>>>>> Stashed changes
   }
 
   &.swal2-error {
@@ -865,13 +545,10 @@ $icon-zoom: math.div(strip-units($swal2-icon-size), 5);
     .swal2-x-mark {
       position: relative;
       flex-grow: 1;
-<<<<<<< Updated upstream
 
       @if $icon-zoom != 1 {
         zoom: $icon-zoom;
       }
-=======
->>>>>>> Stashed changes
     }
 
     [class^='swal2-x-mark-line'] {
@@ -939,13 +616,10 @@ $icon-zoom: math.div(strip-units($swal2-icon-size), 5);
         transform: rotate(-45deg);
         transform-origin: 3.75em 3.75em;
         border-radius: 7.5em 0 0 7.5em;
-<<<<<<< Updated upstream
 
         @if $icon-zoom != 1 {
           zoom: $icon-zoom;
         }
-=======
->>>>>>> Stashed changes
       }
 
       &[class$='right'] {
@@ -954,13 +628,10 @@ $icon-zoom: math.div(strip-units($swal2-icon-size), 5);
         transform: rotate(-45deg);
         transform-origin: 0 3.75em;
         border-radius: 0 7.5em 7.5em 0;
-<<<<<<< Updated upstream
 
         @if $icon-zoom != 1 {
           zoom: $icon-zoom;
         }
-=======
->>>>>>> Stashed changes
       }
     }
 
@@ -975,13 +646,10 @@ $icon-zoom: math.div(strip-units($swal2-icon-size), 5);
       height: 100%;
       border: .25em solid $swal2-success-border;
       border-radius: 50%;
-<<<<<<< Updated upstream
 
       @if $icon-zoom != 1 {
         zoom: $icon-zoom;
       }
-=======
->>>>>>> Stashed changes
     }
 
     .swal2-success-fix {
@@ -993,13 +661,10 @@ $icon-zoom: math.div(strip-units($swal2-icon-size), 5);
       width: .4375em;
       height: 5.625em;
       transform: rotate(-45deg);
-<<<<<<< Updated upstream
 
       @if $icon-zoom != 1 {
         zoom: $icon-zoom;
       }
-=======
->>>>>>> Stashed changes
     }
 
     [class^='swal2-success-line'] {
@@ -1023,13 +688,10 @@ $icon-zoom: math.div(strip-units($swal2-icon-size), 5);
         width: 2.9375em;
         transform: rotate(-45deg);
       }
-<<<<<<< Updated upstream
 
       @if $icon-zoom != 1 {
         zoom: $icon-zoom;
       }
-=======
->>>>>>> Stashed changes
     }
 
     // Success icon animation
@@ -1052,13 +714,9 @@ $icon-zoom: math.div(strip-units($swal2-icon-size), 5);
 }
 
 .swal2-progress-steps {
-<<<<<<< Updated upstream
   flex-wrap: $swal2-progress-steps-flex-wrap;
   align-items: $swal2-progress-steps-align-items;
   max-width: $swal2-progress-steps-max-width;
-=======
-  align-items: center;
->>>>>>> Stashed changes
   margin: $swal2-progress-steps-margin;
   padding: $swal2-progress-steps-padding;
   background: $swal2-progress-steps-background;
@@ -1071,10 +729,7 @@ $icon-zoom: math.div(strip-units($swal2-icon-size), 5);
 
   .swal2-progress-step {
     z-index: 20;
-<<<<<<< Updated upstream
     flex-shrink: 0;
-=======
->>>>>>> Stashed changes
     width: $swal2-progress-step-width;
     height: $swal2-progress-step-height;
     border-radius: $swal2-progress-step-border-radius;
@@ -1099,10 +754,7 @@ $icon-zoom: math.div(strip-units($swal2-icon-size), 5);
 
   .swal2-progress-step-line {
     z-index: 10;
-<<<<<<< Updated upstream
     flex-shrink: 0;
-=======
->>>>>>> Stashed changes
     width: $swal2-progress-steps-distance;
     height: .4em;
     margin: 0 -1px;
@@ -1139,13 +791,8 @@ $icon-zoom: math.div(strip-units($swal2-icon-size), 5);
 // Right-to-left support
 .swal2-rtl {
   .swal2-close {
-<<<<<<< Updated upstream
     margin-right: initial;
     margin-left: $swal2-close-button-gap;
-=======
-    right: auto;
-    left: $swal2-close-button-gap;
->>>>>>> Stashed changes
   }
 
   .swal2-timer-progress-bar {

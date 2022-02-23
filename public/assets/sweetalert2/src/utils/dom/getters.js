@@ -15,27 +15,10 @@ const elementByClass = (className) => {
 
 export const getPopup = () => elementByClass(swalClasses.popup)
 
-<<<<<<< Updated upstream
 export const getIcon = () => elementByClass(swalClasses.icon)
 
 export const getTitle = () => elementByClass(swalClasses.title)
 
-=======
-export const getIcons = () => {
-  const popup = getPopup()
-  return toArray(popup.querySelectorAll(`.${swalClasses.icon}`))
-}
-
-export const getIcon = () => {
-  const visibleIcon = getIcons().filter(icon => isVisible(icon))
-  return visibleIcon.length ? visibleIcon[0] : null
-}
-
-export const getTitle = () => elementByClass(swalClasses.title)
-
-export const getContent = () => elementByClass(swalClasses.content)
-
->>>>>>> Stashed changes
 export const getHtmlContainer = () => elementByClass(swalClasses['html-container'])
 
 export const getImage = () => elementByClass(swalClasses.image)
@@ -46,24 +29,16 @@ export const getValidationMessage = () => elementByClass(swalClasses['validation
 
 export const getConfirmButton = () => elementBySelector(`.${swalClasses.actions} .${swalClasses.confirm}`)
 
-<<<<<<< Updated upstream
 export const getDenyButton = () => elementBySelector(`.${swalClasses.actions} .${swalClasses.deny}`)
 
 export const getInputLabel = () => elementByClass(swalClasses['input-label'])
 
 export const getLoader = () => elementBySelector(`.${swalClasses.loader}`)
 
-=======
->>>>>>> Stashed changes
 export const getCancelButton = () => elementBySelector(`.${swalClasses.actions} .${swalClasses.cancel}`)
 
 export const getActions = () => elementByClass(swalClasses.actions)
 
-<<<<<<< Updated upstream
-=======
-export const getHeader = () => elementByClass(swalClasses.header)
-
->>>>>>> Stashed changes
 export const getFooter = () => elementByClass(swalClasses.footer)
 
 export const getTimerProgressBar = () => elementByClass(swalClasses['timer-progress-bar'])

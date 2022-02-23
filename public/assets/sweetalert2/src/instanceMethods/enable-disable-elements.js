@@ -23,19 +23,11 @@ function setInputDisabled (input, disabled) {
 }
 
 export function enableButtons () {
-<<<<<<< Updated upstream
   setButtonsDisabled(this, ['confirmButton', 'denyButton', 'cancelButton'], false)
 }
 
 export function disableButtons () {
   setButtonsDisabled(this, ['confirmButton', 'denyButton', 'cancelButton'], true)
-=======
-  setButtonsDisabled(this, ['confirmButton', 'cancelButton'], false)
-}
-
-export function disableButtons () {
-  setButtonsDisabled(this, ['confirmButton', 'cancelButton'], true)
->>>>>>> Stashed changes
 }
 
 export function enableInput () {
