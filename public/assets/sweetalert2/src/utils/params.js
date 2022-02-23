@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 import { warn, warnAboutDeprecation } from '../utils/utils.js'
+=======
+import { warn, warnAboutDepreation } from '../utils/utils.js'
+>>>>>>> Stashed changes
 
 export const defaultParams = {
   title: '',
@@ -7,10 +11,16 @@ export const defaultParams = {
   html: '',
   footer: '',
   icon: undefined,
+<<<<<<< Updated upstream
   iconColor: undefined,
   iconHtml: undefined,
   template: undefined,
   toast: false,
+=======
+  iconHtml: undefined,
+  toast: false,
+  animation: true,
+>>>>>>> Stashed changes
   showClass: {
     popup: 'swal2-show',
     backdrop: 'swal2-backdrop-show',
@@ -21,7 +31,11 @@ export const defaultParams = {
     backdrop: 'swal2-backdrop-hide',
     icon: 'swal2-icon-hide',
   },
+<<<<<<< Updated upstream
   customClass: {},
+=======
+  customClass: undefined,
+>>>>>>> Stashed changes
   target: 'body',
   backdrop: true,
   heightAuto: true,
@@ -31,6 +45,7 @@ export const defaultParams = {
   stopKeydownPropagation: true,
   keydownListenerCapture: false,
   showConfirmButton: true,
+<<<<<<< Updated upstream
   showDenyButton: false,
   showCancelButton: false,
   preConfirm: undefined,
@@ -41,12 +56,20 @@ export const defaultParams = {
   denyButtonText: 'No',
   denyButtonAriaLabel: '',
   denyButtonColor: undefined,
+=======
+  showCancelButton: false,
+  preConfirm: undefined,
+  confirmButtonText: 'OK',
+  confirmButtonAriaLabel: '',
+  confirmButtonColor: undefined,
+>>>>>>> Stashed changes
   cancelButtonText: 'Cancel',
   cancelButtonAriaLabel: '',
   cancelButtonColor: undefined,
   buttonsStyling: true,
   reverseButtons: false,
   focusConfirm: true,
+<<<<<<< Updated upstream
   focusDeny: false,
   focusCancel: false,
   returnFocus: true,
@@ -56,6 +79,13 @@ export const defaultParams = {
   loaderHtml: '',
   showLoaderOnConfirm: false,
   showLoaderOnDeny: false,
+=======
+  focusCancel: false,
+  showCloseButton: false,
+  closeButtonHtml: '&times;',
+  closeButtonAriaLabel: 'Close this dialog',
+  showLoaderOnConfirm: false,
+>>>>>>> Stashed changes
   imageUrl: undefined,
   imageWidth: undefined,
   imageHeight: undefined,
@@ -67,29 +97,45 @@ export const defaultParams = {
   background: undefined,
   input: undefined,
   inputPlaceholder: '',
+<<<<<<< Updated upstream
   inputLabel: '',
+=======
+>>>>>>> Stashed changes
   inputValue: '',
   inputOptions: {},
   inputAutoTrim: true,
   inputAttributes: {},
   inputValidator: undefined,
+<<<<<<< Updated upstream
   returnInputValueOnDeny: false,
+=======
+>>>>>>> Stashed changes
   validationMessage: undefined,
   grow: false,
   position: 'center',
   progressSteps: [],
   currentProgressStep: undefined,
   progressStepsDistance: undefined,
+<<<<<<< Updated upstream
   willOpen: undefined,
   didOpen: undefined,
   didRender: undefined,
   willClose: undefined,
   didClose: undefined,
   didDestroy: undefined,
+=======
+  onBeforeOpen: undefined,
+  onOpen: undefined,
+  onRender: undefined,
+  onClose: undefined,
+  onAfterClose: undefined,
+  onDestroy: undefined,
+>>>>>>> Stashed changes
   scrollbarPadding: true
 }
 
 export const updatableParams = [
+<<<<<<< Updated upstream
   'allowEscapeKey',
   'allowOutsideClick',
   'background',
@@ -133,15 +179,50 @@ export const updatableParams = [
 ]
 
 export const deprecatedParams = {}
+=======
+  'title',
+  'titleText',
+  'text',
+  'html',
+  'icon',
+  'customClass',
+  'allowOutsideClick',
+  'allowEscapeKey',
+  'showConfirmButton',
+  'showCancelButton',
+  'confirmButtonText',
+  'confirmButtonAriaLabel',
+  'confirmButtonColor',
+  'cancelButtonText',
+  'cancelButtonAriaLabel',
+  'cancelButtonColor',
+  'buttonsStyling',
+  'reverseButtons',
+  'imageUrl',
+  'imageWidth',
+  'imageHeight',
+  'imageAlt',
+  'progressSteps',
+  'currentProgressStep'
+]
+
+export const deprecatedParams = {
+  animation: 'showClass" and "hideClass',
+}
+>>>>>>> Stashed changes
 
 const toastIncompatibleParams = [
   'allowOutsideClick',
   'allowEnterKey',
   'backdrop',
   'focusConfirm',
+<<<<<<< Updated upstream
   'focusDeny',
   'focusCancel',
   'returnFocus',
+=======
+  'focusCancel',
+>>>>>>> Stashed changes
   'heightAuto',
   'keydownListenerCapture'
 ]
@@ -184,7 +265,11 @@ const checkIfToastParamIsValid = (param) => {
 
 const checkIfParamIsDeprecated = (param) => {
   if (isDeprecatedParameter(param)) {
+<<<<<<< Updated upstream
     warnAboutDeprecation(param, isDeprecatedParameter(param))
+=======
+    warnAboutDepreation(param, isDeprecatedParameter(param))
+>>>>>>> Stashed changes
   }
 }
 
@@ -194,10 +279,13 @@ const checkIfParamIsDeprecated = (param) => {
  * @param params
  */
 export const showWarningsForParams = (params) => {
+<<<<<<< Updated upstream
   if (!params.backdrop && params.allowOutsideClick) {
     warn('"allowOutsideClick" parameter requires `backdrop` parameter to be set to `true`')
   }
 
+=======
+>>>>>>> Stashed changes
   for (const param in params) {
     checkIfParamIsValid(param)
 

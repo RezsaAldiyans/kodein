@@ -23,7 +23,11 @@ export const addKeydownHandler = (instance, globalState, innerParams, dismissWit
 export const setFocus = (innerParams, index, increment) => {
   const focusableElements = dom.getFocusableElements()
   // search for visible elements and select the next possible match
+<<<<<<< Updated upstream
   if (focusableElements.length) {
+=======
+  for (let i = 0; i < focusableElements.length; i++) {
+>>>>>>> Stashed changes
     index = index + increment
 
     // rollover to first item
@@ -41,21 +45,35 @@ export const setFocus = (innerParams, index, increment) => {
   dom.getPopup().focus()
 }
 
+<<<<<<< Updated upstream
 const arrowKeysNextButton = [
   'ArrowRight', 'ArrowDown',
 ]
 
 const arrowKeysPreviousButton = [
   'ArrowLeft', 'ArrowUp',
+=======
+const arrowKeys = [
+  'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown',
+  'Left', 'Right', 'Up', 'Down' // IE11
+]
+
+const escKeys = [
+  'Escape',
+  'Esc' // IE11
+>>>>>>> Stashed changes
 ]
 
 const keydownHandler = (instance, e, dismissWith) => {
   const innerParams = privateProps.innerParams.get(instance)
 
+<<<<<<< Updated upstream
   if (!innerParams) {
     return // This instance has already been destroyed
   }
 
+=======
+>>>>>>> Stashed changes
   if (innerParams.stopKeydownPropagation) {
     e.stopPropagation()
   }
@@ -69,11 +87,19 @@ const keydownHandler = (instance, e, dismissWith) => {
     handleTab(e, innerParams)
 
   // ARROWS - switch focus between buttons
+<<<<<<< Updated upstream
   } else if ([...arrowKeysNextButton, ...arrowKeysPreviousButton].includes(e.key)) {
     handleArrows(e.key)
 
   // ESC
   } else if (e.key === 'Escape') {
+=======
+  } else if (arrowKeys.includes(e.key)) {
+    handleArrows()
+
+  // ESC
+  } else if (escKeys.includes(e.key)) {
+>>>>>>> Stashed changes
     handleEsc(e, innerParams, dismissWith)
   }
 }
@@ -117,6 +143,7 @@ const handleTab = (e, innerParams) => {
   e.preventDefault()
 }
 
+<<<<<<< Updated upstream
 const handleArrows = (key) => {
   const confirmButton = dom.getConfirmButton()
   const denyButton = dom.getDenyButton()
@@ -128,6 +155,17 @@ const handleArrows = (key) => {
   const buttonToFocus = document.activeElement[sibling]
   if (buttonToFocus) {
     buttonToFocus.focus()
+=======
+const handleArrows = () => {
+  const confirmButton = dom.getConfirmButton()
+  const cancelButton = dom.getCancelButton()
+  // focus Cancel button if Confirm button is currently focused
+  if (document.activeElement === confirmButton && dom.isVisible(cancelButton)) {
+    cancelButton.focus()
+    // and vice versa
+  } else if (document.activeElement === cancelButton && dom.isVisible(confirmButton)) {
+    confirmButton.focus()
+>>>>>>> Stashed changes
   }
 }
 

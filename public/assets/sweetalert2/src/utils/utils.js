@@ -21,6 +21,15 @@ export const uniqueArray = (arr) => {
 export const capitalizeFirstLetter = (str) => str.charAt(0).toUpperCase() + str.slice(1)
 
 /**
+<<<<<<< Updated upstream
+=======
+ * Returns the array ob object values (Object.values isn't supported in IE11)
+ * @param obj
+ */
+export const objectValues = (obj) => Object.keys(obj).map(key => obj[key])
+
+/**
+>>>>>>> Stashed changes
  * Convert NodeList to Array
  * @param nodeList
  */
@@ -31,7 +40,11 @@ export const toArray = (nodeList) => Array.prototype.slice.call(nodeList)
  * @param message
  */
 export const warn = (message) => {
+<<<<<<< Updated upstream
   console.warn(`${consolePrefix} ${typeof message === 'object' ? message.join(' ') : message}`)
+=======
+  console.warn(`${consolePrefix} ${message}`)
+>>>>>>> Stashed changes
 }
 
 /**
@@ -63,7 +76,11 @@ export const warnOnce = (message) => {
 /**
  * Show a one-time console warning about deprecated params/methods
  */
+<<<<<<< Updated upstream
 export const warnAboutDeprecation = (deprecatedParam, useInstead) => {
+=======
+export const warnAboutDepreation = (deprecatedParam, useInstead) => {
+>>>>>>> Stashed changes
   warnOnce(`"${deprecatedParam}" is deprecated and will be removed in the next major release. Please use "${useInstead}" instead.`)
 }
 
@@ -74,8 +91,11 @@ export const warnAboutDeprecation = (deprecatedParam, useInstead) => {
  */
 export const callIfFunction = (arg) => typeof arg === 'function' ? arg() : arg
 
+<<<<<<< Updated upstream
 export const hasToPromiseFn = (arg) => arg && typeof arg.toPromise === 'function'
 
 export const asPromise = (arg) => hasToPromiseFn(arg) ? arg.toPromise() : Promise.resolve(arg)
 
+=======
+>>>>>>> Stashed changes
 export const isPromise = (arg) => arg && Promise.resolve(arg) === arg

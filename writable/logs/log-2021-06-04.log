@@ -1,0 +1,293 @@
+CRITICAL - 2021-06-04 04:26:11 --> CodeIgniter\View\View::main(): Failed opening required '/var/www/kodeins/app/Controllers\hit.php' (include_path='.:/usr/share/php')
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-04 04:29:40 --> CodeIgniter\View\View::main(): Failed opening required '/var/www/kodeins/app/Controllers\hit.php' (include_path='.:/usr/share/php')
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-04 04:29:42 --> CodeIgniter\View\View::main(): Failed opening required '/var/www/kodeins/app/Controllers\hit.php' (include_path='.:/usr/share/php')
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-04 04:29:48 --> CodeIgniter\View\View::main(): Failed opening required '/var/www/kodeins/app/Controllers\hit.php' (include_path='.:/usr/share/php')
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-04 04:31:08 --> CodeIgniter\View\View::main(): Failed opening required '/var/www/kodeins/app/Controllers\hit.php' (include_path='.:/usr/share/php')
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-04 04:31:08 --> CodeIgniter\View\View::main(): Failed opening required '/var/www/kodeins/app/Controllers\hit.php' (include_path='.:/usr/share/php')
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-04 04:31:11 --> CodeIgniter\View\View::main(): Failed opening required '/var/www/kodeins/app/Controllers\hit.php' (include_path='.:/usr/share/php')
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-04 04:34:52 --> CodeIgniter\View\View::main(): Failed opening required '/var/www/kodeins/app/Controllers\hit.php' (include_path='.:/usr/share/php')
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-04 04:43:22 --> CodeIgniter\View\View::main(): Failed opening required '/var/www/kodeins/app/Controllers\hit.php' (include_path='.:/usr/share/php')
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-04 04:44:36 --> CodeIgniter\View\View::main(): Failed opening required '/var/www/kodeins/app/Controllers\hit.php' (include_path='.:/usr/share/php')
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-04 05:06:09 --> CodeIgniter\View\View::main(): Failed opening required '/var/www/kodeins/app/Controllers\hit.php' (include_path='.:/usr/share/php')
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-04 05:20:05 --> CodeIgniter\View\View::main(): Failed opening required '/var/www/kodeins/app//App/Controllers\hit.php' (include_path='.:/usr/share/php')
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-04 05:23:00 --> CodeIgniter\View\View::main(): Failed opening required '..app\Controllers\hit.php' (include_path='.:/usr/share/php')
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-04 05:24:50 --> CodeIgniter\View\View::main(): Failed opening required './app/Controllers/hit.php' (include_path='.:/usr/share/php')
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-04 05:24:52 --> CodeIgniter\View\View::main(): Failed opening required './app/Controllers/hit.php' (include_path='.:/usr/share/php')
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-04 05:32:17 --> CodeIgniter\View\View::main(): Failed opening required 'app/Controllers/hit.php' (include_path='.:/usr/share/php')
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-04 05:33:54 --> CodeIgniter\View\View::main(): Failed opening required './app/Controllers/hit.php' (include_path='.:/usr/share/php')
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-04 05:33:57 --> CodeIgniter\View\View::main(): Failed opening required './app/Controllers/hit.php' (include_path='.:/usr/share/php')
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-04 05:51:04 --> CodeIgniter\View\View::main(): Failed opening required './app/Controllers/hit.php' (include_path='.:/usr/share/php')
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-04 06:32:51 --> CodeIgniter\View\View::main(): Failed opening required './app/Controllers/hit.php' (include_path='.:/usr/share/php')
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-04 07:19:51 --> CodeIgniter\View\View::main(): Failed opening required './app/Controllers/hit.php' (include_path='.:/usr/share/php')
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-04 07:32:03 --> CodeIgniter\View\View::main(): Failed opening required './app/Controllers/hit.php' (include_path='.:/usr/share/php')
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-04 07:49:35 --> CodeIgniter\View\View::main(): Failed opening required './app/Controllers/hit.php' (include_path='.:/usr/share/php')
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-04 07:52:43 --> CodeIgniter\View\View::main(): Failed opening required './app/Controllers/hit.php' (include_path='.:/usr/share/php')
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-04 07:57:20 --> CodeIgniter\View\View::main(): Failed opening required './app/Controllers/hit.php' (include_path='.:/usr/share/php')
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-04 08:00:42 --> include_once(/var/www/kodein.codes/app//app/Controllers/hit.php): failed to open stream: No such file or directory
+#0 /var/www/kodein.codes/app/Views/hitCounter.php(2): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/kodein.codes/app/Views/hitCounter.php(2): include_once()
+#2 /var/www/kodein.codes/app/Views/index.php(3): require('/var/www/kodein...')
+#3 /var/www/kodein.codes/system/View/View.php(246): include('/var/www/kodein...')
+#4 /var/www/kodein.codes/system/Common.php(1119): CodeIgniter\View\View->render()
+#5 /var/www/kodein.codes/app/Controllers/Home.php(11): view()
+#6 /var/www/kodein.codes/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#7 /var/www/kodein.codes/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/kodein.codes/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/kodein.codes/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-06-04 08:00:43 --> include_once(/var/www/kodein.codes/app//app/Controllers/hit.php): failed to open stream: No such file or directory
+#0 /var/www/kodein.codes/app/Views/hitCounter.php(2): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/kodein.codes/app/Views/hitCounter.php(2): include_once()
+#2 /var/www/kodein.codes/app/Views/index.php(3): require('/var/www/kodein...')
+#3 /var/www/kodein.codes/system/View/View.php(246): include('/var/www/kodein...')
+#4 /var/www/kodein.codes/system/Common.php(1119): CodeIgniter\View\View->render()
+#5 /var/www/kodein.codes/app/Controllers/Home.php(11): view()
+#6 /var/www/kodein.codes/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#7 /var/www/kodein.codes/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/kodein.codes/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/kodein.codes/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-06-04 08:02:24 --> include_once(/var/www/kodein.codes/app//kodein.codes/app/Controllers/hit.php): failed to open stream: No such file or directory
+#0 /var/www/kodein.codes/app/Views/hitCounter.php(2): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/kodein.codes/app/Views/hitCounter.php(2): include_once()
+#2 /var/www/kodein.codes/app/Views/index.php(3): require('/var/www/kodein...')
+#3 /var/www/kodein.codes/system/View/View.php(246): include('/var/www/kodein...')
+#4 /var/www/kodein.codes/system/Common.php(1119): CodeIgniter\View\View->render()
+#5 /var/www/kodein.codes/app/Controllers/Home.php(11): view()
+#6 /var/www/kodein.codes/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#7 /var/www/kodein.codes/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/kodein.codes/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/kodein.codes/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-06-04 08:03:28 --> Unable to connect to the database.
+#0 /var/www/kodein.codes/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 /var/www/kodein.codes/system/Model.php(1814): CodeIgniter\Database\BaseConnection->query()
+#2 /var/www/kodein.codes/app/Controllers/hit.php(41): CodeIgniter\Model->__call()
+#3 /var/www/kodein.codes/app/Views/hitCounter.php(13): HitCounter->Hitung()
+#4 /var/www/kodein.codes/app/Views/index.php(3): require('/var/www/kodein...')
+#5 /var/www/kodein.codes/system/View/View.php(246): include('/var/www/kodein...')
+#6 /var/www/kodein.codes/system/Common.php(1119): CodeIgniter\View\View->render()
+#7 /var/www/kodein.codes/app/Controllers/Home.php(11): view()
+#8 /var/www/kodein.codes/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#9 /var/www/kodein.codes/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/kodein.codes/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/kodein.codes/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2021-06-04 08:08:30 --> Unable to connect to the database.
+#0 /var/www/kodein.codes/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 /var/www/kodein.codes/system/Model.php(1814): CodeIgniter\Database\BaseConnection->query()
+#2 /var/www/kodein.codes/app/Controllers/hit.php(41): CodeIgniter\Model->__call()
+#3 /var/www/kodein.codes/app/Views/hitCounter.php(13): HitCounter->Hitung()
+#4 /var/www/kodein.codes/app/Views/index.php(3): require('/var/www/kodein...')
+#5 /var/www/kodein.codes/system/View/View.php(246): include('/var/www/kodein...')
+#6 /var/www/kodein.codes/system/Common.php(1119): CodeIgniter\View\View->render()
+#7 /var/www/kodein.codes/app/Controllers/Home.php(11): view()
+#8 /var/www/kodein.codes/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#9 /var/www/kodein.codes/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/kodein.codes/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/kodein.codes/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2021-06-04 08:10:36 --> Unable to connect to the database.
+#0 /var/www/kodein.codes/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 /var/www/kodein.codes/system/Model.php(1814): CodeIgniter\Database\BaseConnection->query()
+#2 /var/www/kodein.codes/app/Controllers/hit.php(41): CodeIgniter\Model->__call()
+#3 /var/www/kodein.codes/app/Views/hitCounter.php(13): HitCounter->Hitung()
+#4 /var/www/kodein.codes/app/Views/index.php(3): require('/var/www/kodein...')
+#5 /var/www/kodein.codes/system/View/View.php(246): include('/var/www/kodein...')
+#6 /var/www/kodein.codes/system/Common.php(1119): CodeIgniter\View\View->render()
+#7 /var/www/kodein.codes/app/Controllers/Home.php(11): view()
+#8 /var/www/kodein.codes/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#9 /var/www/kodein.codes/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/kodein.codes/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/kodein.codes/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2021-06-04 08:11:14 --> Unable to connect to the database.
+#0 /var/www/kodein.codes/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 /var/www/kodein.codes/system/Model.php(1814): CodeIgniter\Database\BaseConnection->query()
+#2 /var/www/kodein.codes/app/Controllers/hit.php(41): CodeIgniter\Model->__call()
+#3 /var/www/kodein.codes/app/Views/hitCounter.php(13): HitCounter->Hitung()
+#4 /var/www/kodein.codes/app/Views/index.php(3): require('/var/www/kodein...')
+#5 /var/www/kodein.codes/system/View/View.php(246): include('/var/www/kodein...')
+#6 /var/www/kodein.codes/system/Common.php(1119): CodeIgniter\View\View->render()
+#7 /var/www/kodein.codes/app/Controllers/Home.php(11): view()
+#8 /var/www/kodein.codes/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#9 /var/www/kodein.codes/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/kodein.codes/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/kodein.codes/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2021-06-04 08:11:16 --> Unable to connect to the database.
+#0 /var/www/kodein.codes/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 /var/www/kodein.codes/system/Model.php(1814): CodeIgniter\Database\BaseConnection->query()
+#2 /var/www/kodein.codes/app/Controllers/hit.php(41): CodeIgniter\Model->__call()
+#3 /var/www/kodein.codes/app/Views/hitCounter.php(13): HitCounter->Hitung()
+#4 /var/www/kodein.codes/app/Views/index.php(3): require('/var/www/kodein...')
+#5 /var/www/kodein.codes/system/View/View.php(246): include('/var/www/kodein...')
+#6 /var/www/kodein.codes/system/Common.php(1119): CodeIgniter\View\View->render()
+#7 /var/www/kodein.codes/app/Controllers/Home.php(11): view()
+#8 /var/www/kodein.codes/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#9 /var/www/kodein.codes/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/kodein.codes/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/kodein.codes/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2021-06-04 08:18:05 --> Unable to connect to the database.
+#0 /var/www/kodein.codes/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 /var/www/kodein.codes/system/Model.php(1814): CodeIgniter\Database\BaseConnection->query()
+#2 /var/www/kodein.codes/app/Controllers/hit.php(41): CodeIgniter\Model->__call()
+#3 /var/www/kodein.codes/app/Views/hitCounter.php(13): HitCounter->Hitung()
+#4 /var/www/kodein.codes/app/Views/index.php(3): require('/var/www/kodein...')
+#5 /var/www/kodein.codes/system/View/View.php(246): include('/var/www/kodein...')
+#6 /var/www/kodein.codes/system/Common.php(1119): CodeIgniter\View\View->render()
+#7 /var/www/kodein.codes/app/Controllers/Home.php(11): view()
+#8 /var/www/kodein.codes/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#9 /var/www/kodein.codes/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/kodein.codes/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/kodein.codes/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2021-06-04 08:21:53 --> Unable to connect to the database.
+#0 /var/www/kodein.codes/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 /var/www/kodein.codes/system/Model.php(1814): CodeIgniter\Database\BaseConnection->query()
+#2 /var/www/kodein.codes/app/Controllers/hit.php(41): CodeIgniter\Model->__call()
+#3 /var/www/kodein.codes/app/Views/hitCounter.php(13): HitCounter->Hitung()
+#4 /var/www/kodein.codes/app/Views/index.php(3): require('/var/www/kodein...')
+#5 /var/www/kodein.codes/system/View/View.php(246): include('/var/www/kodein...')
+#6 /var/www/kodein.codes/system/Common.php(1119): CodeIgniter\View\View->render()
+#7 /var/www/kodein.codes/app/Controllers/Home.php(11): view()
+#8 /var/www/kodein.codes/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#9 /var/www/kodein.codes/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/kodein.codes/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/kodein.codes/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2021-06-04 08:42:58 --> Unable to connect to the database.
+#0 /var/www/kodein.codes/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 /var/www/kodein.codes/system/Model.php(1814): CodeIgniter\Database\BaseConnection->query()
+#2 /var/www/kodein.codes/app/Controllers/hit.php(41): CodeIgniter\Model->__call()
+#3 /var/www/kodein.codes/app/Views/hitCounter.php(13): HitCounter->Hitung()
+#4 /var/www/kodein.codes/app/Views/index.php(3): require('/var/www/kodein...')
+#5 /var/www/kodein.codes/system/View/View.php(246): include('/var/www/kodein...')
+#6 /var/www/kodein.codes/system/Common.php(1119): CodeIgniter\View\View->render()
+#7 /var/www/kodein.codes/app/Controllers/Home.php(11): view()
+#8 /var/www/kodein.codes/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#9 /var/www/kodein.codes/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/kodein.codes/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/kodein.codes/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2021-06-04 09:16:54 --> Unable to connect to the database.
+#0 /var/www/kodein.codes/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 /var/www/kodein.codes/system/Model.php(1814): CodeIgniter\Database\BaseConnection->query()
+#2 /var/www/kodein.codes/app/Controllers/hit.php(41): CodeIgniter\Model->__call()
+#3 /var/www/kodein.codes/app/Views/hitCounter.php(13): HitCounter->Hitung()
+#4 /var/www/kodein.codes/app/Views/index.php(3): require('/var/www/kodein...')
+#5 /var/www/kodein.codes/system/View/View.php(246): include('/var/www/kodein...')
+#6 /var/www/kodein.codes/system/Common.php(1119): CodeIgniter\View\View->render()
+#7 /var/www/kodein.codes/app/Controllers/Home.php(11): view()
+#8 /var/www/kodein.codes/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#9 /var/www/kodein.codes/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/kodein.codes/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/kodein.codes/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2021-06-04 22:27:38 --> Unable to connect to the database.
+#0 /var/www/kodein.codes/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 /var/www/kodein.codes/system/Model.php(1814): CodeIgniter\Database\BaseConnection->query('insert into pen...')
+#2 /var/www/kodein.codes/app/Controllers/hit.php(41): CodeIgniter\Model->__call('query', Array)
+#3 /var/www/kodein.codes/app/Views/hitCounter.php(13): HitCounter->Hitung('Android', ' ')
+#4 /var/www/kodein.codes/app/Views/index.php(3): require('/var/www/kodein...')
+#5 /var/www/kodein.codes/system/View/View.php(246): include('/var/www/kodein...')
+#6 /var/www/kodein.codes/system/Common.php(1119): CodeIgniter\View\View->render('index', Array, true)
+#7 /var/www/kodein.codes/app/Controllers/Home.php(11): view('index')
+#8 /var/www/kodein.codes/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#9 /var/www/kodein.codes/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 /var/www/kodein.codes/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /var/www/kodein.codes/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2021-06-04 22:27:43 --> Unable to connect to the database.
+#0 /var/www/kodein.codes/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 /var/www/kodein.codes/system/Model.php(1814): CodeIgniter\Database\BaseConnection->query('insert into pen...')
+#2 /var/www/kodein.codes/app/Controllers/hit.php(41): CodeIgniter\Model->__call('query', Array)
+#3 /var/www/kodein.codes/app/Views/hitCounter.php(13): HitCounter->Hitung('Android', ' ')
+#4 /var/www/kodein.codes/app/Views/index.php(3): require('/var/www/kodein...')
+#5 /var/www/kodein.codes/system/View/View.php(246): include('/var/www/kodein...')
+#6 /var/www/kodein.codes/system/Common.php(1119): CodeIgniter\View\View->render('index', Array, true)
+#7 /var/www/kodein.codes/app/Controllers/Home.php(11): view('index')
+#8 /var/www/kodein.codes/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#9 /var/www/kodein.codes/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 /var/www/kodein.codes/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /var/www/kodein.codes/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2021-06-04 22:27:51 --> Unable to connect to the database.
+#0 /var/www/kodein.codes/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 /var/www/kodein.codes/system/Model.php(1814): CodeIgniter\Database\BaseConnection->query('insert into pen...')
+#2 /var/www/kodein.codes/app/Controllers/hit.php(41): CodeIgniter\Model->__call('query', Array)
+#3 /var/www/kodein.codes/app/Views/hitCounter.php(13): HitCounter->Hitung('Android', 'RMX2001 ')
+#4 /var/www/kodein.codes/app/Views/index.php(3): require('/var/www/kodein...')
+#5 /var/www/kodein.codes/system/View/View.php(246): include('/var/www/kodein...')
+#6 /var/www/kodein.codes/system/Common.php(1119): CodeIgniter\View\View->render('index', Array, true)
+#7 /var/www/kodein.codes/app/Controllers/Home.php(11): view('index')
+#8 /var/www/kodein.codes/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#9 /var/www/kodein.codes/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 /var/www/kodein.codes/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /var/www/kodein.codes/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2021-06-04 22:27:52 --> Unable to connect to the database.
+#0 /var/www/kodein.codes/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 /var/www/kodein.codes/system/Model.php(1814): CodeIgniter\Database\BaseConnection->query('insert into pen...')
+#2 /var/www/kodein.codes/app/Controllers/hit.php(41): CodeIgniter\Model->__call('query', Array)
+#3 /var/www/kodein.codes/app/Views/hitCounter.php(13): HitCounter->Hitung('Android', 'RMX2001 ')
+#4 /var/www/kodein.codes/app/Views/index.php(3): require('/var/www/kodein...')
+#5 /var/www/kodein.codes/system/View/View.php(246): include('/var/www/kodein...')
+#6 /var/www/kodein.codes/system/Common.php(1119): CodeIgniter\View\View->render('index', Array, true)
+#7 /var/www/kodein.codes/app/Controllers/Home.php(11): view('index')
+#8 /var/www/kodein.codes/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#9 /var/www/kodein.codes/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 /var/www/kodein.codes/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /var/www/kodein.codes/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#12 {main}

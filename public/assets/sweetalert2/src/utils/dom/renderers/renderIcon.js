@@ -5,6 +5,7 @@ import privateProps from '../../../privateProps.js'
 
 export const renderIcon = (instance, params) => {
   const innerParams = privateProps.innerParams.get(instance)
+<<<<<<< Updated upstream
   const icon = dom.getIcon()
 
   // if the given icon already rendered, apply the styling without re-rendering the icon
@@ -52,6 +53,44 @@ const applyStyles = (icon, params) => {
 
   // Custom class
   dom.applyCustomClass(icon, params, 'icon')
+=======
+
+  // if the give icon already rendered, apply the custom class without re-rendering the icon
+  if (innerParams && params.icon === innerParams.icon && dom.getIcon()) {
+    dom.applyCustomClass(dom.getIcon(), params, 'icon')
+    return
+  }
+
+  hideAllIcons()
+
+  if (!params.icon) {
+    return
+  }
+
+  if (Object.keys(iconTypes).indexOf(params.icon) !== -1) {
+    const icon = dom.elementBySelector(`.${swalClasses.icon}.${iconTypes[params.icon]}`)
+    dom.show(icon)
+
+    // Custom or default content
+    setContent(icon, params)
+    adjustSuccessIconBackgoundColor()
+
+    // Custom class
+    dom.applyCustomClass(icon, params, 'icon')
+
+    // Animate icon
+    dom.addClass(icon, params.showClass.icon)
+  } else {
+    error(`Unknown icon! Expected "success", "error", "warning", "info" or "question", got "${params.icon}"`)
+  }
+}
+
+const hideAllIcons = () => {
+  const icons = dom.getIcons()
+  for (let i = 0; i < icons.length; i++) {
+    dom.hide(icons[i])
+  }
+>>>>>>> Stashed changes
 }
 
 // Adjust success icon background color to match the popup background color
@@ -65,30 +104,50 @@ const adjustSuccessIconBackgoundColor = () => {
 }
 
 const setContent = (icon, params) => {
+<<<<<<< Updated upstream
   icon.textContent = ''
 
   if (params.iconHtml) {
     dom.setInnerHtml(icon, iconContent(params.iconHtml))
   } else if (params.icon === 'success') {
     dom.setInnerHtml(icon, `
+=======
+  icon.innerHTML = ''
+
+  if (params.iconHtml) {
+    icon.innerHTML = iconContent(params.iconHtml)
+  } else if (params.icon === 'success') {
+    icon.innerHTML = `
+>>>>>>> Stashed changes
       <div class="swal2-success-circular-line-left"></div>
       <span class="swal2-success-line-tip"></span> <span class="swal2-success-line-long"></span>
       <div class="swal2-success-ring"></div> <div class="swal2-success-fix"></div>
       <div class="swal2-success-circular-line-right"></div>
+<<<<<<< Updated upstream
     `)
   } else if (params.icon === 'error') {
     dom.setInnerHtml(icon, `
+=======
+    `
+  } else if (params.icon === 'error') {
+    icon.innerHTML = `
+>>>>>>> Stashed changes
       <span class="swal2-x-mark">
         <span class="swal2-x-mark-line-left"></span>
         <span class="swal2-x-mark-line-right"></span>
       </span>
+<<<<<<< Updated upstream
     `)
+=======
+    `
+>>>>>>> Stashed changes
   } else {
     const defaultIconHtml = {
       question: '?',
       warning: '!',
       info: 'i'
     }
+<<<<<<< Updated upstream
     dom.setInnerHtml(icon, iconContent(defaultIconHtml[params.icon]))
   }
 }
@@ -103,6 +162,10 @@ const setColor = (icon, params) => {
     dom.setStyle(icon, sel, 'backgroundColor', params.iconColor)
   }
   dom.setStyle(icon, '.swal2-success-ring', 'borderColor', params.iconColor)
+=======
+    icon.innerHTML = iconContent(defaultIconHtml[params.icon])
+  }
+>>>>>>> Stashed changes
 }
 
 const iconContent = (content) => `<div class="${swalClasses['icon-content']}">${content}</div>`

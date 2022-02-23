@@ -1,0 +1,33 @@
+CRITICAL - 2021-06-12 06:25:17 --> Undefined offset: 1
+#0 /var/www/kodein.codes/app/Views/hitCounter.php(11): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/kodein.codes/app/Views/index.php(3): require('/var/www/kodein...')
+#2 /var/www/kodein.codes/system/View/View.php(246): include('/var/www/kodein...')
+#3 /var/www/kodein.codes/system/Common.php(1119): CodeIgniter\View\View->render()
+#4 /var/www/kodein.codes/app/Controllers/Home.php(12): view()
+#5 /var/www/kodein.codes/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#6 /var/www/kodein.codes/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/kodein.codes/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/kodein.codes/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-06-12 06:25:19 --> Undefined offset: 1
+#0 /var/www/kodein.codes/app/Views/hitCounter.php(11): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/kodein.codes/app/Views/index.php(3): require('/var/www/kodein...')
+#2 /var/www/kodein.codes/system/View/View.php(246): include('/var/www/kodein...')
+#3 /var/www/kodein.codes/system/Common.php(1119): CodeIgniter\View\View->render()
+#4 /var/www/kodein.codes/app/Controllers/Home.php(12): view()
+#5 /var/www/kodein.codes/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#6 /var/www/kodein.codes/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/kodein.codes/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/kodein.codes/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-06-12 06:25:19 --> Undefined offset: 1
+#0 /var/www/kodein.codes/app/Views/hitCounter.php(11): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/kodein.codes/app/Views/index.php(3): require('/var/www/kodein...')
+#2 /var/www/kodein.codes/system/View/View.php(246): include('/var/www/kodein...')
+#3 /var/www/kodein.codes/system/Common.php(1119): CodeIgniter\View\View->render()
+#4 /var/www/kodein.codes/app/Controllers/Home.php(12): view()
+#5 /var/www/kodein.codes/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#6 /var/www/kodein.codes/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/kodein.codes/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/kodein.codes/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}

@@ -37,9 +37,26 @@ export const renderContainer = (instance, params) => {
 
   handleBackdropParam(container, params.backdrop)
 
+<<<<<<< Updated upstream
+=======
+  if (!params.backdrop && params.allowOutsideClick) {
+    warn('"allowOutsideClick" parameter requires `backdrop` parameter to be set to `true`')
+  }
+
+>>>>>>> Stashed changes
   handlePositionParam(container, params.position)
   handleGrowParam(container, params.grow)
 
   // Custom class
   dom.applyCustomClass(container, params, 'container')
+<<<<<<< Updated upstream
+=======
+
+  // Set queue step attribute for getQueueStep() method
+  const queueStep = document.body.getAttribute('data-swal2-queue-step')
+  if (queueStep) {
+    container.setAttribute('data-queue-step', queueStep)
+    document.body.removeAttribute('data-swal2-queue-step')
+  }
+>>>>>>> Stashed changes
 }

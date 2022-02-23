@@ -8,7 +8,11 @@ export const renderImage = (instance, params) => {
     return dom.hide(image)
   }
 
+<<<<<<< Updated upstream
   dom.show(image, '')
+=======
+  dom.show(image)
+>>>>>>> Stashed changes
 
   // Src, alt
   image.setAttribute('src', params.imageUrl)

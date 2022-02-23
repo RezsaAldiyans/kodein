@@ -1,0 +1,108 @@
+CRITICAL - 2021-07-26 20:31:09 --> preg_match(): Unknown modifier 'h'
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match(): U...', 'A:\\kodein\\kodei...', 204, Array)
+#1 A:\kodein\kodein.codes\app\Controllers\Home.php(204): preg_match('/<h1>hallo ini ...', '<h1>hallo ini w...')
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->inCoder()
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#7 {main}
+CRITICAL - 2021-07-26 20:31:37 --> preg_match(): Unknown modifier 'h'
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match(): U...', 'A:\\kodein\\kodei...', 204, Array)
+#1 A:\kodein\kodein.codes\app\Controllers\Home.php(204): preg_match('/<h1>hallo ini ...', '<h1>hallo ini w...')
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->inCoder()
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#7 {main}
+CRITICAL - 2021-07-26 20:32:18 --> preg_match(): Unknown modifier 'h'
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match(): U...', 'A:\\kodein\\kodei...', 204, Array)
+#1 A:\kodein\kodein.codes\app\Controllers\Home.php(204): preg_match('/<h1>hallo ini ...', '<h1>hallo ini w...')
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->inCoder()
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#7 {main}
+CRITICAL - 2021-07-26 20:32:26 --> preg_match(): Unknown modifier 'h'
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match(): U...', 'A:\\kodein\\kodei...', 204, Array)
+#1 A:\kodein\kodein.codes\app\Controllers\Home.php(204): preg_match('/<h1>hallo ini ...', '<h1>hallo ini w...')
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->inCoder()
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#7 {main}
+CRITICAL - 2021-07-26 20:34:32 --> preg_match(): Unknown modifier 'h'
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match(): U...', 'A:\\kodein\\kodei...', 204, Array)
+#1 A:\kodein\kodein.codes\app\Controllers\Home.php(204): preg_match('/<h1>hallo ini ...', '<h1>hallo ini w...')
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->inCoder()
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#7 {main}
+CRITICAL - 2021-07-26 20:36:30 --> preg_match(): Unknown modifier 'h'
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match(): U...', 'A:\\kodein\\kodei...', 204, Array)
+#1 A:\kodein\kodein.codes\app\Controllers\Home.php(204): preg_match('/<h1>hallo ini ...', '<h1>hallo ini w...')
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->inCoder()
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#7 {main}
+CRITICAL - 2021-07-26 20:36:40 --> preg_match(): Unknown modifier 'h'
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match(): U...', 'A:\\kodein\\kodei...', 204, Array)
+#1 A:\kodein\kodein.codes\app\Controllers\Home.php(204): preg_match('/<h1>hallo ini ...', '<h1>hallo ini w...')
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->inCoder()
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#7 {main}
+CRITICAL - 2021-07-26 20:43:54 --> preg_match(): Unknown modifier 'l'
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match(): U...', 'A:\\kodein\\kodei...', 204, Array)
+#1 A:\kodein\kodein.codes\app\Controllers\Home.php(204): preg_match('/<h1>hallo ini ...', '<h1>hallo ini w...')
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->inCoder()
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#7 {main}
+CRITICAL - 2021-07-26 20:57:46 --> preg_match(): Compilation failed: quantifier does not follow a repeatable item at offset 11
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match(): C...', 'A:\\kodein\\kodei...', 204, Array)
+#1 A:\kodein\kodein.codes\app\Controllers\Home.php(204): preg_match('/<ul>\r\n<li>^+[h...', '<ul><li>hello</...')
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->inCoder()
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#7 {main}
+CRITICAL - 2021-07-26 20:57:51 --> preg_match(): Compilation failed: quantifier does not follow a repeatable item at offset 11
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match(): C...', 'A:\\kodein\\kodei...', 204, Array)
+#1 A:\kodein\kodein.codes\app\Controllers\Home.php(204): preg_match('/<ul>\r\n<li>^+[h...', '<h1>hallo ini w...')
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->inCoder()
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#7 {main}
+CRITICAL - 2021-07-26 21:02:07 --> preg_match(): No ending delimiter '/' found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match(): N...', 'A:\\kodein\\kodei...', 204, Array)
+#1 A:\kodein\kodein.codes\app\Controllers\Home.php(204): preg_match('/<ul><li>hello\\...', '<ul><li>hello</...')
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->inCoder()
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#7 {main}
+CRITICAL - 2021-07-26 21:02:27 --> preg_match(): No ending delimiter '/' found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match(): N...', 'A:\\kodein\\kodei...', 204, Array)
+#1 A:\kodein\kodein.codes\app\Controllers\Home.php(204): preg_match('/<ul><li>hello+...', '<ul><li>hello</...')
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->inCoder()
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#7 {main}

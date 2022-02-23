@@ -2,6 +2,7 @@ import { swalClasses } from '../../classes.js'
 import * as dom from '../../dom/index.js'
 
 export const renderPopup = (instance, params) => {
+<<<<<<< Updated upstream
   const container = dom.getContainer()
   const popup = dom.getPopup()
 
@@ -13,6 +14,12 @@ export const renderPopup = (instance, params) => {
   } else {
     dom.applyNumericalStyle(popup, 'width', params.width)
   }
+=======
+  const popup = dom.getPopup()
+
+  // Width
+  dom.applyNumericalStyle(popup, 'width', params.width)
+>>>>>>> Stashed changes
 
   // Padding
   dom.applyNumericalStyle(popup, 'padding', params.padding)
@@ -22,8 +29,11 @@ export const renderPopup = (instance, params) => {
     popup.style.background = params.background
   }
 
+<<<<<<< Updated upstream
   dom.hide(dom.getValidationMessage())
 
+=======
+>>>>>>> Stashed changes
   // Classes
   addClasses(popup, params)
 }

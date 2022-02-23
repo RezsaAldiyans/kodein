@@ -1,0 +1,379 @@
+CRITICAL - 2021-06-09 01:29:16 --> Call to a member function validate() on null
+#0 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->register()
+#1 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2021-06-09 01:29:41 --> Function name must be a string
+#0 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->register()
+#1 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2021-06-09 02:00:27 --> Call to undefined method App\Controllers\Home::setRules()
+#0 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->register()
+#1 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2021-06-09 02:00:55 --> Too few arguments to function CodeIgniter\Controller::validate(), 0 passed in A:\kodein\kodein\app\Controllers\Home.php on line 26 and at least 1 expected
+#0 A:\kodein\kodein\app\Controllers\Home.php(26): CodeIgniter\Controller->validate()
+#1 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->register()
+#2 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#6 {main}
+CRITICAL - 2021-06-09 02:01:06 --> Call to a member function setRules() on null
+#0 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->register()
+#1 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2021-06-09 02:02:05 --> Call to a member function setRules() on null
+#0 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->register()
+#1 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2021-06-09 02:04:03 --> Call to a member function setRules() on null
+#0 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->register()
+#1 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2021-06-09 02:05:53 --> Call to a member function setRule() on null
+#0 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->register()
+#1 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2021-06-09 02:07:42 --> Call to a member function setRule() on null
+#0 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->register()
+#1 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2021-06-09 02:10:28 --> Call to a member function library() on null
+#0 A:\kodein\kodein\system\CodeIgniter.php(890): App\Controllers\Home->__construct()
+#1 A:\kodein\kodein\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#2 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2021-06-09 02:11:36 --> Call to a member function library() on null
+#0 A:\kodein\kodein\system\CodeIgniter.php(890): App\Controllers\Home->__construct()
+#1 A:\kodein\kodein\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#2 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2021-06-09 02:12:10 --> Call to a member function setRule() on null
+#0 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->register()
+#1 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2021-06-09 02:12:23 --> Call to a member function setRules() on null
+#0 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->register()
+#1 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2021-06-09 02:12:37 --> Call to a member function setRules() on null
+#0 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->register()
+#1 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2021-06-09 02:14:04 --> Class 'App\Controllers\App\Config\Services' not found
+#0 A:\kodein\kodein\system\CodeIgniter.php(890): App\Controllers\Home->__construct()
+#1 A:\kodein\kodein\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#2 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2021-06-09 02:16:57 --> Call to a member function setRules() on null
+#0 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->register()
+#1 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2021-06-09 02:22:12 --> Argument 1 passed to CodeIgniter\Validation\Validation::setRules() must be of the type array, object given, called in A:\kodein\kodein\system\Controller.php on line 218
+#0 A:\kodein\kodein\system\Controller.php(218): CodeIgniter\Validation\Validation->setRules(Object(CodeIgniter\Validation\Validation), Array)
+#1 A:\kodein\kodein\app\Controllers\Home.php(46): CodeIgniter\Controller->validate(Object(CodeIgniter\Validation\Validation))
+#2 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->register()
+#3 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#7 {main}
+CRITICAL - 2021-06-09 02:24:33 --> nama_lengkap is not a valid rule.
+#0 A:\kodein\kodein\system\Controller.php(203): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('nama_lengkap')
+#1 A:\kodein\kodein\app\Controllers\Home.php(46): CodeIgniter\Controller->validate('nama_lengkap')
+#2 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->register()
+#3 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#7 {main}
+CRITICAL - 2021-06-09 02:32:35 --> Object of class CodeIgniter\Validation\Validation could not be converted to string
+#0 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->register()
+#1 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2021-06-09 02:33:57 --> Object of class CodeIgniter\Validation\Validation could not be converted to string
+#0 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->register()
+#1 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2021-06-09 02:34:17 --> syntax error, unexpected '}'
+#0 A:\kodein\kodein\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('A:\\kodein\\kodei...')
+#1 A:\kodein\kodein\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 A:\kodein\kodein\system\CodeIgniter.php(869): class_exists('\\App\\Controller...', true)
+#5 A:\kodein\kodein\system\CodeIgniter.php(394): CodeIgniter\CodeIgniter->startController()
+#6 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#9 {main}
+CRITICAL - 2021-06-09 02:34:22 --> Object of class CodeIgniter\Validation\Validation could not be converted to string
+#0 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->register()
+#1 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2021-06-09 02:37:54 --> Object of class CodeIgniter\Validation\Validation could not be converted to string
+#0 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->register()
+#1 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2021-06-09 02:38:16 --> Object of class CodeIgniter\Validation\Validation could not be converted to string
+#0 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->register()
+#1 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2021-06-09 06:59:43 --> Class 'App\Models\ProfilModel' not found
+#0 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->login()
+#1 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2021-06-09 07:00:11 --> Class 'App\Controllers\ProfilModel' not found
+#0 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->login()
+#1 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2021-06-09 07:00:28 --> Class 'App\Controllers\ProfilModel' not found
+#0 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->login()
+#1 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2021-06-09 07:00:43 --> Class 'App\Controllers\ProfilModel' not found
+#0 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->login()
+#1 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2021-06-09 07:01:04 --> Class 'App\Models\ProfileModel' not found
+#0 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->login()
+#1 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2021-06-09 07:02:18 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::first()
+#0 A:\kodein\kodein\app\Controllers\Home.php(68): App\Models\ProfileModel->getKelasUser('pelajar-2021060...')
+#1 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->login()
+#2 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#6 {main}
+CRITICAL - 2021-06-09 07:09:27 --> Object of class CodeIgniter\Database\MySQLi\Builder could not be converted to string
+#0 A:\kodein\kodein\system\View\View.php(246): include()
+#1 A:\kodein\kodein\system\Common.php(1119): CodeIgniter\View\View->render('dashboard-user', Array, true)
+#2 A:\kodein\kodein\app\Controllers\Home.php(94): view('dashboard-user')
+#3 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#4 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2021-06-09 07:09:51 --> Cannot use object of type CodeIgniter\Database\MySQLi\Builder as array
+#0 A:\kodein\kodein\system\View\View.php(246): include()
+#1 A:\kodein\kodein\system\Common.php(1119): CodeIgniter\View\View->render('dashboard-user', Array, true)
+#2 A:\kodein\kodein\app\Controllers\Home.php(94): view('dashboard-user')
+#3 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#4 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2021-06-09 07:10:07 --> Cannot use object of type CodeIgniter\Database\MySQLi\Builder as array
+#0 A:\kodein\kodein\system\View\View.php(246): include()
+#1 A:\kodein\kodein\system\Common.php(1119): CodeIgniter\View\View->render('dashboard-user', Array, true)
+#2 A:\kodein\kodein\app\Controllers\Home.php(94): view('dashboard-user')
+#3 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#4 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2021-06-09 07:10:08 --> Cannot use object of type CodeIgniter\Database\MySQLi\Builder as array
+#0 A:\kodein\kodein\system\View\View.php(246): include()
+#1 A:\kodein\kodein\system\Common.php(1119): CodeIgniter\View\View->render('dashboard-user', Array, true)
+#2 A:\kodein\kodein\app\Controllers\Home.php(94): view('dashboard-user')
+#3 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#4 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2021-06-09 07:10:11 --> Cannot use object of type CodeIgniter\Database\MySQLi\Builder as array
+#0 A:\kodein\kodein\system\View\View.php(246): include()
+#1 A:\kodein\kodein\system\Common.php(1119): CodeIgniter\View\View->render('dashboard-user', Array, true)
+#2 A:\kodein\kodein\app\Controllers\Home.php(94): view('dashboard-user')
+#3 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#4 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2021-06-09 07:18:25 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::findAll()
+#0 A:\kodein\kodein\app\Controllers\Home.php(68): App\Models\ProfileModel->getKelasUser('pelajar-2021060...')
+#1 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->login()
+#2 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#6 {main}
+CRITICAL - 2021-06-09 07:18:42 --> Cannot use object of type CodeIgniter\Database\MySQLi\Builder as array
+#0 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->login()
+#1 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2021-06-09 07:19:00 --> Cannot use object of type CodeIgniter\Database\MySQLi\Builder as array
+#0 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->login()
+#1 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2021-06-09 07:25:08 --> count(): Parameter must be an array or an object that implements Countable
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'count(): Parame...', 'A:\\kodein\\kodei...', 77, Array)
+#1 A:\kodein\kodein\app\Controllers\Home.php(77): count(NULL)
+#2 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->login()
+#3 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#7 {main}
+CRITICAL - 2021-06-09 07:33:47 --> syntax error, unexpected '=', expecting ']'
+#0 A:\kodein\kodein\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('A:\\kodein\\kodei...')
+#1 A:\kodein\kodein\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 A:\kodein\kodein\system\CodeIgniter.php(869): class_exists('\\App\\Controller...', true)
+#5 A:\kodein\kodein\system\CodeIgniter.php(394): CodeIgniter\CodeIgniter->startController()
+#6 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#9 {main}
+CRITICAL - 2021-06-09 07:33:53 --> syntax error, unexpected '=', expecting ']'
+#0 A:\kodein\kodein\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('A:\\kodein\\kodei...')
+#1 A:\kodein\kodein\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 A:\kodein\kodein\system\CodeIgniter.php(869): class_exists('\\App\\Controller...', true)
+#5 A:\kodein\kodein\system\CodeIgniter.php(394): CodeIgniter\CodeIgniter->startController()
+#6 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#9 {main}
+CRITICAL - 2021-06-09 07:38:40 --> syntax error, unexpected '}', expecting ';' or ','
+#0 A:\kodein\kodein\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('A:\\kodein\\kodei...')
+#1 A:\kodein\kodein\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 A:\kodein\kodein\system\CodeIgniter.php(869): class_exists('\\App\\Controller...', true)
+#5 A:\kodein\kodein\system\CodeIgniter.php(394): CodeIgniter\CodeIgniter->startController()
+#6 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#9 {main}
+CRITICAL - 2021-06-09 08:05:21 --> syntax error, unexpected 'echo' (T_ECHO)
+#0 A:\kodein\kodein\system\Common.php(1119): CodeIgniter\View\View->render('dashboard-user', Array, true)
+#1 A:\kodein\kodein\app\Controllers\Home.php(104): view('dashboard-user')
+#2 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#3 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#7 {main}
+CRITICAL - 2021-06-09 23:34:47 --> Unable to connect to the database.
+#0 A:\kodein\kodein\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 A:\kodein\kodein\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 A:\kodein\kodein\system\Model.php(506): CodeIgniter\Database\BaseBuilder->get()
+#3 A:\kodein\kodein\app\Controllers\Home.php(62): CodeIgniter\Model->first()
+#4 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->login()
+#5 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#9 {main}
+CRITICAL - 2021-06-09 23:39:31 --> Unable to connect to the database.
+#0 A:\kodein\kodein\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 A:\kodein\kodein\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 A:\kodein\kodein\system\Model.php(506): CodeIgniter\Database\BaseBuilder->get()
+#3 A:\kodein\kodein\app\Controllers\Home.php(62): CodeIgniter\Model->first()
+#4 A:\kodein\kodein\system\CodeIgniter.php(918): App\Controllers\Home->login()
+#5 A:\kodein\kodein\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 A:\kodein\kodein\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 A:\kodein\kodein\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 A:\kodein\kodein\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#9 {main}
+CRITICAL - 2021-06-09 23:59:05 --> Unable to connect to the database.
+#0 /var/www/kodein.codes/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 /var/www/kodein.codes/system/Database/BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query()
+#2 /var/www/kodein.codes/system/Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 /var/www/kodein.codes/app/Models/HistoryModel.php(10): CodeIgniter\Model->findAll()
+#4 /var/www/kodein.codes/app/Controllers/restfulApi.php(12): App\Models\historyModel->getHistory()
+#5 /var/www/kodein.codes/system/CodeIgniter.php(918): App\Controllers\restfulApi->ApiHistory()
+#6 /var/www/kodein.codes/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/kodein.codes/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/kodein.codes/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-06-09 23:59:10 --> CodeIgniter\View\View::main(): Failed opening required '/var/www/kodein.codes/app/Controllers\hit.php' (include_path='.:/usr/share/php')
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}

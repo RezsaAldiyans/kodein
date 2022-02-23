@@ -1,0 +1,46 @@
+CRITICAL - 2021-09-28 18:36:59 --> Division by zero
+#0 A:\kodein\kodein.codes\app\Views\detailkelas.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Division by zer...', 'A:\\kodein\\kodei...', 3, Array)
+#1 A:\kodein\kodein.codes\system\View\View.php(246): include('A:\\kodein\\kodei...')
+#2 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('detailkelas', Array, true)
+#3 A:\kodein\kodein.codes\app\Controllers\Home.php(233): view('detailkelas', Array)
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->detailsKelas('assets', 'images', 'admin.jpg')
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#9 {main}
+CRITICAL - 2021-09-28 18:37:45 --> Division by zero
+#0 A:\kodein\kodein.codes\app\Views\detailkelas.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Division by zer...', 'A:\\kodein\\kodei...', 3, Array)
+#1 A:\kodein\kodein.codes\system\View\View.php(246): include('A:\\kodein\\kodei...')
+#2 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('detailkelas', Array, true)
+#3 A:\kodein\kodein.codes\app\Controllers\Home.php(233): view('detailkelas', Array)
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->detailsKelas('assets', 'images', 'admin.jpg')
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#9 {main}
+CRITICAL - 2021-09-28 18:43:30 --> Illegal string offset 'id_kelas'
+#0 A:\kodein\kodein.codes\app\Controllers\Home.php(251): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'A:\\kodein\\kodei...', 251, Array)
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->mulaiKelas('html-1')
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#6 {main}
+CRITICAL - 2021-09-28 18:43:48 --> Illegal string offset 'id_kelas'
+#0 A:\kodein\kodein.codes\app\Controllers\Home.php(251): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'A:\\kodein\\kodei...', 251, Array)
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->mulaiKelas('html-1')
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#6 {main}
+CRITICAL - 2021-09-28 18:44:17 --> Illegal string offset 'id_kelas'
+#0 A:\kodein\kodein.codes\app\Controllers\Home.php(251): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'A:\\kodein\\kodei...', 251, Array)
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->mulaiKelas('css-1')
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#6 {main}

@@ -1,0 +1,18 @@
+CRITICAL - 2021-08-26 00:25:30 --> Invalid file: index.html
+#0 A:\kodein\kodein.codes\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.html')
+#1 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('index.html', Array, true)
+#2 A:\kodein\kodein.codes\app\Controllers\AdminController.php(84): view('index.html')
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\AdminController->deleteUpdatesSiswa('pelajar-2021070...')
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2021-08-26 12:34:18 --> Argument 2 passed to view() must be of the type array, string given, called in A:\kodein\kodein.codes\app\Controllers\Home.php on line 221
+#0 A:\kodein\kodein.codes\app\Controllers\Home.php(221): view('errors/html/err...', '401')
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->errorCode('401')
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#6 {main}

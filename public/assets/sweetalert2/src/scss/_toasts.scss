@@ -1,14 +1,21 @@
 .swal2-popup {
   &.swal2-toast {
+<<<<<<< Updated upstream
     box-sizing: border-box;
     grid-column: 1/4 !important;
     grid-row: 1/4 !important;
     grid-template-columns: 1fr 99fr 1fr;
+=======
+    flex-direction: row;
+    align-items: center;
+    width: $swal2-toast-width;
+>>>>>>> Stashed changes
     padding: $swal2-toast-padding;
     overflow-y: hidden;
     background: $swal2-toast-background;
     box-shadow: $swal2-toast-box-shadow;
 
+<<<<<<< Updated upstream
     > * {
       grid-column: 2;
     }
@@ -32,6 +39,17 @@
 
     .swal2-validation-message {
       font-size: $swal2-toast-validation-font-size;
+=======
+    .swal2-header {
+      flex-direction: row;
+    }
+
+    .swal2-title {
+      flex-grow: 1;
+      justify-content: flex-start;
+      margin: $swal2-toast-title-margin;
+      font-size: $swal2-toast-title-font-size;
+>>>>>>> Stashed changes
     }
 
     .swal2-footer {
@@ -41,6 +59,7 @@
     }
 
     .swal2-close {
+<<<<<<< Updated upstream
       grid-column: 3/3;
       grid-row: 1/99;
       align-self: center;
@@ -78,12 +97,39 @@
       min-width: 2em;
       height: 2em;
       margin: 0 .5em 0 0;
+=======
+      position: static;
+      width: $swal2-toast-close-button-width;
+      height: $swal2-toast-close-button-height;
+      line-height: $swal2-toast-close-button-line-height;
+    }
+
+    .swal2-content {
+      justify-content: flex-start;
+      font-size: $swal2-toast-content-font-size;
+    }
+
+    .swal2-icon {
+      width: 2em;
+      min-width: 2em;
+      height: 2em;
+      margin: 0;
+>>>>>>> Stashed changes
 
       .swal2-icon-content {
         display: flex;
         align-items: center;
+<<<<<<< Updated upstream
         font-size: $swal2-toast-icon-font-size;
         font-weight: bold;
+=======
+        font-size: 1.8em;
+        font-weight: bold;
+
+        @include ie {
+          font-size: .25em;
+        }
+>>>>>>> Stashed changes
       }
 
       &.swal2-success {
@@ -110,6 +156,7 @@
     }
 
     .swal2-actions {
+<<<<<<< Updated upstream
       justify-content: flex-start;
       height: auto;
       margin: 0;
@@ -120,6 +167,17 @@
     .swal2-styled {
       margin: .25em .5em;
       padding: .4em .6em;
+=======
+      flex-basis: auto !important;
+      width: auto;
+      height: auto;
+      margin: 0 .3125em;
+    }
+
+    .swal2-styled {
+      margin: 0 .3125em;
+      padding: .3125em .625em;
+>>>>>>> Stashed changes
       font-size: $swal2-toast-buttons-font-size;
 
       &:focus {

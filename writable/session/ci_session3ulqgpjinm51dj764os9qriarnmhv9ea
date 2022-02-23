@@ -1,0 +1,8 @@
+__ci_last_regenerate|i:1628847609;_ci_previous_url|s:27:"http://localhost:8080/login";errorRegister|s:173:"	<div class="errors" role="alert">
+		<ul>
+					<li>Nama lengkap wajib diisi</li>
+					<li>Email wajib diisi</li>
+					<li>Password wajib diisi</li>
+				</ul>
+	</div>
+";__ci_vars|a:3:{s:13:"errorRegister";s:3:"old";s:13:"_ci_old_input";s:3:"old";s:21:"_ci_validation_errors";s:3:"old";}_ci_old_input|a:2:{s:3:"get";a:0:{}s:4:"post";a:4:{s:4:"nama";s:0:"";s:5:"email";s:0:"";s:8:"password";s:0:"";s:15:"confirmPassword";s:0:"";}}_ci_validation_errors|s:129:"a:3:{s:4:"nama";s:24:"Nama lengkap wajib diisi";s:5:"email";s:17:"Email wajib diisi";s:8:"password";s:20:"Password wajib diisi";}";

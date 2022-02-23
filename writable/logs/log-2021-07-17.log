@@ -1,0 +1,60 @@
+CRITICAL - 2021-07-17 12:58:47 --> preg_match_all() expects parameter 1 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match_all(...', 'A:\\kodein\\kodei...', 27, Array)
+#1 A:\kodein\kodein.codes\app\Controllers\Home.php(27): preg_match_all(Array, '<h1> </h1><h2> ...')
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(205): App\Controllers\deteksiSpesial('<h1> </h1><h2> ...')
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->inCoder()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2021-07-17 12:59:59 --> preg_match_all() expects parameter 1 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match_all(...', 'A:\\kodein\\kodei...', 28, Array)
+#1 A:\kodein\kodein.codes\app\Controllers\Home.php(28): preg_match_all(Array, '<h1> </h1><h2> ...', Array)
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(207): App\Controllers\deteksiSpesial('<h1> </h1><h2> ...')
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->inCoder()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2021-07-17 13:00:56 --> preg_match_all() expects parameter 1 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match_all(...', 'A:\\kodein\\kodei...', 28, Array)
+#1 A:\kodein\kodein.codes\app\Controllers\Home.php(28): preg_match_all(Array, '<h1> </h1><h2> ...', Array)
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(207): App\Controllers\deteksiSpesial('<h1> </h1><h2> ...')
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->inCoder()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2021-07-17 13:01:05 --> preg_match_all() expects parameter 1 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match_all(...', 'A:\\kodein\\kodei...', 28, Array)
+#1 A:\kodein\kodein.codes\app\Controllers\Home.php(28): preg_match_all(Array, '<h1> </h1><h2> ...', Array)
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(207): App\Controllers\deteksiSpesial('<h1> </h1><h2> ...')
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->inCoder()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2021-07-17 13:01:38 --> preg_match_all() expects parameter 1 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match_all(...', 'A:\\kodein\\kodei...', 28, Array)
+#1 A:\kodein\kodein.codes\app\Controllers\Home.php(28): preg_match_all(Array, '<h1> </h1>\r\n<h2...', Array)
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(207): App\Controllers\deteksiSpesial('<h1> </h1>\r\n<h2...')
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->inCoder()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2021-07-17 13:03:25 --> preg_match_all(): Unknown modifier 'h'
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match_all(...', 'A:\\kodein\\kodei...', 26, Array)
+#1 A:\kodein\kodein.codes\app\Controllers\Home.php(26): preg_match_all('/<h1>([\\w\\s]+)<...', '<h1> </h1><h2> ...', Array)
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(205): App\Controllers\deteksiSpesial('<h1> </h1><h2> ...')
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->inCoder()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}

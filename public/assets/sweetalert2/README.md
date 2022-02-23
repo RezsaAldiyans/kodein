@@ -1,5 +1,9 @@
 <p align="center">
+<<<<<<< Updated upstream
   <a href="https://github.com/sponsors/limonte">[= Become the :trophy: Ultimate Sponsor of SweetAlert2 and place your banner here (100K+ unique visitors per month) =]</a>
+=======
+  <a href="https://github.com/sponsors/limonte">[== Become the :trophy: Ultimate Sponsor of SweetAlert2 and place your banner here (100K+ unique visitors per month!) ==]</a>
+>>>>>>> Stashed changes
 </p>
 
 <p align="center">
@@ -24,11 +28,16 @@
   <a href="https://codeclimate.com/github/sweetalert2/sweetalert2/test_coverage"><img alt="Coverage Status" src="https://api.codeclimate.com/v1/badges/eba34bb80477933854d4/test_coverage"></a>
   <a href="https://www.npmjs.com/package/sweetalert2"><img alt="Version" src="https://img.shields.io/npm/v/sweetalert2.svg"></a>
   <a href="https://www.jsdelivr.com/package/npm/sweetalert2"><img alt="jsdelivr" src="https://data.jsdelivr.com/v1/package/npm/sweetalert2/badge?style=rounded"></a>
+<<<<<<< Updated upstream
   <a href="#support-and-donations"><img alt="Support Donate" src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=ea4aaa"></a>
+=======
+  <a href="#support-and-donations"><img alt="Support Donate" src="https://ionicabizau.github.io/badges/paypal.svg"></a>
+>>>>>>> Stashed changes
 </p>
 
 ---
 
+<<<<<<< Updated upstream
 :moneybag: [Get $100 in free credits with DigitalOcean!](https://m.do.co/c/12907f2ba0bf)
 
 ---
@@ -36,6 +45,13 @@
 :point_right: **Upgrading from v10.x to v11.x?** [Read the release notes!](https://github.com/sweetalert2/sweetalert2/releases/tag/v11.0.0)
 <br>If you're upgrading from v8.x, please [upgrade from v9 to v10](https://github.com/sweetalert2/sweetalert2/releases/tag/v10.0.0) first!
 <br>If you're upgrading from v8.x, please [upgrade from v8 to v9](https://github.com/sweetalert2/sweetalert2/releases/tag/v9.0.0) first!
+=======
+:shipit: The author of SweetAlert2 ([@limonte](https://github.com/limonte/)) is looking for short-term to medium-term working contracts in front-end, preferably OSS.
+
+---
+
+:point_right: **Upgrading from v8.x to v9.x?** [Read the release notes!](https://github.com/sweetalert2/sweetalert2/releases/tag/v9.0.0)
+>>>>>>> Stashed changes
 <br>If you're upgrading from v7.x, please [upgrade from v7 to v8](https://github.com/sweetalert2/sweetalert2/releases/tag/v8.0.0) first!
 <br>If you're upgrading from v6.x, please [upgrade from v6 to v7](https://github.com/sweetalert2/sweetalert2/releases/tag/v7.0.0) first!
 
@@ -54,7 +70,11 @@ Or grab from [jsdelivr CDN](https://www.jsdelivr.com/package/npm/sweetalert2)
 :
 
 ```html
+<<<<<<< Updated upstream
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+=======
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+>>>>>>> Stashed changes
 ```
 
 
@@ -63,6 +83,12 @@ Usage
 
 ```html
 <script src="sweetalert2/dist/sweetalert2.all.min.js"></script>
+<<<<<<< Updated upstream
+=======
+
+<!-- Include a polyfill for ES6 Promises (optional) for IE11 -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill9/dist/polyfill.js"></script>
+>>>>>>> Stashed changes
 ```
 
 You can also include the stylesheet separately if desired:
@@ -129,7 +155,11 @@ Swal.fire({
   confirmButtonText: 'Yes, delete it!',
   cancelButtonText: 'No, keep it'
 }).then((result) => {
+<<<<<<< Updated upstream
   if (result.isConfirmed) {
+=======
+  if (result.value) {
+>>>>>>> Stashed changes
     Swal.fire(
       'Deleted!',
       'Your imaginary file has been deleted.',
@@ -153,11 +183,21 @@ Swal.fire({
 Browser compatibility
 ---------------------
 
+<<<<<<< Updated upstream
 Chrome | Firefox | Safari | Edge
 -------|---------|--------|-----
 :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:
 
 If you need IE11 and legacy Edge support, please use [the previous major version](https://github.com/sweetalert2/sweetalert2/releases/tag/v10.16.7).
+=======
+ IE11* | Edge | Chrome | Firefox | Safari | Opera | UC Browser
+-------|------|--------|---------|--------|-------|------------
+:heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+
+\* ES6 Promise polyfill should be included, see [usage example](#usage).
+
+Note that SweetAlert2 **does not** and **will not** provide support or functionality of any kind on IE10 and lower.
+>>>>>>> Stashed changes
 
 
 
@@ -169,8 +209,11 @@ Themes ([`sweetalert2-themes ↗`](https://github.com/sweetalert2/sweetalert2-th
 - [`Borderless`](https://github.com/sweetalert2/sweetalert2-themes/tree/master/borderless)
 - [`Bootstrap 4`](https://github.com/sweetalert2/sweetalert2-themes/tree/master/bootstrap-4)
 - [`Material UI`](https://github.com/sweetalert2/sweetalert2-themes/tree/master/material-ui)
+<<<<<<< Updated upstream
 - [`WordPress Admin`](https://github.com/sweetalert2/sweetalert2-themes/tree/master/wordpress-admin)
 - [`Bulma`](https://github.com/sweetalert2/sweetalert2-themes/tree/master/bulma)
+=======
+>>>>>>> Stashed changes
 - [`Default`](https://github.com/sweetalert2/sweetalert2-themes/tree/master/default)
 
 
@@ -192,6 +235,17 @@ Related community projects
 - [ElectronAlert](https://electron.guide/electron-alert/) - SweetAlert2 for Electron applications (main process)
 
 
+<<<<<<< Updated upstream
+=======
+Collaborators
+-------------
+
+[![](https://avatars3.githubusercontent.com/u/17089396?v=4&s=80)](https://github.com/gverni) | [![](https://avatars3.githubusercontent.com/u/3198597?v=4&s=80)](https://github.com/zenflow) | [![](https://avatars1.githubusercontent.com/u/1343250?v=4&s=80)](https://github.com/toverux) | [![](https://avatars3.githubusercontent.com/u/9093699?v=4&s=80)](https://github.com/acupajoe)
+-|-|-|-|
+[@gverni](https://github.com/gverni) | [@zenflow](https://github.com/zenflow) | [@toverux](https://github.com/toverux) | [@acupajoe](https://github.com/acupajoe)
+
+
+>>>>>>> Stashed changes
 Contributing
 ------------
 
@@ -209,19 +263,30 @@ If you would like to contribute enhancements or fixes, please do the following:
 4. To begin active development, run `npm start` or `yarn start`. This does several things for you:
  - Builds the `dist` folder
  - Serves sandbox.html @ http://localhost:8080/ (browser-sync ui:  http://localhost:8081/)
+<<<<<<< Updated upstream
  - Re-builds and re-loads as necessary when files change
 
 5. To run tests, run `npm run cypress:open` or `yarn cypress:open`
+=======
+ - Serves unit tests @ http://localhost:3000
+ - Re-builds, re-loads and re-tests as necessary when files change
+>>>>>>> Stashed changes
 
 Big Thanks
 ----------
 
+<<<<<<< Updated upstream
 - [FlowCrypt](https://flowcrypt.com/) for continuous support of this project
 - [Serena Verni (@serenaperora)](https://serena.verni.xyz) for creating the amazing project logo
+=======
+- [Serena Verni (@serenaperora)](https://serena.verni.xyz) for creating the amazing project logo
+- [Sauce Labs](https://saucelabs.com/) for providing the reliable cross-browser testing platform
+>>>>>>> Stashed changes
 
 Sponsors
 --------
 
+<<<<<<< Updated upstream
 For all questions related to sponsorship please contact me via email limon.monte@protonmail.com
 
 [<img src="https://sweetalert2.github.io/images/sponsors/flowcrypt-banner.png">](https://flowcrypt.com/?utm_source=sweetalert2&utm_medium=banner)
@@ -244,12 +309,36 @@ NSFW Sponsors
 [<img src="https://sweetalert2.github.io/images/sponsors/best-blowjob-machines.jpg" width="80">](https://www.bestblowjobmachines.com/?utm_source=sweetalert2&utm_medium=logo) | [<img src="https://sweetalert2.github.io/images/sponsors/sextoycollective.jpg" width="80">](https://sextoycollective.com/?utm_source=sweetalert2&utm_medium=logo) | [<img src="https://sweetalert2.github.io/images/sponsors/doctorclimax.png" width="80">](https://doctorclimax.com/)
 -|-|-
 [Best Blowjob Machines](https://www.bestblowjobmachines.com/?utm_source=sweetalert2&utm_medium=logo) | [STC](https://sextoycollective.com/?utm_source=sweetalert2&utm_medium=logo) | [DoctorClimax](https://doctorclimax.com/)
+=======
+[<img src="https://sweetalert2.github.io/images/sponsors/flowcrypt-banner.png">](https://flowcrypt.com/?utm_source=sweetalert2&utm_medium=banner)
+
+[<img src="https://sweetalert2.github.io/images/plus.png" width="80">](SPONSORS.md) | [<img src="https://avatars2.githubusercontent.com/u/28631236?s=80&v=4" width="80">](https://flowcrypt.com/?utm_source=sweetalert2&utm_medium=logo) | [<img src="https://sweetalert2.github.io/images/sponsors/sexualalpha.jpg" width="80">](https://sexualalpha.com/?utm_source=sweetalert2&utm_medium=logo) | [<img src="https://sweetalert2.github.io/images/sponsors/sex-toy-education.png" width="80">](https://sextoyeducation.com/?utm_source=sweetalert2&utm_medium=logo) | [<img src="https://sweetalert2.github.io/images/sponsors/yourdoll.jpg" width="80">](https://www.yourdoll.com/?utm_source=sweetalert2&utm_medium=logo) | [<img src="https://sweetalert2.github.io/images/sponsors/sextoycollective.jpg" width="80">](https://sextoycollective.com/?utm_source=sweetalert2&utm_medium=logo)
+-|-|-|-|-|-
+[Become a sponsor](SPONSORS.md) | [FlowCrypt](https://flowcrypt.com/?utm_source=sweetalert2&utm_medium=logo) | [SexualAlpha (NSFW)](https://sexualalpha.com/?utm_source=sweetalert2&utm_medium=logo) | [STED (NSFW)](https://sextoyeducation.com/?utm_source=sweetalert2&utm_medium=logo) | [YourDoll (NSFW)](https://www.yourdoll.com/?utm_source=sweetalert2&utm_medium=logo) | [STC (NSFW)](https://sextoycollective.com/?utm_source=sweetalert2&utm_medium=logo)
+
+[<img src="https://sweetalert2.github.io/images/sponsors/sebaebc.png" width="80">](https://github.com/sebaebc) | [<img src="https://sweetalert2.github.io/images/sponsors/loveloxy.png" width="80">](https://loveloxy.com/?utm_source=sweetalert2&utm_medium=logo) | [<img src="https://sweetalert2.github.io/images/sponsors/bingato.png" width="80">](https://bingato.com/?utm_source=sweetalert2&utm_medium=logo) | [<img src="https://sweetalert2.github.io/images/sponsors/realsexdoll.png" width="80">](https://realsexdoll.com/?utm_source=sweetalert2&utm_medium=logo)
+-|-|-|-
+[SebaEBC](https://github.com/sebaebc) | [LoveLoxy (NSFW)](https://www.loveloxy.com/?utm_source=sweetalert2&utm_medium=logo) | [Bingato (NSFW 18+)](https://bingato.com/?utm_source=sweetalert2&utm_medium=logo) | [RealSexDoll (NSFW)](https://realsexdoll.com/?utm_source=sweetalert2&utm_medium=logo)
+
+>>>>>>> Stashed changes
 
 Support and Donations
 ---------------------
 
+<<<<<<< Updated upstream
 Has SweetAlert2 helped you create an amazing application? You can show your support via [GitHub Sponsors](https://github.com/sponsors/limonte)
 
 Alternative ways for donations (PayPal, cryptocurrencies, etc.) are listed here: https://sweetalert2.github.io/#donations
+=======
+Has SweetAlert2 helped you create an amazing application? You can show your support by making a donation:
+
+- [GitHub Sponsors :heart:](https://github.com/sponsors/limonte)
+- [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TKTWHJGUWLR7E)
+- [PayPal.me](https://www.paypal.me/limonte)
+- Bitcoin: `16Z7RvFv7PsV3XzFvchYwPnRfw9KeLTZQJ`
+- Ether: `0x192096161eB2273f12b1cB4E31aBB09Bfc03a7F3`
+- Bitcoin Cash: `qz28x66hrljtdz3052p8ya3cmkwwva5avy0msz2ej3`
+- Stellar: `GDUM4VJZYDNRHBTKUQBOPC374AP6MMMVOJDMSHIPEJPEMBCY4ZHH6NDY`
+>>>>>>> Stashed changes
 
 ### [Hall of Donators :trophy:](DONATIONS.md)

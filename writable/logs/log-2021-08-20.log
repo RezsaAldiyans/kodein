@@ -1,0 +1,123 @@
+CRITICAL - 2021-08-20 02:42:10 --> Invalid file: php-admin/login.php
+#0 A:\kodein\kodein.codes\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('php-admin/login...')
+#1 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('php-admin/login', Array, true)
+#2 A:\kodein\kodein.codes\app\Controllers\admin.php(9): view('php-admin/login')
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Admin->login()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2021-08-20 02:42:37 --> Invalid file: /php-admin/login.php
+#0 A:\kodein\kodein.codes\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/php-admin/logi...')
+#1 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('/php-admin/logi...', Array, true)
+#2 A:\kodein\kodein.codes\app\Controllers\admin.php(9): view('/php-admin/logi...')
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Admin->login()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2021-08-20 22:16:30 --> Call to a member function get() on null
+#0 A:\kodein\kodein.codes\system\View\View.php(246): include()
+#1 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('dashboard-user', Array, true)
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(165): view('dashboard-user')
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2021-08-20 22:17:14 --> Call to a member function get() on null
+#0 A:\kodein\kodein.codes\system\View\View.php(246): include()
+#1 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('dashboard-user', Array, true)
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(165): view('dashboard-user')
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2021-08-20 22:19:43 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::findAll()
+#0 A:\kodein\kodein.codes\app\Controllers\Home.php(148): App\Models\ProfileModel->getKelasUser('pelajar-2021060...')
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#6 {main}
+CRITICAL - 2021-08-20 22:21:25 --> Call to a member function get() on null
+#0 A:\kodein\kodein.codes\system\View\View.php(246): include()
+#1 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('dashboard-user', Array, true)
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(165): view('dashboard-user')
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2021-08-20 22:21:45 --> Call to a member function get() on null
+#0 A:\kodein\kodein.codes\system\View\View.php(246): include()
+#1 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('dashboard-user', Array, true)
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(165): view('dashboard-user')
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2021-08-20 22:59:48 --> Call to a member function select() on null
+#0 A:\kodein\kodein.codes\app\Controllers\Home.php(145): App\Models\LoginModel->getAkun(NULL)
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#6 {main}
+CRITICAL - 2021-08-20 23:00:15 --> Call to a member function select() on null
+#0 A:\kodein\kodein.codes\app\Controllers\Home.php(145): App\Models\LoginModel->getAkun(NULL)
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#6 {main}
+CRITICAL - 2021-08-20 23:00:50 --> Call to a member function select() on null
+#0 A:\kodein\kodein.codes\app\Controllers\Home.php(145): App\Models\LoginModel->getAkun(NULL)
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#6 {main}
+CRITICAL - 2021-08-20 23:01:02 --> Call to a member function where() on null
+#0 A:\kodein\kodein.codes\app\Controllers\Home.php(145): App\Models\LoginModel->getAkun(NULL)
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#6 {main}
+CRITICAL - 2021-08-20 23:12:53 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+#0 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2021-08-20 23:14:14 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::find()
+#0 A:\kodein\kodein.codes\app\Controllers\Home.php(145): App\Models\LoginModel->getAkun('pelajar-2021060...')
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#6 {main}
+CRITICAL - 2021-08-20 23:14:37 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::get()
+#0 A:\kodein\kodein.codes\app\Controllers\Home.php(145): App\Models\LoginModel->getAkun('pelajar-2021060...')
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#6 {main}

@@ -1,0 +1,62 @@
+CRITICAL - 2021-06-11 07:26:09 --> syntax error, unexpected '}', expecting ';' or ','
+#0 /var/www/kodein.codes/system/Common.php(1119): CodeIgniter\View\View->render()
+#1 /var/www/kodein.codes/app/Controllers/Home.php(15): view()
+#2 /var/www/kodein.codes/system/CodeIgniter.php(918): App\Controllers\Home->viewLogin()
+#3 /var/www/kodein.codes/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#4 /var/www/kodein.codes/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#5 /var/www/kodein.codes/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-06-11 08:04:55 --> Use of undefined constant error - assumed 'error' (this will throw an Error in a future version of PHP)
+#0 /var/www/kodein.codes/app/Views/login.php(26): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/kodein.codes/system/View/View.php(246): include('/var/www/kodein...')
+#2 /var/www/kodein.codes/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/kodein.codes/app/Controllers/Home.php(15): view()
+#4 /var/www/kodein.codes/system/CodeIgniter.php(918): App\Controllers\Home->viewLogin()
+#5 /var/www/kodein.codes/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/kodein.codes/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/kodein.codes/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-06-11 09:22:31 --> Undefined offset: 1
+#0 /var/www/kodein.codes/app/Views/hitCounter.php(11): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/kodein.codes/app/Views/index.php(3): require('/var/www/kodein...')
+#2 /var/www/kodein.codes/system/View/View.php(246): include('/var/www/kodein...')
+#3 /var/www/kodein.codes/system/Common.php(1119): CodeIgniter\View\View->render()
+#4 /var/www/kodein.codes/app/Controllers/Home.php(12): view()
+#5 /var/www/kodein.codes/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#6 /var/www/kodein.codes/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/kodein.codes/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/kodein.codes/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-06-11 09:22:32 --> Undefined offset: 1
+#0 /var/www/kodein.codes/app/Views/hitCounter.php(11): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/kodein.codes/app/Views/index.php(3): require('/var/www/kodein...')
+#2 /var/www/kodein.codes/system/View/View.php(246): include('/var/www/kodein...')
+#3 /var/www/kodein.codes/system/Common.php(1119): CodeIgniter\View\View->render()
+#4 /var/www/kodein.codes/app/Controllers/Home.php(12): view()
+#5 /var/www/kodein.codes/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#6 /var/www/kodein.codes/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/kodein.codes/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/kodein.codes/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-06-11 09:22:34 --> Undefined offset: 1
+#0 /var/www/kodein.codes/app/Views/hitCounter.php(11): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/kodein.codes/app/Views/index.php(3): require('/var/www/kodein...')
+#2 /var/www/kodein.codes/system/View/View.php(246): include('/var/www/kodein...')
+#3 /var/www/kodein.codes/system/Common.php(1119): CodeIgniter\View\View->render()
+#4 /var/www/kodein.codes/app/Controllers/Home.php(12): view()
+#5 /var/www/kodein.codes/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#6 /var/www/kodein.codes/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/kodein.codes/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/kodein.codes/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-06-11 09:22:35 --> Undefined offset: 1
+#0 /var/www/kodein.codes/app/Views/hitCounter.php(11): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/kodein.codes/app/Views/index.php(3): require('/var/www/kodein...')
+#2 /var/www/kodein.codes/system/View/View.php(246): include('/var/www/kodein...')
+#3 /var/www/kodein.codes/system/Common.php(1119): CodeIgniter\View\View->render()
+#4 /var/www/kodein.codes/app/Controllers/Home.php(12): view()
+#5 /var/www/kodein.codes/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#6 /var/www/kodein.codes/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/kodein.codes/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/kodein.codes/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}

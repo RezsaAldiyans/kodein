@@ -1,0 +1,106 @@
+CRITICAL - 2021-08-16 14:55:13 --> Class 'App\Models\admin\SiswaModel' not found
+#0 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Siswa->SiswaTerdaftar()
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2021-08-16 14:55:56 --> Class 'App\Models\SiswaModel' not found
+#0 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Siswa->SiswaTerdaftar()
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2021-08-16 14:57:21 --> Call to undefined method App\Models\SiswaModel::respond
+#0 A:\kodein\kodein.codes\app\Models\SiswaModel.php(14): CodeIgniter\Model->__call('respond', Array)
+#1 A:\kodein\kodein.codes\app\Controllers\Siswa.php(9): App\Models\SiswaModel->getChartJoined()
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Siswa->SiswaTerdaftar()
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#7 {main}
+CRITICAL - 2021-08-16 14:57:37 --> Call to undefined method App\Models\SiswaModel::respond
+#0 A:\kodein\kodein.codes\app\Models\SiswaModel.php(15): CodeIgniter\Model->__call('respond', Array)
+#1 A:\kodein\kodein.codes\app\Controllers\Siswa.php(9): App\Models\SiswaModel->getChartJoined()
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Siswa->SiswaTerdaftar()
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#7 {main}
+CRITICAL - 2021-08-16 14:57:57 --> Call to undefined method App\Models\SiswaModel::respond
+#0 A:\kodein\kodein.codes\app\Models\SiswaModel.php(14): CodeIgniter\Model->__call('respond', Array)
+#1 A:\kodein\kodein.codes\app\Controllers\Siswa.php(11): App\Models\SiswaModel->getChartJoined()
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Siswa->SiswaTerdaftar()
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#7 {main}
+CRITICAL - 2021-08-16 14:58:18 --> Call to undefined method App\Models\SiswaModel::respond
+#0 A:\kodein\kodein.codes\app\Models\SiswaModel.php(14): CodeIgniter\Model->__call('respond', Array)
+#1 A:\kodein\kodein.codes\app\Controllers\Siswa.php(11): App\Models\SiswaModel->getChartJoined()
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Siswa->SiswaTerdaftar()
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#7 {main}
+CRITICAL - 2021-08-16 02:59:10 --> Call to undefined method App\Models\SiswaModel::respond
+#0 A:\kodein\kodein.codes\app\Models\SiswaModel.php(14): CodeIgniter\Model->__call('respond', Array)
+#1 A:\kodein\kodein.codes\app\Controllers\Siswa.php(9): App\Models\SiswaModel->getChartJoined()
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Siswa->SiswaTerdaftar()
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#7 {main}
+CRITICAL - 2021-08-16 03:07:18 --> Call to a member function getResultArray() on array
+#0 A:\kodein\kodein.codes\app\Controllers\Siswa.php(9): App\Models\SiswaModel->getChartJoined()
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Siswa->SiswaTerdaftar()
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#6 {main}
+CRITICAL - 2021-08-16 03:07:40 --> Call to a member function getResult() on array
+#0 A:\kodein\kodein.codes\app\Controllers\Siswa.php(9): App\Models\SiswaModel->getChartJoined()
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Siswa->SiswaTerdaftar()
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#6 {main}
+CRITICAL - 2021-08-16 03:08:56 --> Call to a member function getResult() on array
+#0 A:\kodein\kodein.codes\app\Controllers\Siswa.php(9): App\Models\SiswaModel->getChartJoined()
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Siswa->SiswaTerdaftar()
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#6 {main}
+CRITICAL - 2021-08-16 03:09:39 --> Call to a member function getRow() on array
+#0 A:\kodein\kodein.codes\app\Controllers\Siswa.php(9): App\Models\SiswaModel->getChartJoined()
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Siswa->SiswaTerdaftar()
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#6 {main}
+CRITICAL - 2021-08-16 03:10:39 --> Call to a member function getResult() on array
+#0 A:\kodein\kodein.codes\app\Controllers\Siswa.php(9): App\Models\SiswaModel->getChartJoined()
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Siswa->SiswaTerdaftar()
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#6 {main}
+CRITICAL - 2021-08-16 03:14:37 --> Call to a member function getResult() on array
+#0 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Siswa->SiswaTerdaftar()
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}

@@ -1,0 +1,15 @@
+CRITICAL - 2021-07-13 19:57:53 --> Unable to connect to the database.
+#0 A:\kodein\kodein.codes\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 A:\kodein\kodein.codes\system\Model.php(1814): CodeIgniter\Database\BaseConnection->query('insert into pen...')
+#2 A:\kodein\kodein.codes\app\Controllers\hit.php(42): CodeIgniter\Model->__call('query', Array)
+#3 A:\kodein\kodein.codes\app\Views\hitCounter.php(16): HitCounter->Hitung('NT', 'Win64; x64', 'Mozilla/5.0 (Wi...')
+#4 A:\kodein\kodein.codes\app\Views\index.php(3): require('A:\\kodein\\kodei...')
+#5 A:\kodein\kodein.codes\system\View\View.php(246): include('A:\\kodein\\kodei...')
+#6 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('index', Array, true)
+#7 A:\kodein\kodein.codes\app\Controllers\Home.php(19): view('index')
+#8 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#9 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#12 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#13 {main}

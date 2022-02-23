@@ -1,0 +1,10 @@
+CRITICAL - 2021-08-23 19:53:43 --> Invalid file: dashboard-userArray.php
+#0 A:\kodein\kodein.codes\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard-userA...')
+#1 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('dashboard-userA...', Array, true)
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(165): view('dashboard-userA...')
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}

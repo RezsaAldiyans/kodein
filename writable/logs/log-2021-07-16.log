@@ -1,0 +1,18 @@
+CRITICAL - 2021-07-16 19:46:31 --> fgetcsv(): delimiter must be a character
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fgetcsv(): deli...', 'A:\\kodein\\kodei...', 193, Array)
+#1 A:\kodein\kodein.codes\app\Controllers\Home.php(193): fgetcsv(Resource id #76, NULL, '')
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->inCoder()
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#7 {main}
+CRITICAL - 2021-07-16 20:02:44 --> fgetcsv(): delimiter must be a character
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fgetcsv(): deli...', 'A:\\kodein\\kodei...', 194, Array)
+#1 A:\kodein\kodein.codes\app\Controllers\Home.php(194): fgetcsv(Resource id #76, NULL, '')
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->inCoder()
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#7 {main}

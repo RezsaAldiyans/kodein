@@ -1,5 +1,9 @@
 import { undoScrollbar } from '../utils/scrollbarFix.js'
 import { undoIOSfix } from '../utils/iosFix.js'
+<<<<<<< Updated upstream
+=======
+import { undoIEfix } from '../utils/ieFix.js'
+>>>>>>> Stashed changes
 import { unsetAriaHidden } from '../utils/aria.js'
 import * as dom from '../utils/dom/index.js'
 import { swalClasses } from '../utils/classes.js'
@@ -11,15 +15,24 @@ import privateMethods from '../privateMethods.js'
  * Instance method to close sweetAlert
  */
 
+<<<<<<< Updated upstream
 function removePopupAndResetState (instance, container, returnFocus, didClose) {
   if (dom.isToast()) {
     triggerDidCloseAndDispose(instance, didClose)
   } else {
     restoreActiveElement(returnFocus).then(() => triggerDidCloseAndDispose(instance, didClose))
+=======
+function removePopupAndResetState (instance, container, isToast, onAfterClose) {
+  if (isToast) {
+    triggerOnAfterCloseAndDispose(instance, onAfterClose)
+  } else {
+    restoreActiveElement().then(() => triggerOnAfterCloseAndDispose(instance, onAfterClose))
+>>>>>>> Stashed changes
     globalState.keydownTarget.removeEventListener('keydown', globalState.keydownHandler, { capture: globalState.keydownListenerCapture })
     globalState.keydownHandlerAdded = false
   }
 
+<<<<<<< Updated upstream
   const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
   // workaround for #2088
   // for some reason removing the container in Safari will scroll the document to bottom
@@ -29,11 +42,19 @@ function removePopupAndResetState (instance, container, returnFocus, didClose) {
     container.innerHTML = ''
   } else {
     container.remove()
+=======
+  if (container.parentNode) {
+    container.parentNode.removeChild(container)
+>>>>>>> Stashed changes
   }
 
   if (dom.isModal()) {
     undoScrollbar()
     undoIOSfix()
+<<<<<<< Updated upstream
+=======
+    undoIEfix()
+>>>>>>> Stashed changes
     unsetAriaHidden()
   }
 
@@ -48,6 +69,10 @@ function removeBodyClasses () {
       swalClasses['height-auto'],
       swalClasses['no-backdrop'],
       swalClasses['toast-shown'],
+<<<<<<< Updated upstream
+=======
+      swalClasses['toast-column']
+>>>>>>> Stashed changes
     ]
   )
 }
@@ -59,8 +84,11 @@ export function close (resolveValue) {
     return
   }
 
+<<<<<<< Updated upstream
   resolveValue = prepareResolveValue(resolveValue)
 
+=======
+>>>>>>> Stashed changes
   const innerParams = privateProps.innerParams.get(this)
   if (!innerParams || dom.hasClass(popup, innerParams.hideClass.popup)) {
     return
@@ -77,6 +105,7 @@ export function close (resolveValue) {
   handlePopupAnimation(this, popup, innerParams)
 
   // Resolve Swal promise
+<<<<<<< Updated upstream
   swalPromiseResolve(resolveValue)
 }
 
@@ -95,6 +124,9 @@ const prepareResolveValue = (resolveValue) => {
     isDenied: false,
     isDismissed: false,
   }, resolveValue)
+=======
+  swalPromiseResolve(resolveValue || {})
+>>>>>>> Stashed changes
 }
 
 const handlePopupAnimation = (instance, popup, innerParams) => {
@@ -102,6 +134,7 @@ const handlePopupAnimation = (instance, popup, innerParams) => {
   // If animation is supported, animate
   const animationIsSupported = dom.animationEndEvent && dom.hasCssAnimation(popup)
 
+<<<<<<< Updated upstream
   if (typeof innerParams.willClose === 'function') {
     innerParams.willClose(popup)
   }
@@ -116,6 +149,24 @@ const handlePopupAnimation = (instance, popup, innerParams) => {
 
 const animatePopup = (instance, popup, container, returnFocus, didClose) => {
   globalState.swalCloseEventFinishedCallback = removePopupAndResetState.bind(null, instance, container, returnFocus, didClose)
+=======
+  const { onClose, onAfterClose } = innerParams
+
+  if (onClose !== null && typeof onClose === 'function') {
+    onClose(popup)
+  }
+
+  if (animationIsSupported) {
+    animatePopup(instance, popup, container, onAfterClose)
+  } else {
+    // Otherwise, remove immediately
+    removePopupAndResetState(instance, container, dom.isToast(), onAfterClose)
+  }
+}
+
+const animatePopup = (instance, popup, container, onAfterClose) => {
+  globalState.swalCloseEventFinishedCallback = removePopupAndResetState.bind(null, instance, container, dom.isToast(), onAfterClose)
+>>>>>>> Stashed changes
   popup.addEventListener(dom.animationEndEvent, function (e) {
     if (e.target === popup) {
       globalState.swalCloseEventFinishedCallback()
@@ -124,10 +175,17 @@ const animatePopup = (instance, popup, container, returnFocus, didClose) => {
   })
 }
 
+<<<<<<< Updated upstream
 const triggerDidCloseAndDispose = (instance, didClose) => {
   setTimeout(() => {
     if (typeof didClose === 'function') {
       didClose.bind(instance.params)()
+=======
+const triggerOnAfterCloseAndDispose = (instance, onAfterClose) => {
+  setTimeout(() => {
+    if (typeof onAfterClose === 'function') {
+      onAfterClose()
+>>>>>>> Stashed changes
     }
     instance._destroy()
   })

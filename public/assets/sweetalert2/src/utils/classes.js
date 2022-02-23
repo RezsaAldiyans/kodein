@@ -16,19 +16,34 @@ export const swalClasses = prefix([
   'popup',
   'modal',
   'no-backdrop',
+<<<<<<< Updated upstream
   'no-transition',
   'toast',
   'toast-shown',
+=======
+  'toast',
+  'toast-shown',
+  'toast-column',
+>>>>>>> Stashed changes
   'show',
   'hide',
   'close',
   'title',
+<<<<<<< Updated upstream
   'html-container',
   'actions',
   'confirm',
   'deny',
   'cancel',
   'default-outline',
+=======
+  'header',
+  'content',
+  'html-container',
+  'actions',
+  'confirm',
+  'cancel',
+>>>>>>> Stashed changes
   'footer',
   'icon',
   'icon-content',
@@ -42,13 +57,19 @@ export const swalClasses = prefix([
   'label',
   'textarea',
   'inputerror',
+<<<<<<< Updated upstream
   'input-label',
+=======
+>>>>>>> Stashed changes
   'validation-message',
   'progress-steps',
   'active-progress-step',
   'progress-step',
   'progress-step-line',
+<<<<<<< Updated upstream
   'loader',
+=======
+>>>>>>> Stashed changes
   'loading',
   'styled',
   'top',
@@ -71,7 +92,10 @@ export const swalClasses = prefix([
   'grow-fullscreen',
   'rtl',
   'timer-progress-bar',
+<<<<<<< Updated upstream
   'timer-progress-bar-container',
+=======
+>>>>>>> Stashed changes
   'scrollbar-measure',
   'icon-success',
   'icon-warning',
