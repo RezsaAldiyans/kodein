@@ -5,18 +5,6 @@ use App\Models\LoginModel;
 use App\Models\PengunjungModel;
 use App\Models\ProfileModel;
 use App\Models\LeaderboardModel;
-<<<<<<< Updated upstream
-date_default_timezone_set("Asia/Jakarta");
-
-function levelUp($data){
-	$model = new loginModel();
-	$up = $model->levelingUp($data);
-}
-=======
-use App\Models\KelasModel;
-// use App\Controllers\Maintenance;
->>>>>>> Stashed changes
-
 date_default_timezone_set("Asia/Jakarta");
 
 function levelUp($data){
@@ -48,7 +36,6 @@ class Home extends BaseController
 		$password = $this->request->getVar("password");
 		$no_hp = $this->request->getVar("no_hp");
 		$tgl_gabung = date("Ymdhis", time());
-<<<<<<< Updated upstream
 
 		$valid = $this->validate([
 			'nama' => 'required|min_length[1]',
@@ -60,7 +47,6 @@ class Home extends BaseController
 			return redirect()->back()->withInput();
 		}
 
-=======
 
 		$valid = $this->validate([
 			'nama' => 'required|min_length[1]',
@@ -88,18 +74,14 @@ class Home extends BaseController
 			return redirect()->back()->withInput();
 		}
 
->>>>>>> Stashed changes
 		$data_insert =[
 			'id_akun' => 'pelajar-'.$tgl_gabung,
 			'nama_lengkap' => $nama_lengkap,
 			'email' => $email,
 			'password' => md5($password),
 			'tgl_gabung' => $tgl_gabung,
-<<<<<<< Updated upstream
 			'profile_user' => 'assets/images/kodein-logo-k-560x560.png',
-=======
 			'profile_user' => 'assets/images/default.jpg',
->>>>>>> Stashed changes
 			'asal_kota' => '',
 			'exp' => 0,
 			'badges' => 'rookie',
@@ -118,13 +100,10 @@ class Home extends BaseController
 		// pengambilan data dari post
 		$email = $this->request->getVar("email");
 		$password = md5($this->request->getVar("password"));
-<<<<<<< Updated upstream
-=======
 		if($email == '' || $password == ''){
 			$session->setFlashdata('msgerr', 'Harap isi data dengan benar!');
             return redirect()->to('/login');
 		}
->>>>>>> Stashed changes
 		// end pengambilan data
 		// jika datanya tidak valid langsung masuk ke bagian ini
 		// bagian ini diambil dari model LoginModel untuk mengambil data dari database table akun
@@ -177,32 +156,6 @@ class Home extends BaseController
 			return redirect()->to('/');
 		}
 		$model = new LoginModel();
-<<<<<<< Updated upstream
-		$data = $model->where('email',$session->get("email"))->first();
-		//get data kelas_user
-		$profilModel =  new ProfileModel();
-		$dataProfil = $profilModel->getKelasUser($data["id_akun"]);
-		$ses_data = [
-			'id_akun' => $data["id_akun"],
-			'nama_lengkap' => $data["nama_lengkap"],
-			'email' => $data["email"],
-			'tgl_gabung' => $data["tgl_gabung"],
-			'profile_user' => $data["profile_user"],
-			'asal_kota' => $data["asal_kota"],
-			'exp' => $data["exp"],
-			'badges' => $data["badges"],
-			'level' => $data["level"],
-			'kelas_user' => $dataProfil,
-			"total_kelas" => count($dataProfil),
-			'logged_in' => TRUE
-		];
-		levelUp($ses_data);
-		$session->set($ses_data);
-		// return view('dashboard-user');
-	}
-	public function selesai(){
-		return "selesai";
-=======
 		$data = $model->getAkun($session->get("id_akun"));
 		//get data kelas_user
 		$profilModel =  new ProfileModel();
@@ -228,46 +181,36 @@ class Home extends BaseController
 		];
 		levelUp($ses_data);
 		return view('dashboard-user',$ses_data);
->>>>>>> Stashed changes
 	}
 	public function logout(){
 		$session = session();
 		$session->destroy();
 		return redirect()->to('/');
 	}
-<<<<<<< Updated upstream
 	public function testDB(){
 		return view('testDB');
 	}
-=======
 	// public function testDB(){
 	// 	return view('testDB');
 	// }
->>>>>>> Stashed changes
 
 	// function leaderboard
 	public function leaderboard(){
 		$model = new LoginModel();
-<<<<<<< Updated upstream
 		$leaderboardModel = new LeaderboardModel();
-=======
 		// $leaderboardModel = new LeaderboardModel();
->>>>>>> Stashed changes
 		$akun = $model->getLeadAkun();
 		$data = [
 			"data"=>$akun
 		];
 		return view('testLeadBoard',$data);
 	}
-<<<<<<< Updated upstream
 
 	public function inCoder(){
 		return view('inCoder');
 	}
-=======
->>>>>>> Stashed changes
 
-	public function inCoder(){
+	public function inCoders(){
 		$file = "test.txt";
 		$handle = fopen($file,'r');
 		$contentFile = fread($handle,filesize($file));
