@@ -37,15 +37,28 @@ $routes->get('/register','Home::viewRegister');
 $routes->post('/logins','Home::login');
 $routes->post('/register','Home::register');
 
+$routes->get('/kelas/(:any)','Home::detailsKelas/$1');
+$routes->get('/materi/(:any)','Home::mulaiKelas/$1');
+
 $routes->get('/logout','Home::logout');
 
 //test
-$routes->get('/test','Home::leaderboard');
-$routes->get('/coder','Home::inCoder');
-
+$routes->get('/leaderboard','Home::leaderboard');
+// $routes->get('/coder','Home::viewcoder');
+// cek coders?
+// $routes->post('/coders','Home::inCoder');
 
 // route API untuk history
 $routes->get('/ApiHistory','restfulApi::ApiHistory');
+
+// routes admin
+// $routes->get('/admin','AdminController::index');
+// $routes->post('/admin/login','AdminController::login');
+// $routes->get('/admin/dashboard','AdminController::dashboardAdmin');
+// $routes->post('/admin/dashboard','AdminController::searchData');
+// $routes->get('/admin/updateSiswa/(:any)','AdminController::updateSiswa/$1');
+// $routes->post('/admin/updateSiswa/','AdminController::prosesUpdatesSiswa');
+// $routes->get('/admin/deleteSiswa/(:any)','AdminController::deleteUpdatesSiswa/$1');
 
 /**
  * --------------------------------------------------------------------

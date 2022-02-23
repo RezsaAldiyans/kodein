@@ -5,16 +5,15 @@ use App\Models\LoginModel;
 use App\Models\PengunjungModel;
 use App\Models\ProfileModel;
 use App\Models\LeaderboardModel;
+use App\Models\KelasModel;
+// use App\Controllers\Maintenance;
+
 date_default_timezone_set("Asia/Jakarta");
 
 function levelUp($data){
 	$model = new loginModel();
 	$up = $model->levelingUp($data);
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> parent of 95c9dc2 (update)
 class Home extends BaseController
 {
 	public function index()
@@ -44,8 +43,6 @@ class Home extends BaseController
 			return redirect()->back()->withInput();
 		}
 
-<<<<<<< HEAD
-
 		$valid = $this->validate([
 			'nama' => 'required|min_length[1]',
 			'email' => 'required|valid_email',
@@ -71,20 +68,12 @@ class Home extends BaseController
 			session()->setFlashdata('errorRegister', $this->validator->listErrors());
 			return redirect()->back()->withInput();
 		}
-
-=======
->>>>>>> parent of 95c9dc2 (update)
 		$data_insert =[
 			'id_akun' => 'pelajar-'.$tgl_gabung,
 			'nama_lengkap' => $nama_lengkap,
 			'email' => $email,
 			'password' => md5($password),
 			'tgl_gabung' => $tgl_gabung,
-			'profile_user' => 'assets/images/kodein-logo-k-560x560.png',
-<<<<<<< HEAD
-			'profile_user' => 'assets/images/default.jpg',
-=======
->>>>>>> parent of 95c9dc2 (update)
 			'asal_kota' => '',
 			'exp' => 0,
 			'badges' => 'rookie',
@@ -103,13 +92,10 @@ class Home extends BaseController
 		// pengambilan data dari post
 		$email = $this->request->getVar("email");
 		$password = md5($this->request->getVar("password"));
-<<<<<<< HEAD
 		if($email == '' || $password == ''){
 			$session->setFlashdata('msgerr', 'Harap isi data dengan benar!');
             return redirect()->to('/login');
 		}
-=======
->>>>>>> parent of 95c9dc2 (update)
 		// end pengambilan data
 		// jika datanya tidak valid langsung masuk ke bagian ini
 		// bagian ini diambil dari model LoginModel untuk mengambil data dari database table akun
@@ -162,33 +148,6 @@ class Home extends BaseController
 			return redirect()->to('/');
 		}
 		$model = new LoginModel();
-<<<<<<< HEAD
-		$data = $model->getAkun($session->get("id_akun"));
-		//get data kelas_user
-		$profilModel =  new ProfileModel();
-		$dataProfil = $profilModel->getKelasUser($data[0]["id_akun"]);
-		$ses_data = [
-			'id_akun' => $data[0]["id_akun"],
-			'nama_lengkap' => $data[0]["nama_lengkap"],
-			'email' => $data[0]["email"],
-			'tgl_gabung' => $data[0]["tgl_gabung"],
-			'profile_user' => $data[0]["profile_user"],
-			'asal_kota' => $data[0]["asal_kota"],
-			'exp' => $data[0]["exp"],
-			'badges' => $data[0]["badges"],
-			'level' => $data[0]["level"],
-			'kelas_user' => $dataProfil,
-			"total_kelas" => count($dataProfil),
-			"sosmed"=>[
-				"linkedin"=>$data[0]["linkedin"],
-				"instagram"=>$data[0]["instagram"],
-				"twitter"=>$data[0]["twitter"]
-			],
-			'logged_in' => TRUE
-		];
-		levelUp($ses_data);
-		return view('dashboard-user',$ses_data);
-=======
 		$data = $model->where('email',$session->get("email"))->first();
 		//get data kelas_user
 		$profilModel =  new ProfileModel();
@@ -211,10 +170,55 @@ class Home extends BaseController
 		$session->set($ses_data);
 		// return view('dashboard-user');
 	}
-	public function selesai(){
-		return "selesai";
->>>>>>> parent of 95c9dc2 (update)
-	}
+	// public function selesai(){
+	// 	return "selesai";
+	// 	$data = $model->getAkun($session->get("id_akun"));
+	// 	//get data kelas_user
+	// 	$profilModel =  new ProfileModel();
+	// 	$dataProfil = $profilModel->getKelasUser($data[0]["id_akun"]);
+	// 	$ses_data = [
+	// 		'id_akun' => $data[0]["id_akun"],
+	// 		'nama_lengkap' => $data[0]["nama_lengkap"],
+	// 		'email' => $data[0]["email"],
+	// 		'tgl_gabung' => $data[0]["tgl_gabung"],
+	// 		'profile_user' => $data[0]["profile_user"],
+	// 		'asal_kota' => $data[0]["asal_kota"],
+	// 		'exp' => $data[0]["exp"],
+	// 		'badges' => $data[0]["badges"],
+	// 		'level' => $data[0]["level"],
+	// 		'kelas_user' => $dataProfil,
+	// 		"total_kelas" => count($dataProfil),
+	// 		"sosmed"=>[
+	// 			"linkedin"=>$data[0]["linkedin"],
+	// 			"instagram"=>$data[0]["instagram"],
+	// 			"twitter"=>$data[0]["twitter"]
+	// 		],
+	// 		'logged_in' => TRUE
+	// 	];
+	// 	levelUp($ses_data);
+	// 	return view('dashboard-user',$ses_data);
+	// 	$data = $model->where('email',$session->get("email"))->first();
+	// 	//get data kelas_user
+	// 	$profilModel =  new ProfileModel();
+	// 	$dataProfil = $profilModel->getKelasUser($data["id_akun"]);
+	// 	$ses_data = [
+	// 		'id_akun' => $data["id_akun"],
+	// 		'nama_lengkap' => $data["nama_lengkap"],
+	// 		'email' => $data["email"],
+	// 		'tgl_gabung' => $data["tgl_gabung"],
+	// 		'profile_user' => $data["profile_user"],
+	// 		'asal_kota' => $data["asal_kota"],
+	// 		'exp' => $data["exp"],
+	// 		'badges' => $data["badges"],
+	// 		'level' => $data["level"],
+	// 		'kelas_user' => $dataProfil,
+	// 		"total_kelas" => count($dataProfil),
+	// 		'logged_in' => TRUE
+	// 	];
+	// 	levelUp($ses_data);
+	// 	$session->set($ses_data);
+	// 	// return view('dashboard-user');
+	// }
 	public function logout(){
 		$session = session();
 		$session->destroy();
@@ -223,33 +227,16 @@ class Home extends BaseController
 	public function testDB(){
 		return view('testDB');
 	}
-<<<<<<< HEAD
-	// public function testDB(){
-	// 	return view('testDB');
-	// }
-=======
->>>>>>> parent of 95c9dc2 (update)
-
 	// function leaderboard
 	public function leaderboard(){
 		$model = new LoginModel();
 		$leaderboardModel = new LeaderboardModel();
-<<<<<<< HEAD
-		// $leaderboardModel = new LeaderboardModel();
-=======
->>>>>>> parent of 95c9dc2 (update)
 		$akun = $model->getLeadAkun();
 		$data = [
 			"data"=>$akun
 		];
 		return view('testLeadBoard',$data);
 	}
-
-	public function inCoder(){
-		return view('inCoder');
-	}
-
-<<<<<<< HEAD
 	public function inCoders(){
 		$file = "test.txt";
 		$handle = fopen($file,'r');
@@ -316,8 +303,6 @@ class Home extends BaseController
 			return redirect()->to("/kelas/$id_kelas");
 		}
 	}
-=======
->>>>>>> parent of 95c9dc2 (update)
 	//--------------------------------------------------------------------
 
 }
