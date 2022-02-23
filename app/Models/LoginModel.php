@@ -4,11 +4,7 @@ use CodeIgniter\Model;
 
 class LoginModel extends Model{
     protected $table = "akun";
-<<<<<<< Updated upstream
-    protected $allowedFields = ['id_akun','nama_lengkap','email','password','tgl_gabung','profile_user','asal_kota','exp','badges','level'];
-=======
     protected $allowedFields = ['id_akun','nama_lengkap','email','password','tgl_gabung','profile_user','asal_kota','exp','badges','level','linkedin','instagram','twitter'];
->>>>>>> Stashed changes
     protected $primaryKey = "id_akun";
     function _construct()
     {
@@ -18,20 +14,12 @@ class LoginModel extends Model{
         return $this->db->table("akun")->insert($data);
     }
     public function getLeadAkun(){
-<<<<<<< Updated upstream
-        return $this->select('id_akun, nama_lengkap, exp, level, badges')->where("level>=20")->orderBy('level ASC, exp DESC')->findAll();
-=======
         $where = "level>=20 AND kategori_user='end-user'";
         return $this->select('id_akun, nama_lengkap, exp, level, badges')->where($where)->orderBy('exp DESC')->findAll();
->>>>>>> Stashed changes
     }
     public function levelingUp($data){
         switch($data["level"]){
             case 1:
-<<<<<<< Updated upstream
-                echo "level 1 rookie ";
-=======
->>>>>>> Stashed changes
                 if($data["exp"] >= 100){
                     $data=[
                         "id_akun" =>$data["id_akun"],
@@ -44,15 +32,6 @@ class LoginModel extends Model{
                 }
                 break;
             case 2:
-<<<<<<< Updated upstream
-                echo "level 2 beginner";
-                break;
-            default:
-                echo "tidak masuk";
-                break;
-        }
-    }
-=======
                 if($data["exp"] >= 200){
                     $data=[
                         "id_akun" =>$data["id_akun"],
@@ -204,5 +183,4 @@ class LoginModel extends Model{
     public function adminDeleteSiswa($id){
         return $this->db->table("akun")->where("id_akun",$id)->delete();
     }
->>>>>>> Stashed changes
 }

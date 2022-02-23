@@ -43,16 +43,10 @@ $routes->get('/materi/(:any)','Home::mulaiKelas/$1');
 $routes->get('/logout','Home::logout');
 
 //test
-<<<<<<< Updated upstream
-$routes->get('/test','Home::leaderboard');
-$routes->get('/coder','Home::inCoder');
-
-=======
 $routes->get('/leaderboard','Home::leaderboard');
 $routes->get('/coder','Home::viewcoder');
 // cek coders?
 // $routes->post('/coders','Home::inCoder');
->>>>>>> Stashed changes
 
 // route API untuk history
 $routes->get('/ApiHistory','restfulApi::ApiHistory');

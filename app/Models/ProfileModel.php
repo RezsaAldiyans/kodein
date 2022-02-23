@@ -11,9 +11,6 @@ class ProfileModel extends Model{
 
     //from kelas_user table
     public function getKelasUser($id_akun){
-<<<<<<< Updated upstream
-        return $this->where('id_akun',$id_akun)->findAll();
-=======
         // return $this->where('id_akun',$id_akun)->findAll();
         return $this->db->table("kelas_user")->join("kelas_koding","kelas_koding.id_kelas=kelas_user.id_kelas")->where("kelas_user.id_akun",$id_akun)->get()->getResultArray();
     }
@@ -26,6 +23,5 @@ class ProfileModel extends Model{
     }
     public function insertKelasUser($data){
         return $this->db->table("kelas_user")->insert($data);
->>>>>>> Stashed changes
     }
 }

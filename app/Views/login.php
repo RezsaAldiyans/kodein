@@ -5,24 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< Updated upstream
-    <title>Login / Register</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="assets/style1.css">
-    <!-- <link rel="stylesheet" href="assets/sweetalert2/sweetalert/dist/sweetalert2.css"> -->
-    <script src="assets/sweetalert2/sweetalert/dist/sweetalert2.all.js"></script>
-    <script src="assets/js/login.js" defer></script>
-    <script>
-        function alertjs(icon, title, text){
-            Swal.fire({
-                icon: icon,
-                title: title,
-                html: "<h4>"+text+"</h4>",
-                allowOutsideClick:false,
-                showConfirmButton: true,
-                confirmButtonText : "yes",
-=======
     <title>Kodein | Masuk/Daftar</title>
     <!-- sweet alert -->
     <script src="assets/sweetalert2/dist/sweetalert2.all.min.js"></script>
@@ -42,7 +24,6 @@
             Swal.fire({
                 icon: icon,
                 title: title,
->>>>>>> Stashed changes
             })
         }
     </script>
@@ -52,15 +33,6 @@
     <div class="container p-0" id="container">
         <div class="form-container sign-up-container">
             <form action="/register" method="POST">
-<<<<<<< Updated upstream
-                <h1>Create Account</h1>
-                <?php
-                    if(session()->getFlashData('errorRegister')){
-                        echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>".session()->getFlashData('errorRegister')."<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>";
-                        echo "<script>alertjs('error','Invalid Validasi','Cek kembali datanya!');</script>";
-                        echo "<script>document.getElementById('container').classList.add('right-panel-active')</script>";
-                    }?>
-=======
                 <h1 class="mb-2">Buat Akun</h1>
                 <!-- <div class="alert alert-primary" role="alert">This is a primary alert—check it out!</div> -->
                 <?php
@@ -70,38 +42,21 @@
                         echo "<script>document.getElementById('container').classList.add('right-panel-active');</script>";
                     }
 		?>
->>>>>>> Stashed changes
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
-<<<<<<< Updated upstream
-                <span>or use your email for registration</span>
-                <input class ="form-control" type="text" name="nama" id="name" placeholder="Nama Lengkap"/>
-                <input class ="form-control" type="email" name="email" placeholder="example@email.com"/>
-                <input class="form-control" type="password" name="password" placeholder="**********"/>
-                <button>Sign Up</button>
-=======
                 <span>Masukan e-mail dan password untuk mendaftar, atau daftar dengan akun social media</span>
                 <input type="text" name="nama" placeholder="Masukan nama" />
                 <input type="email" name="email" placeholder="Masukan e-mail" />
                 <input type="password" name="password" placeholder="Masukan password (min 8 karakter)" />
                 <input type="password" name="confirmPassword"placeholder="Konfirmasi password" />
                 <button class="mt-2">Daftar</button>
->>>>>>> Stashed changes
             </form>
         </div>
         <div class="form-container sign-in-container">
             <form action="/logins" method="POST">
-<<<<<<< Updated upstream
-                <h1>Sign in</h1>
-                <?php
-                    if(session()->getFlashData('msgerr')){
-                        echo "<div class='alert alert-danger' role='alert'>".session()->getFlashData('msgerr')."</div>";
-                        echo "<script>alertjs('warning','Kesalahan!','".session()->getFlashData('msgerr')."');</script>";
-                        echo "<script>document.getElementById('container').classList.remove('right-panel-active')</script>";
-=======
                 <h1 class="mb-2">Masuk</h1>
                 <!-- <div class="alert alert-primary" role="alert">
                     This is a primary alert—check it out!
@@ -109,7 +64,6 @@
                   <?php
                     if(session()->getFlashData('msgerr')){
                     echo "<div class='alert alert-danger' role='alert'>".session()->getFlashData('msgerr')."</div>";
->>>>>>> Stashed changes
                     }else if(session()->getFlashData('berhasil')){
                         // echo "<div class='alert alert-success' role='alert'>".session()->getFlashData('berhasil')."</div>";
                         echo "<script>alertjs('success','Berhasil!','".session()->getFlashData('berhasil')."');</script>";
@@ -124,19 +78,11 @@
                     <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
-<<<<<<< Updated upstream
-                <span>or use your account</span>
-                <input class="form-control" type="email" name="email" placeholder="example@email.com"/>
-                <input class="form-control" type="password" name="password" placeholder="**********"/>
-                <a href="#">Forgot your password?</a>
-                <button>Sign In</button>
-=======
                 <span>Masukan username dan password atau gunakan akun social media</span>
                 <input type="email" name="email" placeholder="Masukan e-mail" />
                 <input type="password" name="password" placeholder="Masukan password" />
                 <a href="#">Lupa password? coba inget-inget lagi...</a>
                 <button class="mt-2">Masuk</button>
->>>>>>> Stashed changes
             </form>
         </div>
         <div class="overlay-container">
@@ -156,9 +102,6 @@
             </div>
         </div>
     </div>
-<<<<<<< Updated upstream
-</html>
-=======
 
     <!-- Bootrap js -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -175,4 +118,3 @@
 </body>
 
 </html>
->>>>>>> Stashed changes

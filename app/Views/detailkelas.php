@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<?php $session = session();
-$progress = round(($status["progress"]/$kelas["total_materi"])*100);
-?>
+<?php $session = session();?>
 <html>
 <head>
   <meta charset="UTF-8">
@@ -103,7 +101,8 @@ $progress = round(($status["progress"]/$kelas["total_materi"])*100);
 
 <section class="content15 cid-sDBqGpL2uO" id="content15-15">
 	<?php
-		if($status["id_kelas"] == $kelas["id_kelas"]){
+		if(isset($status["id_kelas"]) == $kelas["id_kelas"]){
+            $progress = round(($status["progress"]/$kelas["total_materi"])*100);
 	?>
     <div class="container">
         <div class="row justify-content-center">
