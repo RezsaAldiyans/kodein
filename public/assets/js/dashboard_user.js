@@ -15,14 +15,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 data.push(
                     {
                         title:datas.nama_materi,
-<<<<<<< Updated upstream:public/assets/js/dashboard-user.js
-                        start:datas.tgl_selesai,
-                        end:datas.tgl_selesai,
-=======
                         start:datas.tgl_mulai,
                         end:datas.tgl_selesai,
                         color:"green",
->>>>>>> Stashed changes:public/assets/js/dashboard_user.js
                     }
                 )
             })
