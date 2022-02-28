@@ -38,13 +38,13 @@ $routes->post('/logins','Home::login');
 $routes->post('/register','Home::register');
 
 $routes->get('/kelas/(:any)','Home::detailsKelas/$1');
-$routes->get('/materi/(:any)','Home::mulaiKelas/$1');
+$routes->get('/materi/(:any)/(:any)','Home::mulaiKelas/$1/$2');
+$routes->get('/coder','Home::viewcoder');
 
 $routes->get('/logout','Home::logout');
 
 //test
 $routes->get('/leaderboard','Home::leaderboard');
-$routes->get('/coder','Home::viewcoder');
 // cek coders?
 // $routes->post('/coders','Home::inCoder');
 

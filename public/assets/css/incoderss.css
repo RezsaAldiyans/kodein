@@ -1,20 +1,23 @@
-.main{
-    margin: 0px;
-    padding: 0px;
+h5{
+    margin-top: 10px;
 }
-.col-4{
-    padding: 0px;
+.proc{
+    background-color: blanchedalmond;
+    padding-bottom: 5px;
 }
-.col-2{
-    padding: 0px;
+.percent{
+    margin-bottom: 2px;
 }
-.col-6{
+.col-4, .col-7, .col-2, .col-6, .col-5{
     padding: 0px;
+    /* margin: 1px; */
 }
 .soal {
+    padding-top: 10px;
     padding-left: 10px;
     float: left;
-    height: 653px;
+    /* pengatur ketinggian keseluruhan */
+    height: 606px;
     width: 100%;
     /* margin-bottom: 15px; */
     /* border: 1px solid black; */

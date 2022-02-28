@@ -232,13 +232,15 @@ class Home extends BaseController
 		// print_r($set);
 		return view("detailkelas",$set);
 	}
-	public function mulaiKelas($id_kelas){
+	public function mulaiKelas($id_kelas,$id_soal){
 		$session = session();
 		if(!$session->get("logged_in")){
 			return redirect()->to('/login');
 		}
 		//update kelas user
 		$kelas_user = new ProfileModel();
+		$kelasModel = new KelasModel();
+		$kelas = $kelasModel->findKelas($id_kelas);
 		$data=[
 			"id_kelas"=> $id_kelas,
 			"id_akun"=> session()->get("id_akun"),
@@ -246,17 +248,32 @@ class Home extends BaseController
 			"progress"=> 0
 		];
 		$cekBoolean;
+		$res;
 		$cek = $kelas_user->kelasUser(session()->get("id_akun"),$id_kelas);
+		// $cek_kelas = $kelasModel->kelasMateri($id_kelas);
+		$kelas_MS = $kelasModel->kelasSoal($id_kelas,$id_soal);
+		// print_r($cek_kelas);
+		$res = [
+			"total_materi" => $kelas[0]["total_materi"],
+			"id_kelas" => $cek["id_kelas"],
+			"id_akun" => $cek["id_akun"],
+			"status_kelas" => $cek["status_kelas"],
+			"progress" => $cek["progress"],
+			"kelas" => $kelas_MS[0]
+		];
+		// print_r($res);
 		if($cek["id_kelas"] == $id_kelas){
 			$cekBoolean = 1;
 		}else{
 			$cekBoolean = 0;
 		}
 		if($cekBoolean){
-			return redirect()->to("/kelas/$id_kelas");
+			// return redirect()->to("/kelas/$id_kelas");
+			return view('playground/inCoderss',$res);
 		}else{
 			$kelas_user->insertKelasUser($data);
-			return redirect()->to("/kelas/$id_kelas");
+			// return redirect()->to("/kelas/$id_kelas");
+			return view('playground/inCoderss',$res);
 		}
 	}
 	//--------------------------------------------------------------------
