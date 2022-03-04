@@ -2,6 +2,7 @@
 <html lang="en">
     <?php
     $progressing = round(($progress/$total_materi)*100);
+    $session = session();
     ?>
 <head>
     <meta charset="UTF-8">
@@ -35,7 +36,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/addon/hint/xml-hint.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/addon/hint/css-hint.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/keymap/sublime.js"></script>
-    <script src="<?php echo base_url();?>/assets/playground/js/main.js"></script>
+    <script src="<?php echo base_url();?>/assets/playground/js/main.js" defer></script>
 </head>
 <body>
     <div class="container-fluid">
@@ -60,17 +61,20 @@
                 </div>
             </div>
             <div class="col-6 col-lg-6">
-                <div class="playground">
-                    <textarea name="playgrounds" id="container-playground" class="codeEditor"></textarea>
-                    <div class="submitBtn">
-                        <div class="row">
-                            <div class="col-12">
-                                <p class="float-left">Button Submit -></p>
-                                <button class="btn btn-success float-right" id="btnS" >Submit</button>
+                <form action="http://localhost:8080/cekKebenaran/<?= $kelas['id_materi']?>/<?= $kelas['id_soal']?>/<?= $kelas['tipe_soal']?>" method="post">
+                    <div class="playground">
+                        <textarea name="playgrounds" id="container-playground" name="playground" class="codeEditor"></textarea>
+                        <div class="submitBtn">
+                            <div class="row">
+                                <div class="col-12">
+                                    <p class="float-left">Button Submit -></p>
+                                    <a class="btn btn-success float-right" id="btnT" onClick="show()">Bantuan</a>
+                                    <button class="btn btn-success float-right" id="btnS" >Submit</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
             <div class="col-4">
                 <div class="output">
@@ -83,16 +87,91 @@
         </div>
     </div>
     <script src="<?php echo base_url();?>/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
-        // $("#btnS").on('click',()=>{
-        //     const log = ["log","warn","error"];
-        //     log.forEach(element => {
-        //         console[element] = function(...args){
-        //             console.log(args)
-        //             // document.getElementById("console").innerHTML = args;
-        //         }
-        //     });
+        let berhasil = "hei";
+        if(berhasil === '<?= $session->get("berhasil")?>'){
+            swal({
+                title: "Selamat",
+                text: "User Berhasil",
+                icon: "success",
+                buttons: true,
+                // dangerMode: true,
+            })
+            .then(t =>{
+                if(t){
+                    console.log("berhasil")
+                }
+            })
+        }
+    </script>
+    <script>
+        // $(document).ready(function(){
+            var validation = false;
+            var myTimeoutId = null;
+            var config = {
+                mode: "text/html",
+                lineNumbers: true,
+                keyMap:"sublime",
+                tabSize:4,
+            };
+            // initialize editor
+            var editor = CodeMirror.fromTextArea(document.getElementById("container-playground"),config);
+            editor.setOption("theme", "material-ocean");
+
+            function loadHtml(html) {
+                const document_pattern = /( )*?document\./i;
+                let finalHtml = html.replace(document_pattern, "document.getElementById('result').contentWindow.document.");
+                $('#hasil').contents().find('html').html(finalHtml);
+            }
+
+            loadHtml($('#container-playground').val());
+            editor.on('change',function(cMirror){
+                if (myTimeoutId!==null) {
+                    clearTimeout(myTimeoutId);
+                }
+                myTimeoutId = setTimeout(function() {
+                        try{
+                            loadHtml(cMirror.getValue());
+                        }catch(err){
+                            console.log('err:'+err);
+                        }
+                    }, 1000);
+            });
+            function show(){
+                swal({
+                    title: "Apakah anda yakin",
+                    text: "Jika yakin maka poin tidak akan bertambah",
+                    icon: "info",
+                    buttons: true,
+                    cancel: true,
+                    dangerMode: true,
+                })
+                .then((shows) => {
+                    if (shows) {
+                        var requestOptions = {
+                            method: 'GET',
+                            redirect: 'follow'
+                        };
+
+                        fetch("http://localhost:8080/cekBantuan/<?= $kelas['id_materi']?>/<?= $kelas['id_soal']?>/<?= $kelas['tipe_soal']?>", requestOptions)
+                        .then(response => response.json())
+                        .then(
+                            result =>{
+                                console.log(result)
+                                jawaban = result[0].jawaban_code ? result[0].jawaban_code : result[0].jawaban_pilgan;
+                                editor.setValue(jawaban);
+                            }
+                        )
+                        .catch(error => console.log('error', error));
+                    } else {
+                        editor.setValue("nay")
+                    }
+                });
+            }
         // })
+    </script>
+    <script>
         var msg = $('#msg');
         $(document).keydown(function (e) {
             if(e.ctrlKey && e.key === "s"){

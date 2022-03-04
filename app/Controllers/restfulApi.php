@@ -11,7 +11,7 @@ class restfulApi extends ResourceController{
 			$history = new HistoryModel();
 			return $this->respond($history->getHistory($id_akun), 200);
 		}else{
-			$history = new HistoryModel();
+			// $history = new HistoryModel();
 			return "Data tidak ditemukan!";
 		}
 	}

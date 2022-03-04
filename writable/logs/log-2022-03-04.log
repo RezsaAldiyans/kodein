@@ -1,0 +1,10 @@
+CRITICAL - 2022-03-04 09:22:51 --> Call to a member function destroy() on string
+#0 A:\kodein\kodein.codes\system\View\View.php(246): include()
+#1 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('playground/inCo...', Array, true)
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(270): view('playground/inCo...', Array)
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->mulaiKelas('html-1', '1')
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}

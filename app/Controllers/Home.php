@@ -6,8 +6,6 @@ use App\Models\PengunjungModel;
 use App\Models\ProfileModel;
 use App\Models\LeaderboardModel;
 use App\Models\KelasModel;
-// use App\Controllers\Maintenance;
-
 date_default_timezone_set("Asia/Jakarta");
 
 function levelUp($data){
@@ -275,6 +273,29 @@ class Home extends BaseController
 			// return redirect()->to("/kelas/$id_kelas");
 			return view('playground/inCoderss',$res);
 		}
+	}
+	public function cekBantuanSoal($id_kelas,$id_soal,$tipe_soal){
+		$kelas_model = new KelasModel();
+		$cek = $kelas_model->cekBantuan($id_kelas,$id_soal,$tipe_soal);
+		// print_r($cek);
+		return json_encode($cek,true);
+	}
+	public function cekBenarSoal($id_kelas,$id_soal,$tipe_soal){
+		$kelas_model = new KelasModel();
+		$textarea = $this->request->getVar("playgrounds");
+		$cek = $kelas_model->cekKebenaran($id_kelas,$id_soal,$tipe_soal);
+		// print_r($cek[0]);
+		if($cek[0]["jawaban_code"] == $textarea){
+			$session = session();
+			$ses =[
+				"berhasil"=>"hei",
+			];
+			$session->set($ses);
+			return redirect()->back();
+		}else{
+			return 'nay';
+		}
+		// return redirect()->back();
 	}
 	//--------------------------------------------------------------------
 

@@ -24,4 +24,17 @@ class KelasModel extends Model{
         $kelas = $this->db->table("kelas_materi")->join("kelas_soal","kelas_materi.id_materi=kelas_soal.id_materi","left")->where($where)->get()->getResultArray();
         return $kelas;
     }
+    public function cekBantuan($id_kelas,$id_soal,$tipe_soal){
+        if($tipe_soal == 1 || $tipe_soal == "1"){
+            $kelas = $this->db->table("kelas_materi")->select("kelas_materi.id_kelas, kelas_materi.id_soal,kelas_soal.jawaban_code")->join("kelas_soal","kelas_materi.id_soal=kelas_soal.id_soal","left")->where("kelas_soal.id_soal",$id_soal)->get()->getResultArray();
+        }
+        else if($tipe_soal == 2 || $tipe_soal == "2"){
+            $kelas = $this->db->table("kelas_materi")->select("kelas_materi.id_kelas, kelas_materi.id_soal,kelas_soal.jawaban_pilgan")->join("kelas_soal","kelas_materi.id_soal=kelas_soal.id_soal","left")->where("kelas_soal.id_soal",$id_soal)->get()->getResultArray();
+        }
+        return $kelas;
+    }
+    public function cekKebenaran($id_kelas,$id_soal,$tipe_soal){
+        $kelas = $this->db->table("kelas_materi")->select("kelas_materi.id_kelas, kelas_materi.id_soal,kelas_soal.jawaban_code,kelas_soal.jawaban_pilgan")->join("kelas_soal","kelas_materi.id_soal=kelas_soal.id_soal","left")->where("kelas_soal.id_soal",$id_soal)->get()->getResultArray();
+        return $kelas;
+    }
 }
