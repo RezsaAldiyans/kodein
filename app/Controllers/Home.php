@@ -281,21 +281,28 @@ class Home extends BaseController
 		return json_encode($cek,true);
 	}
 	public function cekBenarSoal($id_kelas,$id_soal,$tipe_soal){
+		$session = session();
 		$kelas_model = new KelasModel();
-		$textarea = $this->request->getVar("playgrounds");
+		$user = new LoginModel();
+		$textarea = $this->request->getPost("jawaban_user");
 		$cek = $kelas_model->cekKebenaran($id_kelas,$id_soal,$tipe_soal);
-		// print_r($cek[0]);
-		if($cek[0]["jawaban_code"] == $textarea){
-			$session = session();
-			$ses =[
-				"berhasil"=>"hei",
-			];
-			$session->set($ses);
-			return redirect()->back();
-		}else{
-			return 'nay';
+		// print_r($textarea);
+		if($session->get("id_akun")){
+			$cek_akun = $user->getAkun($session->get("id_akun"));
+			if(!$cek_akun){
+				// $session->destroy();
+				$ses = array("failed");
+				return json_encode($ses,TRUE);
+			}else{
+				if($cek[0]["jawaban_code"] == $textarea){
+					$ses = array(TRUE);
+					return json_encode($ses,TRUE);
+				}else{
+					$ses = array(FALSE);
+					return json_encode($textarea,TRUE);
+				}
+			}
 		}
-		// return redirect()->back();
 	}
 	//--------------------------------------------------------------------
 

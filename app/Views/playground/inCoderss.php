@@ -61,20 +61,18 @@
                 </div>
             </div>
             <div class="col-6 col-lg-6">
-                <form action="http://localhost:8080/cekKebenaran/<?= $kelas['id_materi']?>/<?= $kelas['id_soal']?>/<?= $kelas['tipe_soal']?>" method="post">
-                    <div class="playground">
-                        <textarea name="playgrounds" id="container-playground" name="playground" class="codeEditor"></textarea>
-                        <div class="submitBtn">
-                            <div class="row">
-                                <div class="col-12">
-                                    <p class="float-left">Button Submit -></p>
-                                    <a class="btn btn-success float-right" id="btnT" onClick="show()">Bantuan</a>
-                                    <button class="btn btn-success float-right" id="btnS" >Submit</button>
-                                </div>
+                <div class="playground">
+                    <textarea name="playgrounds" id="container-playground" name="playground" class="codeEditor"></textarea>
+                    <div class="submitBtn">
+                        <div class="row">
+                            <div class="col-12">
+                                <p class="float-left">Button Submit -></p>
+                                <a class="btn btn-success float-right" id="btnT" onClick="show()">Bantuan</a>
+                                <a class="btn btn-success float-right" id="btnS" onClick="send()">Submit</a>
                             </div>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
             <div class="col-4">
                 <div class="output">
@@ -89,8 +87,8 @@
     <script src="<?php echo base_url();?>/assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
-        let berhasil = "hei";
-        if(berhasil === '<?= $session->get("berhasil")?>'){
+        let berhasil = 1;
+        if(berhasil == '<?= $session->get("berhasil")?>'){
             swal({
                 title: "Selamat",
                 text: "User Berhasil",
@@ -158,7 +156,7 @@
                         .then(response => response.json())
                         .then(
                             result =>{
-                                console.log(result)
+                                // console.log(result)
                                 jawaban = result[0].jawaban_code ? result[0].jawaban_code : result[0].jawaban_pilgan;
                                 editor.setValue(jawaban);
                             }
@@ -168,6 +166,46 @@
                         editor.setValue("nay")
                     }
                 });
+            }
+            function send(){
+                let link = "http://localhost:8080/cekKebenaran/<?= $kelas['id_materi']?>/<?= $kelas['id_soal']?>/<?= $kelas['tipe_soal']?>";
+                swal({
+                    title: "Apakah sudah yakin?",
+                    text: "Periksa kembali jika belum yakin",
+                    icon: "warning",
+                    buttons: true,
+                    // dangerMode: true,
+                })
+                .then(t =>{
+                    if(t){
+                        var formdata = new FormData();
+                        formdata.append("jawaban_user", editor.getValue());
+                        var requestOptions = {
+                            method: 'POST',
+                            body: formdata,
+                            redirect: 'follow'
+                        };
+                        fetch(link, requestOptions)
+                        .then(response => response.json())
+                        .then(
+                            result =>{
+                                // console.log(result[0])
+                                jawaban = result[0];
+                                if(jawaban){
+                                    // berhasil
+                                }
+                                if(jawaban == "failed"){
+                                    // failed auth
+                                    console.log(jawaban)
+                                }
+                                else{
+                                    // gagal
+                                }
+                            }
+                        )
+                        .catch(error => console.log('error', error));
+                    }
+                })
             }
         // })
     </script>
