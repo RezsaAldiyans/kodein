@@ -87,23 +87,6 @@
     <script src="<?php echo base_url();?>/assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
-        let berhasil = 1;
-        if(berhasil == '<?= $session->get("berhasil")?>'){
-            swal({
-                title: "Selamat",
-                text: "User Berhasil",
-                icon: "success",
-                buttons: true,
-                // dangerMode: true,
-            })
-            .then(t =>{
-                if(t){
-                    console.log("berhasil")
-                }
-            })
-        }
-    </script>
-    <script>
         // $(document).ready(function(){
             var validation = false;
             var myTimeoutId = null;
@@ -189,17 +172,34 @@
                         .then(response => response.json())
                         .then(
                             result =>{
-                                // console.log(result[0])
+                                // console.log(result)
                                 jawaban = result[0];
-                                if(jawaban){
+                                if(jawaban == 1){
                                     // berhasil
+                                    swal({
+                                        title: "Selamat Anda Berhasil",
+                                        text: "Selamat anda mendapatkan +100xp",
+                                        icon: "success",
+                                        buttons: true,
+                                    })
                                 }
                                 if(jawaban == "failed"){
                                     // failed auth
-                                    console.log(jawaban)
+                                    swal({
+                                        title: jawaban,
+                                        text: "",
+                                        icon: "danger",
+                                        buttons: true,
+                                    })
                                 }
-                                else{
+                                if(jawaban == 0){
                                     // gagal
+                                    swal({
+                                        title: "Sayang sekali",
+                                        text: "Sayang sekali masih belum tepat jawabannya silahkan dicoba kembali!",
+                                        icon: "error",
+                                        button: true,
+                                    })
                                 }
                             }
                         )

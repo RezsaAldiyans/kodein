@@ -6,6 +6,7 @@ use App\Models\PengunjungModel;
 use App\Models\ProfileModel;
 use App\Models\LeaderboardModel;
 use App\Models\KelasModel;
+use App\Models\KelasUser;
 date_default_timezone_set("Asia/Jakarta");
 
 function levelUp($data){
@@ -238,6 +239,7 @@ class Home extends BaseController
 		//update kelas user
 		$kelas_user = new ProfileModel();
 		$kelasModel = new KelasModel();
+		$user = new LoginModel();
 		$kelas = $kelasModel->findKelas($id_kelas);
 		$data=[
 			"id_kelas"=> $id_kelas,
@@ -259,7 +261,8 @@ class Home extends BaseController
 			"progress" => $cek["progress"],
 			"kelas" => $kelas_MS[0]
 		];
-		// print_r($res);
+		// $kelas_user = new KelasUser();
+		// print_r($kelas_user->updatesProgress($session->get("id_akun"),$id_kelas,1));
 		if($cek["id_kelas"] == $id_kelas){
 			$cekBoolean = 1;
 		}else{
@@ -283,6 +286,7 @@ class Home extends BaseController
 	public function cekBenarSoal($id_kelas,$id_soal,$tipe_soal){
 		$session = session();
 		$kelas_model = new KelasModel();
+		$kelas_user = new KelasUser();
 		$user = new LoginModel();
 		$textarea = $this->request->getPost("jawaban_user");
 		$cek = $kelas_model->cekKebenaran($id_kelas,$id_soal,$tipe_soal);
@@ -290,16 +294,20 @@ class Home extends BaseController
 		if($session->get("id_akun")){
 			$cek_akun = $user->getAkun($session->get("id_akun"));
 			if(!$cek_akun){
-				// $session->destroy();
 				$ses = array("failed");
 				return json_encode($ses,TRUE);
 			}else{
 				if($cek[0]["jawaban_code"] == $textarea){
-					$ses = array(TRUE);
+					$ses = array(1);
+					// $cek = $user->updateExp($session->get("id_akun"),100);
+					// if($cek){
+						$kelas_user->updatesProgress($session->get("id_akun"),$id_kelas,1);
+					// }
+					// $kelas_user->updateProgress($session->get("id_akun"),$id_kelas,1);
 					return json_encode($ses,TRUE);
 				}else{
-					$ses = array(FALSE);
-					return json_encode($textarea,TRUE);
+					$ses = array(0);
+					return json_encode($ses,TRUE);
 				}
 			}
 		}

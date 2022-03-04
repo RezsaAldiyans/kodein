@@ -172,6 +172,17 @@ class LoginModel extends Model{
         // $this->select("id_akun, nama_lengkap, email, CONVERT(varchar(100),tgl_gabung, 100) as tgl_gabung, profile_user, asal_kota, exp ,badges, level")->where('id_akun',$id)->first();
         return $this->db->query("select id_akun, nama_lengkap, email, DATE_FORMAT(tgl_gabung,'%d/%m/%Y') tgl_gabung, profile_user, asal_kota, exp ,badges, level, linkedin, instagram, twitter from akun where id_akun='$id'")->getResultArray();
     }
+    public function updateExp($id_akun,$new_exp){
+        $where = "id_akun='$id_akun'";
+        $old_exp = $this->select('exp,id_akun')->where($where)->first();
+        $exp = (int) $old_exp["exp"] + (int) $new_exp;
+        // print_r();
+        $data=[
+            "id_akun" => $id_akun,
+            "exp" => $exp,
+        ];
+        return $this->save($data);
+    }
     // for admin
     public function adminLogin($email,$password){
         $where = "email='$email' AND password='$password'";
