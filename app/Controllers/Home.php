@@ -17,6 +17,7 @@ class Home extends BaseController
 {
 	public function __construct(){
 		//nothing
+		$this->bantuan = 0;
 	}
 	public function index(){
 		$kelasModel = new KelasModel();
@@ -280,7 +281,7 @@ class Home extends BaseController
 	public function cekBantuanSoal($id_kelas,$id_soal,$tipe_soal){
 		$kelas_model = new KelasModel();
 		$cek = $kelas_model->cekBantuan($id_kelas,$id_soal,$tipe_soal);
-		// print_r($cek);
+		// print_r($this->bantuan);
 		return json_encode($cek,true);
 	}
 	public function cekBenarSoal($id_kelas,$id_soal,$tipe_soal){
@@ -289,6 +290,7 @@ class Home extends BaseController
 		$kelas_user = new KelasUser();
 		$user = new LoginModel();
 		$textarea = $this->request->getPost("jawaban_user");
+		$bantuan = $this->request->getPost("bantuan");
 		$cek = $kelas_model->cekKebenaran($id_kelas,$id_soal,$tipe_soal);
 		// print_r($textarea);
 		if($session->get("id_akun")){
@@ -297,13 +299,15 @@ class Home extends BaseController
 				$ses = array("failed");
 				return json_encode($ses,TRUE);
 			}else{
-				if($cek[0]["jawaban_code"] == $textarea){
+				if($bantuan == 1 && $cek[0]["jawaban_code"] == $textarea){
+					$ses = array(1,'b');
+					$c = $kelas_user->updatesProgress($session->get("id_akun"),$id_kelas,1);
+					return json_encode($ses,TRUE);
+				}
+				if($bantuan == 0 && $cek[0]["jawaban_code"] == $textarea){
 					$ses = array(1);
-					// $cek = $user->updateExp($session->get("id_akun"),100);
-					// if($cek){
-						$kelas_user->updatesProgress($session->get("id_akun"),$id_kelas,1);
-					// }
-					// $kelas_user->updateProgress($session->get("id_akun"),$id_kelas,1);
+					$ceks = $user->updateExp($session->get("id_akun"),100,$id_kelas,1);
+					$c = $kelas_user->updatesProgress($session->get("id_akun"),$id_kelas,1);
 					return json_encode($ses,TRUE);
 				}else{
 					$ses = array(0);

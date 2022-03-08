@@ -67,7 +67,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <p class="float-left">Button Submit -></p>
-                                <a class="btn btn-success float-right" id="btnT" onClick="show()">Bantuan</a>
+                                <a class="btn btn-success float-right" id="btnT" onClick="showBantuan()">Bantuan</a>
                                 <a class="btn btn-success float-right" id="btnS" onClick="send()">Submit</a>
                             </div>
                         </div>
@@ -88,6 +88,7 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
         // $(document).ready(function(){
+            var bantuan = 0;
             var validation = false;
             var myTimeoutId = null;
             var config = {
@@ -119,7 +120,7 @@
                         }
                     }, 1000);
             });
-            function show(){
+            function showBantuan(){
                 swal({
                     title: "Apakah anda yakin",
                     text: "Jika yakin maka poin tidak akan bertambah",
@@ -139,19 +140,17 @@
                         .then(response => response.json())
                         .then(
                             result =>{
-                                // console.log(result)
                                 jawaban = result[0].jawaban_code ? result[0].jawaban_code : result[0].jawaban_pilgan;
                                 editor.setValue(jawaban);
+                                bantuan = 1;
                             }
                         )
                         .catch(error => console.log('error', error));
-                    } else {
-                        editor.setValue("nay")
                     }
                 });
             }
             function send(){
-                let link = "http://localhost:8080/cekKebenaran/<?= $kelas['id_materi']?>/<?= $kelas['id_soal']?>/<?= $kelas['tipe_soal']?>";
+                let link = "http://localhost:8080/cekKebenaran/<?= $kelas['id_kelas']?>/<?= $kelas['id_soal']?>/<?= $kelas['tipe_soal']?>";
                 swal({
                     title: "Apakah sudah yakin?",
                     text: "Periksa kembali jika belum yakin",
@@ -163,6 +162,7 @@
                     if(t){
                         var formdata = new FormData();
                         formdata.append("jawaban_user", editor.getValue());
+                        formdata.append("bantuan", bantuan);
                         var requestOptions = {
                             method: 'POST',
                             body: formdata,
@@ -173,8 +173,16 @@
                         .then(
                             result =>{
                                 // console.log(result)
-                                jawaban = result[0];
-                                if(jawaban == 1){
+                                let jawaban = result[0];
+                                if(result[1] == 'b' && jawaban == 1){
+                                    swal({
+                                        title: "Selamat Anda Berhasil",
+                                        text: "Selamat anda telah menyelasaikan quest ini",
+                                        icon: "success",
+                                        buttons: true,
+                                    })
+                                }
+                                if(jawaban == 1 && !result[1]){
                                     // berhasil
                                     swal({
                                         title: "Selamat Anda Berhasil",
