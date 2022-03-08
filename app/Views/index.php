@@ -7,23 +7,22 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="ELLE GENERATOR">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="assets/images/kodein-logo-landing-128x128.png" type="image/x-icon">
   <meta name="description" content="kodein is a website for learning">
   
   
   <title>Kodein | Home</title>
-  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
-  <link rel="stylesheet" href="assets/tether/tether.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="assets/dropdown/css/style.css">
-  <link rel="stylesheet" href="assets/animatecss/animate.css">
-  <link rel="stylesheet" href="assets/socicon/css/styles.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  <link rel="stylesheet" href="<?php echo base_url();?>/assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>/assets/tether/tether.min.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>/assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>/assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>/assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>/assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>/assets/animatecss/animate.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>/assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>/assets/theme/css/style.css">
+  <link rel="preload" as="style" href="<?php echo base_url();?>/assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
   
   
   
@@ -444,17 +443,17 @@
 <section style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; color:#aaa; font-size:12px; padding: 0; align-items: center; display: flex;">
     <a href="https://mobirise.site" style="flex: 1 1; height: 3rem; padding-left: 1rem;"></a>
 </section>
-<script src="assets/web/assets/jquery/jquery.min.js"></script>
-<script src="assets/popper/popper.min.js"></script>
-<script src="assets/tether/tether.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/smoothscroll/smooth-scroll.js"></script>
-<script src="assets/dropdown/js/nav-dropdown.js"></script>
-<script src="assets/dropdown/js/navbar-dropdown.js"></script>
-<script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
-<script src="assets/viewportchecker/jquery.viewportchecker.js"></script>
-<script src="assets/parallax/jarallax.min.js"></script>
-<script src="assets/countdown/jquery.countdown.min.js"></script>
-<script src="assets/theme/js/script.js"></script>
+<script src="<?php echo base_url();?>/assets/web/assets/jquery/jquery.min.js"></script>
+<script src="<?php echo base_url();?>/assets/popper/popper.min.js"></script>
+<script src="<?php echo base_url();?>/assets/tether/tether.min.js"></script>
+<script src="<?php echo base_url();?>/assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="<?php echo base_url();?>/assets/smoothscroll/smooth-scroll.js"></script>
+<script src="<?php echo base_url();?>/assets/dropdown/js/nav-dropdown.js"></script>
+<script src="<?php echo base_url();?>/assets/dropdown/js/navbar-dropdown.js"></script>
+<script src="<?php echo base_url();?>/assets/touchswipe/jquery.touch-swipe.min.js"></script>
+<script src="<?php echo base_url();?>/assets/viewportchecker/jquery.viewportchecker.js"></script>
+<script src="<?php echo base_url();?>/assets/parallax/jarallax.min.js"></script>
+<script src="<?php echo base_url();?>/assets/countdown/jquery.countdown.min.js"></script>
+<script src="<?php echo base_url();?>/assets/theme/js/script.js"></script>
 </body>
 </html>

@@ -136,7 +136,7 @@
                             redirect: 'follow'
                         };
 
-                        fetch("http://localhost:8080/cekBantuan/<?= $kelas['id_materi']?>/<?= $kelas['id_soal']?>/<?= $kelas['tipe_soal']?>", requestOptions)
+                        fetch("<?php echo base_url();?>/cekBantuan/<?= $kelas['id_materi']?>/<?= $kelas['id_soal']?>/<?= $kelas['tipe_soal']?>", requestOptions)
                         .then(response => response.json())
                         .then(
                             result =>{
@@ -150,7 +150,7 @@
                 });
             }
             function send(){
-                let link = "http://localhost:8080/cekKebenaran/<?= $kelas['id_kelas']?>/<?= $kelas['id_soal']?>/<?= $kelas['tipe_soal']?>";
+                let link = "<?php echo base_url();?>/cekKebenaran/<?= $kelas['id_kelas']?>/<?= $kelas['id_soal']?>/<?= $kelas['tipe_soal']?>";
                 swal({
                     title: "Apakah sudah yakin?",
                     text: "Periksa kembali jika belum yakin",

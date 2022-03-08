@@ -22,8 +22,8 @@
 	<link rel="stylesheet" href="assets/fullcalendar-5.7.0/lib/main.css">
 
 	<!-- JS -->
-	<script src="assets/js/dashboard_user.js" defer></script>
-	<script src="assets/fullcalendar-5.7.0/lib/main.js" defer></script>
+	<script src="<?php echo base_url();?>/assets/js/dashboard_user.js" defer></script>
+	<script src="<?php echo base_url();?>/assets/fullcalendar-5.7.0/lib/main.js" defer></script>
 	
 	<title>Profile <?php echo $nama_lengkap; ?></title>
 </head>

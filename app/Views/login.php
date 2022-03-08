@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kodein | Masuk/Daftar</title>
     <!-- sweet alert -->
-    <script src="assets/sweetalert2/dist/sweetalert2.all.min.js"></script>
-    <link rel="stylesheet" href="assets/sweetalert2/dist/sweetalert2.min.css">
+    <script src="<?php echo base_url();?>/assets/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/sweetalert2/dist/sweetalert2.min.css">
 
     <!-- css -->
-    <link rel="stylesheet" href="assets/log-in/style.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/log-in/style.css">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -114,7 +114,7 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-    <script src="assets/log-in/script.js"></script>
+    <script src="<?php echo base_url();?>/assets/log-in/script.js"></script>
 </body>
 
 </html>

@@ -10,7 +10,7 @@
   <meta name="description" content="">
   
   
-  <title>DetailKelasAndroid</title>
+  <title>Kelas <?php echo $kelas['nama_kelas'];?></title>
   <link rel="stylesheet" href="<?php echo base_url();?>/assets/web/assets/mobirise-icons2/mobirise2.css">
   <link rel="stylesheet" href="<?php echo base_url();?>/assets/tether/tether.min.css">
   <link rel="stylesheet" href="<?php echo base_url();?>/assets/bootstrap/css/bootstrap.min.css">
