@@ -11,10 +11,15 @@ class KelasUser extends Model{
         $this->db = db_connect();
     }
     public function updatesProgress($id_akun,$id_kelas,$progress){
+        $cek_kelas_koding = $this->db->table("kelas_koding")->select("id_kelas,total_materi")->where("id_kelas",$id_kelas)->get()->getResultArray();
+        $total_materi = $cek_kelas_koding[0]["total_materi"];
+
         $where = "id_akun='$id_akun' and id_kelas='$id_kelas'";
         $old_progress = $this->select('id_akun,progress,id_kelas')->where($where)->first();
         $progresss = (int) $old_progress["progress"] + (int) $progress;
+        if($progresss <= $total_materi){
+            return $this->db->query("UPDATE kelas_user SET progress='$progresss' WHERE id_akun='$id_akun' and id_kelas='$id_kelas'");
+        }
         // print_r($id_akun);
-        return $this->db->query("UPDATE kelas_user SET progress= '$progresss' WHERE id_akun='$id_akun' and id_kelas='$id_kelas'");
     }
 }

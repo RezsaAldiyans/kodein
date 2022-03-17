@@ -17,7 +17,6 @@ class Home extends BaseController
 {
 	public function __construct(){
 		//nothing
-		$this->bantuan = 0;
 	}
 	public function index(){
 		$kelasModel = new KelasModel();
@@ -218,7 +217,7 @@ class Home extends BaseController
 		}
 	}
 	public function viewCoder(){
-		return view('playground/inCoderss');
+		return view('playground/inCoders');
 	}
 	public function detailsKelas($id_kelas){
 		$kelasModel = new KelasModel();
@@ -271,11 +270,11 @@ class Home extends BaseController
 		}
 		if($cekBoolean){
 			// return redirect()->to("/kelas/$id_kelas");
-			return view('playground/inCoderss',$res);
+			return view('playground/inCoders',$res);
 		}else{
 			$kelas_user->insertKelasUser($data);
 			// return redirect()->to("/kelas/$id_kelas");
-			return view('playground/inCoderss',$res);
+			return view('playground/inCoders',$res);
 		}
 	}
 	public function cekBantuanSoal($id_kelas,$id_soal,$tipe_soal){

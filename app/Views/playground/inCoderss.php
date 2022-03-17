@@ -100,6 +100,7 @@
             // initialize editor
             var editor = CodeMirror.fromTextArea(document.getElementById("container-playground"),config);
             editor.setOption("theme", "material-ocean");
+            editor.setSize(685, 550);
 
             function loadHtml(html) {
                 const document_pattern = /( )*?document\./i;
