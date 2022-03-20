@@ -206,7 +206,6 @@ $session = session();
             element[0].style.height = (height - (3.5 * 16)) + "px";
         }
     });
-
     function showBantuan() {
         swal({
             title: "Apakah anda yakin",
@@ -222,19 +221,86 @@ $session = session();
                     method: 'GET',
                     redirect: 'follow'
                 };
-                fetch("<?php echo base_url();?>/cekBantuan/<?= $kelas['id_materi']?>/<?= $kelas['id_soal']?>/<?= $kelas['tipe_soal']?>",requestOptions)
-                .then(response => response.json())
-                .then(
-                    result => {
-                        jawaban = result[0].jawaban_code ? result[0].jawaban_code : result[0].jawaban_pilgan;
-                        editor.setValue(jawaban);
-                        bantuan = 1;
-                    }
-                )
-                .catch(error => console.log('error', error));
-                }
-            });
+
+                fetch("<?php echo base_url();?>/cekBantuan/<?= $kelas['id_materi']?>/<?= $kelas['id_soal']?>/<?= $kelas['tipe_soal']?>", requestOptions)
+                    .then(response => response.json())
+                    .then(
+                        result => {
+                            jawaban = result[0].jawaban_code ? result[0].jawaban_code : result[0].jawaban_pilgan;
+                            editor.setValue(jawaban);
+                            bantuan = 1;
+                        }
+                    )
+                    .catch(error => console.log('error', error));
+            }
+        });
     }
+    function send() {
+        let link = "<?php echo base_url();?>/cekKebenaran/<?= $kelas['id_kelas']?>/<?= $kelas['id_soal']?>/<?= $kelas['tipe_soal']?>";
+        swal({
+            title: "Apakah sudah yakin?",
+            text: "Periksa kembali jika belum yakin",
+            icon: "warning",
+            buttons: true,
+            // dangerMode: true,
+        })
+            .then(t => {
+                if (t) {
+                    var formdata = new FormData();
+                    formdata.append("jawaban_user", editor.getValue());
+                    formdata.append("bantuan", bantuan);
+                    var requestOptions = {
+                        method: 'POST',
+                        body: formdata,
+                        redirect: 'follow'
+                    };
+                    fetch(link, requestOptions)
+                        .then(response => response.json())
+                        .then(
+                            result => {
+                                // console.log(result)
+                                let jawaban = result[0];
+                                if (result[1] == 'b' && jawaban == 1) {
+                                    swal({
+                                        title: "Selamat Anda Berhasil",
+                                        text: "Selamat anda telah menyelasaikan quest ini",
+                                        icon: "success",
+                                        buttons: true,
+                                    })
+                                }
+                                if (jawaban == 1 && !result[1]) {
+                                    // berhasil
+                                    swal({
+                                        title: "Selamat Anda Berhasil",
+                                        text: "Selamat anda mendapatkan +100xp",
+                                        icon: "success",
+                                        buttons: true,
+                                    })
+                                }
+                                if (jawaban == "failed") {
+                                    // failed auth
+                                    swal({
+                                        title: jawaban,
+                                        text: "",
+                                        icon: "danger",
+                                        buttons: true,
+                                    })
+                                }
+                                if (jawaban == 0) {
+                                    // gagal
+                                    swal({
+                                        title: "Sayang sekali",
+                                        text: "Sayang sekali masih belum tepat jawabannya silahkan dicoba kembali!",
+                                        icon: "error",
+                                        button: true,
+                                    })
+                                }
+                            }
+                        )
+                        .catch(error => console.log('error', error));
+                }
+            })
+        }
     </script>
     <script>
     var msg = $('#msg');

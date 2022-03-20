@@ -175,18 +175,21 @@ class LoginModel extends Model{
     public function updateExp($id_akun,$new_exp,$id_kelas,$progress){
         $where = "id_akun='$id_akun'";
         $old_exp = $this->select('exp,id_akun')->where($where)->first();
-        $exp = (int) $old_exp["exp"] + (int) $new_exp;
-        // print_r();
-        $data=[
-            "id_akun" => $id_akun,
-            "exp" => $exp,
-        ];
-        return $this->save($data);
+        $where = "id_kelas='$id_kelas' AND id_akun='$id_akun'";
+        $cek_progress_user = $this->db->table("kelas_user")->select("id_kelas,progress")->where($where)->get()->getResultArray();
+        // print_r($cek_progress_user[0]["progress"]);
+        if($progress > $cek_progress_user[0]["progress"]){
+            $exp = (int) $old_exp["exp"] + (int) $new_exp;
+            $data=[
+                "id_akun" => $id_akun,
+                "exp" => $exp,
+            ];
+            return $this->save($data);
+        }
     }
     // for admin
     public function adminLogin($email,$password){
         $where = "email='$email' AND password='$password'";
-        // echo $where;
         return $this->select("id_akun, nama_lengkap, email, foto, tgl_gabung, kategori_user")->where($where)->first();
     }
     public function adminUpdateSiswa($data){
