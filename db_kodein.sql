@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 04, 2022 at 07:17 AM
+-- Generation Time: Mar 29, 2022 at 02:42 PM
 -- Server version: 10.4.16-MariaDB
 -- PHP Version: 7.4.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `xyfxiyai_db_kodein`
+-- Database: `db_kodein`
 --
 
 -- --------------------------------------------------------
@@ -49,7 +49,7 @@ CREATE TABLE `akun` (
 --
 
 INSERT INTO `akun` (`id_akun`, `nama_lengkap`, `email`, `password`, `tgl_gabung`, `profile_user`, `asal_kota`, `exp`, `badges`, `level`, `kategori_user`, `linkedin`, `instagram`, `twitter`) VALUES
-('admin', 'mikhael hosea', 'mikhael.hosea@gmail.com', 'c4673dd606f1f7bd5045dd337b0c9d06', '2021-08-13 07:22:38', 'assets/images/admin.jpg', 'Jakarta', 0, 'rookie', 0, 'administrator', 'https://www.linkedin.com/in/mikhael-hosea', 'https://instagram.com/mikhaelhosea', 'https://twitter.com/test'),
+('admin', 'mikhael hosea', 'mikhael.hosea@gmail.com', 'c4673dd606f1f7bd5045dd337b0c9d06', '2021-08-13 07:22:38', 'assets/images/admin.jpg', 'Jakarta', 2800, 'rookie', 0, 'administrator', 'https://www.linkedin.com/in/mikhael-hosea', 'https://instagram.com/mikhaelhosea', 'https://twitter.com/test'),
 ('pelajar-20210609065805', 'mirai', 'mirai@gmail.com', 'c4673dd606f1f7bd5045dd337b0c9d06', '2021-06-09 00:00:00', 'assets/images/admin.jpg', 'bekasi', 5000, 'intermediate', 50, 'end-user', 'https://www.linkedin.com/in/mikhael-hosea', 'https://instagram.com/mikhaelhosea', ''),
 ('pelajar-20210614011449', 'kodeins', 'kodein@gmail.com', 'c4673dd606f1f7bd5045dd337b0c9d06', '2021-06-14 00:00:00', 'assets/images/kodein-logo-k-560x560.png', 'jakarta', 7000, 'professional', 70, 'end-user', '', '', ''),
 ('pelajar-20210703024209', 'yoges', 'yoges@gmail.com', 'c4673dd606f1f7bd5045dd337b0c9d06', '2021-07-03 00:00:00', 'assets/images/kodein-logo-k-560x560.png', '', 2800, 'beginner', 28, 'end-user', '', '', ''),
@@ -147,7 +147,7 @@ CREATE TABLE `kelas_materi` (
 --
 
 INSERT INTO `kelas_materi` (`id_materi`, `id_kelas`, `id_soal`, `materi_title`, `submateri_title`, `tipe_materi`, `text_slides`, `gambar_slides`, `subject_card`, `konteks_card`, `subject_codesite`, `soal_pilgan`, `pil_a`, `pil_b`, `pil_c`, `pil_d`, `kunci_pilgan`, `soal_puzzle`, `jawaban_puzzle`) VALUES
-('1', 'html-1', 1, 'Perkenalan', 'Tag HTML', 1, 'Perkenalan tag pada HTML!', '', 'Perkenalan tag pada HTML!', 'Perkenalan tag pada HTML!', 'Perkenalan tag pada HTML!', '', '', '', '', '', '', '', ''),
+('1', 'html-1', 1, 'Perkenalan HTML 1', 'Tag HTML', 1, 'Perkenalan tag pada HTML!', '', 'Perkenalan tag pada HTML!', 'Perkenalan tag pada HTML!', 'Perkenalan tag pada HTML!', '', '', '', '', '', '', '', ''),
 ('2', 'html-1', 2, 'Perkenalan 2', 'Tag HTML', 1, 'Perkenalan tag pada HTML!', '', 'Perkenalan tag pada HTML!', 'Perkenalan tag pada HTML!', 'Perkenalan tag pada HTML!', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
@@ -175,7 +175,7 @@ CREATE TABLE `kelas_soal` (
 --
 
 INSERT INTO `kelas_soal` (`id_soal`, `id_materi`, `tipe_soal`, `soal_code`, `jawaban_code`, `soal_pilgan`, `pilgan_a`, `pilgan_b`, `pilgan_c`, `pilgan_d`, `jawaban_pilgan`) VALUES
-(1, '1', 1, 'Buatlah tag h1 dan h2 dengan kata \"Hello World\"', '<h1>Hello World</h1>\r\n<h2>Hello World</h2>', NULL, NULL, NULL, NULL, NULL, NULL),
+(1, '1', 1, '<p>Buatlah tag h1 dengan kata \"Hello World\"</p>\r\n<p>Buatlah tag h2 dengan kata \"Hello World\"</p>', '<h1>Hello World</h1>\r\n<h2>Hello World</h2>', NULL, NULL, NULL, NULL, NULL, NULL),
 (2, '2', 2, NULL, NULL, '<p>HTML kepanjangan dari ?</p>', '<p>A. Hypertext Markup Language</p>', '<p>B. Hypertext Mark Lone</p>', '<p>C. Hyper Me Love</p>', '<p>D. Hindari Markas Lalu</p>', 'a');
 
 -- --------------------------------------------------------
@@ -197,11 +197,11 @@ CREATE TABLE `kelas_user` (
 --
 
 INSERT INTO `kelas_user` (`ids_KU`, `id_kelas`, `id_akun`, `status_kelas`, `progress`) VALUES
-(1, 'css-1', 'admin', 'masih berjalan', 2),
+(1, 'css-1', 'admin', 'masih berjalan', 0),
 (2, 'html-1', 'pelajar-20210609065805', 'masih berjalan', 0),
 (3, 'js-1', 'pelajar-20210609065805', 'masih berjalan', 0),
-(4, 'html-1', 'admin', 'masih berjalan', 0),
-(5, 'js-1', 'admin', 'masih berjalan', 2);
+(4, 'html-1', 'admin', 'masih berjalan', 1),
+(5, 'js-1', 'admin', 'masih berjalan', 0);
 
 -- --------------------------------------------------------
 
@@ -299,7 +299,7 @@ ALTER TABLE `kelas_soal`
 -- AUTO_INCREMENT for table `kelas_user`
 --
 ALTER TABLE `kelas_user`
-  MODIFY `ids_KU` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ids_KU` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

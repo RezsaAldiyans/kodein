@@ -436,9 +436,6 @@
 
     </div>
 </section>
-<section style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; color:#aaa; font-size:12px; padding: 0; align-items: center; display: flex;">
-    <a href="https://mobirise.site" style="flex: 1 1; height: 3rem; padding-left: 1rem;"></a>
-</section>
 <script src="<?php echo base_url();?>/assets/web/assets/jquery/jquery.min.js"></script>
 <script src="<?php echo base_url();?>/assets/popper/popper.min.js"></script>
 <script src="<?php echo base_url();?>/assets/tether/tether.min.js"></script>
@@ -450,6 +447,6 @@
 <script src="<?php echo base_url();?>/assets/viewportchecker/jquery.viewportchecker.js"></script>
 <script src="<?php echo base_url();?>/assets/parallax/jarallax.min.js"></script>
 <script src="<?php echo base_url();?>/assets/countdown/jquery.countdown.min.js"></script>
-<!-- <script src="<?php echo base_url();?>/assets/theme/js/script.js"></script> -->
+<!-- <script src="/assets/theme/js/script.js"></script> -->
 </body>
 </html>
