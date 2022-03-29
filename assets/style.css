@@ -1,0 +1,52 @@
+.calender {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+
+    padding: 4%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: #113078;
+}
+
+.footer {
+    margin-top: 60px;
+}
+.footer p{
+    color: #ACACAC;
+    font-size: 18px;
+
+}
+
+.image{
+    width: 200px;
+    height: 200px;
+}
+
+.card{
+    margin: 12px;
+}
+
+.my-card
+{
+    position:absolute;
+    left:40%;
+    top:-30px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+
+/* Desktop Layouts */
+@media (min-width: 992px){
+    .history{
+        margin-top: 25px;
+    }
+    .card{
+        margin: 15px;
+    }    
+}
