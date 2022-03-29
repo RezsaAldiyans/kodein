@@ -65,21 +65,32 @@
     </nav>
 </section>
 
-<section class="header11 cid-swTlNn1ixR" id="header11-9">
+<section class="kodeinanim header11 cid-swTlNn1ixR" id="header11-9">
     <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-5 image-wrapper">
+        <style>@media screen and (max-width: 700px) {
+            div.anilogo {
+            display: none;
+              margin-top: 5%;
+            }
+            .kodeinanim {
+                margin-top: 64%;
+            }
+          }</style>
+        <div class="row justify-content-left">
+            <div class="anilogo col-12 col-md-5 image-wrapper">
                 <object type="image/svg+xml" data="assets/images/kodein-animate.svg">
 
                     <img src="assets/images/kodein-animate.svg" />
                     
                     </object>
             </div>
+            
             <div class="col-12 col-md">
                 <div class="text-wrapper text-center">
-                    <h1 class="mbr-section-title mbr-fonts-style mb-3 display-2"><strong>Selamat datang di Kodein!</strong></h1>
-                    <p class="mbr-text mbr-fonts-style display-7">Ayo mulai <strong>Kelas Koding Kodein!</strong>&nbsp;asah dan tingkatkan kemampuan pemogramanmu. Daftar Kelas Koding&nbsp;<strong>GRATIS&nbsp;</strong>dari&nbsp;<strong>Kodein!</strong></p>
-                    <div class="mbr-section-btn mt-3"><a class="btn btn-info display-7" href="/#features13-6">&nbsp;Lihat selengkapnya!</a></div>
+                    <h2 class="mbr-section-title mbr-fonts-style mb-3 display-2"><strong>Kelas koding kodein!</strong></h2>
+                    <p class="mbr-text mbr-fonts-style display-7">
+                        Kono bangumi wa goran no suponsaa no teikyou de okurishimasu. platform untuk belajar koding khusus untuk weebs di indonesia!&nbsp;</p>
+                    <div class="mbr-section-btn mt-3"><a class="btn btn-info display-7" href="index.html#features13-6">&nbsp;Lihat selengkapnya!</a></div>
                 </div>
             </div>
         </div>
