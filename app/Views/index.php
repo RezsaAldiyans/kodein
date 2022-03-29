@@ -293,8 +293,8 @@
 
 <section class="gallery3 cid-swTnKrdX7j" id="gallery3-a">
     
-    
-    <div class="container-fluid">
+    <div class="mbr-overlay"></div>
+    <div class="container">
         <div class="mbr-section-head">
             <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-1"><strong>Meet Kodein Team!</strong><br><strong><br></strong></h4>
             
@@ -328,7 +328,8 @@
                     
                 </div>
             </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-3">
+            
+            <!-- <div class="item features-image сol-12 col-md-6 col-lg-3">
                 <div class="item-wrapper">
                     <div class="item-img">
                         <img src="assets/images/kodein-logo-k-560x560.png" alt="">
@@ -370,7 +371,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </section>
 
 <section class="footer5 cid-swTu8oSquH" once="footers" id="footer5-c">
