@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+.fc-toolbar-title{
+  padding-top: 10px;
+  text-align: center;
+}
+.calender {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #ffff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  color: #113078;
+}
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body{
+      font-family: 'Noto Sans JP', sans-serif;
+      background-color: rgb(255, 255, 255);
+  }
+  
+  
+  /* Navbar */
+  .navbar-brand img{
+      height: 3.7rem;
+  }
+  
+  .img-user-kecil{
+      object-fit: cover;
+      object-position: center;
+  }
+
+  .navbar-light .navbar-nav .nav-link{
+      color: #125488;
+      font-weight: bold;
+      font-size: 17px;
+  }
+  
+  .navbar-light .navbar-nav .nav-link:hover{
+      color: rgba(71, 65, 65, 0.5);
+  }
+  
+  /* End of Navbar */
+  
+  /* Main */
+  
+  
+  
+  
+  .section-details-content {
+      margin-top: -210px;
+      min-height: 60vh;
+    }
+    
+    .section-details-content .card-details {
+      padding: 30px;
+      border-radius: 11px;
+    }
+  
+    .nav-tabs {
+      border-bottom: transparent;
+      }
+  
+    .nav-tabs > li.active > a,.nav-tabs > li.active > a:hover,.nav-tabs > i.active > a:focus{
+      border-bottom-color: #ffffff;
+    }
+  
+    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+      background-color: transparent;
+      border-color: transparent;
+  
+    }
+  
+    nav-tabs .nav-item {
+      margin-bottom: 10px;
+      color: transparent;
+  }
+  
+    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active:hover {
+      background-color: transparent;
+      border: transparent;
+  
+    }
+  
+    #tab{
+      cursor: pointer;
+    }
+    #tab1Content {
+      display: none; 
+     }
+    
+   #tab2Content, #tab3Content {
+      display: none; 
+     }
+
+    .card-title{
+      font-size: 30px;
+      font-family: 'Jost', sans-serif;
+    }
+
+    .more{
+      background-color: #125488 !important;
+      border-radius: 50px;
+      padding: 10px 20px;
+      font-size: 20px;
+      font-weight: bold;
+      font-family: 'Jost', sans-serif;
+    }
+   /* Tablet */
+   /* @media (min-width: 768px) {
+      .tabzz{
+  
+          margin-left: 20px;
+      }
+   } */
+  
+   /* Desktop */
+  
+    /* @media (min-width: 992px) { 
+      .tabzz{
+          margin-left: 30px;
+      }
+  } */
+  
+     /* @media (min-width: 1200px) { 
+      .tabzz{
+          margin-left: 1px;
+      }
+      } */
+  

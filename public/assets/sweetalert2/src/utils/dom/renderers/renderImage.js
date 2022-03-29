@@ -1,0 +1,28 @@
+import { swalClasses } from '../../classes.js'
+import * as dom from '../../dom/index.js'
+
+export const renderImage = (instance, params) => {
+  const image = dom.getImage()
+
+  if (!params.imageUrl) {
+    return dom.hide(image)
+  }
+
+<<<<<<< Updated upstream
+  dom.show(image, '')
+=======
+  dom.show(image)
+>>>>>>> Stashed changes
+
+  // Src, alt
+  image.setAttribute('src', params.imageUrl)
+  image.setAttribute('alt', params.imageAlt)
+
+  // Width, height
+  dom.applyNumericalStyle(image, 'width', params.imageWidth)
+  dom.applyNumericalStyle(image, 'height', params.imageHeight)
+
+  // Class
+  image.className = swalClasses.image
+  dom.applyCustomClass(image, params, 'image')
+}

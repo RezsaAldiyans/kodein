@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Playground</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap-reboot.min.css">
+    <!-- <link rel="stylesheet" href="../../../public/assets/css/incoderss.css"> -->
+    <style>
+        h5{
+    margin-top: 10px;
+}
+.proc{
+    background-color: blanchedalmond;
+    padding-bottom: 5px;
+}
+.percent{
+    margin-bottom: 2px;
+}
+.col-4, .col-7, .col-2, .col-6, .col-5{
+    padding: 0px;
+    /* margin: 1px; */
+}
+.soal {
+    padding-top: 10px;
+    padding-left: 10px;
+    float: left;
+    /* pengatur ketinggian keseluruhan */
+    height: 606px;
+    width: 100%;
+    /* margin-bottom: 15px; */
+    /* border: 1px solid black; */
+    background-color: rgb(34, 32, 32);
+    color:white;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.playground{
+    /* float: left; */
+    height: 100%;
+    width: 100%;
+    /* margin-bottom: 15px; */
+    /* border: 1px solid black; */
+    clear: both;
+    background-color: rgb(41, 32, 32);
+    color:white
+}
+.CodeMirror {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    resize: vertical;
+    max-height: 600px;
+}
+.submitBtn{
+    /* float: left; */
+    /* height: 50px; */
+    width: 100%;
+    padding: 15px 10px 15px 10px;
+    /* border: 1px solid black; */
+    clear: both;
+    background-color: rgb(53, 54, 65);
+}
+.output{
+    /* float: left; */
+    height: 100%;
+    width: 100%;
+    /* margin-bottom: 15px; */
+    /* border: 1px solid black; */
+    clear: both;
+    background-color: rgb(34, 32, 32);
+    color:white
+}
+.result{
+    /* float: left; */
+    height: 50%;
+    width: 100%;
+    /* margin-bottom: 15px; */
+    /* border: 1px solid black; */
+    clear: both;
+    background-color: rgb(34, 32, 32);
+    color:white
+}
+#hasil{
+    position: absolute;
+    border: 0;
+    background-color: white;
+    width: 100%;
+    height: 50%;
+}
+.console{
+    /* float: left; */
+    height: 50%;
+    width: 100%;
+    /* margin-bottom: 15px; */
+    /* border: 1px solid black; */
+    clear: both;
+    background-color: rgb(34, 32, 32);
+    color:white
+}
+    </style>
+
+    <!-- cdn css editor playground -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/theme/material-ocean.css"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/addon/hint/show-hint.css">
+
+    <!-- cdn js editor playground -->
+    <!-- <script src="assets/web/assets/jquery/jquery.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/mode/xml/xml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/mode/javascript/javascript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/mode/css/css.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/addon/edit/matchbrackets.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/addon/hint/show-hint.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/addon/hint/javascript-hint.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/addon/hint/html-hint.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/addon/hint/xml-hint.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/addon/hint/css-hint.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/keymap/sublime.js"></script>
+    <!-- <script src="../../../public/assets/playground/js/main.js" defer></script> -->
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row proc">
+            <div class="col-5">
+                <div class="materi pl-3">
+                    <h5>materi</h5>
+                </div>
+            </div>
+            <div class="col-6">
+                <p class="percent">Progress</p>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width:10%"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <div class="soal">
+                    <h4>Pertanyaan!</h4>
+                    <p>1234</p>
+                </div>
+            </div>
+            <div class="col-6 col-lg-6">
+                <div class="playground">
+                    <textarea name="playgrounds" id="container-playground" name="playground" class="codeEditor"></textarea>
+                    <div class="submitBtn">
+                        <div class="row">
+                            <div class="col-12">
+                                <p class="float-left">Button Submit -></p>
+                                <a class="btn btn-success float-right" id="btnT" onClick="showBantuan()">Bantuan</a>
+                                <a class="btn btn-success float-right" id="btnS" onClick="send()">Submit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="output">
+                    <div class="result">
+                        <iframe id="hasil"></iframe>
+                    </div>
+                    <div id="console">console js</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        var bantuan = 0;
+            var validation = false;
+            var myTimeoutId = null;
+            var config = {
+                mode: "text/html",
+                lineNumbers: true,
+                keyMap:"sublime",
+                tabSize:4,
+            };
+            // initialize editor
+            var editor = CodeMirror.fromTextArea(document.getElementById("container-playground"),config);
+            editor.setOption("theme", "material-ocean");
+
+            function loadHtml(html) {
+                const document_pattern = /( )*?document\./i;
+                let finalHtml = html.replace(document_pattern, "document.getElementById('result').contentWindow.document.");
+                $('#hasil').contents().find('html').html(finalHtml);
+            }
+
+            loadHtml($('#container-playground').val());
+            editor.on('change',function(cMirror){
+                if (myTimeoutId!==null) {
+                    clearTimeout(myTimeoutId);
+                }
+                myTimeoutId = setTimeout(function() {
+                        try{
+                            loadHtml(cMirror.getValue());
+                        }catch(err){
+                            console.log('err:'+err);
+                        }
+                    }, 1000);
+            });
+    </script>
+    <script>
+        var msg = $('#msg');
+        $(document).keydown(function (e) {
+            if(e.ctrlKey && e.key === "s"){
+                alert("Tenang file kamu selalu disimpan didalam server kami\nTetap semangat!")
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

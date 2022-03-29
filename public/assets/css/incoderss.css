@@ -1,0 +1,91 @@
+h5{
+    margin-top: 10px;
+}
+.proc{
+    background-color: blanchedalmond;
+    padding-bottom: 5px;
+}
+.percent{
+    margin-bottom: 2px;
+}
+.col-4, .col-7, .col-2, .col-6, .col-5{
+    padding: 0px;
+    /* margin: 1px; */
+}
+.soal {
+    padding-top: 10px;
+    padding-left: 10px;
+    float: left;
+    /* pengatur ketinggian keseluruhan */
+    height: 606px;
+    width: 100%;
+    /* margin-bottom: 15px; */
+    /* border: 1px solid black; */
+    background-color: rgb(34, 32, 32);
+    color:white;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.playground{
+    /* float: left; */
+    height: 100%;
+    width: 100%;
+    /* margin-bottom: 15px; */
+    /* border: 1px solid black; */
+    clear: both;
+    background-color: rgb(41, 32, 32);
+    color:white
+}
+.CodeMirror {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    resize: vertical;
+    max-height: 600px;
+}
+.submitBtn{
+    /* float: left; */
+    /* height: 50px; */
+    width: 100%;
+    padding: 15px 10px 15px 10px;
+    /* border: 1px solid black; */
+    clear: both;
+    background-color: rgb(53, 54, 65);
+}
+.output{
+    /* float: left; */
+    height: 100%;
+    width: 100%;
+    /* margin-bottom: 15px; */
+    /* border: 1px solid black; */
+    clear: both;
+    background-color: rgb(34, 32, 32);
+    color:white
+}
+.result{
+    /* float: left; */
+    height: 50%;
+    width: 100%;
+    /* margin-bottom: 15px; */
+    /* border: 1px solid black; */
+    clear: both;
+    background-color: rgb(34, 32, 32);
+    color:white
+}
+#hasil{
+    position: absolute;
+    border: 0;
+    background-color: white;
+    width: 100%;
+    height: 50%;
+}
+.console{
+    /* float: left; */
+    height: 50%;
+    width: 100%;
+    /* margin-bottom: 15px; */
+    /* border: 1px solid black; */
+    clear: both;
+    background-color: rgb(34, 32, 32);
+    color:white
+}
