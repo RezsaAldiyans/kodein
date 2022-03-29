@@ -7,7 +7,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="assets/images/kodein-logo-landing-128x128.png" type="image/x-icon">
+  <link rel="shortcut icon" href="<?php echo base_url();?>/assets/images/kodein-logo-landing-128x128.png" type="image/x-icon">
   <meta name="description" content="kodein is a website for learning">
   
   
@@ -21,11 +21,8 @@
   <link rel="stylesheet" href="<?php echo base_url();?>/assets/animatecss/animate.css">
   <link rel="stylesheet" href="<?php echo base_url();?>/assets/socicon/css/styles.css">
   <link rel="stylesheet" href="<?php echo base_url();?>/assets/theme/css/style.css">
-  <link rel="preload" as="style" href="<?php echo base_url();?>/assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
-  
-  
-  
-  
+  <link rel="preload" as="style" href="<?php echo base_url();?>/assets/mobirise/css/mbr-additional.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>/assets/mobirise/css/mbr-additional.css" type="text/css">
 </head>
 <body>
   
@@ -453,6 +450,6 @@
 <script src="<?php echo base_url();?>/assets/viewportchecker/jquery.viewportchecker.js"></script>
 <script src="<?php echo base_url();?>/assets/parallax/jarallax.min.js"></script>
 <script src="<?php echo base_url();?>/assets/countdown/jquery.countdown.min.js"></script>
-<script src="<?php echo base_url();?>/assets/theme/js/script.js"></script>
+<!-- <script src="<?php echo base_url();?>/assets/theme/js/script.js"></script> -->
 </body>
 </html>

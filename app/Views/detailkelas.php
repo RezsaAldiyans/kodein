@@ -339,7 +339,7 @@ Kono bangumi wa goran no suponsaa no teikyou de okurishimasu.teikyou de okurishi
 <script src="<?php echo base_url();?>/assets/touchswipe/jquery.touch-swipe.min.js"></script>
 <script src="<?php echo base_url();?>/assets/viewportchecker/jquery.viewportchecker.js"></script>
 <script src="<?php echo base_url();?>/assets/mbr-tabs/mbr-tabs.js"></script>
-<script src="<?php echo base_url();?>/assets/theme/js/script.js"></script>
+<!-- <script src="<?php echo base_url();?>/assets/theme/js/script.js"></script> -->
     <input name="animation" type="hidden">
     </body>
 </html>
