@@ -191,31 +191,6 @@ class Home extends BaseController
 		];
 		return view('testLeadBoard',$data);
 	}
-
-	public function inCoder(){
-		$file = "test.txt";
-		$handle = fopen($file,'r');
-		$contentFile = fread($handle,filesize($file));
-		$isi = str_replace(array("\n", "\r"), '', $this->request->getPost("data"));
-		if($isi){
-			$string = str_replace(array("\n", "\r"), '', $contentFile);
-			if(preg_match("/$string/",$isi)){
-				$dataResult = array("result"=>TRUE);
-				echo json_encode($dataResult);
-			}else{
-				$dataResult = array("result"=>FALSE);
-				echo json_encode($dataResult);
-			}
-			// if($isi == $string){
-			// 	$dataResult = array("result"=>TRUE);
-			// 	echo json_encode($dataResult);
-			// 	// echo "benar";
-			// }else{
-			// 	$dataResult = array("result"=>FALSE);
-			// 	echo json_encode($dataResult);
-			// }
-		}
-	}
 	public function viewCoder(){
 		return view('playground/inCoders');
 	}
@@ -225,7 +200,8 @@ class Home extends BaseController
 		$kelas = $kelasModel->findKelas($id_kelas);
 		$status = $kelas_user->kelasUser(session()->get("id_akun"),$id_kelas);
 		$set =[
-			"kelas"=>$kelas[0],
+			"kelas"=>$kelas['kelas'][0],
+			"mulai_materi" => $kelas['mulai_materi'][0]["mulai_materi"],
 			"status"=>$status,
 		];
 		// print_r($set);
@@ -247,30 +223,29 @@ class Home extends BaseController
 			"status_kelas"=>"masih berjalan",
 			"progress"=> 0
 		];
-		$cekBoolean;
 		$res;
 		$cek = $kelas_user->kelasUser(session()->get("id_akun"),$id_kelas);
-		// $cek_kelas = $kelasModel->kelasMateri($id_kelas);
 		$kelas_MS = $kelasModel->kelasSoal($id_kelas,$id_soal);
-		// print_r($cek_kelas);
+		// print_r($cek);
 		$res = [
-			"total_materi" => $kelas[0]["total_materi"],
+			"total_materi" => $kelas["kelas"][0]["total_materi"],
 			"id_kelas" => $cek["id_kelas"],
 			"id_akun" => $cek["id_akun"],
 			"status_kelas" => $cek["status_kelas"],
 			"progress" => $cek["progress"],
 			"kelas" => $kelas_MS[0]
 		];
-		// $kelas_user = new KelasUser();
-		// print_r($kelas_user->updatesProgress($session->get("id_akun"),$id_kelas,1));
-		if($cek["id_kelas"] == $id_kelas){
-			$cekBoolean = 1;
-		}else{
-			$cekBoolean = 0;
-		}
+		// print_r($res);
+		$cekBoolean = $cek["id_kelas"] ? TRUE : 0;
+		$cek_materi_id = $kelas_MS[0]["id_materi"] == $id_soal ? TRUE : 0;
+		// print_r($cek_materi_id);
 		if($cekBoolean){
-			// return redirect()->to("/kelas/$id_kelas");
-			return view('playground/inCoders',$res);
+			if($cek_materi_id){
+				return view('playground/inCoders',$res);
+			}
+			else{
+				return redirect()->back();
+			}
 		}else{
 			$kelas_user->insertKelasUser($data);
 			// return redirect()->to("/kelas/$id_kelas");

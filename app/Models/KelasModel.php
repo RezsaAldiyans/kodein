@@ -14,15 +14,23 @@ class KelasModel extends Model{
         return $this->db->query("select * from kelas_koding")->getResultArray();
     }
     public function findKelas($id_kelas){
-        return $this->where("id_kelas",$id_kelas)->findAll();
+        // initial array for 2 table
+        $data = [
+            "mulai_materi" => $this->db->table("kelas_materi")->select("min(id_materi) as mulai_materi")->where("id_kelas",$id_kelas)->get()->getResultArray(),
+            "kelas" => $this->where("id_kelas",$id_kelas)->findAll()
+        ];
+        // $data['mulai_kelas_materi'] = $this->db->table("kelas_materi")->select("min('id_materi')")->where("id_kelas",$id_kelas)->get()->getResultArray();
+        // $data['kelas'] = $this->where("id_kelas",$id_kelas)->findAll();
+        return $data;
     }
     public function kelasMateri($id_kelas){
         return $this->db->table("kelas_materi")->where("id_kelas",$id_kelas)->get()->getResultArray();
     }
     public function kelasSoal($id_kelas,$id_soal){
-        $where = "kelas_soal.id_soal='$id_soal' and kelas_materi.id_kelas='$id_kelas'";
-        $kelas = $this->db->table("kelas_materi")->join("kelas_soal","kelas_materi.id_materi=kelas_soal.id_materi","left")->where($where)->get()->getResultArray();
+        $where = "kelas_materi.id_kelas='$id_kelas' and kelas_soal.id_soal='$id_soal'";
+        $kelas = $this->db->table("kelas_materi")->join("kelas_soal","kelas_materi.id_materi=kelas_soal.id_materi")->where($where)->get()->getResultArray();
         return $kelas;
+        // $where = "kelas_materi.id_kelas ='$id_kelas' ";
     }
     public function cekBantuan($id_kelas,$id_soal,$tipe_soal){
         if($tipe_soal == 1 || $tipe_soal == "1"){

@@ -92,7 +92,7 @@
                 <div class="text-wrapper text-center">
                     <h1 class="mbr-section-title mbr-fonts-style mb-3 display-2"><strong><?php echo $kelas['nama_kelas'];?></strong></h1>
                     <p class="mbr-text mbr-fonts-style display-7"><?php echo $kelas['deskripsi_kelas']; ?></p>
-                    <div class="mbr-section-btn mt-3"><a class="btn btn-info display-7" href="/materi/<?php echo $kelas['id_kelas']; ?>/1">Mulai Kelas!</a></div>
+                    <div class="mbr-section-btn mt-3"><a class="btn btn-info display-7" href="/materi/<?php echo $kelas['id_kelas']; ?>/<?php echo $mulai_materi; ?>">Mulai Kelas!</a></div>
                 </div>
             </div>
         </div>
@@ -325,10 +325,6 @@ Kono bangumi wa goran no suponsaa no teikyou de okurishimasu.teikyou de okurishi
 
     </div>
 </section>
-<section style="background-color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; color:#aaa; font-size:12px; padding: 0; align-items: center; display: flex;">
-    <a href="" style="flex: 1 1; height: 3rem; padding-left: 1rem;"></a>
-    <p style="flex: 0 0 auto; margin:0; padding-right:1rem;">Develop your own site - <a href="https://mobirise.site/w" style="color:#aaa;">See here</a></p>
-</section>
 <script src="<?php echo base_url();?>/assets/web/assets/jquery/jquery.min.js"></script>
 <script src="<?php echo base_url();?>/assets/popper/popper.min.js"></script>
 <script src="<?php echo base_url();?>/assets/tether/tether.min.js"></script>
@@ -339,7 +335,7 @@ Kono bangumi wa goran no suponsaa no teikyou de okurishimasu.teikyou de okurishi
 <script src="<?php echo base_url();?>/assets/touchswipe/jquery.touch-swipe.min.js"></script>
 <script src="<?php echo base_url();?>/assets/viewportchecker/jquery.viewportchecker.js"></script>
 <script src="<?php echo base_url();?>/assets/mbr-tabs/mbr-tabs.js"></script>
-<!-- <script src="<?php echo base_url();?>/assets/theme/js/script.js"></script> -->
+<!-- <script src="/assets/theme/js/script.js"></script> -->
     <input name="animation" type="hidden">
     </body>
 </html>
