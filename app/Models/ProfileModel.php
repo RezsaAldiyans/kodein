@@ -16,7 +16,15 @@ class ProfileModel extends Model{
     }
     public function kelasUser($id_akun,$id_kelas){
         $where = "id_akun='$id_akun' and id_kelas='$id_kelas'";
-        return $this->where($where)->first();
+        $data = $this->where($where)->first();
+
+        // split the progress because the progress still in string,
+        // and we need to count the total progress of user
+        $counter = count(explode(",", $data["progress"]));
+        # update progress in data variable
+        $data["progress"] = $counter;
+
+        return $data;
     }
     public function findKelasWithidakun($id_akun){
         return $this->where("id_akun",$id_akun)->findAll();

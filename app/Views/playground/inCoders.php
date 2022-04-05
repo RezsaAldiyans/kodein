@@ -249,55 +249,117 @@ $session = session();
                     var formdata = new FormData();
                     formdata.append("jawaban_user", editor.getValue());
                     formdata.append("bantuan", bantuan);
-                    var requestOptions = {
-                        method: 'POST',
-                        body: formdata,
-                        redirect: 'follow'
+                    formdata.append("id_soal", <?php echo $kelas['id_soal'];?>);
+                    var settings = {
+                        "url": link,
+                        "method": "POST",
+                        "timeout": 0,
+                        "processData": false,
+                        "mimeType": "multipart/form-data",
+                        "contentType": false,
+                        "data": formdata
                     };
-                    fetch(link, requestOptions)
-                        .then(response => response.json())
-                        .then(
-                            result => {
-                                // console.log(result)
-                                let jawaban = result[0];
-                                if (result[1] == 'b' && jawaban == 1) {
-                                    swal({
-                                        title: "Selamat Anda Berhasil",
-                                        text: "Selamat anda telah menyelasaikan quest ini",
-                                        icon: "success",
-                                        buttons: true,
-                                    })
+                    $.ajax(settings).done(function(response) {
+                        jawaban = JSON.parse(response);
+                        // console.log(jawaban);
+                        // berhasil menjawab tanpa bantuan
+                        if (jawaban[0] == 1) {
+                            // berhasil
+                            swal({
+                                title: "Selamat Anda Berhasil",
+                                text: "Selamat anda mendapatkan +100xp",
+                                icon: "success",
+                                buttons: true,
+                            })
+                            .then((t) => {
+                                if(t){
+                                    <?php
+                                        $nextSoal = explode("/",$_SERVER["REQUEST_URI"])[4]+1;
+                                    ?>
+                                    window.location.replace("<?= base_url();?>/materi/<?= $kelas['id_kelas']?>/<?= $next_soal[$nextSoal]['km_id']?>/<?= $nextSoal?>");
                                 }
-                                if (jawaban == 1 && !result[1]) {
-                                    // berhasil
-                                    swal({
-                                        title: "Selamat Anda Berhasil",
-                                        text: "Selamat anda mendapatkan +100xp",
-                                        icon: "success",
-                                        buttons: true,
-                                    })
-                                }
-                                if (jawaban == "failed") {
-                                    // failed auth
-                                    swal({
-                                        title: jawaban,
-                                        text: "",
-                                        icon: "danger",
-                                        buttons: true,
-                                    })
-                                }
-                                if (jawaban == 0) {
-                                    // gagal
-                                    swal({
-                                        title: "Sayang sekali",
-                                        text: "Sayang sekali masih belum tepat jawabannya silahkan dicoba kembali!",
-                                        icon: "error",
-                                        button: true,
-                                    })
-                                }
-                            }
-                        )
-                        .catch(error => console.log('error', error));
+                            });
+                        }
+                    });
+                    // fetch(link, requestOptions)
+                    //     .then(response => response.json())
+                    //     .then(
+                    //         result => {
+                    //             // console.log(result)
+                    //             let jawaban = result[0];
+                    //             // sudah selesai mengerjakan dan mengirim ulang
+                    //             if (result[1] == 's' && jawaban == 1) {
+                    //                 swal({
+                    //                     title: "Selamat Anda Berhasil",
+                    //                     text: "Anda telah menyelasaikan quest ini silahkan lanjutkan ke quest selanjutnya",
+                    //                     icon: "success",
+                    //                     buttons: true,
+                    //                 })
+                    //                 .then((t) => {
+                    //                     if(t){
+                    //                         <?php
+                    //                             $nextSoal = explode("/",$_SERVER["REQUEST_URI"])[4]+1;
+                    //                         ?>
+                    //                         location.href = "<?= base_url();?>/materi/<?= $kelas['id_kelas']?>/<?= $next_soal[$nextSoal]?>/<?= $nextSoal?>";
+                    //                     }
+                    //                 });
+                    //             }
+                                // // berhasil menjawab tanpa bantuan
+                                // if (jawaban == 1 && !result[1]) {
+                                //     // berhasil
+                                //     swal({
+                                //         title: "Selamat Anda Berhasil",
+                                //         text: "Selamat anda mendapatkan +100xp",
+                                //         icon: "success",
+                                //         buttons: true,
+                                //     })
+                                //     .then((t) => {
+                                //         if(t){
+                                //             <?php
+                                //                 $nextSoal = explode("/",$_SERVER["REQUEST_URI"])[4]+1;
+                                //             ?>
+                                //             window.location.replace("<?= base_url();?>/materi/<?= $kelas['id_kelas']?>/<?= $next_soal[$nextSoal]?>/<?= $nextSoal?>");
+                                //         }
+                                //     });
+                                // }
+                    //             // berhasil menjawab dengan bantuan
+                    //             if (result[1] == 'nexp' && jawaban == 1) {
+                    //                 swal({
+                    //                     title: "Selamat Anda Berhasil",
+                    //                     text: "selemat anda telah menyelasaikan quest ini dengan bantuan silahkan lanjutkan ke quest selanjutnya",
+                    //                     icon: "success",
+                    //                     buttons: true,
+                    //                 })
+                    //                 .then((t) => {
+                    //                     if(t){
+                    //                         <?php
+                    //                             $nextSoal = explode("/",$_SERVER["REQUEST_URI"])[4]+1;
+                    //                         ?>
+                    //                         location.href = "<?= base_url();?>/materi/<?= $kelas['id_kelas']?>/<?= $next_soal[$nextSoal]?>/<?= $nextSoal?>";
+                    //                     }
+                    //                 });
+                    //             }
+                    //             // failed authentication
+                    //             if (jawaban == "failed") {
+                    //                 swal({
+                    //                     title: jawaban,
+                    //                     text: "",
+                    //                     icon: "danger",
+                    //                     buttons: true,
+                    //                 })
+                    //             }
+                    //             // gagal menjawab
+                    //             if (jawaban == 0) {
+                    //                 swal({
+                    //                     title: "Sayang sekali",
+                    //                     text: "Sayang sekali masih belum tepat jawabannya silahkan dicoba kembali!",
+                    //                     icon: "error",
+                    //                     button: true,
+                    //                 })
+                    //             }
+                    //         }
+                    //     )
+                    //     .catch(error => console.log('error', error));
                 }
             })
         }

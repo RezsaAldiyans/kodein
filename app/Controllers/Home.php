@@ -207,7 +207,7 @@ class Home extends BaseController
 		// print_r($set);
 		return view("detailkelas",$set);
 	}
-	public function mulaiKelas($id_kelas,$id_soal){
+	public function mulaiKelas($id_kelas,$id_soal,$array_soal){
 		$session = session();
 		if(!$session->get("logged_in")){
 			return redirect()->to('/login');
@@ -226,19 +226,19 @@ class Home extends BaseController
 		$res;
 		$cek = $kelas_user->kelasUser(session()->get("id_akun"),$id_kelas);
 		$kelas_MS = $kelasModel->kelasSoal($id_kelas,$id_soal);
-		// print_r($cek);
+		// print_r($kelas_MS['next_soal']);
 		$res = [
 			"total_materi" => $kelas["kelas"][0]["total_materi"],
 			"id_kelas" => $cek["id_kelas"],
 			"id_akun" => $cek["id_akun"],
 			"status_kelas" => $cek["status_kelas"],
 			"progress" => $cek["progress"],
-			"kelas" => $kelas_MS[0]
+			"kelas" => $kelas_MS["kelas"][0],
+			"next_soal" => $kelas_MS["next_soal"]
 		];
-		// print_r($res);
+		// print_r($cek["progress"]);
 		$cekBoolean = $cek["id_kelas"] ? TRUE : 0;
-		$cek_materi_id = $kelas_MS[0]["id_materi"] == $id_soal ? TRUE : 0;
-		// print_r($cek_materi_id);
+		$cek_materi_id = $kelas_MS["kelas"][0]["id_materi"] == $id_soal ? TRUE : 0;
 		if($cekBoolean){
 			if($cek_materi_id){
 				return view('playground/inCoders',$res);
@@ -248,9 +248,10 @@ class Home extends BaseController
 			}
 		}else{
 			$kelas_user->insertKelasUser($data);
-			// return redirect()->to("/kelas/$id_kelas");
 			return view('playground/inCoders',$res);
 		}
+		// $kelas_user = new KelasUser();
+		// $d = $kelas_user->updatesProgress($session->get("id_akun"),$id_kelas,$id_soal);
 	}
 	public function cekBantuanSoal($id_kelas,$id_soal,$tipe_soal){
 		$kelas_model = new KelasModel();
@@ -265,28 +266,67 @@ class Home extends BaseController
 		$user = new LoginModel();
 		$textarea = $this->request->getPost("jawaban_user");
 		$bantuan = $this->request->getPost("bantuan");
+		$id_soal = $this->request->getPost("id_soal");
 		$cek = $kelas_model->cekKebenaran($id_kelas,$id_soal,$tipe_soal);
-		// print_r($textarea);
+		// print_r($textarea,$bantuan);
 		if($session->get("id_akun")){
 			$cek_akun = $user->getAkun($session->get("id_akun"));
 			if(!$cek_akun){
 				$ses = array("failed");
 				return json_encode($ses,TRUE);
 			}else{
+				// menggunakan bantuan dan jawaban dari database
 				if($bantuan == 1 && $cek[0]["jawaban_code"] == $textarea){
-					$ses = array(1,'b');
+					$ses = array(1,'nexp');
 					$c = $kelas_user->updatesProgress($session->get("id_akun"),$id_kelas,1);
 					return json_encode($ses,TRUE);
 				}
+				// tidak menggunakan bantuan sama sekali
 				if($bantuan == 0 && $cek[0]["jawaban_code"] == $textarea){
 					$ses = array(1);
-					$ceks = $user->updateExp($session->get("id_akun"),100,$id_kelas,1);
-					$c = $kelas_user->updatesProgress($session->get("id_akun"),$id_kelas,1);
+					$d = $kelas_user->updatesProgress($session->get("id_akun"),$id_kelas,$id_soal);
+					$c = $user->updateExp($session->get("id_akun"),100,$id_kelas,1);
 					return json_encode($ses,TRUE);
-				}else{
+				}
+				else{
 					$ses = array(0);
 					return json_encode($ses,TRUE);
 				}
+			}
+		}
+	}
+	public function dummy(){
+		$kelas = ["html-1","js-1","css-1"];
+		for($i = 4; $i < 50; $i++){
+			$getKelas = $kelas[rand(0,2)];
+			$data_kelas_materi = [
+				"id_materi" => $i,
+				"id_kelas" => $getKelas,
+				"id_soal" => $i,
+				"materi_title" => "Materi $getKelas $i",
+				"submateri_title" => "Submateri $getKelas $i",
+				"tipe_materi" => 1,
+				"text_slides" => "",
+				"gambar_slides" => "",
+				"subject_card" => "",
+				"konteks_card" => "",
+				"subject_codesite" => "",
+			];
+			// $data_kelas_soal = [
+			// 	"id_soal" => $i,
+			// 	"id_materi" => $i,
+			// 	"tipe_soal" => 1,
+			// 	"soal_code" => "ujicoba $getkelas $i",
+			// 	"jawaban_code" => "ujicoba $getkelas $i",
+			// ];
+			$kelas_model = new KelasModel();
+			$c = $kelas_model->insertKelasMateri($data_kelas_materi);
+			// $d = $kelas_model->insertKelasSoal($data_kelas_soal);
+			// var_dump($c);
+			if($c){
+				echo "berhasil";
+			}else{
+				echo "gagal";
 			}
 		}
 	}

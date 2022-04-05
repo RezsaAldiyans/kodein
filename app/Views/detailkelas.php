@@ -92,7 +92,7 @@
                 <div class="text-wrapper text-center">
                     <h1 class="mbr-section-title mbr-fonts-style mb-3 display-2"><strong><?php echo $kelas['nama_kelas'];?></strong></h1>
                     <p class="mbr-text mbr-fonts-style display-7"><?php echo $kelas['deskripsi_kelas']; ?></p>
-                    <div class="mbr-section-btn mt-3"><a class="btn btn-info display-7" href="/materi/<?php echo $kelas['id_kelas']; ?>/<?php echo $mulai_materi; ?>">Mulai Kelas!</a></div>
+                    <div class="mbr-section-btn mt-3"><a class="btn btn-info display-7" href="/materi/<?php echo $kelas['id_kelas']; ?>/<?php echo $mulai_materi; ?>/0">Mulai Kelas!</a></div>
                 </div>
             </div>
         </div>

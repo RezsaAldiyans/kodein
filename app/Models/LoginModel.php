@@ -173,6 +173,7 @@ class LoginModel extends Model{
         return $this->db->query("select id_akun, nama_lengkap, email, DATE_FORMAT(tgl_gabung,'%d/%m/%Y') tgl_gabung, profile_user, asal_kota, exp ,badges, level, linkedin, instagram, twitter from akun where id_akun='$id'")->getResultArray();
     }
     public function updateExp($id_akun,$new_exp,$id_kelas,$progress){
+        // update kodingan tommorow
         $where = "id_akun='$id_akun'";
         $old_exp = $this->select('exp,id_akun')->where($where)->first();
         $where = "id_kelas='$id_kelas' AND id_akun='$id_akun'";

@@ -38,7 +38,7 @@ $routes->post('/logins','Home::login');
 $routes->post('/register','Home::register');
 
 $routes->get('/kelas/(:any)','Home::detailsKelas/$1');
-$routes->get('/materi/(:any)/(:any)','Home::mulaiKelas/$1/$2');
+$routes->get('/materi/(:any)/(:any)/(:any)','Home::mulaiKelas/$1/$2/$3');
 $routes->get('/coder','Home::viewcoder');
 $routes->post('/cekKebenaran/(:any)/(:any)/(:any)','Home::cekBenarSoal/$1/$2/$3');
 $routes->get('/cekBantuan/(:any)/(:any)/(:any)','Home::cekBantuanSoal/$1/$2/$3');
@@ -47,6 +47,8 @@ $routes->get('/logout','Home::logout');
 
 //test
 $routes->get('/leaderboard','Home::leaderboard');
+// try dummy kelas soal dan kelas materi
+// $routes->get('/dummy','Home::dummy');
 // cek coders?
 // $routes->post('/coders','Home::inCoder');
 
