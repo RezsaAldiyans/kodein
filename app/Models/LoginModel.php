@@ -172,20 +172,23 @@ class LoginModel extends Model{
         // $this->select("id_akun, nama_lengkap, email, CONVERT(varchar(100),tgl_gabung, 100) as tgl_gabung, profile_user, asal_kota, exp ,badges, level")->where('id_akun',$id)->first();
         return $this->db->query("select id_akun, nama_lengkap, email, DATE_FORMAT(tgl_gabung,'%d/%m/%Y') tgl_gabung, profile_user, asal_kota, exp ,badges, level, linkedin, instagram, twitter from akun where id_akun='$id'")->getResultArray();
     }
-    public function updateExp($id_akun,$new_exp,$id_kelas,$progress){
-        // update kodingan tommorow
+    public function updateExp($id_akun,$new_exp,$id_kelas,$id_soal){
         $where = "id_akun='$id_akun'";
         $old_exp = $this->select('exp,id_akun')->where($where)->first();
         $where = "id_kelas='$id_kelas' AND id_akun='$id_akun'";
-        $cek_progress_user = $this->db->table("kelas_user")->select("id_kelas,progress")->where($where)->get()->getResultArray();
+        $cek_progress_user = $this->db->table("kelas_user")->select("progress")->where($where)->get()->getResultArray();
+        $current_progress = explode(",", $cek_progress_user[0]["progress"]);
         // print_r($cek_progress_user[0]["progress"]);
-        if($progress > $cek_progress_user[0]["progress"]){
+        if(!in_array((string) $id_soal, $current_progress, true)){
             $exp = (int) $old_exp["exp"] + (int) $new_exp;
             $data=[
                 "id_akun" => $id_akun,
                 "exp" => $exp,
             ];
-            return $this->save($data);
+            $this->save($data);
+            return array("status" => "success");
+        }else{
+            return array("status" => "selesai");
         }
     }
     // for admin

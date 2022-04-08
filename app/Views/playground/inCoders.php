@@ -134,8 +134,13 @@ $session = session();
                     </div>
                     <div
                         class="w-full h-20 flex justify-end items-center bg-[#1a1d21] border-t border-[#333] space-x-2 p-3">
-                        <button onClick="send()"
-                            class="bg-green-500 hover:bg-green-700 rounded-sm h-10 px-6">Submit</button>
+                        <?php
+                            if($selesai["status"] == "selesai"){
+                                echo '<button onClick="next()"class="bg-green-500 hover:bg-green-700 rounded-sm h-10 px-6">Next</button>';
+                            }else{
+                                echo '<button onClick="send()"class="bg-green-500 hover:bg-green-700 rounded-sm h-10 px-6">Submit</button>';
+                            }
+                        ?>
                         <button onClick="showBantuan()"
                             class="bg-green-500 hover:bg-green-700 rounded-sm h-10 px-6">Bantuan</button>
                     </div>
@@ -206,6 +211,9 @@ $session = session();
             element[0].style.height = (height - (3.5 * 16)) + "px";
         }
     });
+    <?php if($selesai["status"] == "selesai"){?>
+            editor.setValue(`<?= $selesai['jawaban_kelas']?>`)
+        <?php }?>
     function showBantuan() {
         swal({
             title: "Apakah anda yakin",
@@ -261,24 +269,47 @@ $session = session();
                     };
                     $.ajax(settings).done(function(response) {
                         jawaban = JSON.parse(response);
-                        // console.log(jawaban);
+                        console.log(jawaban);
                         // berhasil menjawab tanpa bantuan
                         if (jawaban[0] == 1) {
                             // berhasil
+                            if(jawaban[1] == "success" && jawaban[2] == "success"){
+                                swal({
+                                    title: "Selamat Anda Berhasil",
+                                    text: "Selamat anda mendapatkan +100xp",
+                                    icon: "success",
+                                    buttons: true,
+                                })
+                                .then((t) => {
+                                    if(t){
+                                        <?php
+                                            $nextSoal = explode("/",$_SERVER["REQUEST_URI"])[4]+1;
+                                        ?>
+                                        window.location.replace("<?= base_url();?>/materi/<?= $kelas['id_kelas']?>/<?= $next_soal[$nextSoal]['km_id']?>/<?= $nextSoal?>");
+                                    }
+                                });
+                            }
+                            else if(jawaban[1] == "selesai" && jawaban[2] == "selesai"){
+                                swal({
+                                    title: "Silakan ke materi selanjutnya",
+                                    icon: "success",
+                                    buttons: true,
+                                })
+                                .then((t) => {
+                                    if(t){
+                                        <?php
+                                            $nextSoal = explode("/",$_SERVER["REQUEST_URI"])[4]+1;
+                                        ?>
+                                        window.location.replace("<?= base_url();?>/materi/<?= $kelas['id_kelas']?>/<?= $next_soal[$nextSoal]['km_id']?>/<?= $nextSoal?>");
+                                    }
+                                });
+                            }
+                        }else if(jawaban[0] == 0){
                             swal({
-                                title: "Selamat Anda Berhasil",
-                                text: "Selamat anda mendapatkan +100xp",
-                                icon: "success",
-                                buttons: true,
+                                title: "Sayang sekali belum benar",
+                                icon: "danger",
+                                buttonText: "Coba lagi",
                             })
-                            .then((t) => {
-                                if(t){
-                                    <?php
-                                        $nextSoal = explode("/",$_SERVER["REQUEST_URI"])[4]+1;
-                                    ?>
-                                    window.location.replace("<?= base_url();?>/materi/<?= $kelas['id_kelas']?>/<?= $next_soal[$nextSoal]['km_id']?>/<?= $nextSoal?>");
-                                }
-                            });
                         }
                     });
                     // fetch(link, requestOptions)

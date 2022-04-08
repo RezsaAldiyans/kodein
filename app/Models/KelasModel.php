@@ -27,10 +27,13 @@ class KelasModel extends Model{
         return $this->db->table("kelas_materi")->where("id_kelas",$id_kelas)->get()->getResultArray();
     }
     public function kelasSoal($id_kelas,$id_soal){
+        // diubah selectnya lebih strict lagi
         $where = "kelas_materi.id_kelas='$id_kelas' and kelas_soal.id_soal='$id_soal'";
         $where2 = "kelas_materi.id_kelas='$id_kelas'";
+        $cek_kelas = $this->db->table("kelas_materi")->join("kelas_soal","kelas_materi.id_materi=kelas_soal.id_materi")->where($where)->get()->getResultArray();
+        $split_kelas = $cek_kelas[0]["tipe_soal"] == 1 ? $this->db->table("kelas_materi")->select("kelas_materi.*, kelas_soal.id_soal,kelas_soal.id_materi,kelas_soal.tipe_soal,kelas_soal.soal_code")->join("kelas_soal","kelas_materi.id_materi=kelas_soal.id_materi")->where($where)->get()->getResultArray() : $this->db->table("kelas_materi")->select("kelas_materi.*, kelas_soal.id_soal,kelas_soal.id_materi,kelas_soal.tipe_soal,kelas_soal.soal_pilgan,kelas_soal.pilgan_a,kelas_soal.pilgan_b,kelas_soal.pilgan_c,kelas_soal.pilgan_d")->join("kelas_soal","kelas_materi.id_materi=kelas_soal.id_materi")->where($where)->get()->getResultArray();
         $kelas = [
-            "kelas" => $this->db->table("kelas_materi")->join("kelas_soal","kelas_materi.id_materi=kelas_soal.id_materi")->where($where)->get()->getResultArray(),
+            "kelas" => $split_kelas,
             "next_soal" => $this->db->query("select kelas_materi.id_materi as km_id from kelas_materi join kelas_soal on kelas_materi.id_materi = kelas_soal.id_materi where $where2")->getResultArray()
         ];
         return $kelas;

@@ -213,8 +213,9 @@ class Home extends BaseController
 			return redirect()->to('/login');
 		}
 		//update kelas user
-		$kelas_user = new ProfileModel();
+		$profilemodel = new ProfileModel();
 		$kelasModel = new KelasModel();
+		$kelas_user = new KelasUser();
 		$user = new LoginModel();
 		$kelas = $kelasModel->findKelas($id_kelas);
 		$data=[
@@ -224,8 +225,9 @@ class Home extends BaseController
 			"progress"=> 0
 		];
 		$res;
-		$cek = $kelas_user->kelasUser(session()->get("id_akun"),$id_kelas);
+		$cek = $profilemodel->kelasUser(session()->get("id_akun"),$id_kelas);
 		$kelas_MS = $kelasModel->kelasSoal($id_kelas,$id_soal);
+		$cek_materi_selesai = $kelas_user->cekMateriSelesai(session()->get("id_akun"),$id_kelas,$id_soal);
 		// print_r($kelas_MS['next_soal']);
 		$res = [
 			"total_materi" => $kelas["kelas"][0]["total_materi"],
@@ -234,24 +236,34 @@ class Home extends BaseController
 			"status_kelas" => $cek["status_kelas"],
 			"progress" => $cek["progress"],
 			"kelas" => $kelas_MS["kelas"][0],
-			"next_soal" => $kelas_MS["next_soal"]
+			"next_soal" => $kelas_MS["next_soal"],
+			"selesai" => $cek_materi_selesai
 		];
-		// print_r($cek["progress"]);
+		// print_r($res["selesai"]);
 		$cekBoolean = $cek["id_kelas"] ? TRUE : 0;
 		$cek_materi_id = $kelas_MS["kelas"][0]["id_materi"] == $id_soal ? TRUE : 0;
+		$tipe_materi = $res["kelas"]["tipe_soal"];
 		if($cekBoolean){
 			if($cek_materi_id){
-				return view('playground/inCoders',$res);
+				if($tipe_materi == "1"){
+					return view('playground/inCoders',$res);
+				}else if($tipe_materi == "2"){
+					// return view('playground/inCoders',$res);
+					return "<h1>Tahap Perkembangan!</h1>";
+				}
 			}
 			else{
 				return redirect()->back();
 			}
 		}else{
-			$kelas_user->insertKelasUser($data);
+			$profilemodel->insertKelasUser($data);
 			return view('playground/inCoders',$res);
 		}
+		// $user = new LoginModel();
+		// $c = $user->updateExp($session->get("id_akun"),100,$id_kelas,$id_soal)["status"];
 		// $kelas_user = new KelasUser();
-		// $d = $kelas_user->updatesProgress($session->get("id_akun"),$id_kelas,$id_soal);
+		// $d = $kelas_user->updatesProgress($session->get("id_akun"),$id_kelas,$id_soal)["status"];
+		// var_dump($c,$d);
 	}
 	public function cekBantuanSoal($id_kelas,$id_soal,$tipe_soal){
 		$kelas_model = new KelasModel();
@@ -277,15 +289,15 @@ class Home extends BaseController
 			}else{
 				// menggunakan bantuan dan jawaban dari database
 				if($bantuan == 1 && $cek[0]["jawaban_code"] == $textarea){
-					$ses = array(1,'nexp');
-					$c = $kelas_user->updatesProgress($session->get("id_akun"),$id_kelas,1);
+					$d = $kelas_user->updatesProgress($session->get("id_akun"),$id_kelas,$id_soal)["status"];
+					$ses = array(1,'nexp',$d);
 					return json_encode($ses,TRUE);
 				}
 				// tidak menggunakan bantuan sama sekali
 				if($bantuan == 0 && $cek[0]["jawaban_code"] == $textarea){
-					$ses = array(1);
-					$d = $kelas_user->updatesProgress($session->get("id_akun"),$id_kelas,$id_soal);
-					$c = $user->updateExp($session->get("id_akun"),100,$id_kelas,1);
+					$c = $user->updateExp($session->get("id_akun"),100,$id_kelas,$id_soal)["status"];
+					$d = $kelas_user->updatesProgress($session->get("id_akun"),$id_kelas,$id_soal)["status"];
+					$ses = array(1,$c,$d);
 					return json_encode($ses,TRUE);
 				}
 				else{

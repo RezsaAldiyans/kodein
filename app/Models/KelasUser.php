@@ -36,18 +36,35 @@ class KelasUser extends Model{
             }
 
             if(count($current_progress) - 1 <= $total_materi){
-                return $this->db->query("UPDATE kelas_user SET progress='$new_progress' WHERE id_akun='$id_akun' and id_kelas='$id_kelas'");
+                $this->db->query("UPDATE kelas_user SET progress='$new_progress' WHERE id_akun='$id_akun' and id_kelas='$id_kelas'");
+                return array("status" => "success");
             }
         }
         else {
-            return array("selesai");
+            return array("status" => "selesai");
         }
-        
         // if($new_progress > $cek_progress_user[0]["progress"]){
         //     if($new_progress <= $total_materi){
         //         return $this->db->query("UPDATE kelas_user SET progress='$new_progress' WHERE id_akun='$id_akun' and id_kelas='$id_kelas'");
         //     }
         // // }
         // print_r($id_akun);
+    }
+    public function cekMateriSelesai($id_akun,$id_kelas,$id_soal){
+        $where = "id_akun='$id_akun' and id_kelas='$id_kelas'";
+        $progress = $this->select('progress')->where($where)->first();
+        $current_progress = explode(",", $progress["progress"]);
+
+        // get kelas answer
+        $where = "kelas_soal.id_soal='$id_soal'";
+        $cek_kelas = $this->db->table("kelas_soal")->select("tipe_soal")->where($where)->get()->getResultArray();
+        $jawaban_kelas = $cek_kelas[0]["tipe_soal"] == 1 ? $this->db->table("kelas_soal")->select("jawaban_code")->where($where)->get()->getResultArray()[0]["jawaban_code"] : $this->db->table("kelas_soal")->select("jawaban_pilgan")->where($where)->get()->getResultArray()[0]["jawaban_pilgan"];
+        // print_r($this->db->table("kelas_soal")->select("jawaban_code")->where($where)->get()->getResultArray()[0]["jawaban_code"]);
+        if(in_array((string) $id_soal, $current_progress, true)) {
+            return array("status" => "selesai","jawaban_kelas" => $jawaban_kelas);
+        }
+        else {
+            return array("status" => "belum");
+        }
     }
 }
