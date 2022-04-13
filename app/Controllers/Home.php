@@ -192,7 +192,7 @@ class Home extends BaseController
 		return view('testLeadBoard',$data);
 	}
 	public function viewCoder(){
-		return view('playground/inCoders');
+		return view('playground/inCoder');
 	}
 	public function detailsKelas($id_kelas){
 		$kelasModel = new KelasModel();
@@ -213,7 +213,6 @@ class Home extends BaseController
 			return redirect()->to('/login');
 		}
 		//update kelas user
-		$profilemodel = new ProfileModel();
 		$kelasModel = new KelasModel();
 		$kelas_user = new KelasUser();
 		$user = new LoginModel();
@@ -225,16 +224,17 @@ class Home extends BaseController
 			"progress"=> 0
 		];
 		$res;
-		$cek = $profilemodel->kelasUser(session()->get("id_akun"),$id_kelas);
+		$cek = $kelas_user->kelasUser(session()->get("id_akun"),$id_kelas);
 		$kelas_MS = $kelasModel->kelasSoal($id_kelas,$id_soal);
 		$cek_materi_selesai = $kelas_user->cekMateriSelesai(session()->get("id_akun"),$id_kelas,$id_soal);
-		// print_r($kelas_MS['next_soal']);
+		$progress = $kelas_user->getProgress(session()->get("id_akun"),$id_kelas);
+		// print_r($progress);
 		$res = [
 			"total_materi" => $kelas["kelas"][0]["total_materi"],
 			"id_kelas" => $cek["id_kelas"],
 			"id_akun" => $cek["id_akun"],
 			"status_kelas" => $cek["status_kelas"],
-			"progress" => $cek["progress"],
+			"progress" => $progress,
 			"kelas" => $kelas_MS["kelas"][0],
 			"next_soal" => $kelas_MS["next_soal"],
 			"selesai" => $cek_materi_selesai
@@ -256,7 +256,7 @@ class Home extends BaseController
 				return redirect()->back();
 			}
 		}else{
-			$profilemodel->insertKelasUser($data);
+			$kelas_user->insertKelasUser($data);
 			return view('playground/inCoders',$res);
 		}
 		// $user = new LoginModel();

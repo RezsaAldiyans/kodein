@@ -156,7 +156,8 @@ $session = session();
                         <iframe id="hasil"></iframe>
                     </div>
                     <div class="col-span-1 bg-[#1f2227] w-full h-full ">
-                        <div class="bg-[#1a1d21] border-[#333] p-2">console.js</div>
+                        <div class="bg-[#1a1d21] border-[#333] p-2">Console</div>
+                        <div id="console-output"></div>
                     </div>
                 </div>
             </div>
@@ -166,6 +167,26 @@ $session = session();
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- scripts get console in iframe -->
+    <script>
+        // Listen for messages
+        window.addEventListener('message', function(response) {
+            // Make sure message is from our iframe, extensions like React dev tools might use the same technique and mess up our logs
+            if (response.data && response.data.source === 'iframe') {
+                if(response.data.message[0] !== undefined){
+                    // Do whatever you want here.
+                    let divId = document.getElementById("console-output");
+                    var newDiv = document.createElement("div");
+                    var span = document.createElement('span');
+                    newDiv.id  = 'console-output';
+                    var newContent = document.createTextNode(response.data.message[0]);
+                    span.appendChild(newContent);
+                    newDiv.appendChild(span);
+                    divId.appendChild(newDiv);
+                }
+            }
+        },false);
+    </script>
     <script>
     var bantuan = 0;
     var validation = false;
@@ -185,15 +206,40 @@ $session = session();
         let finalHtml = html.replace(document_pattern, "document.getElementById('result').contentWindow.document.");
         $('#hasil').contents().find('html').html(finalHtml);
     }
+    function loadJS(js){
+        if(js === ""){
+            let console = document.getElementById("console-output");
+            console.remove();
+        }
+        var coderJS = "<scri" + "pt>" +
+            `
+            ["log","warn","error"].forEach((level)=>{
+                const _log = console[level];
+                console[level] = (...args)=>{
+                    window.parent.postMessage({
+                        source:'iframe',
+                        message: args
+                    },"*");
+                    // _log(args);
+                }
+            });
+            ` + "</scri" + "pt>" +
+                "<scri" + "pt>" + js + "</scri" + "pt>";
+            var frame = document.getElementById("hasil").contentWindow.document;
+            document.getElementById("hasil").contentWindow.location.reload();
+            frame.open();
+            frame.write(coderJS);
+            frame.close();
+    }
 
-    loadHtml($('#container-playground').val());
+    // loadHtml($('#container-playground').val());
     editor.on('change', function(cMirror) {
         if (myTimeoutId !== null) {
             clearTimeout(myTimeoutId);
         }
         myTimeoutId = setTimeout(function() {
             try {
-                loadHtml(cMirror.getValue());
+                loadJS(cMirror.getValue());
             } catch (err) {
                 console.log('err:' + err);
             }
@@ -289,9 +335,10 @@ $session = session();
                                     }
                                 });
                             }
-                            else if(jawaban[1] == "selesai" && jawaban[2] == "selesai"){
+                            else if(jawaban[1] == "nexp" && jawaban[2] == "success"){
                                 swal({
                                     title: "Silakan ke materi selanjutnya",
+                                    text: "Selamat anda telah menyelesaikan materi ini",
                                     icon: "success",
                                     buttons: true,
                                 })
@@ -307,90 +354,11 @@ $session = session();
                         }else if(jawaban[0] == 0){
                             swal({
                                 title: "Sayang sekali belum benar",
-                                icon: "danger",
+                                icon: "error",
                                 buttonText: "Coba lagi",
                             })
                         }
                     });
-                    // fetch(link, requestOptions)
-                    //     .then(response => response.json())
-                    //     .then(
-                    //         result => {
-                    //             // console.log(result)
-                    //             let jawaban = result[0];
-                    //             // sudah selesai mengerjakan dan mengirim ulang
-                    //             if (result[1] == 's' && jawaban == 1) {
-                    //                 swal({
-                    //                     title: "Selamat Anda Berhasil",
-                    //                     text: "Anda telah menyelasaikan quest ini silahkan lanjutkan ke quest selanjutnya",
-                    //                     icon: "success",
-                    //                     buttons: true,
-                    //                 })
-                    //                 .then((t) => {
-                    //                     if(t){
-                    //                         <?php
-                    //                             $nextSoal = explode("/",$_SERVER["REQUEST_URI"])[4]+1;
-                    //                         ?>
-                    //                         location.href = "<?= base_url();?>/materi/<?= $kelas['id_kelas']?>/<?= $next_soal[$nextSoal]?>/<?= $nextSoal?>";
-                    //                     }
-                    //                 });
-                    //             }
-                                // // berhasil menjawab tanpa bantuan
-                                // if (jawaban == 1 && !result[1]) {
-                                //     // berhasil
-                                //     swal({
-                                //         title: "Selamat Anda Berhasil",
-                                //         text: "Selamat anda mendapatkan +100xp",
-                                //         icon: "success",
-                                //         buttons: true,
-                                //     })
-                                //     .then((t) => {
-                                //         if(t){
-                                //             <?php
-                                //                 $nextSoal = explode("/",$_SERVER["REQUEST_URI"])[4]+1;
-                                //             ?>
-                                //             window.location.replace("<?= base_url();?>/materi/<?= $kelas['id_kelas']?>/<?= $next_soal[$nextSoal]?>/<?= $nextSoal?>");
-                                //         }
-                                //     });
-                                // }
-                    //             // berhasil menjawab dengan bantuan
-                    //             if (result[1] == 'nexp' && jawaban == 1) {
-                    //                 swal({
-                    //                     title: "Selamat Anda Berhasil",
-                    //                     text: "selemat anda telah menyelasaikan quest ini dengan bantuan silahkan lanjutkan ke quest selanjutnya",
-                    //                     icon: "success",
-                    //                     buttons: true,
-                    //                 })
-                    //                 .then((t) => {
-                    //                     if(t){
-                    //                         <?php
-                    //                             $nextSoal = explode("/",$_SERVER["REQUEST_URI"])[4]+1;
-                    //                         ?>
-                    //                         location.href = "<?= base_url();?>/materi/<?= $kelas['id_kelas']?>/<?= $next_soal[$nextSoal]?>/<?= $nextSoal?>";
-                    //                     }
-                    //                 });
-                    //             }
-                    //             // failed authentication
-                    //             if (jawaban == "failed") {
-                    //                 swal({
-                    //                     title: jawaban,
-                    //                     text: "",
-                    //                     icon: "danger",
-                    //                     buttons: true,
-                    //                 })
-                    //             }
-                    //             // gagal menjawab
-                    //             if (jawaban == 0) {
-                    //                 swal({
-                    //                     title: "Sayang sekali",
-                    //                     text: "Sayang sekali masih belum tepat jawabannya silahkan dicoba kembali!",
-                    //                     icon: "error",
-                    //                     button: true,
-                    //                 })
-                    //             }
-                    //         }
-                    //     )
-                    //     .catch(error => console.log('error', error));
                 }
             })
         }

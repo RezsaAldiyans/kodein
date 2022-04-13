@@ -67,4 +67,37 @@ class KelasUser extends Model{
             return array("status" => "belum");
         }
     }
+    //from kelas_user table
+    public function getKelasUser($id_akun){
+        // return $this->where('id_akun',$id_akun)->findAll();
+        return $this->db->table("kelas_user")->join("kelas_koding","kelas_koding.id_kelas=kelas_user.id_kelas")->where("kelas_user.id_akun",$id_akun)->get()->getResultArray();
+    }
+    public function kelasUser($id_akun,$id_kelas){
+        $where = "id_akun='$id_akun' and id_kelas='$id_kelas'";
+        $data = $this->where($where)->first();
+
+        return $data;
+    }
+    public function getProgress($id_akun,$id_kelas){
+        $where = "id_akun='$id_akun' and id_kelas='$id_kelas'";
+        $data = $this->select("progress")->where($where)->first();
+
+        // split the progress because the progress still in string,
+        // and we need to count the total progress of user
+        $counter = count(explode(",", $data["progress"]));
+        # update progress in data variable
+        // $data["progress"] = $counter;
+        // if(is_null($data["progress"])){
+        //     print_r(0);
+        // }else{
+        //     print_r(1);
+        // }
+        return is_null($data["progress"]) ? 0 : $counter;
+    }
+    public function findKelasWithidakun($id_akun){
+        return $this->where("id_akun",$id_akun)->findAll();
+    }
+    public function insertKelasUser($data){
+        return $this->db->table("kelas_user")->insert($data);
+    }
 }

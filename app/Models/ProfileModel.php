@@ -22,7 +22,7 @@ class ProfileModel extends Model{
         // and we need to count the total progress of user
         $counter = count(explode(",", $data["progress"]));
         # update progress in data variable
-        $data["progress"] = $counter;
+        $data["progress"] = $counter -1;
 
         return $data;
     }
