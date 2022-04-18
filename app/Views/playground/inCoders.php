@@ -157,7 +157,7 @@ $session = session();
                     </div>
                     <div class="col-span-1 bg-[#1f2227] w-full h-full ">
                         <div class="bg-[#1a1d21] border-[#333] p-2">Console</div>
-                        <div id="console-output"></div>
+                        <div id="console-outputs"></div>
                     </div>
                 </div>
             </div>
@@ -170,12 +170,12 @@ $session = session();
     <!-- scripts get console in iframe -->
     <script>
         // Listen for messages
-        window.addEventListener('message', function(response) {
+        window.addEventListener('message', async function(response) {
             // Make sure message is from our iframe, extensions like React dev tools might use the same technique and mess up our logs
             if (response.data && response.data.source === 'iframe') {
                 if(response.data.message[0] !== undefined){
                     // Do whatever you want here.
-                    let divId = document.getElementById("console-output");
+                    let divId = document.getElementById("console-outputs");
                     var newDiv = document.createElement("div");
                     var span = document.createElement('span');
                     newDiv.id  = 'console-output';
@@ -183,8 +183,13 @@ $session = session();
                     span.appendChild(newContent);
                     newDiv.appendChild(span);
                     divId.appendChild(newDiv);
+
+                    // showLogInIframe(response.data.message[0]);
+                    // arrayLog.push(response.data.message[0]);
+                    // console.log(response.data)
                 }
             }
+            // console.log(response)
         },false);
     </script>
     <script>
@@ -207,20 +212,21 @@ $session = session();
         $('#hasil').contents().find('html').html(finalHtml);
     }
     function loadJS(js){
-        if(js === ""){
-            let console = document.getElementById("console-output");
-            console.remove();
-        }
-        var coderJS = "<scri" + "pt>" +
+        let consoles = document.querySelectorAll("[id='console-output']");
+        if(js == ""){
+            consoles.remove();
+        }else{
+            var coderJS = "<scri" + "pt>" +
             `
             ["log","warn","error"].forEach((level)=>{
                 const _log = console[level];
                 console[level] = (...args)=>{
                     window.parent.postMessage({
                         source:'iframe',
-                        message: args
-                    },"*");
-                    // _log(args);
+                        message: args,
+                        length: '${js.split("\n").length}'
+                    });
+                    // _log();
                 }
             });
             ` + "</scri" + "pt>" +
@@ -230,6 +236,11 @@ $session = session();
             frame.open();
             frame.write(coderJS);
             frame.close();
+            if(consoles.length > 0){
+                // console.log(consoles.length);
+                consoles.forEach((console)=>{console.remove()});
+            }
+        }
     }
 
     // loadHtml($('#container-playground').val());
@@ -240,6 +251,8 @@ $session = session();
         myTimeoutId = setTimeout(function() {
             try {
                 loadJS(cMirror.getValue());
+                // let js = cMirror.getValue()
+                // console.log(js.split("\n"));
             } catch (err) {
                 console.log('err:' + err);
             }
