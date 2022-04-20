@@ -196,18 +196,20 @@ class Home extends BaseController
 	}
 	public function detailsKelas($id_kelas){
 		$kelasModel = new KelasModel();
-		$kelas_user = new ProfileModel();
+		$profilModel = new ProfileModel();
+		$kelas_user = new KelasUser();
 		$kelas = $kelasModel->findKelas($id_kelas);
-		$status = $kelas_user->kelasUser(session()->get("id_akun"),$id_kelas);
+		$status = $profilModel->kelasUser(session()->get("id_akun"),$id_kelas);
 		$set =[
 			"kelas"=>$kelas['kelas'][0],
 			"mulai_materi" => $kelas['mulai_materi'][0]["mulai_materi"],
-			"status"=>$status,
+			"status"=> $status,
+			"progress" => $kelas_user->getProgress(session()->get("id_akun"),$id_kelas)
 		];
 		// print_r($set);
 		return view("detailkelas",$set);
 	}
-	public function mulaiKelas($id_kelas,$id_soal,$array_soal){
+	public function mulaiKelas($id_kelas,$id_soal){
 		$session = session();
 		if(!$session->get("logged_in")){
 			return redirect()->to('/login');
@@ -229,6 +231,15 @@ class Home extends BaseController
 		$cek_materi_selesai = $kelas_user->cekMateriSelesai(session()->get("id_akun"),$id_kelas,$id_soal);
 		$progress = $kelas_user->getProgress(session()->get("id_akun"),$id_kelas);
 		// print_r($progress);
+		// array
+		$index = 0;
+		$i = 0;
+		foreach($kelas_MS["next_soal"] as $val){
+			$i++;
+			if($val["km_id"] == $id_soal){
+				$index = $i;
+			}
+		}
 		$res = [
 			"total_materi" => $kelas["kelas"][0]["total_materi"],
 			"id_kelas" => $cek["id_kelas"],
@@ -236,10 +247,10 @@ class Home extends BaseController
 			"status_kelas" => $cek["status_kelas"],
 			"progress" => $progress,
 			"kelas" => $kelas_MS["kelas"][0],
-			"next_soal" => $kelas_MS["next_soal"],
+			"next_soal" => $kelas_MS["next_soal"][$index],
 			"selesai" => $cek_materi_selesai
 		];
-		// print_r($res["selesai"]);
+		// print_r($res["next_soal"]);
 		$cekBoolean = $cek["id_kelas"] ? TRUE : 0;
 		$cek_materi_id = $kelas_MS["kelas"][0]["id_materi"] == $id_soal ? TRUE : 0;
 		$tipe_materi = $res["kelas"]["tipe_soal"];

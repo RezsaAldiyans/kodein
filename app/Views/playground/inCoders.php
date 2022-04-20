@@ -136,7 +136,7 @@ $session = session();
                         class="w-full h-20 flex justify-end items-center bg-[#1a1d21] border-t border-[#333] space-x-2 p-3">
                         <?php
                             if($selesai["status"] == "selesai"){
-                                echo '<button onClick="next()"class="bg-green-500 hover:bg-green-700 rounded-sm h-10 px-6">Next</button>';
+                                echo '<a href="/materi/'.$kelas['id_kelas'].'/'.$next_soal['km_id'].'" class="bg-green-500 hover:bg-green-700 rounded-sm h-10 px-6">Next</a>';
                             }else{
                                 echo '<button onClick="send()"class="bg-green-500 hover:bg-green-700 rounded-sm h-10 px-6">Submit</button>';
                             }

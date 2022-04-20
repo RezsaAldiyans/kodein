@@ -92,7 +92,7 @@
                 <div class="text-wrapper text-center">
                     <h1 class="mbr-section-title mbr-fonts-style mb-3 display-2"><strong><?php echo $kelas['nama_kelas'];?></strong></h1>
                     <p class="mbr-text mbr-fonts-style display-7"><?php echo $kelas['deskripsi_kelas']; ?></p>
-                    <div class="mbr-section-btn mt-3"><a class="btn btn-info display-7" href="/materi/<?php echo $kelas['id_kelas']; ?>/<?php echo $mulai_materi; ?>/0">Mulai Kelas!</a></div>
+                    <div class="mbr-section-btn mt-3"><a class="btn btn-info display-7" href="/materi/<?php echo $kelas['id_kelas']; ?>/<?php echo $mulai_materi; ?>">Mulai Kelas!</a></div>
                 </div>
             </div>
         </div>
@@ -102,7 +102,8 @@
 <section class="content15 cid-sDBqGpL2uO" id="content15-15">
 	<?php
 		if(isset($status["id_kelas"]) == $kelas["id_kelas"]){
-            $progress = round(($status["progress"]/$kelas["total_materi"])*100);
+            $progressing = round(($progress/$kelas["total_materi"])*100);
+            // print_r($kelas["total_materi"]);
 	?>
     <div class="container">
         <div class="row justify-content-center">
@@ -111,9 +112,9 @@
                     <div class="card-box align-left">
                         <h4 class="card-title mbr-fonts-style mbr-white mb-3 display-5"><strong>Progress kelas</strong></h4>
                         <div class="progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="<?php echo $progress;?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $progress;?>%"><?php echo $progress;?>%</div>
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="<?php echo $progressing;?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $progressing;?>%"><?php echo $progressing;?>%</div>
                         </div>
-                        <p class="mbr-text mbr-fonts-style display-7"><br><strong><?php echo $status["progress"];?>/<?php echo $kelas['total_materi']; ?> </strong>materi telah diselesaikan, estimasi selesai kelas <?php echo gmdate("H:i:s", $kelas["estimasi_belajar"]); ?>.</p>
+                        <p class="mbr-text mbr-fonts-style display-7"><br><strong><?php echo $progress;?>/<?php echo $kelas['total_materi']; ?> </strong>materi telah diselesaikan, estimasi selesai kelas <?php echo gmdate("H:i:s", $kelas["estimasi_belajar"]); ?>.</p>
                     </div>
                 </div>
             </div>
