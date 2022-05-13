@@ -134,8 +134,13 @@ $session = session();
                     </div>
                     <div
                         class="w-full h-20 flex justify-end items-center bg-[#1a1d21] border-t border-[#333] space-x-2 p-3">
-                        <button onClick="send()"
-                            class="bg-green-500 hover:bg-green-700 rounded-sm h-10 px-6">Submit</button>
+                        <?php
+                            if($selesai["status"] == "selesai"){
+                                echo '<a href="/materi/'.$kelas['id_kelas'].'/'.$next_soal['km_id'].'" class="bg-green-500 hover:bg-green-700 rounded-sm h-10 px-6">Next</a>';
+                            }else{
+                                echo '<button onClick="send()"class="bg-green-500 hover:bg-green-700 rounded-sm h-10 px-6">Submit</button>';
+                            }
+                        ?>
                         <button onClick="showBantuan()"
                             class="bg-green-500 hover:bg-green-700 rounded-sm h-10 px-6">Bantuan</button>
                     </div>
@@ -151,7 +156,8 @@ $session = session();
                         <iframe id="hasil"></iframe>
                     </div>
                     <div class="col-span-1 bg-[#1f2227] w-full h-full ">
-                        <div class="bg-[#1a1d21] border-[#333] p-2">console.js</div>
+                        <div class="bg-[#1a1d21] border-[#333] p-2">Console</div>
+                        <div id="console-outputs"></div>
                     </div>
                 </div>
             </div>
@@ -161,6 +167,31 @@ $session = session();
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- scripts get console in iframe -->
+    <script>
+        // Listen for messages
+        window.addEventListener('message', async function(response) {
+            // Make sure message is from our iframe, extensions like React dev tools might use the same technique and mess up our logs
+            if (response.data && response.data.source === 'iframe') {
+                if(response.data.message[0] !== undefined){
+                    // Do whatever you want here.
+                    let divId = document.getElementById("console-outputs");
+                    var newDiv = document.createElement("div");
+                    var span = document.createElement('span');
+                    newDiv.id  = 'console-output';
+                    var newContent = document.createTextNode(response.data.message[0]);
+                    span.appendChild(newContent);
+                    newDiv.appendChild(span);
+                    divId.appendChild(newDiv);
+
+                    // showLogInIframe(response.data.message[0]);
+                    // arrayLog.push(response.data.message[0]);
+                    // console.log(response.data)
+                }
+            }
+            // console.log(response)
+        },false);
+    </script>
     <script>
     var bantuan = 0;
     var validation = false;
@@ -180,15 +211,48 @@ $session = session();
         let finalHtml = html.replace(document_pattern, "document.getElementById('result').contentWindow.document.");
         $('#hasil').contents().find('html').html(finalHtml);
     }
+    function loadJS(js){
+        let consoles = document.querySelectorAll("[id='console-output']");
+        if(js == ""){
+            consoles.remove();
+        }else{
+            var coderJS = "<scri" + "pt>" +
+            `
+            ["log","warn","error"].forEach((level)=>{
+                const _log = console[level];
+                console[level] = (...args)=>{
+                    window.parent.postMessage({
+                        source:'iframe',
+                        message: args,
+                        length: '${js.split("\n").length}'
+                    });
+                    // _log();
+                }
+            });
+            ` + "</scri" + "pt>" +
+                "<scri" + "pt>" + js + "</scri" + "pt>";
+            var frame = document.getElementById("hasil").contentWindow.document;
+            document.getElementById("hasil").contentWindow.location.reload();
+            frame.open();
+            frame.write(coderJS);
+            frame.close();
+            if(consoles.length > 0){
+                // console.log(consoles.length);
+                consoles.forEach((console)=>{console.remove()});
+            }
+        }
+    }
 
-    loadHtml($('#container-playground').val());
+    // loadHtml($('#container-playground').val());
     editor.on('change', function(cMirror) {
         if (myTimeoutId !== null) {
             clearTimeout(myTimeoutId);
         }
         myTimeoutId = setTimeout(function() {
             try {
-                loadHtml(cMirror.getValue());
+                loadJS(cMirror.getValue());
+                // let js = cMirror.getValue()
+                // console.log(js.split("\n"));
             } catch (err) {
                 console.log('err:' + err);
             }
@@ -206,6 +270,9 @@ $session = session();
             element[0].style.height = (height - (3.5 * 16)) + "px";
         }
     });
+    <?php if($selesai["status"] == "selesai"){?>
+            editor.setValue(`<?= $selesai['jawaban_kelas']?>`)
+        <?php }?>
     function showBantuan() {
         swal({
             title: "Apakah anda yakin",
@@ -249,55 +316,62 @@ $session = session();
                     var formdata = new FormData();
                     formdata.append("jawaban_user", editor.getValue());
                     formdata.append("bantuan", bantuan);
-                    var requestOptions = {
-                        method: 'POST',
-                        body: formdata,
-                        redirect: 'follow'
+                    formdata.append("id_soal", <?php echo $kelas['id_soal'];?>);
+                    var settings = {
+                        "url": link,
+                        "method": "POST",
+                        "timeout": 0,
+                        "processData": false,
+                        "mimeType": "multipart/form-data",
+                        "contentType": false,
+                        "data": formdata
                     };
-                    fetch(link, requestOptions)
-                        .then(response => response.json())
-                        .then(
-                            result => {
-                                // console.log(result)
-                                let jawaban = result[0];
-                                if (result[1] == 'b' && jawaban == 1) {
-                                    swal({
-                                        title: "Selamat Anda Berhasil",
-                                        text: "Selamat anda telah menyelasaikan quest ini",
-                                        icon: "success",
-                                        buttons: true,
-                                    })
-                                }
-                                if (jawaban == 1 && !result[1]) {
-                                    // berhasil
-                                    swal({
-                                        title: "Selamat Anda Berhasil",
-                                        text: "Selamat anda mendapatkan +100xp",
-                                        icon: "success",
-                                        buttons: true,
-                                    })
-                                }
-                                if (jawaban == "failed") {
-                                    // failed auth
-                                    swal({
-                                        title: jawaban,
-                                        text: "",
-                                        icon: "danger",
-                                        buttons: true,
-                                    })
-                                }
-                                if (jawaban == 0) {
-                                    // gagal
-                                    swal({
-                                        title: "Sayang sekali",
-                                        text: "Sayang sekali masih belum tepat jawabannya silahkan dicoba kembali!",
-                                        icon: "error",
-                                        button: true,
-                                    })
-                                }
+                    $.ajax(settings).done(function(response) {
+                        jawaban = JSON.parse(response);
+                        console.log(jawaban);
+                        // berhasil menjawab tanpa bantuan
+                        if (jawaban[0] == 1) {
+                            // berhasil
+                            if(jawaban[1] == "success" && jawaban[2] == "success"){
+                                swal({
+                                    title: "Selamat Anda Berhasil",
+                                    text: "Selamat anda mendapatkan +100xp",
+                                    icon: "success",
+                                    buttons: true,
+                                })
+                                .then((t) => {
+                                    if(t){
+                                        <?php
+                                            $nextSoal = explode("/",$_SERVER["REQUEST_URI"])[4]+1;
+                                        ?>
+                                        window.location.replace("<?= base_url();?>/materi/<?= $kelas['id_kelas']?>/<?= $next_soal[$nextSoal]['km_id']?>/<?= $nextSoal?>");
+                                    }
+                                });
                             }
-                        )
-                        .catch(error => console.log('error', error));
+                            else if(jawaban[1] == "nexp" && jawaban[2] == "success"){
+                                swal({
+                                    title: "Silakan ke materi selanjutnya",
+                                    text: "Selamat anda telah menyelesaikan materi ini",
+                                    icon: "success",
+                                    buttons: true,
+                                })
+                                .then((t) => {
+                                    if(t){
+                                        <?php
+                                            $nextSoal = explode("/",$_SERVER["REQUEST_URI"])[4]+1;
+                                        ?>
+                                        window.location.replace("<?= base_url();?>/materi/<?= $kelas['id_kelas']?>/<?= $next_soal[$nextSoal]['km_id']?>/<?= $nextSoal?>");
+                                    }
+                                });
+                            }
+                        }else if(jawaban[0] == 0){
+                            swal({
+                                title: "Sayang sekali belum benar",
+                                icon: "error",
+                                buttonText: "Coba lagi",
+                            })
+                        }
+                    });
                 }
             })
         }

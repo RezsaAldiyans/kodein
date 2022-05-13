@@ -4,39 +4,58 @@
         $session = session();
     ?>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="<?php echo base_url();?>/assets/images/kodein-logo-landing-128x128.png" type="image/x-icon">
-  <meta name="description" content="kodein is a website for learning">
-  
-  
-  <title>Kodein | Home</title>
-  <link rel="stylesheet" href="<?php echo base_url();?>/assets/web/assets/mobirise-icons2/mobirise2.css">
-  <link rel="stylesheet" href="<?php echo base_url();?>/assets/tether/tether.min.css">
-  <link rel="stylesheet" href="<?php echo base_url();?>/assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="<?php echo base_url();?>/assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="<?php echo base_url();?>/assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="<?php echo base_url();?>/assets/dropdown/css/style.css">
-  <link rel="stylesheet" href="<?php echo base_url();?>/assets/animatecss/animate.css">
-  <link rel="stylesheet" href="<?php echo base_url();?>/assets/socicon/css/styles.css">
-  <link rel="stylesheet" href="<?php echo base_url();?>/assets/theme/css/style.css">
-  <link rel="preload" as="style" href="<?php echo base_url();?>/assets/mobirise/css/mbr-additional.css">
-  <link rel="stylesheet" href="<?php echo base_url();?>/assets/mobirise/css/mbr-additional.css" type="text/css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="<?php echo base_url();?>/assets/images/kodein-logo-landing-128x128.png" type="image/x-icon">
+    <link rel="icon" href="<?php echo base_url();?>/assets/images/kodein-logo-landing-128x128.png" type="image/png">
+    <meta name="description" content="kodein is a website for learning">
+
+    <title>Kodein | Home</title>
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/web/assets/mobirise-icons2/mobirise2.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/tether/tether.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/dropdown/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/animatecss/animate.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/socicon/css/styles.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/theme/css/style.css">
+    <link rel="preload" as="style" href="<?php echo base_url();?>/assets/mobirise/css/mbr-additional.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/mobirise/css/mbr-additional.css" type="text/css">
+    <style>
+    .addReadMore.showlesscontent .SecSec,
+    .addReadMore.showlesscontent .readLess {
+        display: none;
+    }
+
+    .addReadMore.showmorecontent .readMore {
+        display: none;
+    }
+
+    .addReadMore .readMore,
+    .addReadMore .readLess {
+        font-weight: bold;
+        margin-left: 2px;
+        color: blue;
+        cursor: pointer;
+    }
+
+    .addReadMoreWrapTxt.showmorecontent .SecSec,
+    .addReadMoreWrapTxt.showmorecontent .readLess {
+        display: block;
+    }
+    </style>
 </head>
 <body>
-  
-  <section class="menu menu3 cid-swTgLUegze" once="menu" id="menu3-0">
-    
+
+<section class="menu menu3 cid-swTgLUegze" once="menu" id="menu3-0">
     <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
         <div class="container-fluid">
             <div class="navbar-brand">
                 <span class="navbar-logo">
-                    
-                        <a href="/"><img src="assets/images/kodein-logo-k-1-263x263.png" alt="Kodein" style="height: 4rem;"></a>
-                    
+                        <a href="/"><img src="<?php echo base_url();?>/assets/images/kodein-logo-k-1-263x263.png" alt="Kodein" style="height: 4rem;"></a>
                 </span>
-                
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <div class="hamburger">
@@ -67,24 +86,23 @@
 
 <section class="kodeinanim header11 cid-swTlNn1ixR" id="header11-9">
     <div class="container-fluid">
-        <style>@media screen and (max-width: 700px) {
+        <style>
+        @media screen and (max-width: 700px) {
             div.anilogo {
-            display: none;
-              margin-top: 5%;
+                display: none;
+                margin-top: 5%;
             }
             .kodeinanim {
                 margin-top: 64%;
             }
-          }</style>
+        }
+        </style>
         <div class="row justify-content-left">
             <div class="anilogo col-12 col-md-5 image-wrapper">
-                <object type="image/svg+xml" data="assets/images/kodein-animate.svg">
-
-                    <img src="assets/images/kodein-animate.svg" />
-                    
-                    </object>
+                <object type="image/svg+xml" data="<?php echo base_url();?>/assets/images/kodein-animate.svg">
+                    <img src="<?php echo base_url();?>/assets/images/kodein-animate.svg" />
+                </object>
             </div>
-            
             <div class="col-12 col-md">
                 <div class="text-wrapper text-center">
                     <h2 class="mbr-section-title mbr-fonts-style mb-3 display-2"><strong>Kelas koding kodein!</strong></h2>
@@ -98,9 +116,6 @@
 </section>
 
 <section class="features12 cid-swTjBTkX2v" id="features13-6">
-
-    
-    
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-6">
@@ -157,7 +172,7 @@
             <div class="item features-image сol-6 col-md-3 col-lg-4">
                 <div class="item-wrapper">
                     <div class="item-img">
-                        <img src="assets/images/<?php echo $data['icon_kelas']?>" alt="" title="" data-slide-to="0">
+                        <img src="<?php echo base_url();?>/assets/images/<?php echo $data['icon_kelas']?>" alt="" title="" data-slide-to="0">
                     </div>
                     <div class="item-content">
                         <h5 class="item-title mbr-fonts-style display-5">
@@ -168,7 +183,7 @@
                             <br>
                             </strong>
                         </h5>
-                        <p class="mbr-text mbr-fonts-style mt-3 display-7"><?php echo ucfirst($data["deskripsi_kelas"]); ?></p>
+                        <p class="mbr-text mbr-fonts-style mt-3 display-7 addReadMore showlesscontent fadeIn"><?php echo ucfirst($data["deskripsi_kelas"]); ?></p>
                     </div>
                     <div class="mbr-section-btn item-footer mt-2"><a href="/kelas/<?php echo $data['id_kelas'];?>" class="btn item-btn btn-info display-7">Lihat Selengkapnya!</a></div>
                 </div>
@@ -184,7 +199,6 @@
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8">
                 <h3 class="mbr-section-title mb-4 mbr-fonts-style display-2"><strong>Gratis kelas <em>beginner</em></strong><br><strong>coba sekarang!</strong></h3>
-                
                 <div class="mbr-section-btn"><a class="btn btn-info display-7" href="/#content2-b">Lihat semua kelas!</a></div>
             </div>
         </div>
@@ -192,9 +206,6 @@
 </section>
 
 <section class="features19 cid-swTjCLy8Sz" id="features20-7">
-
-    
-    
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12 col-lg-9">
@@ -203,7 +214,6 @@
                         <h4 class="card-title mbr-fonts-style mb-4 display-2">
                             <strong>Step-To-Step Tantangan Kode</strong></h4>
                         <p class="mbr-text mbr-fonts-style mb-4 display-7">Bagi yang ingin mengasah logika dan mengetahui sudah sampai mana pemahaman dalam logika pemrograman dapat mengikuti <strong>Tantangan Kode!</strong></p>
-                        
                     </div>
                 </div>
             </div>
@@ -235,26 +245,16 @@
                         <h5 class="icon-text mbr-black mbr-fonts-style display-4">Kono bangumi wa goran no suponsaa no teikyou de okurishimasu. Kono bangumi wa goran no suponsaa no teikyou de okurishimasu. Kono bangumi wa goran no suponsaa no teikyou de&nbsp;</h5>
                     </div>
                 </div>
-                
-                
-                
-                
-                
-                
-                
             </div>
         </div>
     </div>
 </section>
 
 <section class="countdown3 cid-swTub6G8gX" id="countdown3-d">
-    
-    
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <h3 class="mbr-section-title mb-5 align-center mbr-fonts-style display-1"><strong>Kami Segera Hadir!</strong><strong><br></strong></h3>
-                
                 <div class="countdown-cont align-center mb-5">
                     <div class="daysCountdown col-xs-3 col-sm-3 col-md-3" title="Days"></div>
                     <div class="hoursCountdown col-xs-3 col-sm-3 col-md-3" title="Hours"></div>
@@ -264,10 +264,6 @@
                 </div>
                 <p class="mbr-text mb-5 align-center mbr-fonts-style display-7">Ikuti media sosial <strong>Kodein </strong>untuk update informasi selengkapnya!</p>
                 <div class="icons-menu row justify-content-center display-7">
-                    
-                    
-                    
-                    
                 <div class="soc-item col-auto">
                         <a href="#" target="_blank" rel="noreferrer" class="social__link">
                             <span class="mbr-iconfont socicon-instagram socicon"></span>
@@ -284,109 +280,54 @@
                         <a href="#" target="_blank" rel="noreferrer" class="social__link">
                             <span class="mbr-iconfont socicon socicon-youtube"></span>
                         </a>
-                    </div></div>
-                
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
 <section class="gallery3 cid-swTnKrdX7j" id="gallery3-a">
-    
     <div class="mbr-overlay"></div>
     <div class="container">
         <div class="mbr-section-head">
             <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-1"><strong>Meet Kodein Team!</strong><br><strong><br></strong></h4>
-            
         </div>
         <div class="row mt-4">
             <div class="item features-image сol-12 col-md-6 col-lg-3">
                 <div class="item-wrapper">
                     <div class="item-img">
-                        <img src="assets/images/aku.png" alt="">
+                        <img src="<?php echo base_url();?>/assets/images/aku.png" alt="">
                     </div>
                     <div class="item-content">
                         <h5 class="item-title mbr-fonts-style display-5"><strong>Rezsa</strong></h5>
-                        
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">
                             Kono bangumi wa goran no suponsaa no teikyou de okurishimasu.  <a href="#" class="text-primary">Read more..</a></p>
                     </div>
-                    
                 </div>
             </div>
             <div class="item features-image сol-12 col-md-6 col-lg-3">
                 <div class="item-wrapper">
                     <div class="item-img">
-                        <img src="assets/images/mika-melatika-portrait-1-350x451.png" alt="">
+                        <img src="<?php echo base_url();?>/assets/images/mika-melatika-portrait-1-350x451.png" alt="">
                     </div>
                     <div class="item-content">
                         <h5 class="item-title mbr-fonts-style display-5"><strong>Mika</strong></h5>
-                        
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">
                             Kono bangumi wa goran no suponsaa no teikyou de okurishimasu. <a href="#" class="text-primary">Read more..</a></p>
                     </div>
-                    
-                </div>
-            </div>
-            
-            <!-- <div class="item features-image сol-12 col-md-6 col-lg-3">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/kodein-logo-k-560x560.png" alt="">
-                    </div>
-                    <div class="item-content">
-                        <h5 class="item-title mbr-fonts-style display-5"><strong>Justin</strong></h5>
-                        
-                        <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                            Kono bangumi wa goran no suponsaa no teikyou de okurishimasu. <a href="#" class="text-primary">Read more..</a></p>
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-3">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/kodein-logo-k-560x560.png" alt="" title="" data-slide-to="3">
-                    </div>
-                    <div class="item-content">
-                        <h5 class="item-title mbr-fonts-style display-5"><strong>Yoges</strong></h5>
-                        
-                        <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                            Kono bangumi wa goran no suponsaa no teikyou de okurishimasu. <a href="#" class="text-primary">Read more..</a></p>
-                    </div>
-                    
-                </div>
-            </div><div class="item features-image сol-12 col-md-6 col-lg-3">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/kodein-logo-k-560x560.png" alt="" title="" data-slide-to="4">
-                    </div>
-                    <div class="item-content">
-                        <h5 class="item-title mbr-fonts-style display-5"><strong>Rainner</strong></h5>
-                        
-                        <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                            Kono bangumi wa goran no suponsaa no teikyou de okurishimasu. <a href="#" class="text-primary">Read more..</a></p>
-                    </div>
-                    
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 </section>
 
 <section class="footer5 cid-swTu8oSquH" once="footers" id="footer5-c">
-
-    
-
-    
-
     <div class="container">
         <div class="media-container-row">
             <div class="col-md-2 col-6">
                 <div class="media-wrap">
-                    
-                        <img src="assets/images/kodein-logo-309x162.png" alt="Kodein">
-                    
+                    <img src="assets/images/kodein-logo-309x162.png" alt="Kodein">
                 </div>
             </div>
             <div class="col-10 col-6">
@@ -442,10 +383,7 @@
                     </div>
                 </div>
             </div>
-            <!-- </div>
-            </div> -->
         </div>
-
     </div>
 </section>
 <script src="<?php echo base_url();?>/assets/web/assets/jquery/jquery.min.js"></script>
@@ -459,6 +397,28 @@
 <script src="<?php echo base_url();?>/assets/viewportchecker/jquery.viewportchecker.js"></script>
 <script src="<?php echo base_url();?>/assets/parallax/jarallax.min.js"></script>
 <script src="<?php echo base_url();?>/assets/countdown/jquery.countdown.min.js"></script>
+<script>
+    function addReadMore(){
+        let limit = 100
+        var readMoreTxt = " ... Read More";
+        var readLessTxt = " Read Less";
+        $(".addReadMore").each(function(){
+            let allstr = $(this).text();
+            if(allstr.length > limit){
+                let first = allstr.substring(0,limit);
+                let sec = allstr.substring(limit,allstr.length);
+                let strtoadd = first + "<span class='SecSec'>" + sec + "</span><span class='readMore'  title='Click to Show More'>" + readMoreTxt + "</span><span class='readLess' title='Click to Show Less'>" + readLessTxt + "</span>";
+                $(this).html(strtoadd);
+            }
+        })
+        $(document).on("click",".readMore,.readLess",function(){
+            $(this).closest(".addReadMore").toggleClass("showlesscontent showmorecontent");
+        })
+    }
+    $(function(){
+        addReadMore();
+    })
+</script>
 <!-- <script src="/assets/theme/js/script.js"></script> -->
 </body>
 </html>

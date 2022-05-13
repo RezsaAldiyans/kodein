@@ -1,0 +1,210 @@
+CRITICAL - 2022-04-05 21:29:59 --> A non-numeric value encountered
+#0 A:\kodein\kodein.codes\app\Views\playground\inCoders.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric v...', 'A:\\kodein\\kodei...', 4, Array)
+#1 A:\kodein\kodein.codes\system\View\View.php(246): include('A:\\kodein\\kodei...')
+#2 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('playground/inCo...', Array, true)
+#3 A:\kodein\kodein.codes\app\Controllers\Home.php(245): view('playground/inCo...', Array)
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->mulaiKelas('html-1', '2', '0')
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#9 {main}
+CRITICAL - 2022-04-05 21:30:26 --> A non-numeric value encountered
+#0 A:\kodein\kodein.codes\app\Views\playground\inCoders.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric v...', 'A:\\kodein\\kodei...', 4, Array)
+#1 A:\kodein\kodein.codes\system\View\View.php(246): include('A:\\kodein\\kodei...')
+#2 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('playground/inCo...', Array, true)
+#3 A:\kodein\kodein.codes\app\Controllers\Home.php(245): view('playground/inCo...', Array)
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->mulaiKelas('html-1', '2', '0')
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#9 {main}
+CRITICAL - 2022-04-05 21:46:13 --> Call to a member function updatesProgress() on null
+#0 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->mulaiKelas('html-1', '2', '0')
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2022-04-05 21:46:27 --> Call to a member function get() on null
+#0 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->mulaiKelas('html-1', '2', '0')
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2022-04-05 21:48:40 --> Unsupported operand types
+#0 A:\kodein\kodein.codes\app\Controllers\Home.php(255): App\Models\KelasUser->updatesProgress('admin', 'html-1', '2')
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->mulaiKelas('html-1', '2', '0')
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#6 {main}
+CRITICAL - 2022-04-05 22:06:58 --> A non-numeric value encountered
+#0 A:\kodein\kodein.codes\app\Views\playground\inCoders.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric v...', 'A:\\kodein\\kodei...', 4, Array)
+#1 A:\kodein\kodein.codes\system\View\View.php(246): include('A:\\kodein\\kodei...')
+#2 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('playground/inCo...', Array, true)
+#3 A:\kodein\kodein.codes\app\Controllers\Home.php(245): view('playground/inCo...', Array)
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->mulaiKelas('html-1', '2', '0')
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#9 {main}
+CRITICAL - 2022-04-05 22:09:06 --> A non-numeric value encountered
+#0 A:\kodein\kodein.codes\app\Views\playground\inCoders.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric v...', 'A:\\kodein\\kodei...', 4, Array)
+#1 A:\kodein\kodein.codes\system\View\View.php(246): include('A:\\kodein\\kodei...')
+#2 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('playground/inCo...', Array, true)
+#3 A:\kodein\kodein.codes\app\Controllers\Home.php(245): view('playground/inCo...', Array)
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->mulaiKelas('html-1', '2', '0')
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#9 {main}
+CRITICAL - 2022-04-05 22:09:07 --> A non-numeric value encountered
+#0 A:\kodein\kodein.codes\app\Views\playground\inCoders.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric v...', 'A:\\kodein\\kodei...', 4, Array)
+#1 A:\kodein\kodein.codes\system\View\View.php(246): include('A:\\kodein\\kodei...')
+#2 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('playground/inCo...', Array, true)
+#3 A:\kodein\kodein.codes\app\Controllers\Home.php(245): view('playground/inCo...', Array)
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->mulaiKelas('html-1', '2', '0')
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#9 {main}
+CRITICAL - 2022-04-05 22:09:47 --> A non-numeric value encountered
+#0 A:\kodein\kodein.codes\app\Views\detailkelas.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric v...', 'A:\\kodein\\kodei...', 105, Array)
+#1 A:\kodein\kodein.codes\system\View\View.php(246): include('A:\\kodein\\kodei...')
+#2 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('detailkelas', Array, true)
+#3 A:\kodein\kodein.codes\app\Controllers\Home.php(208): view('detailkelas', Array)
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->detailsKelas('html-1')
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#9 {main}
+CRITICAL - 2022-04-05 22:09:51 --> A non-numeric value encountered
+#0 A:\kodein\kodein.codes\app\Views\detailkelas.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric v...', 'A:\\kodein\\kodei...', 105, Array)
+#1 A:\kodein\kodein.codes\system\View\View.php(246): include('A:\\kodein\\kodei...')
+#2 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('detailkelas', Array, true)
+#3 A:\kodein\kodein.codes\app\Controllers\Home.php(208): view('detailkelas', Array)
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->detailsKelas('html-1')
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#9 {main}
+CRITICAL - 2022-04-05 22:10:44 --> Division by zero
+#0 A:\kodein\kodein.codes\app\Views\detailkelas.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Division by zer...', 'A:\\kodein\\kodei...', 105, Array)
+#1 A:\kodein\kodein.codes\system\View\View.php(246): include('A:\\kodein\\kodei...')
+#2 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('detailkelas', Array, true)
+#3 A:\kodein\kodein.codes\app\Controllers\Home.php(208): view('detailkelas', Array)
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->detailsKelas('materi', 'html-1', '2', '0')
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#9 {main}
+CRITICAL - 2022-04-05 22:33:47 --> explode() expects parameter 2 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'explode() expec...', 'A:\\kodein\\kodei...', 19, Array)
+#1 A:\kodein\kodein.codes\app\Models\ProfileModel.php(19): explode(',', Array, true)
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(227): App\Models\ProfileModel->kelasUser('admin', 'html-1')
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->mulaiKelas('html-1', '2', '0')
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2022-04-05 22:36:11 --> Illegal string offset 'id_kelas'
+#0 A:\kodein\kodein.codes\app\Controllers\Home.php(232): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'A:\\kodein\\kodei...', 232, Array)
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->mulaiKelas('html-1', '2', '0')
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#6 {main}
+CRITICAL - 2022-04-05 22:37:19 --> Illegal string offset 'id_kelas'
+#0 A:\kodein\kodein.codes\app\Controllers\Home.php(232): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'A:\\kodein\\kodei...', 232, Array)
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->mulaiKelas('html-1', '2', '0')
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#6 {main}
+CRITICAL - 2022-04-05 22:37:56 --> Illegal string offset 'id_kelas'
+#0 A:\kodein\kodein.codes\app\Controllers\Home.php(232): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'A:\\kodein\\kodei...', 232, Array)
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->mulaiKelas('html-1', '2', '0')
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#6 {main}
+CRITICAL - 2022-04-05 22:38:20 --> Illegal string offset 'id_kelas'
+#0 A:\kodein\kodein.codes\app\Controllers\Home.php(232): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'A:\\kodein\\kodei...', 232, Array)
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->mulaiKelas('html-1', '2', '0')
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#6 {main}
+CRITICAL - 2022-04-05 22:40:27 --> Illegal string offset 'id_kelas'
+#0 A:\kodein\kodein.codes\app\Controllers\Home.php(232): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'A:\\kodein\\kodei...', 232, Array)
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->mulaiKelas('html-1', '2', '0')
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#6 {main}
+CRITICAL - 2022-04-05 22:44:21 --> syntax error, unexpected '$data' (T_VARIABLE)
+#0 A:\kodein\kodein.codes\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('A:\\kodein\\kodei...')
+#1 A:\kodein\kodein.codes\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Prof...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Prof...')
+#3 A:\kodein\kodein.codes\app\Controllers\Home.php(216): spl_autoload_call('App\\Models\\Prof...')
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->mulaiKelas('html-1', '2', '0')
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#9 {main}
+CRITICAL - 2022-04-05 22:51:38 --> syntax error, unexpected 'var' (T_VAR)
+#0 A:\kodein\kodein.codes\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('A:\\kodein\\kodei...')
+#1 A:\kodein\kodein.codes\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Kela...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Kela...')
+#3 A:\kodein\kodein.codes\app\Controllers\Home.php(264): spl_autoload_call('App\\Models\\Kela...')
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->cekBenarSoal('html-1', '2', '1')
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#9 {main}
+CRITICAL - 2022-04-05 22:52:38 --> Call to undefined method App\Models\ProfileModel::updatesProgress
+#0 A:\kodein\kodein.codes\app\Controllers\Home.php(254): CodeIgniter\Model->__call('updatesProgress', Array)
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->mulaiKelas('html-1', '2', '0')
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#6 {main}
+CRITICAL - 2022-04-05 22:56:18 --> syntax error, unexpected 'var' (T_VAR)
+#0 A:\kodein\kodein.codes\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('A:\\kodein\\kodei...')
+#1 A:\kodein\kodein.codes\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Kela...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Kela...')
+#3 A:\kodein\kodein.codes\app\Controllers\Home.php(254): spl_autoload_call('App\\Models\\Kela...')
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->mulaiKelas('html-1', '2', '0')
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#9 {main}
+CRITICAL - 2022-04-05 23:21:56 --> count(): Parameter must be an array or an object that implements Countable
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'count(): Parame...', 'A:\\kodein\\kodei...', 235, Array)
+#1 A:\kodein\kodein.codes\app\Controllers\Home.php(235): count(3)
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->mulaiKelas('html-1', '7', '3')
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#7 {main}

@@ -21,6 +21,8 @@ $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 $routes->setAutoRoute(true);
+// set true for maintenance mode
+$routes->setMaintenance(true);
 
 /**
  * --------------------------------------------------------------------
@@ -33,7 +35,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/dashboard','Home::dashboard_user');
 $routes->get('/login','Home::viewLogin');
-$routes->get('/register','Home::viewRegister');
+// $routes->get('/register','Home::viewRegister');
 $routes->post('/logins','Home::login');
 $routes->post('/register','Home::register');
 
@@ -43,10 +45,20 @@ $routes->get('/coder','Home::viewcoder');
 $routes->post('/cekKebenaran/(:any)/(:any)/(:any)','Home::cekBenarSoal/$1/$2/$3');
 $routes->get('/cekBantuan/(:any)/(:any)/(:any)','Home::cekBantuanSoal/$1/$2/$3');
 
+$routes->get('/cekToken/(:any)','Home::cekToken/$1');
+$routes->post('/cekToken','Home::cekTokenPost');
+$routes->get('/resetToken/(:any)','Home::resetToken/$1');
+
 $routes->get('/logout','Home::logout');
 
 //test
 $routes->get('/leaderboard','Home::leaderboard');
+// route for any test
+$routes->get('/expired','Home::expiredToken');
+// route test uniq id
+// $routes->get('/uid','Home::uid');
+// try dummy kelas soal dan kelas materi
+// $routes->get('/dummy','Home::dummy');
 // cek coders?
 // $routes->post('/coders','Home::inCoder');
 
