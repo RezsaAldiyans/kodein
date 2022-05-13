@@ -395,6 +395,19 @@ class RouteCollection implements RouteCollectionInterface
 	//--------------------------------------------------------------------
 
 	/**
+	 * set the maintenance mode
+	 */
+	public function setMaintenance(bool $value = false)
+	{
+		if($value == true){
+			require APPPATH . 'Views/maintenance/index.php';
+			die();
+		}
+	}
+
+	//--------------------------------------------------------------------
+
+	/**
 	 * Will attempt to discover any additional routes, either through
 	 * the local PSR4 namespaces, or through selected Composer packages.
 	 */

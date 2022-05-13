@@ -16,7 +16,7 @@ function levelUp($data){
 class Home extends BaseController
 {
 	public function __construct(){
-		//nothing
+		//do if maintenance web
 	}
 	public function index(){
 		$kelasModel = new KelasModel();
@@ -32,12 +32,101 @@ class Home extends BaseController
 	public function viewRegister(){
 		return view('register');
 	}
+	private function uid(){
+		// generate random uid for register
+		$n = 3;
+		$result = bin2hex(random_bytes($n));
+		return $result;
+	}
+	private function convertSecondToHour($second){
+		$hours = floor($second / 3600);
+		$minutes = floor(($second / 60) % 60);
+		$seconds = $second % 60;
+
+		return "$hours:$minutes:$seconds";
+	}
+	private function expiredToken($token,$email){
+		/**
+		*cek tanggal gabung pertama kali ketika dia register gunain model untuk mengambil tgl_gabung
+		*cek waktu expired pada database lalu dijumlahin dengan tgl_gabung lalu di cek apakah waktu expired sudah lebih dari yang ditentukan
+		*jika expired maka harus resend code
+		*jika tidak expired maka tidak perlu resend code
+		*resend code bisa dikirim berulang kali dan mengganti token yang lama dengan yang baru
+		**/
+		// cek tanggal gabung
+		$loginModel = new LoginModel();
+		$tgl_gabung = $loginModel->getTglGabung($email);
+		$str = str_replace(" ", ",",$tgl_gabung[0]["tgl_gabung"]);
+		$split = explode(",",$str);
+		$waktu_split = explode(":",$split[1]);
+		$theday = explode("-",$split[0]);
+
+		$conv = explode(":",$this->convertSecondToHour($tgl_gabung[0]["expired_token"]));
+		$hour = $waktu_split[0] + $conv[0];
+		$minutes = $waktu_split[1] + $conv[1];
+		$seconds = $waktu_split[2] + $conv[2];
+		// echo $hour.":".$minutes.":".$seconds;
+		// check if token is expired
+		$dates = date("Y:m:d:H:i:s");
+		$time = explode(":",$dates);
+		if($tgl_gabung[0]["status_token"] == 'true'){
+			return 'selesai';
+		}
+		if($tgl_gabung[0]["token"] == sha1($token)){
+			if ($theday[0] == $time[0] && $theday[1] == $time[1] && $theday[2] == $time[2] && $time[3] <= $hour && $time[4] <= $minutes) {
+				$loginModel->updateStatusToken($email);
+				return "berhasil";
+			}else{
+				return "expired";
+			}
+		}
+		else{
+			return "invalid";
+		}
+	}
+	public function cekToken($email){
+		return view('cekToken/cekToken',["email"=>$email]);
+	}
+	public function cekTokenPost(){
+		$session = session();
+		$email = $this->request->getVar('email');
+		$token = $this->request->getVar('token');
+		$cek = $this->expiredToken($token,$email);
+		if($cek == "selesai"){
+			$session->setFlashdata('selesai', 'Akun anda sudah teraktivasi silakan login!');
+			// return redirect()->to(base_url('login'));
+			return redirect()->to(base_url('cekToken/'.$email));
+		}
+		if($cek == "berhasil"){
+			$session->setFlashdata('berhasil', 'Register berhasil. Silakan login!');
+			// return redirect()->to(base_url('login'));
+			return redirect()->to(base_url('cekToken/'.$email));
+		}
+		else if($cek == "expired"){
+			$session->setFlashdata('expired', 'Token anda sudah expired. Silakan resend code!');
+			return redirect()->to(base_url('cekToken/'.$email));
+		}
+		else{
+			$session->setFlashdata('invalid', 'Token anda tidak valid. Silakan cek kembali email anda!');
+			return redirect()->to(base_url('cekToken/'.$email));
+		}
+	}
+	public function resetToken($email){
+		$session = session();
+		$loginModel = new LoginModel();
+		$generateUid = $this->uid();
+		$reset = $loginModel->resetToken($email,sha1($generateUid),date("YmdHis", time()));
+		$this->email($email,$generateUid);
+		$session->setFlashdata('berhasil', 'berhasil mereset token');
+		return redirect()->to(base_url('cekToken/'.$email));
+	}
 	public function register(){
 		$nama_lengkap = $this->request->getVar("nama");
 		$email = $this->request->getVar("email");
 		$password = $this->request->getVar("password");
 		$no_hp = $this->request->getVar("no_hp");
-		$tgl_gabung = date("Ymdhis", time());
+		$tgl_gabung = date("YmdHis", time());
+		$generateUid = $this->uid();
 
 		$valid = $this->validate([
 			'nama' => 'required|min_length[1]',
@@ -75,13 +164,16 @@ class Home extends BaseController
 			'asal_kota' => '',
 			'exp' => 0,
 			'badges' => 'rookie',
-			'level' => 0
+			'level' => 0,
+			'token' => sha1($generateUid),
+			'expired_token' => 60
 		];
 		$loginModel = new LoginModel();
 		$result = $loginModel->register($data_insert);
 		if($result){
 			$session = session();
-			$session->setFlashdata('berhasil', 'Register berhasil. Silakan login');
+			$session->setFlashdata('berhasil', 'Register berhasil. Silakan cek email anda!');
+			$this->email($email,$generateUid);
 			return redirect()->to('/login');
 		}
 	}
@@ -100,6 +192,11 @@ class Home extends BaseController
 		$model = new LoginModel();
 		$data = $model->where('email',$email)->first(); //pencarian data dari model LoginModel menurut email yang sudah di input
 		if($data){
+			$cek = $model->getTglGabung($email);
+			if($cek[0]["status_token"] == "false"){
+				$session->setFlashdata('inactivated', 'Akun anda belum terverifikasi silakan cek email anda!');
+                return redirect()->to('/login');
+			}
 			$pass = $data['password'];
 			// cek passwordnya apakah sama dengan yang ada di data
 			if($pass == $password){
@@ -316,6 +413,32 @@ class Home extends BaseController
 					return json_encode($ses,TRUE);
 				}
 			}
+		}
+	}
+	private function email($email,$token = null){
+	    // initialize email setting from emailConfig function.
+		$config['protocol']   = 'smtp';
+        $config['SMTPHost']   = 'mail.kodein.codes';
+        $config['SMTPUser']   = 'admin@kodein.codes';
+        $config['SMTPPass']   = 'miraimiyuki06';
+        $config['SMTPPort']   = 465;
+        $config['SMTPCrypto'] = 'ssl';
+        $config['mailType']   = 'html';
+		$this->email->initialize($config);
+		// Set sender email and name from .env file
+		$this->email->setFrom($config['SMTPUser'], getenv('email_config_senderName'));
+		// target email or receiver
+		$this->email->setTo($email);
+		// Email subject
+		$this->email->setSubject('Admin Test');
+		// Email message
+		$this->email->setMessage(view('MailTemplate/verifikasi',["name"=>$email,"token"=>$token]));
+
+		// make sure email is send
+		if($this->email->send()){
+			return True;
+		}else {
+			return False;
 		}
 	}
 	public function dummy(){

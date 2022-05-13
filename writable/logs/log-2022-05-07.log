@@ -1,0 +1,35 @@
+CRITICAL - 2022-05-07 19:58:48 --> Call to undefined function App\Controllers\randString()
+#0 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->uid()
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2022-05-07 20:24:20 --> Too few arguments to function App\Controllers\Home::expiredToken(), 0 passed in A:\kodein\kodein.codes\system\CodeIgniter.php on line 918 and exactly 1 expected
+#0 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->expiredToken()
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2022-05-07 20:24:20 --> Too few arguments to function App\Controllers\Home::expiredToken(), 0 passed in A:\kodein\kodein.codes\system\CodeIgniter.php on line 918 and exactly 1 expected
+#0 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->expiredToken()
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2022-05-07 20:39:49 --> Call to undefined function App\Controllers\split()
+#0 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->expiredToken()
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}
+CRITICAL - 2022-05-07 20:40:21 --> Call to undefined function App\Controllers\split()
+#0 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->expiredToken()
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}

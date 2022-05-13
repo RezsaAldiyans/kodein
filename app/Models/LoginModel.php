@@ -172,6 +172,23 @@ class LoginModel extends Model{
         // $this->select("id_akun, nama_lengkap, email, CONVERT(varchar(100),tgl_gabung, 100) as tgl_gabung, profile_user, asal_kota, exp ,badges, level")->where('id_akun',$id)->first();
         return $this->db->query("select id_akun, nama_lengkap, email, DATE_FORMAT(tgl_gabung,'%d/%m/%Y') tgl_gabung, profile_user, asal_kota, exp ,badges, level, linkedin, instagram, twitter from akun where id_akun='$id'")->getResultArray();
     }
+    public function getTglGabung($email){
+        // $this->select("id_akun, nama_lengkap, email, CONVERT(varchar(100),tgl_gabung, 100) as tgl_gabung, profile_user, asal_kota, exp ,badges, level")->where('id_akun',$id)->first();
+        return $this->db->query("select tgl_gabung,token,expired_token,status_token from akun where email='$email'")->getResultArray();
+    }
+    public function updateStatusToken($email){
+        $data=[
+            "status_token"=>"true"
+        ];
+        return $this->db->table("akun")->where("email",$email)->update($data);
+    }
+    public function resetToken($email,$token,$tgl_gabung){
+        $data=[
+            "tgl_gabung"=>$tgl_gabung,
+            "token" => $token,
+        ];
+        return $this->db->table("akun")->where("email",$email)->update($data);
+    }
     public function updateExp($id_akun,$new_exp,$id_kelas,$id_soal){
         $where = "id_akun='$id_akun'";
         $old_exp = $this->select('exp,id_akun')->where($where)->first();

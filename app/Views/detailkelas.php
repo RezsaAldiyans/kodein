@@ -78,11 +78,6 @@
 </section>
 
 <section class="header11 cid-sDBohKsmP7" id="header11-11">
-
-    
-
-    
-
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-md-4 image-wrapper">

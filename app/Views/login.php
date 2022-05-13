@@ -62,8 +62,11 @@
                     This is a primary alert—check it out!
                   </div> -->
                   <?php
+                    if(session()->getFlashData('inactivated')){
+                        echo "<div class='alert alert-danger' role='alert'>".session()->getFlashData('inactivated')."</div>";
+                    }
                     if(session()->getFlashData('msgerr')){
-                    echo "<div class='alert alert-danger' role='alert'>".session()->getFlashData('msgerr')."</div>";
+                        echo "<div class='alert alert-danger' role='alert'>".session()->getFlashData('msgerr')."</div>";
                     }else if(session()->getFlashData('berhasil')){
                         // echo "<div class='alert alert-success' role='alert'>".session()->getFlashData('berhasil')."</div>";
                         echo "<script>alertjs('success','Berhasil!','".session()->getFlashData('berhasil')."');</script>";
