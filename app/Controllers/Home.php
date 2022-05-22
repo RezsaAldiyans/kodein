@@ -288,9 +288,6 @@ class Home extends BaseController
 		];
 		return view('testLeadBoard',$data);
 	}
-	public function viewCoder(){
-		return view('playground/inCoder');
-	}
 	public function detailsKelas($id_kelas){
 		$kelasModel = new KelasModel();
 		$profilModel = new ProfileModel();
@@ -357,7 +354,7 @@ class Home extends BaseController
 					return view('playground/inCoders',$res);
 				}else if($tipe_materi == "2"){
 					// return view('playground/inCoders',$res);
-					return "<h1>Tahap Perkembangan!</h1>";
+					return view('playground/pilgan',$res);
 				}
 			}
 			else{

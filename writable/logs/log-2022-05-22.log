@@ -1,0 +1,55 @@
+CRITICAL - 2022-05-22 12:29:15 --> Unable to connect to the database.
+#0 A:\kodein\kodein.codes\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 A:\kodein\kodein.codes\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT min(id_m...', Array, false)
+#2 A:\kodein\kodein.codes\app\Models\KelasModel.php(19): CodeIgniter\Database\BaseBuilder->get()
+#3 A:\kodein\kodein.codes\app\Controllers\Home.php(315): App\Models\KelasModel->findKelas('html-1')
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->mulaiKelas('html-1', '2')
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#9 {main}
+CRITICAL - 2022-05-22 12:29:55 --> A non-numeric value encountered
+#0 A:\kodein\kodein.codes\app\Views\playground\inCoders.php(139): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric v...', 'A:\\kodein\\kodei...', 139, Array)
+#1 A:\kodein\kodein.codes\system\View\View.php(246): include('A:\\kodein\\kodei...')
+#2 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('playground/inCo...', Array, true)
+#3 A:\kodein\kodein.codes\app\Controllers\Home.php(354): view('playground/inCo...', Array)
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->mulaiKelas('html-1', '2')
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#9 {main}
+CRITICAL - 2022-05-22 12:30:20 --> A non-numeric value encountered
+#0 A:\kodein\kodein.codes\app\Views\playground\inCoders.php(139): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric v...', 'A:\\kodein\\kodei...', 139, Array)
+#1 A:\kodein\kodein.codes\system\View\View.php(246): include('A:\\kodein\\kodei...')
+#2 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('playground/inCo...', Array, true)
+#3 A:\kodein\kodein.codes\app\Controllers\Home.php(354): view('playground/inCo...', Array)
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->mulaiKelas('html-1', '2')
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#9 {main}
+CRITICAL - 2022-05-22 12:31:01 --> A non-numeric value encountered
+#0 A:\kodein\kodein.codes\app\Views\playground\inCoders.php(139): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric v...', 'A:\\kodein\\kodei...', 139, Array)
+#1 A:\kodein\kodein.codes\system\View\View.php(246): include('A:\\kodein\\kodei...')
+#2 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('playground/inCo...', Array, true)
+#3 A:\kodein\kodein.codes\app\Controllers\Home.php(354): view('playground/inCo...', Array)
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->mulaiKelas('html-1', '2')
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#9 {main}
+CRITICAL - 2022-05-22 12:31:02 --> A non-numeric value encountered
+#0 A:\kodein\kodein.codes\app\Views\playground\inCoders.php(139): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric v...', 'A:\\kodein\\kodei...', 139, Array)
+#1 A:\kodein\kodein.codes\system\View\View.php(246): include('A:\\kodein\\kodei...')
+#2 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('playground/inCo...', Array, true)
+#3 A:\kodein\kodein.codes\app\Controllers\Home.php(354): view('playground/inCo...', Array)
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->mulaiKelas('html-1', '2')
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#9 {main}

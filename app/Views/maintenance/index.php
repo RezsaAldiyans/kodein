@@ -11,7 +11,7 @@
 <body>
 	<div class="container mx-auto md:container md:mx-auto lg:container lg:mx-auto">
 		<div class="row">
-			<object class="stroke-1 mx-auto w-full md:w-32 md:w-full lg:w-48" type="image/svg+xml" data="<?php echo base_url();?>/assets/images/kodein-animate.svg" alt="animate kodein logo">
+			<object class="mx-auto w-full md:w-32 md:w-full lg:w-48" type="image/svg+xml" data="<?php echo base_url();?>/assets/images/kodein-animate.svg" alt="animate kodein logo">
 				<img src="<?php echo base_url();?>/assets/images/kodein-animate.svg" alt="animate kodein logo"/>
 			</object>
 		</div>

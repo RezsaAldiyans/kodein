@@ -7,7 +7,7 @@
   <meta name="generator" content="Mobirise v5.2.0, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="<?php echo base_url();?>/assets/images/kodein-logo-landing-128x128.png" type="image/x-icon">
-  <meta name="description" content="">
+  <meta name="description" content="Detail kelas">
   
   
   <title>Kelas <?php echo $kelas['nama_kelas'];?></title>
