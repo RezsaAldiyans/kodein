@@ -107,11 +107,9 @@ $session = session();
             </div>
             <!-- right content -->
             <div class="col-span-3 relative flex flex-col pr-2.5">
-                <p class="text-left text-[16px] mb-0.5 -mt-3"><?= $progressing ?>% Progress</p>
-                <div class="progress min-w-full">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                        aria-valuenow="<?= $progressing ?>" aria-valuemin="0" aria-valuemax="100"
-                        style="width:<?= $progressing ?>%"></div>
+                <p class="text-left text-[16px] mb-0.5 -mt-3"><?= $progressing ?>%</p>
+                <div class="w-full bg-gray-200 h-5 rounded-full">
+                    <div class="bg-blue-600 h-5 rounded-full" style="width: <?= $progressing ?>%"></div>
                 </div>
             </div>
         </div>
