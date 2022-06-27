@@ -24,7 +24,7 @@ $session = session();
             display:inline-block;
             /* margin:-2px; */
             padding: 10px 12px;
-            background-color: #fff;
+            background-color: #e7e7e7;
             /* border-color: #e7e7e7; */
             width: 100%;
             /* height: 40px; */
@@ -32,7 +32,15 @@ $session = session();
         input[type=radio]:checked + label,
         input[type=radio]:hover + label{
             background-image: none;
-            background-color: #4CAF50;
+            background-color: #B3B3B3;
+            color: #fff;
+        }
+        input[type="radio"] + .benar{
+            background-color: #00ff00;
+            color: #fff;
+        }
+        input[type="radio"] + .salah{
+            background-color: #ff0000;
             color: #fff;
         }
     </style>
@@ -59,29 +67,29 @@ $session = session();
     </div>
     <!-- main pilgan -->
     <div class="flex justify-center mt-5">
-    <div class="container flex justify-center pb-3 border-solid border-2 border-[#545454] w-3/4 p-4">
-        <form action="#" method="post">
+    <div class="container flex justify-center pb-3 w-1/2 p-4">
+        <form id="myform">
                 <div class="flex mb-4 text-[24px]">
                     <div class="p font-semibold"><?= $kelas["soal_pilgan"]?></div>
                 </div>
-                <div class="mb-4 border-solid border-2 border-sky-500 w-full rounded">
+                <div class="mb-4 w-full rounded">
                     <input id="default-radio-1" type="radio" value="a" name="radio" class="jwb1">
-                    <label for="default-radio-1" class="text-sm font-medium text-black-900"><?= $kelas["pilgan_a"]?></label>
+                    <label for="default-radio-1" class="benar text-sm font-medium text-black-900"><?= $kelas["pilgan_a"]?></label>
                 </div>
-                <div class="mb-4 border-solid border-2 border-sky-500 w-full rounded">
+                <div class="mb-4 w-full rounded">
                     <input id="default-radio-2" type="radio" value="b" name="radio" class="jwb-2">
                     <label for="default-radio-2" class="text-sm font-medium text-black-900 dark:text-black-300"><?= $kelas["pilgan_b"]?></label>
                 </div>
-                <div class="mb-4 border-solid border-2 border-sky-500 w-full rounded">
+                <div class="mb-4 w-full rounded">
                     <input id="default-radio-3" type="radio" value="c" name="radio" class="jwb-3">
                     <label for="default-radio-3" class="text-sm font-medium text-black-900 dark:text-black-300"><?= $kelas["pilgan_c"]?></label>
                 </div>
-                <div class="mb-4 border-solid border-2 border-sky-500 w-full rounded">
+                <div class="mb-4 w-full rounded">
                     <input id="default-radio-4" type="radio" value="d" name="radio" class="jwb-4">
                     <label for="default-radio-4" class="text-sm font-medium text-black-900 dark:text-black-300"><?= $kelas["pilgan_d"]?></label>
                 </div>
                 <div class="flex space-x-5">
-                    <button type="submit" class="inline-block px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-sky-400 hover:bg-opacity-30 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">
+                    <button onclick="send()" class="inline-block px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-sky-400 hover:bg-opacity-30 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">
                         Kirim
                     </button>
                     <button type="button" class="inline-block px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">
@@ -91,6 +99,39 @@ $session = session();
         </form>
     </div>
     </div>
+    <script src="<?php echo base_url();?>/assets/web/assets/jquery/jquery.min.js"></script>
+    <script>
+    function send() {
+        var radioValue = $("input[name=radio]:checked").val();
+        if(radioValue == undefined){
+            alert("Pilih jawaban terlebih dahulu");
+        }else{
+            let link = "<?php echo base_url();?>/cekKebenaran/<?= $kelas['id_kelas']?>/<?= $kelas['id_soal']?>/<?= $kelas['tipe_soal']?>";
+            $('#myform').on('submit', function(e) {
+            e.preventDefault();
+            var formdata = new FormData();
+            formdata.append("jawaban_user", radioValue);
+            formdata.append("id_soal", <?php echo $kelas['id_soal'];?>);
+            var settings = {
+                "url": link,
+                "method": "POST",
+                "timeout": 0,
+                "processData": false,
+                "mimeType": "multipart/form-data",
+                "contentType": false,
+                "data": formdata
+            };
+            $.ajax(settings).done(function(response) {
+                jawaban = JSON.parse(response);
+                if(jawaban[0] == 1){
+                    alert("Jawaban anda benar");
+                }else{
+                    alert("Jawaban anda salah");
+                }
+                });
+            });
+    }};
+    </script>
 </body>
 
 </html>

@@ -326,7 +326,6 @@ $session = session();
                     };
                     $.ajax(settings).done(function(response) {
                         jawaban = JSON.parse(response);
-                        console.log(jawaban);
                         // berhasil menjawab tanpa bantuan
                         if (jawaban[0] == 1) {
                             // berhasil

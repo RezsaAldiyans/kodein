@@ -2,12 +2,25 @@
 <?php $session = session();?>
 <head>
 	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="<?php echo base_url();?>/assets/images/kodein-logo-landing-128x128.png" type="image/x-icon">
+    <link rel="icon" href="<?php echo base_url();?>/assets/images/kodein-logo-landing-128x128.png" type="image/png">
+    <meta name="description" content="kodein is a website for learning">
 
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-		integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<link rel="stylesheet" href="<?php echo base_url();?>/assets/web/assets/mobirise-icons2/mobirise2.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/tether/tether.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/dropdown/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/animatecss/animate.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/socicon/css/styles.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/theme/css/style.css">
+    <link rel="preload" as="style" href="<?php echo base_url();?>/assets/mobirise/css/mbr-additional.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/mobirise/css/mbr-additional.css" type="text/css">
 
 	<!-- Style Font nya guys -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,71 +31,52 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 	<!-- CSS AKU -->
-	<link rel="stylesheet" href="assets/css/dashboard.css">
-	<link rel="stylesheet" href="assets/fullcalendar-5.7.0/lib/main.css">
+	<!-- <link rel="stylesheet" href="<?php echo base_url();?>/assets/css/dashboard.css"> -->
+	<link rel="stylesheet" href="<?php echo base_url();?>/assets/fullcalendar-5.7.0/lib/main.css">
 
 	<!-- JS -->
 	<script src="<?php echo base_url();?>/assets/js/dashboard_user.js" defer></script>
 	<script src="<?php echo base_url();?>/assets/fullcalendar-5.7.0/lib/main.js" defer></script>
-	
+	<!-- <script src="<?php echo base_url();?>/assets/tailwind/all.js"></script> -->
+
 	<title>Profile <?php echo $nama_lengkap; ?></title>
 </head>
 
 <body>
-	<!-- Navbar -->
-	<nav class="navbar shadow navbar-expand-md navbar-light">
-		<!-- <div class="container"> -->
-
-		<a class="navbar-brand ml-lg-5" href="/">
-		<img src="assets/images/kodein-logo-k-1-263x263.png" alt="Kodein logo">
-		</a>
-
-		<!-- Collapse button -->
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav1"
-		aria-controls="basicExampleNav1" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-		</button>
-
-		<!-- Links -->
-		<div class="collapse navbar-collapse " id="basicExampleNav1">
-
-		<!-- Right -->
-		<ul class="navbar-nav ml-auto  mr-md-5 ">
-			<li class="nav-item mx-md-2 pt-md-2">
-			<a href="#!" class="nav-link mx-3">
-				Academy
-			</a>
-			</li>
-			<li class="nav-item mx-md-2 pt-md-2">
-			<a href="#!" class="nav-link mx-3">
-				Challenges
-			</a>
-			</li>
-			<li class="nav-item mx-md-2 pt-md-2">
-			<a href="#!" class="nav-link mx-3">
-				Event
-			</a>
-			</li>
-			<li class="nav-item dropdown ">
-			<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
-				aria-haspopup="true" aria-expanded="false">
-				<img src="<?php echo $profile_user;?>" height="43" width="43" alt="foto profile"
-				class="rounded-circle img-user-keci">
-			</a>
-			<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-				<a class="dropdown-item" href="/dashboard">Profile Saya</a>
-				<a class="dropdown-item" href="#">Pengaturan</a>
-				<a class="dropdown-item" href="/logout">Log Out</a>
-			</div>
-			</li>
-		</ul>
-
-		</div>
-		<!-- Links -->
-
-		<!-- </div> -->
-	</nav>
-	<!-- Navbar -->
+	<!-- Start Navbar -->
+	<section class="menu menu3" once="menu" id="menu3-0">
+    <nav class="navbar navbar-light bg-light navbar-dropdown navbar-fixed-top navbar-expand-lg mb-5">
+        <div class="container-fluid">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                        <a href="/"><img class="pl-0" src="<?php echo base_url();?>/assets/images/kodein-logo-k-1-263x263.png" alt="Kodein"></a>
+                </span>
+            </div>
+            <button class="navbar-toggler mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="w-6" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+				<path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path>
+			</svg>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav" data-app-modern-menu="true">
+                    <li class="nav-item"><a class="nav-link link text-info text-primary display-4" href="/#gallery3-a"><strong>Tentang Kami</strong></a></li>
+                    <li class="nav-item"><a class="nav-link link text-info text-primary display-4" href="/#content2-b"><strong>Kelas Koding</strong></a></li>
+                    <li class="nav-item"><a class="nav-link link text-info text-primary display-4" href="/#features20-7"><strong>Tantangan Kode</strong></a></li>
+                </ul>
+                <?php if(!$session->get("id_akun")){?>
+                <div class="navbar-buttons mbr-section-btn">
+                    <a class="btn btn-info-outline display-4" href="/login">Masuk / Daftar</a>
+                </div>
+                <?php }else{?>
+                <div class="navbar-buttons mbr-section-btn">
+                    <a class="btn btn-info-outline display-4" href="/dashboard">Dashboard</a>
+                </div>
+                <?php }?>
+            </div>
+        </div>
+    </nav>
+</section>
+	<!-- End Navbar -->
 
 	<!-- Main content -->
 	<main>
@@ -256,13 +250,17 @@
 
 	<!-- Optional JavaScript; choose one of the two! -->
 
-	<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-		crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-		crossorigin="anonymous"></script>
+	<script src="<?php echo base_url();?>/assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="<?php echo base_url();?>/assets/web/assets/jquery/jquery.min.js"></script>
+	<script src="<?php echo base_url();?>/assets/popper/popper.min.js"></script>
+	<script src="<?php echo base_url();?>/assets/tether/tether.min.js"></script>
+	<script src="<?php echo base_url();?>/assets/smoothscroll/smooth-scroll.js"></script>
+	<script src="<?php echo base_url();?>/assets/dropdown/js/nav-dropdown.js"></script>
+	<script src="<?php echo base_url();?>/assets/dropdown/js/navbar-dropdown.js"></script>
+	<script src="<?php echo base_url();?>/assets/touchswipe/jquery.touch-swipe.min.js"></script>
+	<script src="<?php echo base_url();?>/assets/viewportchecker/jquery.viewportchecker.js"></script>
+	<script src="<?php echo base_url();?>/assets/parallax/jarallax.min.js"></script>
+	<script src="<?php echo base_url();?>/assets/countdown/jquery.countdown.min.js"></script>
 	<script>
 		function selectTab(tabIndex) {
 		//Hide All Tabs

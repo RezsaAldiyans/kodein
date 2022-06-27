@@ -3,7 +3,9 @@
 
 
 
-
+.dropdown-toggle::after {
+  display: none !important;
+}
 .btn {
   border-width: 2px;
 }
@@ -1138,7 +1140,7 @@ a {
   outline: none;
 }
 .cid-swTq3V5hrx .item {
-  cursor: pointer;
+  cursor: default;
   margin-bottom: 2rem;
 }
 .cid-swTq3V5hrx .item-wrapper {
@@ -5504,7 +5506,7 @@ a {
   outline: none;
 }
 .cid-sDBkN6yl8k .item {
-  cursor: pointer;
+  cursor: default;
   margin-bottom: 2rem;
 }
 .cid-sDBkN6yl8k .item-wrapper {
@@ -5558,7 +5560,7 @@ a {
   outline: none;
 }
 .cid-sDBkOBtspa .item {
-  cursor: pointer;
+  cursor: default;
   margin-bottom: 2rem;
 }
 .cid-sDBkOBtspa .item-wrapper {

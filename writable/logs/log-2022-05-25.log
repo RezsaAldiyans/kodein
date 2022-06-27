@@ -1,0 +1,7 @@
+CRITICAL - 2022-05-25 20:02:00 --> Too few arguments to function App\Controllers\Home::testPilgan(), 0 passed in A:\kodein\kodein.codes\system\CodeIgniter.php on line 918 and exactly 3 expected
+#0 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->testPilgan()
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}

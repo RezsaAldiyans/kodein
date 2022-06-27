@@ -1,10 +1,76 @@
+google.charts.load("current", { packages: ["calendar"] });
+google.charts.setOnLoadCallback(drawChart);
+function drawChart(data){
+    console.log(data)
+    var dataTable = new google.visualization.DataTable();
+    dataTable.addColumn({ type: 'date', id: 'Date' });
+    dataTable.addColumn({ type: 'number', id: 'Laporan' });
+    dataTable.addRows([
+        // Many rows omitted for brevity.
+    ]);
+
+    var chart = new google.visualization.Calendar(document.getElementById('calendar_basic'));
+
+    var options = {
+        title: "Aktivitas",
+        height: 150,
+        calendar: {
+            // cell sizing
+            cellSize: 10,
+            focusedCellColor: {
+                stroke: '#00ff00',
+                strokeOpacity: 1,
+                strokeWidth: 1,
+            },
+            monthLabel: {
+                fontName: 'Jost',
+                fontSize: 12,
+                color: '#135388',
+                bold: true,
+                italic: true
+            },
+            monthOutlineColor: {
+                stroke: '#3cd9d6',
+                strokeOpacity: 0.8,
+                strokeWidth: 2
+            },
+            unusedMonthOutlineColor: {
+                stroke: '#fff',
+                strokeOpacity: 0.8,
+                strokeWidth: 1
+            },
+            yearLabel: {
+                fontName: 'Jost',
+                fontSize: 32,
+                color: '#3cd9d6',
+                bold: true,
+                italic: true
+            },
+            // color of the month name
+            dayOfWeekLabel: {
+                fontName: 'Jost',
+                fontSize: 8,
+                color: '#1a8763',
+                bold: true,
+                italic: true,
+            },
+        },
+        // mengubah tema background dan warna box
+        // noDataPattern: {
+        //     backgroundColor: '#76a7fa',
+        //     color: '#fff'
+        // }
+    };
+
+    chart.draw(dataTable, options);
+}
 document.addEventListener('DOMContentLoaded', function() {
     // initial API untuk events
     var requestOptions = {
         method: 'GET',
         redirect: 'follow'
     };
-    fetch("http://localhost:8080/ApiHistory", requestOptions)
+    fetch("https://kodein.online/ApiHistory", requestOptions)
         .then(response => response.json())
         .then(result =>{
             let data = [];
@@ -21,56 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 )
             })
-            // initial date
-            var today = new Date();
-            var dd = String(today.getDate()).padStart(2, '0');
-            var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-            var yyyy = today.getFullYear();
-
-            today = yyyy + '-' + mm + '-' + dd;
-            var calendarEl = document.getElementById('calender');
-
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-
-                headerToolbar: {
-                    left: '',
-                    center: 'prev,next,dayGridMonth,listWeek,listDay,today title',
-                    right: ''
-                },
-                // customize the button names,
-                // otherwise they'd all just say "list"
-                views: {
-                    dayGridMonth: { buttonText: 'Month' },
-                    listDay: { buttonText: 'Day' },
-                    listWeek: { buttonText: 'Week' },
-                },
-
-                initialView: 'dayGridMonth',
-                initialDate: today,
-                navLinks: true,
-                // editable: true,
-                // dayMaxEvents: true,
-                eventColor: 'blue',
-                events:data //semua event calendar dari data
-                    // {
-                    //     title: 'Menyelesaikan tugas dasar',
-                    //     start: '2021-05-17T00:00:00',
-                    //     end: '2021-05-17T01:00:00'
-                    // },
-                    // {
-                    //     title: 'Menyelesaikan tugas menengah',
-                    //     start: '2021-05-18T14:00:00',
-                    //     end: '2021-05-18T01:00:00',
-                    // },
-                    // {
-                    //     title: 'Menyelesaikan tugas menengah',
-                    //     groupId: 'testGroupId',
-                    //     start: '2021-05-19T10:00:00',
-                    //     end: '2021-05-05T16:00:00',
-                    //     // display: 'inverse-background'
-                    // }
-            });
-            calendar.render();
+            drawChart(data);
         })
         .catch(error => console.log('error', error));
 });

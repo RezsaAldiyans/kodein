@@ -1,0 +1,7 @@
+CRITICAL - 2022-06-01 20:34:56 --> Call to undefined method CodeIgniter\HTTP\IncomingRequest::post()
+#0 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\PaymentNotifHandling->index('123')
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaymentNotifHandling))
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#5 {main}

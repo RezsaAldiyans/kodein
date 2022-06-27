@@ -54,6 +54,9 @@ $routes->get('/logout','Home::logout');
 $routes->get('/leaderboard','Home::leaderboard');
 // route for any test
 $routes->get('/expired','Home::expiredToken');
+$routes->get('/test','Home::test');
+// route test send pilgan
+$routes->post('/sendPilgan','Home::testPilgan');
 // route test uniq id
 // $routes->get('/uid','Home::uid');
 // try dummy kelas soal dan kelas materi
@@ -64,6 +67,8 @@ $routes->get('/expired','Home::expiredToken');
 // route API untuk history
 $routes->get('/ApiHistory','restfulApi::ApiHistory');
 
+// routes test payment
+$routes->post('/payment/(:any)','PaymentNotifHandling::index/$1');
 // routes admin
 // $routes->get('/admin','AdminController::index');
 // $routes->post('/admin/login','AdminController::login');

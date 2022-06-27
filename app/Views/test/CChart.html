@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load("current", { packages: ["calendar"] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var dataTable = new google.visualization.DataTable();
+            dataTable.addColumn({ type: 'date', id: 'Date' });
+            dataTable.addColumn({ type: 'number', id: 'Laporan' });
+            dataTable.addRows([
+                // Many rows omitted for brevity.
+                [new Date(2022, 11, 4), 0],
+                [new Date(2022, 11, 5), 2],
+                [new Date(2022, 11, 2), 3],
+                [new Date(2022, 11, 22), 5],
+                [new Date(2022, 11, 9), 3],
+                [new Date(2022, 11, 23), 4],
+                [new Date(2022, 11, 24), 5],
+                [new Date(2022, 11, 29), 10]
+            ]);
+
+            var chart = new google.visualization.Calendar(document.getElementById('calendar_basic'));
+
+            var options = {
+                title: "Laporan Bulanan",
+                height: 350,
+                calendar: {
+                    // cell sizing
+                    cellSize: 10,
+                    focusedCellColor: {
+                        stroke: '#00ff00',
+                        strokeOpacity: 1,
+                        strokeWidth: 1,
+                    },
+                    monthLabel: {
+                        fontName: 'Times-Roman',
+                        fontSize: 12,
+                        color: '#981b48',
+                        bold: true,
+                        italic: true
+                    },
+                    monthOutlineColor: {
+                        stroke: '#981b48',
+                        strokeOpacity: 0.8,
+                        strokeWidth: 2
+                    },
+                    yearLabel: {
+                        fontName: 'Times-Roman',
+                        fontSize: 32,
+                        color: '#1A8763',
+                        bold: true,
+                        italic: true
+                    },
+                    // color of the month name
+                    dayOfWeekLabel: {
+                        fontName: 'Times-Roman',
+                        fontSize: 8,
+                        color: '#1a8763',
+                        bold: true,
+                        italic: true,
+                    },
+                },
+                // mengubah tema background dan warna box
+                // noDataPattern: {
+                //     backgroundColor: '#76a7fa',
+                //     color: '#fff'
+                // }
+            };
+
+            chart.draw(dataTable, options);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="calendar_basic" style="width: 50%; height: 350px;"></div>
+</body>
+
+</html>

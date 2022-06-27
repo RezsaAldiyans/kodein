@@ -16,7 +16,7 @@ function levelUp($data){
 class Home extends BaseController
 {
 	public function __construct(){
-		//do if maintenance web
+		// do nothing
 	}
 	public function index(){
 		$kelasModel = new KelasModel();
@@ -125,7 +125,7 @@ class Home extends BaseController
 		$email = $this->request->getVar("email");
 		$password = $this->request->getVar("password");
 		$no_hp = $this->request->getVar("no_hp");
-		$tgl_gabung = date("YmdHis", time());
+		$tgl_gabung = date("YmdHis");
 		$generateUid = $this->uid();
 
 		$valid = $this->validate([
@@ -213,10 +213,6 @@ class Home extends BaseController
 					'exp' => $data["exp"],
 					'badges' => $data["badges"],
 					'level' => $data["level"],
-					//sessiond data kelas
-					// "id_kelas" => $dataProfil["id_kelas"],
-					// "status_kelas" => $dataProfil["status_kelas"],
-					// "nama_kelas" => $dataProfil["nama_kelas"],
 					'kelas_user' => $dataProfil,
 					"total_kelas" => count($dataProfil),
 					'logged_in' => TRUE
@@ -267,7 +263,7 @@ class Home extends BaseController
 			'logged_in' => TRUE
 		];
 		levelUp($ses_data);
-		return view('dashboard-user',$ses_data);
+		return view('dashboard',$ses_data);
 	}
 	public function logout(){
 		$session = session();
@@ -381,9 +377,6 @@ class Home extends BaseController
 		$kelas_model = new KelasModel();
 		$kelas_user = new KelasUser();
 		$user = new LoginModel();
-		$textarea = $this->request->getPost("jawaban_user");
-		$bantuan = $this->request->getPost("bantuan");
-		$id_soal = $this->request->getPost("id_soal");
 		$cek = $kelas_model->cekKebenaran($id_kelas,$id_soal,$tipe_soal);
 		// print_r($textarea,$bantuan);
 		if($session->get("id_akun")){
@@ -392,22 +385,39 @@ class Home extends BaseController
 				$ses = array("failed");
 				return json_encode($ses,TRUE);
 			}else{
-				// menggunakan bantuan dan jawaban dari database
-				if($bantuan == 1 && $cek[0]["jawaban_code"] == $textarea){
-					$d = $kelas_user->updatesProgress($session->get("id_akun"),$id_kelas,$id_soal)["status"];
-					$ses = array(1,'nexp',$d);
-					return json_encode($ses,TRUE);
-				}
-				// tidak menggunakan bantuan sama sekali
-				if($bantuan == 0 && $cek[0]["jawaban_code"] == $textarea){
-					$c = $user->updateExp($session->get("id_akun"),100,$id_kelas,$id_soal)["status"];
-					$d = $kelas_user->updatesProgress($session->get("id_akun"),$id_kelas,$id_soal)["status"];
-					$ses = array(1,$c,$d);
-					return json_encode($ses,TRUE);
-				}
-				else{
-					$ses = array(0);
-					return json_encode($ses,TRUE);
+				if($tipe_soal == 1){
+					$textarea = $this->request->getPost("jawaban_user");
+					$bantuan = $this->request->getPost("bantuan");
+					$id_soal = $this->request->getPost("id_soal");
+					// menggunakan bantuan dan jawaban dari database
+					if($bantuan == 1 && $cek[0]["jawaban_code"] == $textarea){
+						$d = $kelas_user->updatesProgress($session->get("id_akun"),$id_kelas,$id_soal)["status"];
+						$ses = array(1,'nexp',$d);
+						return json_encode($ses,TRUE);
+					}
+					// tidak menggunakan bantuan sama sekali
+					if($bantuan == 0 && $cek[0]["jawaban_code"] == $textarea){
+						$c = $user->updateExp($session->get("id_akun"),100,$id_kelas,$id_soal)["status"];
+						$d = $kelas_user->updatesProgress($session->get("id_akun"),$id_kelas,$id_soal)["status"];
+						$ses = array(1,$c,$d);
+						return json_encode($ses,TRUE);
+					}
+					else{
+						$ses = array(0);
+						return json_encode($ses,TRUE);
+					}
+				}else if($tipe_soal == 2){
+					$radioValue = $this->request->getPost("jawaban_user");
+					if($cek[0]["jawaban_pilgan"] == $radioValue){
+						// $c = $user->updateExp($session->get("id_akun"),100,$id_kelas,$id_soal)["status"];
+						// $d = $kelas_user->updatesProgress($session->get("id_akun"),$id_kelas,$id_soal)["status"];
+						$ses = array(1);
+						return json_encode($ses,TRUE);
+					}
+					else{
+						$ses = array(0);
+						return json_encode($ses,TRUE);
+					}
 				}
 			}
 		}
@@ -437,6 +447,9 @@ class Home extends BaseController
 		}else {
 			return False;
 		}
+	}
+	public function testPilgan(){
+		return "test";
 	}
 	public function dummy(){
 		$kelas = ["html-1","js-1","css-1"];
@@ -472,6 +485,9 @@ class Home extends BaseController
 				echo "gagal";
 			}
 		}
+	}
+	public function test(){
+		return view('test/dashboard.php');
 	}
 	//--------------------------------------------------------------------
 

@@ -2,80 +2,67 @@
 <?php $session = session();?>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v5.2.0, mobirise.com">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="<?php echo base_url();?>/assets/images/kodein-logo-landing-128x128.png" type="image/x-icon">
-  <meta name="description" content="Detail kelas">
-  
-  
-  <title>Kelas <?php echo $kelas['nama_kelas'];?></title>
-  <link rel="stylesheet" href="<?php echo base_url();?>/assets/web/assets/mobirise-icons2/mobirise2.css">
-  <link rel="stylesheet" href="<?php echo base_url();?>/assets/tether/tether.min.css">
-  <link rel="stylesheet" href="<?php echo base_url();?>/assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="<?php echo base_url();?>/assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="<?php echo base_url();?>/assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="<?php echo base_url();?>/assets/dropdown/css/style.css">
-  <link rel="stylesheet" href="<?php echo base_url();?>/assets/animatecss/animate.css">
-  <link rel="stylesheet" href="<?php echo base_url();?>/assets/socicon/css/styles.css">
-  <link rel="stylesheet" href="<?php echo base_url();?>/assets/theme/css/style.css">
-  <link rel="preload" as="style" href="<?php echo base_url();?>/assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="<?php echo base_url();?>/assets/mobirise/css/mbr-additional.css" type="text/css">
-  
-  
-  
-  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="Mobirise v5.2.0, mobirise.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="<?php echo base_url();?>/assets/images/kodein-logo-landing-128x128.png" type="image/x-icon">
+    <meta name="description" content="Detail kelas">
+
+    <title>Kelas <?php echo $kelas['nama_kelas'];?></title>
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/web/assets/mobirise-icons2/mobirise2.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/tether/tether.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/dropdown/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/animatecss/animate.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/socicon/css/styles.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/theme/css/style.css">
+    <link rel="preload" as="style" href="<?php echo base_url();?>/assets/mobirise/css/mbr-additional.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/mobirise/css/mbr-additional.css" type="text/css">
+    <script src="<?php echo base_url();?>/assets/tailwind/all.js"></script>
 </head>
 <body>
-  
-  <section class="menu menu3 cid-swTgLUegze" once="menu" id="menu3-z">
-    
-    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
-        <div class="container-fluid">
-            <div class="navbar-brand">
-                <span class="navbar-logo">
-                    
-                        <a href="/"><img src="<?php echo base_url();?>/assets/images/kodein-logo-k-1-263x263.png" alt="Kodein" style="height: 3.7rem;"></a>
-                    
-                </span>
-                
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky top-0 z-50">
+    <div class="container-fluid">
+        <div class="navbar-brand">
+            <span class="navbar-logo">
+                <a href="/"><img class="ml-4 w-auto h-12" src="<?php echo base_url();?>/assets/images/kodein-logo-k-1-263x263.png" alt="Kodein"></a>
+            </span>
+        </div>
+        <button class="navbar-toggler dropdown-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-3" data-app-modern-menu="true">
                     <li class="nav-item"><a class="nav-link link text-info text-primary display-4" href="/#gallery3-a"><strong>Tentang Kami</strong></a></li>
                     <li class="nav-item"><a class="nav-link link text-info text-primary display-4" href="/#content2-b"><strong>Kelas Koding</strong></a></li>
                     <li class="nav-item"><a class="nav-link link text-info text-primary display-4" href="/#features20-7"><strong>Tantangan Kode</strong></a></li>
                     <?php if(!$session->get("id_akun")){?>
-                        <div class="navbar-buttons mbr-section-btn">
-                            <a class="btn btn-info-outline display-4" href="/login">Masuk / Daftar</a>
-                        </div>
+                    <div class="navbar-buttons mbr-section-btn mt-0">
+                        <a class="btn btn-info-outline display-4 font-bold mt-0 h-[48px]" href="/login">Masuk / Daftar</a>
+                    </div>
                     <?php }else{?>
-                        <li class="nav-item dropdown ">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                <img src="/<?php echo $session->get('profile_user');?>" height="43" width="43" alt="foto profile"
-                                class="rounded-circle img-user-keci">
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="/dashboard">Profile Saya</a>
-                                <a class="dropdown-item" href="#">Pengaturan</a>
-                                <a class="dropdown-item" href="/logout">Log Out</a>
-                            </div>
-                        </li>
+                    <div class="nav-item dropdown relative mt-2 mr-3">
+                        <a class="nav-link dropdown-toggle flex pt-0" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/<?php echo $session->get('profile_user');?>" alt="foto profile" class="rounded-circle w-auto h-9 pt-0">&nbsp;
+                            <span class="full-name display-4 font-bold"><?= ucfirst($session->get('nama_lengkap'));?></span>
+                        </a>
+                        <ul class="dropdown-menu absolute float-left z-50 text-left text-base list-none py-2 rounded-lg bg-clip-padding mt-2" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/dashboard">Profile Saya</a></li>
+                            <li><a class="dropdown-item" href="#">Pengaturan</a></li>
+                            <hr class="h-0 my-2 border border-solid border-t-0 border-gray-700 opacity-25" />
+                            <li><a class="dropdown-item" href="/logout">Log Out</a></li>
+                        </ul>
+                    </div>
                     <?php }?>
                 </ul>
             </div>
         </div>
-    </nav>
-</section>
+    </div>
+</nav>
 
 <section class="header11 cid-sDBohKsmP7" id="header11-11">
     <div class="container">
