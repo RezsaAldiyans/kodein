@@ -166,7 +166,7 @@
         <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 gap-5">
         <?php foreach($kelas as $data){?>
             <div class="card bg-light m-3 pt-4 pl-4 pr-4 w-[100%]">
-                <img src="<?php echo base_url();?>/assets/images/<?php echo $data['icon_kelas']?>" class="card-img-top h-[50%]" aalt="icon kelas" title="Kelas <?php echo ucfirst($data["nama_kelas"]);?>">
+                <img src="<?php echo base_url();?>/assets/images/<?php echo $data['icon_kelas']?>" class="card-img-top" aalt="icon kelas" title="Kelas <?php echo ucfirst($data["nama_kelas"]);?>">
                 <div class="card-body">
                     <h5 class="card-title text-[25px]">
                         <strong>Kelas <?php echo ucfirst($data["level"]);?></strong>

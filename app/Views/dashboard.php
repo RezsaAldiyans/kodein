@@ -1,9 +1,9 @@
 <html lang="en">
 <?php
 $session = session();
-$badges = $session->get('badges');
-$exp = $session->get('exp');
-$tgl_gabung = $session->get('tgl_gabung');
+$badges = $badges;
+$exp = $exp;
+$tgl_gabung = $tgl_gabung;
 ?>
 <head>
 	<!-- Required meta tags -->
@@ -20,6 +20,8 @@ $tgl_gabung = $session->get('tgl_gabung');
     <link rel="stylesheet" href="<?php echo base_url();?>/assets/bootstrap/css/bootstrap-reboot.min.css">
     <!-- <link rel="preload" as="style" href="<?php echo base_url();?>/assets/mobirise/css/mbr-additional.css"> -->
     <link rel="stylesheet" href="<?php echo base_url();?>/assets/mobirise/css/mbr-additional.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/web/assets/mobirise-icons2/mobirise2.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/theme/css/style.css">
 
     <!-- CSS Font awesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -114,10 +116,10 @@ $tgl_gabung = $session->get('tgl_gabung');
             $("section.coc").hide()
             $("section.coe").hide()
             $("div.kek").click(function(){
-                $("section.kek").toggle(1000);
-                $('html, body').animate({
-                    scrollTop: $("section.kek").offset().top - 5
-                }, 1000);
+                $("section.kek").toggle(500);
+                // $('html, body').animate({
+                //     scrollTop: $("section.kek").offset().top - 5
+                // }, 1000);
                 if($("section.coc").is(':visible')){
                     $("section.coc").hide(1000);
                 }
@@ -127,9 +129,6 @@ $tgl_gabung = $session->get('tgl_gabung');
             });
             $("div.coc").click(function(){
                 $("section.coc").toggle(1000);
-                $('html, body').animate({
-                    scrollTop: $("section.coc").offset().top - 5
-                }, 1000);
                 if($("section.kek").is(':visible')){
                     $("section.kek").hide(1000);
                 }
@@ -139,9 +138,6 @@ $tgl_gabung = $session->get('tgl_gabung');
             });
             $("div.coe").click(function(){
                 $("section.coe").toggle(1000);
-                $('html, body').animate({
-                    scrollTop: $("section.coe").offset().top - 5
-                }, 1000);
                 if($("section.coc").is(':visible')){
                     $("section.coc").hide(1000);
                 }
@@ -191,8 +187,8 @@ $tgl_gabung = $session->get('tgl_gabung');
                     <?php }else{?>
                     <div class="nav-item dropdown relative mt-2 mr-3">
                         <a class="nav-link dropdown-toggle flex pt-0" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="/<?php echo $session->get('profile_user');?>" alt="foto profile" class="rounded-circle w-auto h-9 pt-0">&nbsp;
-                            <span class="full-name display-4 font-bold"><?= ucfirst($session->get('nama_lengkap'));?></span>
+                            <img src="/<?php echo $profile_user;?>" alt="foto profile" class="rounded-circle w-auto h-9 pt-0">&nbsp;
+                            <span class="full-name display-4 font-bold"><?= ucfirst($nama_lengkap);?></span>
                         </a>
                         <ul class="dropdown-menu absolute float-left z-50 text-left text-base list-none py-2 rounded-lg bg-clip-padding mt-2" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="/dashboard">Profile Saya</a></li>
@@ -212,18 +208,18 @@ $tgl_gabung = $session->get('tgl_gabung');
 <main>
     <section class="mt-5">
         <div class="container">
-            <div class="row">
+            <div class="row mx-auto">
                 <!-- <div class="flex"> -->
                     <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 md:gap-x-10 xl-grid-cols-2 gap-y-10 gap-x-6">
                         <div class="profile">
                             <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow shadow-[#E8E8E8] pl-0 text-center w-[600px] font-bold">
                                 <div class="p-6 flex flex-col">
-                                    <img class="w-[130] h-[130] rounded-full ml-3 mt-2 mx-auto" src="/<?php echo $session->get('profile_user');?>" alt="foto profile" />
+                                    <img class="w-[130] h-[130] rounded-full ml-3 mt-2 mx-auto" src="/<?php echo $profile_user;?>" alt="foto profile" />
                                 </div>
                                 <div class="p-6 flex flex-col">
-                                    <p class="text-gray-700 text-base mb-3 text-[22px]"><?= ucfirst($session->get('nama_lengkap'));?></p>
-                                    <p class="text-gray-700 text-base mb-3 text-[22px]"><?php if($badges == "rookie"){echo '🗿'.$badges;}else if($badges == "beginner"){echo '<i style="color: bronze;" class="fas fa-medal pr-1"></i>'.$badges;}else if($badges == "intermediate"){echo '<i style="color: silver;" class="fas fa-medal pr-1"></i>'.$badges;}else if($badges == "professional"){echo '<i style="color: gold;" class="fas fa-medal pr-1"></i>'.$badges;} ?></p>
-                                    <p class="text-gray-700 text-base mb-3 text-[22px]"><?php echo $exp ?> XP</p>
+                                    <p class="text-gray-700 text-base mb-3 text-[22px] font-bold"><?= ucfirst($nama_lengkap);?></p>
+                                    <p class="text-gray-700 text-base italic mb-3 text-[22px]"><?php if($badges == "rookie"){echo '🗿'.$badges;}else if($badges == "beginner"){echo '<i style="color: #967444;" class="fas fa-medal pr-1"></i>'.$badges;}else if($badges == "intermediate"){echo '<i style="color: #A9A9A9;" class="fas fa-medal pr-1"></i>'.$badges;}else if($badges == "professional"){echo '<i style="color: gold;" class="fas fa-medal pr-1"></i>'.$badges;} ?></p>
+                                    <p class="text-gray-700 text-base mb-3 text-[22px] text-[#3cd9d7] font-bold"><?php echo $exp ?> XP</p>
                                     <p class="text-gray-700 text-base mb-3 text-[22px]">Bergabung : <?php echo substr($tgl_gabung,0,11); ?></p>
                                     <div class="icon">
                                         <a href="<?php echo $sosmed['linkedin'];?>" target="_blank" class="mt-2 ">
@@ -252,7 +248,7 @@ $tgl_gabung = $session->get('tgl_gabung');
             <div class="row">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-10 xl-grid-cols-4 gap-y-10 gap-x-6">
                     <div class="flex justify-center gap-5 kek">
-                        <div class="block rounded-lg shadow-lg bg-white max-w-sm text-center w-[500px]">
+                        <div class="block rounded-lg shadow bg-white max-w-sm text-center w-[500px]">
                             <div class="py-3 px-6 border-2 border-blue-300 text-[24px] font-bold pointer">
                             Kelas Koding
                             </div>
@@ -262,7 +258,7 @@ $tgl_gabung = $session->get('tgl_gabung');
                         </div>
                     </div>
                     <div class="flex justify-center gap-5 coc">
-                        <div class="block rounded-lg shadow-lg bg-white max-w-sm text-center w-[500px]">
+                        <div class="block rounded-lg shadow bg-white max-w-sm text-center w-[500px]">
                             <div class="py-3 px-6 border-2 border-blue-300 text-[24px] font-bold pointer">
                             Code Challenge
                             </div>
@@ -272,7 +268,7 @@ $tgl_gabung = $session->get('tgl_gabung');
                         </div>
                     </div>
                     <div class="flex justify-center coe">
-                        <div class="block rounded-lg shadow-lg bg-white max-w-sm text-center w-[500px]">
+                        <div class="block rounded-lg shadow bg-white max-w-sm text-center w-[500px]">
                             <div class="py-3 px-6 border-2 border-blue-300 text-[24px] font-bold pointer">
                             Code Events
                             </div>
@@ -288,22 +284,21 @@ $tgl_gabung = $session->get('tgl_gabung');
     <!-- section kelas koding -->
     <section class="mt-5 mb-5 kek">
         <div class="container">
-            <div class="block rounded-lg shadow-lg bg-white w-100 h-100 pt-3">
+            <div class="block rounded-lg shadow bg-white w-100 h-100 pt-3">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5">
                     <?php
                         foreach($kelas_user as $kelas){
                     ?>
-                    <div class="card bg-light m-3 pt-4 pl-4 pr-4 w-95">
-                        <img src="<?php echo base_url();?>/assets/images/<?php echo $kelas['icon_kelas']?>" class="card-img-top h-[50%]" aalt="icon kelas" title="Kelas <?php echo ucfirst($kelas["nama_kelas"]);?>">
+                    <div class="card bg-light m-3 pt-4 pl-4 pr-4 w-[100%]">
+                        <img src="<?php echo base_url();?>/assets/images/<?php echo $kelas['icon_kelas']?>" class="card-img-top" aalt="icon kelas" title="Kelas <?php echo ucfirst($kelas["nama_kelas"]);?>">
                         <div class="card-body">
                             <h5 class="card-title text-[25px]">
-                                <strong><?php echo $kelas["nama_kelas"];?></strong>
+                                <strong>Kelas <?php echo ucfirst($kelas["level"]);?></strong>
                                 <br>
-                                <strong>Status : <?php echo $kelas["status_kelas"] ?></strong>
+                                <strong><?php echo ucfirst($kelas["nama_kelas"]);?></strong>
                             </h5>
-                            <div class="mbr-section-btn mt-5">
-                                <a href="/kelas/<?php echo $kelas['id_kelas'];?>" class="btn item-btn btn-info display-7">Lihat Selengkapnya!</a>
-                            </div>
+                            <p class="mbr-text mbr-fonts-style mt-3 display-7 text-[17px] addReadMore showlesscontent fadeIn"><?php echo ucfirst($kelas["deskripsi_kelas"]); ?></p>
+                            <div class="mbr-section-btn mt-5"><a href="/kelas/<?php echo $kelas['id_kelas'];?>" class="btn item-btn btn-info display-7">Lihat Selengkapnya!</a></div>
                         </div>
                     </div>
                     <?php } ?>
@@ -314,7 +309,7 @@ $tgl_gabung = $session->get('tgl_gabung');
     <!-- section code challenge -->
     <section class="mt-5 mb-5 coc">
         <div class="container">
-        <div class="block rounded-lg shadow-lg bg-white w-100 h-100 pt-3">
+        <div class="block rounded-lg shadow bg-white w-100 h-100 pt-3">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5">
                     <?php
                         foreach($kelas_user as $kelas){
@@ -340,7 +335,7 @@ $tgl_gabung = $session->get('tgl_gabung');
     <!-- section code events -->
     <section class="mt-5 mb-5 coe">
         <div class="container">
-        <div class="block rounded-lg shadow-lg bg-white w-100 h-100 pt-3">
+        <div class="block rounded-lg shadow bg-white w-100 h-100 pt-3">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5">
                     <?php
                         foreach($kelas_user as $kelas){
@@ -363,6 +358,70 @@ $tgl_gabung = $session->get('tgl_gabung');
             </div>
         </div>
     </section>
+    <section class="footer5 cid-swTu8oSquH mt-5" once="footers" id="footer5-c">
+    <div class="container">
+        <div class="media-container-row">
+            <div class="col-md-2 col-6">
+                <div class="media-wrap">
+                    <img src="assets/images/kodein-logo-309x162.png" alt="Kodein">
+                </div>
+            </div>
+            <div class="col-10 col-6">
+                <p class="mbr-text align-right links mbr-fonts-style display-7"><strong>Tentang Kami</strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>Kelas Koding</strong>&nbsp; &nbsp; &nbsp;<strong>&nbsp;Code Challenge</strong></p>
+            </div>
+        </div>
+        <!-- <div class="media-container-row">
+            <div class="col-md-12"> -->
+        <div class="footer-lower">
+            <div class="media-container-row">
+                <div class="col-md-12">
+                    <hr>
+                </div>
+            </div>
+            <div class="media-container-row">
+                <div class="col-md-6 copyright">
+                    <p class="mbr-text mbr-fonts-style display-7">
+                        © Copyright 2021 Kodein - All Rights Reserved
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="social-list align-right">
+                        <div class="soc-item">
+                            <a href="#" target="_blank" rel="noreferrer">
+                                <span class="socicon-twitter socicon mbr-iconfont mbr-iconfont-social"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="#" target="_blank" rel="noreferrer">
+                                <span class="socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="#" target="_blank" rel="noreferrer">
+                                <span class="socicon-youtube socicon mbr-iconfont mbr-iconfont-social"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="#" target="_blank" rel="noreferrer">
+                                <span class="socicon-instagram socicon mbr-iconfont mbr-iconfont-social"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="#" target="_blank" rel="noreferrer">
+                                <span class="mbr-iconfont mbr-iconfont-social mobi-mbri-github mobi-mbri"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="#" target="_blank" rel="noreferrer">
+                                <span class="mbr-iconfont mbr-iconfont-social mobi-mbri-paper-plane mobi-mbri"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 </main>
 <!-- all js -->
 <script src="<?php echo base_url();?>/assets/bootstrap/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

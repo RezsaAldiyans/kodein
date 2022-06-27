@@ -205,16 +205,6 @@ class Home extends BaseController
 				$dataProfil = $profilModel->getKelasUser($data["id_akun"]);
 				$ses_data = [
 					'id_akun' => $data["id_akun"],
-					'nama_lengkap' => $data["nama_lengkap"],
-					'email' => $data["email"],
-					'tgl_gabung' => $data["tgl_gabung"],
-					'profile_user' => $data["profile_user"],
-					'asal_kota' => $data["asal_kota"],
-					'exp' => $data["exp"],
-					'badges' => $data["badges"],
-					'level' => $data["level"],
-					'kelas_user' => $dataProfil,
-					"total_kelas" => count($dataProfil),
 					'logged_in' => TRUE
 				];
 				// setting session agar session dapat dipanggil di file manapun
@@ -244,7 +234,6 @@ class Home extends BaseController
 		$profilModel =  new ProfileModel();
 		$dataProfil = $profilModel->getKelasUser($data[0]["id_akun"]);
 		$ses_data = [
-			'id_akun' => $data[0]["id_akun"],
 			'nama_lengkap' => $data[0]["nama_lengkap"],
 			'email' => $data[0]["email"],
 			'tgl_gabung' => $data[0]["tgl_gabung"],
