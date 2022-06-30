@@ -248,7 +248,7 @@ $session = session();
         }
         myTimeoutId = setTimeout(function() {
             try {
-                loadJS(cMirror.getValue());
+                loadHtml(cMirror.getValue());
                 // let js = cMirror.getValue()
                 // console.log(js.split("\n"));
             } catch (err) {
@@ -312,7 +312,7 @@ $session = session();
             .then(t => {
                 if (t) {
                     var formdata = new FormData();
-                    formdata.append("jawaban_user", editor.getValue());
+                    formdata.append("jawaban_user", editor.getValue().toLowerCase());
                     formdata.append("bantuan", bantuan);
                     formdata.append("id_soal", <?php echo $kelas['id_soal'];?>);
                     var settings = {
@@ -374,13 +374,13 @@ $session = session();
         }
     </script>
     <script>
-    var msg = $('#msg');
-    $(document).keydown(function(e) {
-        if (e.ctrlKey && e.key === "s") {
-            alert("Tenang file kamu selalu disimpan didalam server kami\nTetap semangat!")
-            e.preventDefault();
-        }
-    });
+    // var msg = $('#msg');
+    // $(document).keydown(function(e) {
+    //     if (e.ctrlKey && e.key === "s") {
+    //         alert("Tenang file kamu selalu disimpan didalam server kami\nTetap semangat!")
+    //         e.preventDefault();
+    //     }
+    // });
     </script>
 </body>
 

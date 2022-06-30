@@ -15,14 +15,19 @@ function levelUp($data){
 }
 class Home extends BaseController
 {
+	protected $session;
 	public function __construct(){
 		// do nothing
+		$this->session = session();
 	}
 	public function index(){
 		$kelasModel = new KelasModel();
+		$model = new LoginModel();
 		$dataKelas = $kelasModel->getAllKelas();
 		$set_data = [
-			"kelas"=>$dataKelas
+			"kelas"=>$dataKelas,
+			"profile_user"=> $model->getAkun($this->session->get("id_akun"))[0]['profile_user'],
+			"nama_lengkap"=> $model->getAkun($this->session->get("id_akun"))[0]['nama_lengkap']
 		];
 		return view('index',$set_data);
 	}

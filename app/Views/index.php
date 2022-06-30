@@ -48,9 +48,23 @@
         display: block;
     }
     </style>
+    <style>
+        .dropdown-toggle::after {
+            display: none !important;
+        }
+        .pointer{
+            cursor: pointer;
+        }
+        .scroll{
+            overflow-y: hidden;
+            overflow-x: auto;
+            width:50px;
+        }
+    </style>
 </head>
 <body class="smooth-scroll">
 
+<!-- Start Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky top-0 z-50">
     <div class="container-fluid">
         <div class="navbar-brand">
@@ -68,14 +82,14 @@
                     <li class="nav-item"><a class="nav-link link text-info text-primary display-4" href="/#content2-b"><strong>Kelas Koding</strong></a></li>
                     <li class="nav-item"><a class="nav-link link text-info text-primary display-4" href="/#features20-7"><strong>Tantangan Kode</strong></a></li>
                     <?php if(!$session->get("id_akun")){?>
-                    <div class="navbar-buttons mbr-section-btn mt-0">
-                        <a class="btn btn-info-outline display-4 font-bold mt-0 h-[48px]" href="/login">Masuk / Daftar</a>
+                    <div class="navbar-buttons mbr-section-btn">
+                        <a class="btn btn-info-outline display-4 font-bold pt-1 h-[48px]" href="/login">Masuk / Daftar</a>
                     </div>
                     <?php }else{?>
                     <div class="nav-item dropdown relative mt-2 mr-3">
                         <a class="nav-link dropdown-toggle flex pt-0" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="/<?php echo $session->get('profile_user');?>" alt="foto profile" class="rounded-circle w-auto h-9 pt-0">&nbsp;
-                            <span class="full-name display-4 font-bold"><?= ucfirst($session->get('nama_lengkap'));?></span>
+                            <img src="/<?php echo $profile_user;?>" alt="foto profile" class="rounded-circle w-auto h-9 pt-0">&nbsp;
+                            <span class="full-name display-4 font-bold text-[#125488]"><?= ucfirst($nama_lengkap);?></span>
                         </a>
                         <ul class="dropdown-menu absolute float-left z-50 text-left text-base list-none py-2 rounded-lg bg-clip-padding mt-2" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="/dashboard">Profile Saya</a></li>
@@ -90,6 +104,7 @@
         </div>
     </div>
 </nav>
+<!-- End Navbar -->
 
 <section class="kodeinanim header11 bg-[#fafafa]" id="header11-9">
     <div class="container-fluid">
@@ -104,7 +119,7 @@
                     <h2 class="mbr-section-title mbr-fonts-style mb-3 display-2"><strong>Kelas koding kodein!</strong></h2>
                     <p class="mbr-text mbr-fonts-style display-7">
                         Kono bangumi wa goran no suponsaa no teikyou de okurishimasu. platform untuk belajar koding khusus untuk weebs di indonesia!&nbsp;</p>
-                    <div class="mbr-section-btn mt-3"><a class="btn btn-info display-7" href="index.html#features13-6">&nbsp;Lihat selengkapnya!</a></div>
+                    <div class="mbr-section-btn mt-3"><a class="btn btn-info display-7" href="#content2-b">&nbsp;Lihat selengkapnya!</a></div>
                 </div>
             </div>
         </div>
@@ -120,7 +135,7 @@
                         <h4 class="card-title mbr-fonts-style mb-4 display-2">Apa itu<strong> Kodein?</strong>
                         </h4>
                         <p class="mbr-text mbr-fonts-style mb-4 display-7"><strong>Kodein</strong> adalah sebuah platform untuk belajar pemrograman secara online dari tingkat pemula sampai tingkat lanjut.<br><br>Ikuti <strong>Kelas Koding Kodein </strong>sekarang <strong>GRATIS </strong>semua<strong>&nbsp;</strong>kelas tingkat <em>Beginner</em>!</p>
-                        <div class="mbr-section-btn"><a class="btn btn-info display-4" href="/#content2-b">Belajar koding sekarang!</a></div>
+                        <div class="mbr-section-btn"><a class="btn btn-info display-4" href="#content2-b">Belajar koding sekarang!</a></div>
                     </div>
                 </div>
             </div>
@@ -283,7 +298,7 @@
             <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-1"><strong>Meet Kodein Team!</strong><br><strong><br></strong></h4>
         </div>
         <div class="row mt-4">
-            <div class="item features-image сol-12 col-md-6 col-lg-3">
+            <div class="item features-image col-12 col-md-6 col-lg-3">
                 <div class="item-wrapper">
                     <div class="item-img">
                         <img src="<?php echo base_url();?>/assets/images/rezsa.png" alt="">
@@ -295,13 +310,13 @@
                     </div>
                 </div>
             </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-3">
+            <div class="item features-image col-12 col-md-6 col-lg-3">
                 <div class="item-wrapper">
                     <div class="item-img">
                         <img src="<?php echo base_url();?>/assets/images/mikhael.jpg" alt="">
                     </div>
                     <div class="item-content">
-                        <h5 class="item-title mbr-fonts-style display-5"><strong>Mika</strong></h5>
+                        <h5 class="item-title mbr-fonts-style display-5"><strong>Mikhael</strong></h5>
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">
                             Kono bangumi wa goran no suponsaa no teikyou de okurishimasu. <a href="#" class="text-primary">Read more..</a></p>
                     </div>
