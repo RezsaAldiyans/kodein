@@ -10,9 +10,8 @@ $session = session();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Playground</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/bootstrap/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- cdn css editor playground -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/theme/material-ocean.css">
@@ -61,8 +60,6 @@ $session = session();
 
     <!-- cdn js editor playground -->
     <!-- <script src="assets/web/assets/jquery/jquery.min.js"></script> -->
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/mode/xml/xml.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/mode/javascript/javascript.js"></script>
@@ -76,6 +73,7 @@ $session = session();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/addon/hint/css-hint.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/keymap/sublime.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <!-- <script src="../../../public/assets/playground/js/main.js" defer></script> -->
 </head>
 
@@ -114,13 +112,89 @@ $session = session();
             </div>
         </div>
         <!-- end topbar -->
-
+        <!-- content flashcard -->
+        <div class="modal modal-xl fade" id="modals" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                        <button type="button" class="btn-close bi bi-x-lg" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="CarouselSlider" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#CarouselSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#CarouselSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#CarouselSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#CarouselSlider" data-bs-slide-to="3" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" data-bs-interval="10000">
+                                    <!-- <img src="../../../images/logo-1.png" class="d-block w-100" alt="Carousel One">
+                                    <div class="carousel-caption text-white d-none d-md-block col-6">
+                                        <h3 class="fs-1">Where does it come from?</h3>
+                                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                                        <a href="#" class="btn btn-warning mt-3">Learn More</a>
+                                    </div> -->
+                                    <div class="grid grid-cols-2 gap-2">
+                                        <div>
+                                            <h1>HELLO WORLD!</h1>
+                                        </div>
+                                        <div>WORLD HELLO!</div>
+                                        <div><img src="<?= base_url();?>/assets/images/mbr-5.png" class="d-block w-100" alt="Carousel One"></div>
+                                        <div><img src="<?= base_url();?>/assets/images/mbr-9.png" class="d-block w-100" alt="Carousel One"></div>
+                                    </div>
+                                </div>
+                                <!-- <div class="carousel-item" data-bs-interval="2000">
+                                    <img src="../../../images/logo-2.png" class="d-block w-100" alt="Carousel Two">
+                                    <div class="carousel-caption text-white d-none d-md-block col-6">
+                                        <h3 class="fs-1">Where can I get some?</h3>
+                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.</p>
+                                        <a href="#" class="btn btn-warning mt-3">Learn More</a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../../../images/logo-3.png" class="d-block w-100" alt="Carousel Three">
+                                    <div class="carousel-caption text-white d-none d-md-block col-6">
+                                        <h3 class="fs-1">Why do we use it?</h3>
+                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
+                                        <a href="#" class="btn btn-warning mt-3">Learn More</a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../../../images/logo-4.png" class="d-block w-100" alt="Carousel Three">
+                                    <div class="carousel-caption text-white d-none d-md-block col-6">
+                                        <h3 class="fs-1">Why do we use it?</h3>
+                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
+                                        <a href="#" class="btn btn-warning mt-3">Learn More</a>
+                                    </div>
+                                </div> -->
+                            <!-- </div> -->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#CarouselSlider" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#CarouselSlider" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end content flashcard -->
         <!-- content -->
         <div class="grid grid-cols-10 height-context text-white">
             <div class="grid grid-cols-12 col-span-7">
                 <!-- questions -->
                 <div class="col-span-4 bg-[#1f2227] border-r border-[#333] sidebar overflow-y-auto p-3 text-[14px]">
                     <?php echo $kelas["soal_code"]; ?>
+                    <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open Materi</a>
                 </div>
                 <!-- end questions -->
 
@@ -163,8 +237,16 @@ $session = session();
         </div>
         <!-- end content -->
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url();?>/assets/bootstrap/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- script show modal first -->
+    <script>
+        $(document).ready(function(){
+            // Show the Modal on load
+            $("#modals").modal("show");
+
+        });
+    </script>
     <!-- scripts get console in iframe -->
     <script>
         // Listen for messages
@@ -326,6 +408,7 @@ $session = session();
                     };
                     $.ajax(settings).done(function(response) {
                         jawaban = JSON.parse(response);
+                        console.log(jawaban)
                         // berhasil menjawab tanpa bantuan
                         if (jawaban[0] == 1) {
                             // berhasil

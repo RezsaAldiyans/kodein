@@ -237,7 +237,12 @@ class Home extends BaseController
 		$data = $model->getAkun($session->get("id_akun"));
 		//get data kelas_user
 		$profilModel =  new ProfileModel();
+		$kelas_user = new KelasUser();
 		$dataProfil = $profilModel->getKelasUser($data[0]["id_akun"]);
+		$progress = $kelas_user->getProgress(session()->get("id_akun"),$id_kelas);
+		foreach($dataProfil as $kelas){
+			$progress = $kelas_user->getProgress(session()->get("id_akun"),$kelas["id_kelas"]);
+		}
 		$ses_data = [
 			'nama_lengkap' => $data[0]["nama_lengkap"],
 			'email' => $data[0]["email"],
@@ -248,6 +253,7 @@ class Home extends BaseController
 			'badges' => $data[0]["badges"],
 			'level' => $data[0]["level"],
 			'kelas_user' => $dataProfil,
+			'progress' => $progress,
 			"total_kelas" => count($dataProfil),
 			"sosmed"=>[
 				"linkedin"=>$data[0]["linkedin"],
@@ -282,13 +288,17 @@ class Home extends BaseController
 		$kelasModel = new KelasModel();
 		$profilModel = new ProfileModel();
 		$kelas_user = new KelasUser();
+		$model = new LoginModel();
 		$kelas = $kelasModel->findKelas($id_kelas);
 		$status = $profilModel->kelasUser(session()->get("id_akun"),$id_kelas);
+		$data = $model->getAkun($this->session->get("id_akun"));
 		$set =[
 			"kelas"=>$kelas['kelas'][0],
 			"mulai_materi" => $kelas['mulai_materi'][0]["mulai_materi"],
 			"status"=> $status,
-			"progress" => $kelas_user->getProgress(session()->get("id_akun"),$id_kelas)
+			"progress" => $kelas_user->getProgress($this->session->get("id_akun"),$id_kelas),
+			'nama_lengkap' => $data[0]["nama_lengkap"],
+			'profile_user' => $data[0]["profile_user"]
 		];
 		// print_r($set);
 		return view("detailkelas",$set);
@@ -307,7 +317,6 @@ class Home extends BaseController
 			"id_kelas"=> $id_kelas,
 			"id_akun"=> session()->get("id_akun"),
 			"status_kelas"=>"masih berjalan",
-			"progress"=> 0
 		];
 		$res;
 		$cek = $kelas_user->kelasUser(session()->get("id_akun"),$id_kelas);
@@ -334,6 +343,7 @@ class Home extends BaseController
 			"next_soal" => $kelas_MS["next_soal"][$index],
 			"selesai" => $cek_materi_selesai
 		];
+		// var_dump($res);
 		// print_r($res["next_soal"]);
 		$cekBoolean = $cek["id_kelas"] ? TRUE : 0;
 		$cek_materi_id = $kelas_MS["kelas"][0]["id_materi"] == $id_soal ? TRUE : 0;
@@ -380,7 +390,7 @@ class Home extends BaseController
 				return json_encode($ses,TRUE);
 			}else{
 				if($tipe_soal == 1){
-					$textarea = $this->request->getPost("jawaban_user");
+					$textarea = str_replace("\r",'',$this->request->getPost("jawaban_user"));
 					$bantuan = $this->request->getPost("bantuan");
 					$id_soal = $this->request->getPost("id_soal");
 					// menggunakan bantuan dan jawaban dari database

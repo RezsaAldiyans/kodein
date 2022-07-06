@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 08, 2022 at 02:47 PM
+-- Generation Time: Jun 19, 2022 at 03:03 PM
 -- Server version: 10.4.16-MariaDB
 -- PHP Version: 7.4.12
 
@@ -22,7 +22,6 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
-
 --
 -- Table structure for table `akun`
 --
@@ -41,29 +40,18 @@ CREATE TABLE `akun` (
   `kategori_user` enum('end-user','administrator') NOT NULL,
   `linkedin` varchar(200) NOT NULL,
   `instagram` varchar(200) NOT NULL,
-  `twitter` varchar(200) NOT NULL
+  `twitter` varchar(200) NOT NULL,
+  `token` varchar(50) NOT NULL,
+  `expired_token` int(3) NOT NULL,
+  `status_token` enum('true','false') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `akun`
 --
 
-INSERT INTO `akun` (`id_akun`, `nama_lengkap`, `email`, `password`, `tgl_gabung`, `profile_user`, `asal_kota`, `exp`, `badges`, `level`, `kategori_user`, `linkedin`, `instagram`, `twitter`) VALUES
-('admin', 'mikhael hosea', 'mikhael.hosea@gmail.com', 'c4673dd606f1f7bd5045dd337b0c9d06', '2021-08-13 07:22:38', 'assets/images/admin.jpg', 'Jakarta', 7400, 'rookie', 0, 'administrator', 'https://www.linkedin.com/in/mikhael-hosea', 'https://instagram.com/mikhaelhosea', 'https://twitter.com/test'),
-('pelajar-20210609065805', 'mirai', 'mirai@gmail.com', 'c4673dd606f1f7bd5045dd337b0c9d06', '2021-06-09 00:00:00', 'assets/images/admin.jpg', 'bekasi', 5000, 'intermediate', 50, 'end-user', 'https://www.linkedin.com/in/mikhael-hosea', 'https://instagram.com/mikhaelhosea', ''),
-('pelajar-20210614011449', 'kodeins', 'kodein@gmail.com', 'c4673dd606f1f7bd5045dd337b0c9d06', '2021-06-14 00:00:00', 'assets/images/kodein-logo-k-560x560.png', 'jakarta', 7000, 'professional', 70, 'end-user', '', '', ''),
-('pelajar-20210703024209', 'yoges', 'yoges@gmail.com', 'c4673dd606f1f7bd5045dd337b0c9d06', '2021-07-03 00:00:00', 'assets/images/kodein-logo-k-560x560.png', '', 2800, 'beginner', 28, 'end-user', '', '', ''),
-('pelajar-20210703030220', 'test1', 'test1@gmail.com', 'c4673dd606f1f7bd5045dd337b0c9d06', '2021-07-03 00:00:00', 'assets/images/kodein-logo-k-560x560.png', '', 2200, 'beginner', 22, 'end-user', '', '', ''),
-('pelajar-20210703030233', 'test2', 'test2@gmail.com', 'c4673dd606f1f7bd5045dd337b0c9d06', '2021-07-03 00:00:00', 'assets/images/kodein-logo-k-560x560.png', '', 2300, 'beginner', 23, 'end-user', '', '', ''),
-('pelajar-20210703030258', 'test4', 'test4@gmail.com', 'c4673dd606f1f7bd5045dd337b0c9d06', '2021-07-03 00:00:00', 'assets/images/kodein-logo-k-560x560.png', '', 2500, 'beginner', 25, 'end-user', '', '', ''),
-('pelajar-20210703030311', 'test5', 'test5@gmail.com', 'c4673dd606f1f7bd5045dd337b0c9d06', '2021-07-03 00:00:00', 'assets/images/kodein-logo-k-560x560.png', '', 2600, 'beginner', 26, 'end-user', '', '', ''),
-('pelajar-20210703030325', 'test6', 'test6@gmail.com', 'c4673dd606f1f7bd5045dd337b0c9d06', '2021-07-03 00:00:00', 'assets/images/kodein-logo-k-560x560.png', '', 2200, 'beginner', 22, 'end-user', '', '', ''),
-('pelajar-20210703030340', 'test7', 'test7@gmail.com', 'c4673dd606f1f7bd5045dd337b0c9d06', '2021-07-03 00:00:00', 'assets/images/kodein-logo-k-560x560.png', '', 2100, 'beginner', 21, 'end-user', '', '', ''),
-('pelajar-20210703030354', 'test8', 'test8@gmail.com', 'c4673dd606f1f7bd5045dd337b0c9d06', '2021-07-03 00:00:00', 'assets/images/kodein-logo-k-560x560.png', '', 2300, 'beginner', 23, 'end-user', '', '', ''),
-('pelajar-20210703030408', 'test9', 'test9@gmail.com', 'c4673dd606f1f7bd5045dd337b0c9d06', '2021-07-03 00:00:00', 'assets/images/kodein-logo-k-560x560.png', '', 2501, 'beginner', 25, 'end-user', '', '', ''),
-('pelajar-20210725073030', 'yuvika', 'yuvi@gmail.com', '97f21c2c62f7151db6edc0e9ccccf8e6', '2021-07-25 00:00:00', 'assets/images/kodein-logo-k-560x560.png', '', 0, 'rookie', 0, 'end-user', '', '', ''),
-('pelajar-20210812074540', 'yoges', 'yoges@gmail.com', '5d76b59f14ee06a7c730d7caa2637f0d', '2021-08-12 00:00:00', 'assets/images/kodein-logo-k-560x560.png', '', 0, 'rookie', 0, 'end-user', '', '', ''),
-('pelajar-20210915104942', 'user_kodein', 'kodeins@gmail.com', 'b6e778842f12ff0560ed4d3ccede8811', '2021-09-15 10:49:42', 'assets/images/default.jpg', '', 0, 'rookie', 0, 'end-user', '', '', '');
+INSERT INTO `akun` (`id_akun`, `nama_lengkap`, `email`, `password`, `tgl_gabung`, `profile_user`, `asal_kota`, `exp`, `badges`, `level`, `kategori_user`, `linkedin`, `instagram`, `twitter`, `token`, `expired_token`, `status_token`) VALUES
+('pelajar-20220508211228', 'mikhael', 'mikhael.hosea@gmail.com', 'c4673dd606f1f7bd5045dd337b0c9d06', '2022-05-11 19:55:09', 'assets/images/default.jpg', '', 2100, 'rookie', 0, 'end-user', '', '', '', 'a9ecdc93624084b296a4e2663245fde7ce587e94', 60, 'true');
 
 -- --------------------------------------------------------
 
@@ -85,8 +73,8 @@ CREATE TABLE `history` (
 --
 
 INSERT INTO `history` (`id_history`, `id_akun`, `id_kelas`, `tgl_mulai`, `tgl_selesai`, `nama_materi`) VALUES
-('history1', 'pelajar-20210609065805', 'html-1', '2021-08-23 05:53:58', '2021-08-23 10:01:53', 'Kelas HTML'),
-('history3', 'pelajar-20210609065805', 'js-1', '2021-08-23 13:44:52', '2021-08-23 15:45:54', 'Kelas JAVASCRIPT');
+('history1', 'pelajar-20220508211228', 'html-1', '2021-08-23 05:53:58', '2021-08-23 10:01:53', 'Kelas HTML'),
+('history3', 'pelajar-20220508211228', 'js-1', '2021-08-23 13:44:52', '2021-08-23 15:45:54', 'Kelas JAVASCRIPT');
 
 -- --------------------------------------------------------
 
@@ -111,7 +99,7 @@ CREATE TABLE `kelas_koding` (
 
 INSERT INTO `kelas_koding` (`id_kelas`, `nama_kelas`, `deskripsi_kelas`, `total_materi`, `icon_kelas`, `estimasi_belajar`, `level`, `pelajar_terdaftar`) VALUES
 ('css-1', 'CSS', 'Cascading Style Sheet (CSS) merupakan aturan untuk mengatur beberapa komponen dalam sebuah web sehingga akan lebih terstruktur dan seragam. CSS bukan merupakan bahasa pemograman.', 14, 'css.png', 60, 'newbie', 1),
-('html-1', 'HTML', 'Perkenalan HTML dasar untuk membuat website', 19, 'mbr-9.png', 60, 'newbie', 1),
+('html-1', 'HTML', 'Perkenalan HTML dasar untuk membuat website. HTML merupakan singkatan dari Hypertext Markup Language, yaitu bahasa markup standar untuk membuat dan menyusun halaman dan aplikasi web', 19, 'mbr-9.png', 60, 'newbie', 1),
 ('js-1', 'JAVASCRIPT', 'JavaScript adalah bahasa pemrograman tingkat tinggi dan dinamis. JavaScript populer di internet dan dapat bekerja di sebagian besar penjelajah web populer seperti Google Chrome, Internet Explorer, Mozilla Firefox, Netscape dan Opera. Kode JavaScript dapat disisipkan dalam halaman web menggunakan tag SCRIPT.', 16, 'mbr-5.png', 60, 'newbie', 1);
 
 -- --------------------------------------------------------
@@ -141,7 +129,7 @@ CREATE TABLE `kelas_materi` (
 INSERT INTO `kelas_materi` (`id_materi`, `id_kelas`, `id_soal`, `materi_title`, `submateri_title`, `tipe_materi`, `text_slides`, `gambar_slides`, `subject_card`, `konteks_card`, `subject_codesite`) VALUES
 (1, 'js-1', 1, 'Perkenalan Console', 'Menggunakan Console di JS', 1, '', '', '', '', ''),
 (2, 'html-1', 2, 'Perkenalan HTML 1', 'Tag HTML', 1, 'Perkenalan tag pada HTML!', '', 'Perkenalan tag pada HTML!', 'Perkenalan tag pada HTML!', 'Perkenalan tag pada HTML!'),
-(3, 'html-1', 3, 'Perkenalan 2', 'Tag HTML', 1, 'Perkenalan tag pada HTML!', '', 'Perkenalan tag pada HTML!', 'Perkenalan tag pada HTML!', 'Perkenalan tag pada HTML!'),
+(3, 'html-1', 3, 'Perkenalan HTML', 'Tag HTML', 1, 'Perkenalan tag pada HTML!', '', 'Perkenalan tag pada HTML!', 'Perkenalan tag pada HTML!', 'Perkenalan tag pada HTML!'),
 (4, 'js-1', 4, 'Materi js-1 4', 'Submateri js-1 4', 1, '', '', '', '', ''),
 (5, 'html-1', 5, 'Materi html-1 5', 'Submateri html-1 5', 1, '', '', '', '', ''),
 (6, 'js-1', 6, 'Materi js-1 6', 'Submateri js-1 6', 1, '', '', '', '', ''),
@@ -275,7 +263,7 @@ CREATE TABLE `kelas_user` (
   `id_kelas` varchar(20) NOT NULL,
   `id_akun` varchar(50) DEFAULT NULL,
   `status_kelas` varchar(50) DEFAULT NULL,
-  `progress` varchar(255) NOT NULL
+  `progress` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -286,8 +274,9 @@ INSERT INTO `kelas_user` (`ids_KU`, `id_kelas`, `id_akun`, `status_kelas`, `prog
 (1, 'css-1', 'admin', 'masih berjalan', '0'),
 (2, 'html-1', 'pelajar-20210609065805', 'masih berjalan', '0'),
 (3, 'js-1', 'pelajar-20210609065805', 'masih berjalan', '0'),
-(4, 'html-1', 'admin', 'masih berjalan', '2,3'),
-(5, 'js-1', 'admin', 'masih berjalan', '0');
+(4, 'html-1', 'admin', 'masih berjalan', '2'),
+(5, 'js-1', 'admin', 'masih berjalan', '0,1,4'),
+(14, 'html-1', 'pelajar-20220508211228', 'masih berjalan', '0,2');
 
 -- --------------------------------------------------------
 
@@ -385,7 +374,7 @@ ALTER TABLE `kelas_soal`
 -- AUTO_INCREMENT for table `kelas_user`
 --
 ALTER TABLE `kelas_user`
-  MODIFY `ids_KU` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `ids_KU` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

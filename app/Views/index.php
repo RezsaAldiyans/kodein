@@ -83,7 +83,7 @@
                     <li class="nav-item"><a class="nav-link link text-info text-primary display-4" href="/#features20-7"><strong>Tantangan Kode</strong></a></li>
                     <?php if(!$session->get("id_akun")){?>
                     <div class="navbar-buttons mbr-section-btn">
-                        <a class="btn btn-info-outline display-4 font-bold pt-1 h-[48px]" href="/login">Masuk / Daftar</a>
+                        <a class="btn btn-info-outline display-4 font-bold mt-0 h-[48px]" href="/login">Masuk / Daftar</a>
                     </div>
                     <?php }else{?>
                     <div class="nav-item dropdown relative mt-2 mr-3">

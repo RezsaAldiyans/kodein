@@ -1,82 +1,97 @@
 <html>
 
 <head>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-        google.charts.load("current", { packages: ["calendar"] });
-        google.charts.setOnLoadCallback(drawChart);
-
-        function drawChart() {
-            var dataTable = new google.visualization.DataTable();
-            dataTable.addColumn({ type: 'date', id: 'Date' });
-            dataTable.addColumn({ type: 'number', id: 'Laporan' });
-            dataTable.addRows([
-                // Many rows omitted for brevity.
-                [new Date(2022, 11, 4), 0],
-                [new Date(2022, 11, 5), 2],
-                [new Date(2022, 11, 2), 3],
-                [new Date(2022, 11, 22), 5],
-                [new Date(2022, 11, 9), 3],
-                [new Date(2022, 11, 23), 4],
-                [new Date(2022, 11, 24), 5],
-                [new Date(2022, 11, 29), 10]
-            ]);
-
-            var chart = new google.visualization.Calendar(document.getElementById('calendar_basic'));
-
-            var options = {
-                title: "Laporan Bulanan",
-                height: 350,
-                calendar: {
-                    // cell sizing
-                    cellSize: 10,
-                    focusedCellColor: {
-                        stroke: '#00ff00',
-                        strokeOpacity: 1,
-                        strokeWidth: 1,
-                    },
-                    monthLabel: {
-                        fontName: 'Times-Roman',
-                        fontSize: 12,
-                        color: '#981b48',
-                        bold: true,
-                        italic: true
-                    },
-                    monthOutlineColor: {
-                        stroke: '#981b48',
-                        strokeOpacity: 0.8,
-                        strokeWidth: 2
-                    },
-                    yearLabel: {
-                        fontName: 'Times-Roman',
-                        fontSize: 32,
-                        color: '#1A8763',
-                        bold: true,
-                        italic: true
-                    },
-                    // color of the month name
-                    dayOfWeekLabel: {
-                        fontName: 'Times-Roman',
-                        fontSize: 8,
-                        color: '#1a8763',
-                        bold: true,
-                        italic: true,
-                    },
-                },
-                // mengubah tema background dan warna box
-                // noDataPattern: {
-                //     backgroundColor: '#76a7fa',
-                //     color: '#fff'
-                // }
-            };
-
-            chart.draw(dataTable, options);
-        }
-    </script>
+    <meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../public/assets/bootstrap/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+    <script src="../../../public/assets/tailwind/all.js"></script>
+    <style>
+      #CarouselSlider {
+    max-height: 100vh;
+    overflow: hidden;
+}
+.carousel-caption {
+    right: initial;
+    top: 35%;
+    bottom: initial;
+    padding-bottom: 1.25rem;
+    text-align: left;
+}
+.carousel-caption {
+    background-color: rgb(0 0 0 / 22%);
+    padding: 20px;
+    border-radius: 10px;
+}
+    </style>
 </head>
 
 <body>
-    <div id="calendar_basic" style="width: 50%; height: 350px;"></div>
-</body>
+  <div id="CarouselSlider" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#CarouselSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#CarouselSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#CarouselSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#CarouselSlider" data-bs-slide-to="3" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+            <!-- <img src="../../../images/logo-1.png" class="d-block w-100" alt="Carousel One">
+            <div class="carousel-caption text-white d-none d-md-block col-6">
+                <h3 class="fs-1">Where does it come from?</h3>
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                <a href="#" class="btn btn-warning mt-3">Learn More</a>
+            </div> -->
+            <div class="grid grid-cols-2 gap-2">
+              <div>
+                <h1>HELLO WORLD!</h1>
+              </div>
+              <div>WORLD HELLO!</div>
+              <div><img src="../../../images/logo-1.png" class="d-block w-100" alt="Carousel One"></div>
+              <div><img src="../../../images/logo-1.png" class="d-block w-100" alt="Carousel One"></div>
+            </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+            <img src="../../../images/logo-2.png" class="d-block w-100" alt="Carousel Two">
+            <div class="carousel-caption text-white d-none d-md-block col-6">
+                <h3 class="fs-1">Where can I get some?</h3>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.</p>
+                <a href="#" class="btn btn-warning mt-3">Learn More</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="../../../images/logo-3.png" class="d-block w-100" alt="Carousel Three">
+            <div class="carousel-caption text-white d-none d-md-block col-6">
+                <h3 class="fs-1">Why do we use it?</h3>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
+                <a href="#" class="btn btn-warning mt-3">Learn More</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="../../../images/logo-4.png" class="d-block w-100" alt="Carousel Three">
+            <div class="carousel-caption text-white d-none d-md-block col-6">
+                <h3 class="fs-1">Why do we use it?</h3>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
+                <a href="#" class="btn btn-warning mt-3">Learn More</a>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#CarouselSlider" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#CarouselSlider" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<script>
+    // $(document).ready(function(){
+    //     // Show the Modal on load
+    //     $("#modal").modal("show");
+    // });
+</script>
+<script src="../../../public/assets/bootstrap/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </html>

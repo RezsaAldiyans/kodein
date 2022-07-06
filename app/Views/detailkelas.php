@@ -23,7 +23,8 @@
     <link rel="stylesheet" href="<?php echo base_url();?>/assets/mobirise/css/mbr-additional.css" type="text/css">
     <script src="<?php echo base_url();?>/assets/tailwind/all.js"></script>
 </head>
-<body>
+<body class="scroll smooth">
+<!-- Start Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky top-0 z-50">
     <div class="container-fluid">
         <div class="navbar-brand">
@@ -41,14 +42,14 @@
                     <li class="nav-item"><a class="nav-link link text-info text-primary display-4" href="/#content2-b"><strong>Kelas Koding</strong></a></li>
                     <li class="nav-item"><a class="nav-link link text-info text-primary display-4" href="/#features20-7"><strong>Tantangan Kode</strong></a></li>
                     <?php if(!$session->get("id_akun")){?>
-                    <div class="navbar-buttons mbr-section-btn mt-0">
-                        <a class="btn btn-info-outline display-4 font-bold mt-0 h-[48px]" href="/login">Masuk / Daftar</a>
+                    <div class="navbar-buttons mbr-section-btn">
+                        <a class="btn btn-info-outline display-4 font-bold pt-1 h-[48px]" href="/login">Masuk / Daftar</a>
                     </div>
                     <?php }else{?>
                     <div class="nav-item dropdown relative mt-2 mr-3">
                         <a class="nav-link dropdown-toggle flex pt-0" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="/<?php echo $session->get('profile_user');?>" alt="foto profile" class="rounded-circle w-auto h-9 pt-0">&nbsp;
-                            <span class="full-name display-4 font-bold"><?= ucfirst($session->get('nama_lengkap'));?></span>
+                            <img src="/<?php echo $profile_user;?>" alt="foto profile" class="rounded-circle w-auto h-9 pt-0">&nbsp;
+                            <span class="full-name display-4 font-bold text-[#125488]"><?= ucfirst($nama_lengkap);?></span>
                         </a>
                         <ul class="dropdown-menu absolute float-left z-50 text-left text-base list-none py-2 rounded-lg bg-clip-padding mt-2" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="/dashboard">Profile Saya</a></li>
@@ -63,12 +64,13 @@
         </div>
     </div>
 </nav>
+<!-- End Navbar -->
 
 <section class="header11 cid-sDBohKsmP7" id="header11-11">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-md-4 image-wrapper">
-                <img class="w-100" src="<?php echo base_url();?>/assets/images/<?php echo $kelas['icon_kelas'];?>" alt="Mobirise">
+                <img class="w-100" src="<?php echo base_url();?>/assets/images/<?php echo $kelas['icon_kelas'];?>" alt="kelas ikon">
             </div>
             <div class="col-12 col-md">
                 <div class="text-wrapper text-center">
@@ -309,15 +311,16 @@ Kono bangumi wa goran no suponsaa no teikyou de okurishimasu.teikyou de okurishi
     </div>
 </section>
 <script src="<?php echo base_url();?>/assets/web/assets/jquery/jquery.min.js"></script>
-<script src="<?php echo base_url();?>/assets/popper/popper.min.js"></script>
-<script src="<?php echo base_url();?>/assets/tether/tether.min.js"></script>
-<script src="<?php echo base_url();?>/assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="<?php echo base_url();?>/assets/smoothscroll/smooth-scroll.js"></script>
-<script src="<?php echo base_url();?>/assets/dropdown/js/nav-dropdown.js"></script>
-<script src="<?php echo base_url();?>/assets/dropdown/js/navbar-dropdown.js"></script>
-<script src="<?php echo base_url();?>/assets/touchswipe/jquery.touch-swipe.min.js"></script>
-<script src="<?php echo base_url();?>/assets/viewportchecker/jquery.viewportchecker.js"></script>
-<script src="<?php echo base_url();?>/assets/mbr-tabs/mbr-tabs.js"></script>
+<script src="<?php echo base_url();?>/assets/bootstrap/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!-- <script src="<?php echo base_url();?>/assets/popper/popper.min.js"></script> -->
+<!-- <script src="<?php echo base_url();?>/assets/tether/tether.min.js"></script> -->
+<!-- <script src="<?php echo base_url();?>/assets/bootstrap/js/bootstrap.min.js"></script> -->
+<!-- <script src="<?php echo base_url();?>/assets/smoothscroll/smooth-scroll.js"></script> -->
+<!-- <script src="<?php echo base_url();?>/assets/dropdown/js/nav-dropdown.js"></script> -->
+<!-- <script src="<?php echo base_url();?>/assets/dropdown/js/navbar-dropdown.js"></script> -->
+<!-- <script src="<?php echo base_url();?>/assets/touchswipe/jquery.touch-swipe.min.js"></script> -->
+<!-- <script src="<?php echo base_url();?>/assets/viewportchecker/jquery.viewportchecker.js"></script> -->
+<!-- <script src="<?php echo base_url();?>/assets/mbr-tabs/mbr-tabs.js"></script> -->
 <!-- <script src="/assets/theme/js/script.js"></script> -->
     <input name="animation" type="hidden">
     </body>

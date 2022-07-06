@@ -288,6 +288,7 @@ $tgl_gabung = $tgl_gabung;
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5">
                     <?php
                         foreach($kelas_user as $kelas){
+                            $progressing = round(($progress/$kelas["total_materi"])*100);
                     ?>
                     <div class="card bg-light m-3 pt-4 pl-4 pr-4 w-[100%]">
                         <img src="<?php echo base_url();?>/assets/images/<?php echo $kelas['icon_kelas']?>" class="card-img-top" aalt="icon kelas" title="Kelas <?php echo ucfirst($kelas["nama_kelas"]);?>">
@@ -295,9 +296,8 @@ $tgl_gabung = $tgl_gabung;
                             <h5 class="card-title text-[25px]">
                                 <strong>Kelas <?php echo ucfirst($kelas["level"]);?></strong>
                                 <br>
-                                <strong><?php echo ucfirst($kelas["nama_kelas"]);?></strong>
+                                <strong>Status : <?php echo $progressing ?>%</strong>
                             </h5>
-                            <p class="mbr-text mbr-fonts-style mt-3 display-7 text-[17px] addReadMore showlesscontent fadeIn"><?php echo ucfirst($kelas["deskripsi_kelas"]); ?></p>
                             <div class="mbr-section-btn mt-5"><a href="/kelas/<?php echo $kelas['id_kelas'];?>" class="btn item-btn btn-info display-7">Lihat Selengkapnya!</a></div>
                         </div>
                     </div>
@@ -336,26 +336,26 @@ $tgl_gabung = $tgl_gabung;
     <section class="mt-5 mb-5 coe">
         <div class="container">
         <div class="block rounded-lg shadow bg-white w-100 h-100 pt-3">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5">
-                    <?php
-                        foreach($kelas_user as $kelas){
-                    ?>
-                    <div class="card bg-light m-3 pt-4 pl-4 pr-4 w-95">
-                        <img src="<?php echo base_url();?>/assets/images/<?php echo $kelas['icon_kelas']?>" class="card-img-top h-[50%]" aalt="icon kelas" title="Kelas <?php echo ucfirst($kelas["nama_kelas"]);?>">
-                        <div class="card-body">
-                            <h5 class="card-title text-[25px]">
-                                <strong><?php echo $kelas["nama_kelas"];?></strong>
-                                <br>
-                                <strong>Status : <?php echo $kelas["status_kelas"] ?></strong>
-                            </h5>
-                            <div class="mbr-section-btn mt-5">
-                                <a href="/kelas/<?php echo $kelas['id_kelas'];?>" class="btn item-btn btn-info display-7">Lihat Selengkapnya!</a>
-                            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+                <?php
+                    foreach($kelas_user as $kelas){
+                ?>
+                <div class="card bg-light m-3 pt-4 pl-4 pr-4 w-100">
+                    <img src="<?php echo base_url();?>/assets/images/<?php echo $kelas['icon_kelas']?>" class="card-img-top h-[50%]" aalt="icon kelas" title="Kelas <?php echo ucfirst($kelas["nama_kelas"]);?>">
+                    <div class="card-body">
+                        <h5 class="card-title text-[25px]">
+                            <strong><?php echo $kelas["nama_kelas"];?></strong>
+                            <br>
+                            <strong>Status : <?php echo $kelas["status_kelas"] ?></strong>
+                        </h5>
+                        <div class="mbr-section-btn mt-5">
+                            <a href="/kelas/<?php echo $kelas['id_kelas'];?>" class="btn item-btn btn-info display-7">Lihat Selengkapnya!</a>
                         </div>
                     </div>
-                    <?php } ?>
                 </div>
+                <?php } ?>
             </div>
+        </div>
         </div>
     </section>
 
