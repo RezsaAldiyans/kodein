@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
         method: 'GET',
         redirect: 'follow'
     };
-    fetch("https://kodein.online/ApiHistory", requestOptions)
+    fetch("http://localhost:8080/ApiHistory", requestOptions)
         .then(response => response.json())
         .then(result =>{
             let data = [];

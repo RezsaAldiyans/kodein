@@ -56,6 +56,27 @@ $session = session();
         width: 100%;
         height: 100%;
     }
+
+    /* css modal, i love you caffy */
+    .caffy {
+        margin-bottom: 0;
+        display:block;
+        width:1000px;
+        height:200px;
+        overflow:hidden;
+    }
+    .caffyImage{
+        transform: translateY(110px);
+    }
+    #static-example{
+        transform: translateY(170px);
+        display: none;
+    }
+    .caffyImage:hover
+    {
+        transform: translateY(-20px);
+        transition: 0.7s;
+    }
     </style>
 
     <!-- cdn js editor playground -->
@@ -98,9 +119,6 @@ $session = session();
                 </div>
                 <div class="col-span-8 flex items-center space-x-8 text-[17px]">
                     <div class="link"><?php echo $kelas["materi_title"];?></div>
-                    <!-- <div class="link">asd</div>
-          <div class="link">zxc</div>
-          <div class="link">rty</div> -->
                 </div>
             </div>
             <!-- right content -->
@@ -120,29 +138,42 @@ $session = session();
                         <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
                         <button type="button" class="btn-close bi bi-x-lg" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body pb-0">
                         <div id="CarouselSlider" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
+                            <!-- <div class="carousel-indicators">
                                 <button type="button" data-bs-target="#CarouselSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                                 <button type="button" data-bs-target="#CarouselSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
                                 <button type="button" data-bs-target="#CarouselSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                 <button type="button" data-bs-target="#CarouselSlider" data-bs-slide-to="3" aria-label="Slide 3"></button>
-                            </div>
+                            </div> -->
                             <div class="carousel-inner">
-                                <div class="carousel-item active" data-bs-interval="10000">
-                                    <!-- <img src="../../../images/logo-1.png" class="d-block w-100" alt="Carousel One">
-                                    <div class="carousel-caption text-white d-none d-md-block col-6">
-                                        <h3 class="fs-1">Where does it come from?</h3>
-                                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-                                        <a href="#" class="btn btn-warning mt-3">Learn More</a>
-                                    </div> -->
+                                <div class="carousel-item active">
                                     <div class="grid grid-cols-2 gap-2">
                                         <div>
-                                            <h1>HELLO WORLD!</h1>
+                                            <p>Heading HTML! Heading HTML!Heading HTML!Heading HTML!Heading HTML!Heading HTML!Heading HTML!Heading HTML!Heading HTML!Heading HTML!Heading HTML!Heading HTML!Hea</p>
                                         </div>
-                                        <div>WORLD HELLO!</div>
-                                        <div><img src="<?= base_url();?>/assets/images/mbr-5.png" class="d-block w-100" alt="Carousel One"></div>
-                                        <div><img src="<?= base_url();?>/assets/images/mbr-9.png" class="d-block w-100" alt="Carousel One"></div>
+                                        <div>
+                                            Struktur HTML!
+                                        </div>
+                                        <div><img src="<?= base_url();?>/assets/images/headinghtml.png" class="d-block" alt="heading"></div>
+                                        <div><img src="<?= base_url();?>/assets/images/strukturhtml.png" class="d-block" alt="heading"></div>
+                                    </div>
+                                    <div class="caffy">
+                                        <div class="inline-flex scrolls">
+                                            <img src="<?= base_url();?>/assets/images/caffy.png" class="w-[250px] caffyImage inline-flex" id="caffyna" alt="Caffyna">
+                                            <div class="bg-blue-600 shadow-lg mx-auto w-96 h-[20px] text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3 toasts" id="static-example" role="alert" aria-live="assertive" aria-atomic="true" data-mdb-autohide="false">
+                                                <div class="bg-blue-600 flex justify-between items-center py-2 px-3 bg-clip-padding border-b border-blue-500 rounded-t-lg">
+                                                <p class="font-bold text-white flex items-center">Caffyna Coderyna</p>
+                                                <div class="flex items-center">
+                                                    <p class="text-white opacity-90 text-xs">Mahasiswi magang di Kodein</p>
+                                                    <button type="button" class="btn-close btn-close-white box-content w-4 h-4 ml-2 text-white border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-white hover:opacity-75 hover:no-underline" data-mdb-dismiss="toast" aria-label="Close"></button>
+                                                </div>
+                                                </div>
+                                                <div class="p-3 bg-blue-600 rounded-b-lg break-words text-white">
+                                                Hello, world! This is a toast message.
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- <div class="carousel-item" data-bs-interval="2000">
@@ -152,36 +183,15 @@ $session = session();
                                         <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.</p>
                                         <a href="#" class="btn btn-warning mt-3">Learn More</a>
                                     </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="../../../images/logo-3.png" class="d-block w-100" alt="Carousel Three">
-                                    <div class="carousel-caption text-white d-none d-md-block col-6">
-                                        <h3 class="fs-1">Why do we use it?</h3>
-                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
-                                        <a href="#" class="btn btn-warning mt-3">Learn More</a>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="../../../images/logo-4.png" class="d-block w-100" alt="Carousel Three">
-                                    <div class="carousel-caption text-white d-none d-md-block col-6">
-                                        <h3 class="fs-1">Why do we use it?</h3>
-                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
-                                        <a href="#" class="btn btn-warning mt-3">Learn More</a>
-                                    </div>
-                                </div> -->
-                            <!-- </div> -->
-                                <button class="carousel-control-prev" type="button" data-bs-target="#CarouselSlider" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#CarouselSlider" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
+                                </div>-->
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                            <!-- <button class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Close</button> -->
+                            <button class="btn btn-primary" type="button" data-bs-target="#CarouselSlider" data-bs-slide="next">
+                                <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+                                Next
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -244,6 +254,18 @@ $session = session();
         $(document).ready(function(){
             // Show the Modal on load
             $("#modals").modal("show");
+
+            let caffyImage = document.getElementById("caffyna");
+            caffyImage.addEventListener("mouseover",function(){
+                // $("#static-example").css("transition","10");
+                $("#static-example").show(200);
+                $("#static-example").css("display","visible");
+                $("#static-example").css("transform","translateY(60px)");
+            })
+            caffyImage.addEventListener("mouseout",function(){
+                $("#caffyna").css("transform","translateY(75px)");
+                $("#static-example").hide(200);
+            })
 
         });
     </script>

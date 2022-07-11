@@ -64,9 +64,6 @@
         .icon:hover{
             fill:black;
         }
-        .closeIcon {
-            display: none;
-        }
     </style>
 </head>
 <body class="smooth-scroll">
@@ -76,31 +73,11 @@
     <div class="container-fluid">
         <div class="navbar-brand">
             <span class="navbar-logo">
-                <a href="/"><img class="ml-0 w-full h-12" src="<?php echo base_url();?>/assets/images/kodein-logo-k-1-263x263.png" alt="Kodein"></a>
+                <a href="/"><img class="ml-0 w-auto h-12" src="<?php echo base_url();?>/assets/images/kodein-logo-k-1-263x263.png" alt="Kodein"></a>
             </span>
         </div>
-        </button>
-        <button class="hamburger navbar-toggler dropdown-toggle inline-flex items-center justify-center mt-2.5 rounded-md text-gray-400" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <!--
-                Icon when menu is closed.
-
-                Heroicon name: outline/menu
-
-                Menu open: "hidden", Menu closed: "block"
-            -->
-            <svg class="openIcon block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#125488" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-            <!--
-                Icon when menu is open.
-
-                Heroicon name: outline/x
-
-                Menu open: "block", Menu closed: "hidden"
-            -->
-            <svg class="closeIcon h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#125488" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
+        <button class="navbar-toggler dropdown-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
@@ -135,13 +112,13 @@
 
 <section class="kodeinanim header11 bg-[#fafafa]" id="header11-9">
     <div class="container-fluid">
-        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 items-center">
-            <div class="flex justify-center">
-                <object type="image/svg+xml" data="<?php echo base_url();?>/assets/images/kodein-animated-repeat.svg" class="p-0 m-0 w-full" alt="kodein animasi">
+        <div class="row flex items-center">
+            <div class="col-7">
+                <object type="image/svg+xml" data="<?php echo base_url();?>/assets/images/kodein-animated-repeat.svg" class="p-0 m-0 w-[390px] h-[390px] xl:w-[600px] xl:h-[600px] lg:w-[500px] lg:h-[500px] md:w-[500px] md:h-[500px]" alt="kodein animasi">
                     <img src="<?php echo base_url();?>/assets/images/kodein-animated-repeat.svg" alt="kodein animasi"/>
                 </object>
             </div>
-            <div class="flex justify-center">
+            <div class="col-12 col-md">
                 <div class="text-wrapper text-center">
                     <h2 class="mbr-section-title mbr-fonts-style mb-3 display-2"><strong>Kelas koding kodein!</strong></h2>
                     <p class="mbr-text mbr-fonts-style display-7">
@@ -208,7 +185,7 @@
         <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 gap-5">
         <?php foreach($kelas as $data){?>
             <div class="card bg-light m-3 pt-4 pl-4 pr-4 w-[100%]">
-                <img src="<?php echo base_url();?>/assets/images/icon_kelas/<?php echo $data['icon_kelas']?>" class="card-img-top" aalt="icon kelas" title="Kelas <?php echo ucfirst($data["nama_kelas"]);?>">
+                <img src="<?php echo base_url();?>/assets/images/<?php echo $data['icon_kelas']?>" class="card-img-top" aalt="icon kelas" title="Kelas <?php echo ucfirst($data["nama_kelas"]);?>">
                 <div class="card-body">
                     <h5 class="card-title text-[25px]">
                         <strong>Kelas <?php echo ucfirst($data["nama_kelas"]);?></strong>
@@ -322,16 +299,16 @@
     <div class="mbr-overlay"></div>
     <div class="container">
         <div class="mbr-section-head">
-            <h4 class="mbr-fonts-style align-center mb-0 display-1 text-[#fff]"><strong>Kodein Team!</strong><br><strong><br></strong></h4>
+            <h4 class="mbr-fonts-style align-center mb-0 display-1 text-[#fff]"><strong>Meet Kodein Team!</strong><br><strong><br></strong></h4>
         </div>
         <div class="row mt-4 flex justify-center">
             <div class="item features-image col-12 col-md-6 col-lg-3 ">
                 <div class="item-wrapper">
                     <div class="item-img">
-                        <img src="<?php echo base_url();?>/assets/images/author/rezsa.jpg" alt="founder">
+                        <img src="<?php echo base_url();?>/assets/images/rezsa.jpg" alt="founder">
                     </div>
                     <div class="item-content">
-                        <h5 class="item-title mbr-fonts-style display-5 text-center"><strong>Rezsa<br>Aldiyans</strong></h5>
+                        <h5 class="item-title mbr-fonts-style display-5 text-center"><strong>Rezsa</strong></h5>
                         <div class="founder text-[17px] font-bold text-center text-center">FOUNDER</div>
                             <a href="https://www.linkedin.com/in/rezsaaldiyans/" class="hover flex justify-center mt-4">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#0077b5" class="bi bi-linkedin icon" viewBox="0 0 16 16">
@@ -344,10 +321,10 @@
             <div class="item features-image col-12 col-md-6 col-lg-3">
                 <div class="item-wrapper">
                     <div class="item-img">
-                        <img src="<?php echo base_url();?>/assets/images/author/mikhael.jpg" alt="founder">
+                        <img src="<?php echo base_url();?>/assets/images/mikhael.jpg" alt="founder">
                     </div>
                     <div class="item-content">
-                        <h5 class="item-title mbr-fonts-style display-5 text-center"><strong>Mikhael<br>Hosea</strong></h5>
+                        <h5 class="item-title mbr-fonts-style display-5 text-center"><strong>Mikhael</strong></h5>
                         <div class="founder text-[17px] font-bold text-center">FOUNDER</div>
                         <a href="https://www.linkedin.com/in/mikhaelhosea/" class="hover flex justify-center mt-4">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#0077b5" class="bi bi-linkedin icon" viewBox="0 0 16 16">
@@ -360,10 +337,10 @@
             <div class="item features-image col-12 col-md-6 col-lg-3">
                 <div class="item-wrapper">
                     <div class="item-img">
-                        <img src="<?php echo base_url();?>/assets/images/author/askar.jpg" alt="founder">
+                        <img src="<?php echo base_url();?>/assets/images/askar.jpg" alt="founder">
                     </div>
                     <div class="item-content">
-                        <h5 class="item-title mbr-fonts-style display-5 text-center"><strong>Askar<br>Ghany</strong></h5>
+                        <h5 class="item-title mbr-fonts-style display-5 text-center"><strong>Askar</strong></h5>
                         <div class="founder text-[17px] font-bold text-center">FOUNDER</div>
                         <a href="https://www.linkedin.com/in/muhammad-askar-ghany-irawan-a287291a2/" class="hover flex justify-center mt-4">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#0077b5" class="bi bi-linkedin icon" viewBox="0 0 16 16">
@@ -482,26 +459,10 @@
             $(this).closest(".addReadMore").toggleClass("showlesscontent showmorecontent");
         })
     }
-
-    const menu = document.querySelector(".navbar-nav");
-    const menuIcon = document.querySelector(".openIcon");
-    const closeIcon = document.querySelector(".closeIcon");
-    const hamburger = document.querySelector(".hamburger");
-    function toggleMenu() {
-        if (menu.classList.contains("showMenu")) {
-            menu.classList.remove("showMenu");
-            closeIcon.style.display = "none";
-            menuIcon.style.display = "block";
-        } else {
-            menu.classList.add("showMenu");
-            closeIcon.style.display = "block";
-            menuIcon.style.display = "none";
-        }
-    }
     $(function(){
         addReadMore();
-        hamburger.addEventListener("click", toggleMenu);
     })
 </script>
+<!-- <script src="/assets/theme/js/script.js"></script> -->
 </body>
 </html>

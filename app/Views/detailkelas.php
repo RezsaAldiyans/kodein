@@ -70,7 +70,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-md-4 image-wrapper">
-                <img class="w-100" src="<?php echo base_url();?>/assets/images/<?php echo $kelas['icon_kelas'];?>" alt="kelas ikon">
+                <img class="w-100 shadow shadow-lg" src="<?php echo base_url();?>/assets/images/icon_kelas/<?php echo $kelas['icon_kelas'];?>" alt="kelas ikon">
             </div>
             <div class="col-12 col-md">
                 <div class="text-wrapper text-center">

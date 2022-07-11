@@ -239,9 +239,9 @@ class Home extends BaseController
 		$profilModel =  new ProfileModel();
 		$kelas_user = new KelasUser();
 		$dataProfil = $profilModel->getKelasUser($data[0]["id_akun"]);
-		$progress = $kelas_user->getProgress(session()->get("id_akun"),$id_kelas);
+		$progress = array();
 		foreach($dataProfil as $kelas){
-			$progress = $kelas_user->getProgress(session()->get("id_akun"),$kelas["id_kelas"]);
+			array_push($progress,$kelas_user->getProgress(session()->get("id_akun"),$kelas["id_kelas"]));
 		}
 		$ses_data = [
 			'nama_lengkap' => $data[0]["nama_lengkap"],
@@ -253,7 +253,7 @@ class Home extends BaseController
 			'badges' => $data[0]["badges"],
 			'level' => $data[0]["level"],
 			'kelas_user' => $dataProfil,
-			'progress' => $progress,
+			'progress' => 0,
 			"total_kelas" => count($dataProfil),
 			"sosmed"=>[
 				"linkedin"=>$data[0]["linkedin"],
@@ -262,6 +262,7 @@ class Home extends BaseController
 			],
 			'logged_in' => TRUE
 		];
+		// var_dump($progress);
 		levelUp($ses_data);
 		return view('dashboard',$ses_data);
 	}
@@ -429,9 +430,9 @@ class Home extends BaseController
 	private function email($email,$token = null){
 	    // initialize email setting from emailConfig function.
 		$config['protocol']   = 'smtp';
-        $config['SMTPHost']   = 'mail.kodein.codes';
-        $config['SMTPUser']   = 'admin@kodein.codes';
-        $config['SMTPPass']   = 'miraimiyuki06';
+        $config['SMTPHost']   = 'mail.kodein.online';
+        $config['SMTPUser']   = 'admin@kodein.online';
+        $config['SMTPPass']   = 'kelaskodingkodein';
         $config['SMTPPort']   = 465;
         $config['SMTPCrypto'] = 'ssl';
         $config['mailType']   = 'html';
@@ -491,7 +492,7 @@ class Home extends BaseController
 		}
 	}
 	public function test(){
-		return view('test/dashboard.php');
+		return $this->email("rezsa.aldiyans@gmail.com","123");
 	}
 	//--------------------------------------------------------------------
 

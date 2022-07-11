@@ -287,18 +287,20 @@ $tgl_gabung = $tgl_gabung;
             <div class="block rounded-lg shadow bg-white w-100 h-100 pt-3">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5">
                     <?php
+                    $i = 0;
                         foreach($kelas_user as $kelas){
                             $progressing = round(($progress/$kelas["total_materi"])*100);
+                            // var_dump($progress);
                     ?>
                     <div class="card bg-light m-3 pt-4 pl-4 pr-4 w-[100%]">
-                        <img src="<?php echo base_url();?>/assets/images/<?php echo $kelas['icon_kelas']?>" class="card-img-top" aalt="icon kelas" title="Kelas <?php echo ucfirst($kelas["nama_kelas"]);?>">
+                        <img src="<?php echo base_url();?>/assets/images/icon_kelas/<?php echo $kelas['icon_kelas']?>" class="card-img-top" alt="icon kelas" title="Kelas <?php echo ucfirst($kelas["nama_kelas"]);?>">
                         <div class="card-body">
                             <h5 class="card-title text-[25px]">
-                                <strong>Kelas <?php echo ucfirst($kelas["level"]);?></strong>
+                                <strong>Kelas <?php echo ucfirst($kelas["nama_kelas"]);?></strong>
                                 <br>
                                 <strong>Status : <?php echo $progressing ?>%</strong>
                             </h5>
-                            <div class="mbr-section-btn mt-5"><a href="/kelas/<?php echo $kelas['id_kelas'];?>" class="btn item-btn btn-info display-7">Lihat Selengkapnya!</a></div>
+                            <div class="mbr-section-btn mt-5"><a href="/kelas/<?php echo $kelas['id_kelas'];?>" class="btn item-btn btn-info display-7">Lanjutkan Pembelajaran</a></div>
                         </div>
                     </div>
                     <?php } ?>
