@@ -289,10 +289,10 @@ $tgl_gabung = $tgl_gabung;
                     <?php
                     $i = 0;
                         foreach($kelas_user as $kelas){
-                            $progressing = round(($progress/$kelas["total_materi"])*100);
-                            // var_dump($progress);
+                            $counter = is_null($kelas["progress"]) ? 0 : count(explode(",", $kelas["progress"]));
+                            $progressing = round(($counter/$kelas["total_materi"])*100);
                     ?>
-                    <div class="card bg-light m-3 pt-4 pl-4 pr-4 w-[100%]">
+                    <div class="card bg-light m-3 pt-4 pl-4 pr-4 w-[90%]">
                         <img src="<?php echo base_url();?>/assets/images/icon_kelas/<?php echo $kelas['icon_kelas']?>" class="card-img-top" alt="icon kelas" title="Kelas <?php echo ucfirst($kelas["nama_kelas"]);?>">
                         <div class="card-body">
                             <h5 class="card-title text-[25px]">

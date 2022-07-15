@@ -1,0 +1,235 @@
+CRITICAL - 2022-07-15 19:41:42 --> Unable to connect to the database.
+#0 A:\kodein\kodein.codes\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 A:\kodein\kodein.codes\app\Models\KelasModel.php(14): CodeIgniter\Database\BaseConnection->query('select * from k...')
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(26): App\Models\KelasModel->getAllKelas()
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2022-07-15 19:52:59 --> array_push() expects parameter 1 to be array, null given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_push() ex...', 'A:\\kodein\\kodei...', 245, Array)
+#1 A:\kodein\kodein.codes\app\Controllers\Home.php(245): array_push(NULL, Array)
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#7 {main}
+CRITICAL - 2022-07-15 19:58:47 --> Cannot use a scalar value as an array
+#0 A:\kodein\kodein.codes\app\Controllers\Home.php(245): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot use a sc...', 'A:\\kodein\\kodei...', 245, Array)
+#1 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#6 {main}
+CRITICAL - 2022-07-15 19:59:50 --> array_push() expects parameter 1 to be array, int given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_push() ex...', 'A:\\kodein\\kodei...', 245, Array)
+#1 A:\kodein\kodein.codes\app\Controllers\Home.php(245): array_push(0, Array)
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#7 {main}
+CRITICAL - 2022-07-15 20:04:29 --> Unsupported operand types
+#0 A:\kodein\kodein.codes\system\View\View.php(246): include()
+#1 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('dashboard', Array, true)
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(270): view('dashboard', Array)
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2022-07-15 20:05:17 --> Unsupported operand types
+#0 A:\kodein\kodein.codes\system\View\View.php(246): include()
+#1 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('dashboard', Array, true)
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(270): view('dashboard', Array)
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2022-07-15 20:07:58 --> Unsupported operand types
+#0 A:\kodein\kodein.codes\system\View\View.php(246): include()
+#1 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('dashboard', Array, true)
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(270): view('dashboard', Array)
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2022-07-15 20:08:10 --> Unsupported operand types
+#0 A:\kodein\kodein.codes\system\View\View.php(246): include()
+#1 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('dashboard', Array, true)
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(270): view('dashboard', Array)
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2022-07-15 20:08:21 --> Unsupported operand types
+#0 A:\kodein\kodein.codes\system\View\View.php(246): include()
+#1 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('dashboard', Array, true)
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(270): view('dashboard', Array)
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2022-07-15 20:08:59 --> Unsupported operand types
+#0 A:\kodein\kodein.codes\system\View\View.php(246): include()
+#1 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('dashboard', Array, true)
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(270): view('dashboard', Array)
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2022-07-15 20:10:03 --> Unsupported operand types
+#0 A:\kodein\kodein.codes\system\View\View.php(246): include()
+#1 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('dashboard', Array, true)
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(270): view('dashboard', Array)
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2022-07-15 20:10:19 --> Unsupported operand types
+#0 A:\kodein\kodein.codes\system\View\View.php(246): include()
+#1 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('dashboard', Array, true)
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(270): view('dashboard', Array)
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2022-07-15 08:11:46 --> syntax error, unexpected '"total_kelas"' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+#0 A:\kodein\kodein.codes\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('A:\\kodein\\kodei...')
+#1 A:\kodein\kodein.codes\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(869): class_exists('\\App\\Controller...', true)
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(394): CodeIgniter\CodeIgniter->startController()
+#6 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#9 {main}
+CRITICAL - 2022-07-15 20:11:54 --> Unsupported operand types
+#0 A:\kodein\kodein.codes\system\View\View.php(246): include()
+#1 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('dashboard', Array, true)
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(270): view('dashboard', Array)
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2022-07-15 20:12:07 --> Unsupported operand types
+#0 A:\kodein\kodein.codes\system\View\View.php(246): include()
+#1 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('dashboard', Array, true)
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(270): view('dashboard', Array)
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2022-07-15 20:12:22 --> Unsupported operand types
+#0 A:\kodein\kodein.codes\system\View\View.php(246): include()
+#1 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('dashboard', Array, true)
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(270): view('dashboard', Array)
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2022-07-15 20:12:34 --> Unsupported operand types
+#0 A:\kodein\kodein.codes\system\View\View.php(246): include()
+#1 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('dashboard', Array, true)
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(270): view('dashboard', Array)
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2022-07-15 20:15:18 --> Unsupported operand types
+#0 A:\kodein\kodein.codes\system\View\View.php(246): include()
+#1 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('dashboard', Array, true)
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(273): view('dashboard', Array)
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2022-07-15 20:15:51 --> array_push() expects parameter 1 to be array, int given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_push() ex...', 'A:\\kodein\\kodei...', 245, Array)
+#1 A:\kodein\kodein.codes\app\Controllers\Home.php(245): array_push(0, Array)
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#7 {main}
+CRITICAL - 2022-07-15 20:16:01 --> array_push() expects parameter 1 to be array, int given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_push() ex...', 'A:\\kodein\\kodei...', 245, Array)
+#1 A:\kodein\kodein.codes\app\Controllers\Home.php(245): array_push(0, Array)
+#2 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#7 {main}
+CRITICAL - 2022-07-15 20:16:14 --> Unsupported operand types
+#0 A:\kodein\kodein.codes\system\View\View.php(246): include()
+#1 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('dashboard', Array, true)
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(270): view('dashboard', Array)
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2022-07-15 20:16:25 --> Unsupported operand types
+#0 A:\kodein\kodein.codes\system\View\View.php(246): include()
+#1 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('dashboard', Array, true)
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(270): view('dashboard', Array)
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2022-07-15 20:23:10 --> Unsupported operand types
+#0 A:\kodein\kodein.codes\system\View\View.php(246): include()
+#1 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('dashboard', Array, true)
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(274): view('dashboard', Array)
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}
+CRITICAL - 2022-07-15 20:31:40 --> Unsupported operand types
+#0 A:\kodein\kodein.codes\system\View\View.php(246): include()
+#1 A:\kodein\kodein.codes\system\Common.php(1119): CodeIgniter\View\View->render('dashboard', Array, true)
+#2 A:\kodein\kodein.codes\app\Controllers\Home.php(270): view('dashboard', Array)
+#3 A:\kodein\kodein.codes\system\CodeIgniter.php(918): App\Controllers\Home->dashboard_user()
+#4 A:\kodein\kodein.codes\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 A:\kodein\kodein.codes\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 A:\kodein\kodein.codes\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 A:\kodein\kodein.codes\system\Commands\Server\rewrite.php(34): require_once('A:\\kodein\\kodei...')
+#8 {main}

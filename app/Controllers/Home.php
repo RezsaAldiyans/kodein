@@ -171,6 +171,7 @@ class Home extends BaseController
 			'badges' => 'rookie',
 			'level' => 0,
 			'token' => sha1($generateUid),
+			'status_token' => false,
 			'expired_token' => 60
 		];
 		$loginModel = new LoginModel();
@@ -239,10 +240,11 @@ class Home extends BaseController
 		$profilModel =  new ProfileModel();
 		$kelas_user = new KelasUser();
 		$dataProfil = $profilModel->getKelasUser($data[0]["id_akun"]);
-		$progress = array();
-		foreach($dataProfil as $kelas){
-			array_push($progress,$kelas_user->getProgress(session()->get("id_akun"),$kelas["id_kelas"]));
-		}
+		// $progress = [];
+		// foreach($dataProfil as $kelas){
+			// array_push($progress,$kelas_user->getProgress(session()->get("id_akun"),$kelas["id_kelas"]));
+		// 	// $progress[$kelas["id_kelas"]] = $kelas_user->getProgress(session()->get("id_akun"),$kelas["id_kelas"]);
+		// }
 		$ses_data = [
 			'nama_lengkap' => $data[0]["nama_lengkap"],
 			'email' => $data[0]["email"],

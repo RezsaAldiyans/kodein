@@ -67,6 +67,7 @@ $session = session();
     }
     .caffyImage{
         transform: translateY(110px);
+        transition: 0.3s;
     }
     #static-example{
         transform: translateY(170px);
@@ -430,7 +431,6 @@ $session = session();
                     };
                     $.ajax(settings).done(function(response) {
                         jawaban = JSON.parse(response);
-                        console.log(jawaban)
                         // berhasil menjawab tanpa bantuan
                         if (jawaban[0] == 1) {
                             // berhasil
